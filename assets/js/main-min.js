@@ -1,0 +1,1 @@
+$(function(){function e(){var e=document.querySelector("nav").offsetHeight;$(".wrapper").css({"padding-top":e+"px"})}$("pre code").each(function(e,n){hljs.highlightBlock(n)}),e(),window.addEventListener("resize",e),window.addEventListener("orientationchange",e)});

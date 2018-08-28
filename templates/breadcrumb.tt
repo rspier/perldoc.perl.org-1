@@ -1,0 +1,13 @@
+[% USE Dumper %]
+  [% IF breadcrumb %]
+    <li class="breadcrumb-item"  > <a href="[% path %][% breadcrumb %]"> [% breadcrumb %]</a> </li>
+  [% ELSE %]
+    <li class="breadcrumb-item"  > <a href="[% path %]index.html">Home</a></li>
+    [% IF breadcrumbs %]
+      [% FOREACH crumb IN breadcrumbs %]
+         <li class="breadcrumb-item"  ><a href="[% path %][% crumb.url %]">[% crumb.name %]</a> </li> 
+      [% END %]
+    [% END %]
+     <li class="breadcrumb-item active" aria-current="page">[% pagename %]</li>  
+  [% END %]
+ 

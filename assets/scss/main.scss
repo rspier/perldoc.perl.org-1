@@ -1,0 +1,139 @@
+@import "bootstrap/scss/bootstrap.scss";
+@import "highlight/rainbow.scss";
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+object {
+  pointer-events: none;
+}
+
+.navbar-dark {
+  .navbar-nav {
+    .nav-link {
+      padding: 1rem;
+      color: rgba($color: #fff, $alpha: 1);
+      &:hover,
+      &:active,
+      &:visited,
+      &.active {
+        background-color: darken($color: $primary, $amount: 5%);
+        color: rgba($color: #fff, $alpha: 1);
+      }
+    }
+  }
+}
+
+.bg-perl {
+  background-image: linear-gradient(to bottom, #0073a1 0, #003555 100%);
+  background-repeat: repeat-x;
+}
+
+.logo {
+  height: 60px;
+}
+
+.feature-image-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  object {
+    pointer-events: none;
+    padding-right: 1rem;
+  }
+}
+
+.highlight-module {
+  background-color: $gray-100;
+  display: block;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  color: $black;
+  border: 1px solid transparent;
+  .alternate {
+    color: $black;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+    border: 1px solid $gray-200;
+  }
+}
+
+.ic-highlight {
+  height: 70px;
+}
+
+.dropdown-menu {
+  .dropdown-item {
+    color: $blue;
+    &:hover,
+    &:active,
+    &.active {
+      background-color: darken($color: $white, $amount: 15%);
+    }
+  }
+  .major-version {
+    text-align-last: left;
+    color: $gray-800;
+    margin-bottom: 0;
+    &:hover {
+      background-color: $white;
+      color: $gray-800;
+    }
+  }
+  .minor-version {
+    text-align: right;
+  }
+  &.letters-wrap {
+    display: none;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    right: 0;
+    left: unset;
+    .letters {
+      display: inline-block;
+      text-align: center; // flex-grow: 1;
+      width: fit-content;
+      padding: 0.25rem 0.25rem;
+      font-feature-settings: "tnum";
+      font-variant-numeric: tabular-nums;
+    }
+    &.show {
+      display: flex;
+    }
+  }
+}
+
+.letter-container {
+  padding: 0.25rem 1.5rem;
+}
+
+.jumbotron {
+  img {
+    @include media-breakpoint-up(xs) {
+      margin-right: 0;
+    }
+  }
+  margin-bottom: 0;
+}
+
+.dropdown-divider {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
