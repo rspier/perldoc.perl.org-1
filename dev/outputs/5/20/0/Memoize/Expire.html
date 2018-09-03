@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="icon" href="../static/favicon.ico">
+
+    <title>Memoize::Expire - perldoc.perl.org</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/main.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="../static/logo_perl_doc.svg">
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Perl 5.22.1 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="typeahead"><input type="text" class="form-control" placeholder="Search"/></li>
+                <li class="dropdown-header">Perl 5.22</li>
+                <li><a href="#">Perl 5.22.1</a></li>
+                <li><a href="#">Perl 5.22.0</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Perl 5.21</li>
+                <li><a href="#">Perl 5.21.1</a></li>
+                <li><a href="#">Perl 5.21.0</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Manuals<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="../index-overview.html">Overview</a></li>
+                <li><a href="../index-tutorials.html">Tutorials</a></li>
+                <li><a href="../index-faq.html">FAQs</a></li>
+                <li><a href="../index-history.html">History / Changes</a></li>
+                <li><a href="../index-licence.html">License</a></li>
+                <li><a href="../index-language.html">Language</a></li>
+                <li><a href="../index-functions.html">Functions</a></li>
+                <li><a href="../perlop.html">Operators</a></li>
+                <li><a href="../perlvar.html">Special Variables</a></li>
+                <li><a href="../index-pragmas.html">Pragmas</a></li>
+                <li><a href="../index-utilities.html">Utilities</a></li>
+                <li><a href="../index-internals.html">Internals</a></li>
+                <li><a href="../index-platforms.html">Platform Specific</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Functions<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="typeahead"><input type="text" class="form-control" placeholder="Search"/></li>
+                <li><a href="#">A-Z</a></li>
+                <li><a href="#">By Category</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Most used</li>
+                <li><a href="#">Split</a></li>
+                <li><a href="#">Open</a></li>
+                <li><a href="#">Substr</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Modules<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+		<li>
+		
+                
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+		
+                    <a href="../index-modules-A.html">A</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-B.html">B</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-C.html">C</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-D.html">D</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-E.html">E</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../index-modules-F.html">F</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-G.html">G</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-H.html">H</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-I.html">I</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-J.html">J</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../index-modules-L.html">L</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-M.html">M</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-N.html">N</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-O.html">O</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-P.html">P</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../index-modules-S.html">S</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-T.html">T</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-U.html">U</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-X.html">X</a>
+                    
+                
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="container-fluid container-internal">
+      <div class="row row-height">
+	<div class="col-sm-4 sidebar">
+          <h3>Section heading</h3>
+          <ul class="list-unstyled">
+            <li><h4>Sub heading</h4></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="The Perl 5 language interpreter">Item 1</a></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="A brief introduction and overview of Perl">Item 2</a></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="How to execute the Perl interpreter">Item 3</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-8 content">
+          <div class="content-container">
+	    
+	    <div id="page_name">
+	      <h1>Memoize::Expire</h1>
+	    </div>
+	    
+	    <div id="perl_version">
+	      Perl 5 version 20.0 documentation
+	    </div>
+  
+	    <div id="breadcrumbs">
+	        
+    <a href="../index.html">Home</a> &gt;
+    
+      
+        <a href="../index-modules-M.html">Core modules (M)</a> &gt;
+      
+    
+    Memoize::Expire
+  
+
+	    </div>
+  
+	    <h1>Memoize::Expire</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#INTERFACE">INTERFACE</a><li><a href="#ALTERNATIVES">ALTERNATIVES</a><li><a href="#CAVEATS">CAVEATS</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#SEE-ALSO">SEE ALSO</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>Memoize::Expire - Plug-in module for automatic expiration of memoized values</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Memoize</span><span class="sc">;</span>
+  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Memoize::Expire</span><span class="sc">;</span>
+  <a class="l_k" href="../functions/tie.html">tie</a> <a class="l_k" href="../functions/my.html">my</a> <span class="i">%cache</span> <span class="cm">=&gt;</span> <span class="q">&#39;Memoize::Expire&#39;</span><span class="cm">,</span>
+	  	     <span class="w">LIFETIME</span> <span class="cm">=&gt;</span> <span class="i">$lifetime</span><span class="cm">,</span>    <span class="c"># In seconds</span>
+		     <span class="w">NUM_USES</span> <span class="cm">=&gt;</span> <span class="i">$n_uses</span><span class="sc">;</span>
+
+  <span class="w">memoize</span> <span class="q">&#39;function&#39;</span><span class="cm">,</span> <span class="w">SCALAR_CACHE</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="w">HASH</span> <span class="cm">=&gt;</span> \<span class="i">%cache</span> <span class="s">]</span><span class="sc">;</span></pre>
+</body>
+</html>
+<a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>Memoize::Expire is a plug-in module for Memoize.  It allows the cached
+values for memoized functions to expire automatically.  This manual
+assumes you are already familiar with the Memoize module.  If not, you
+should study that manual carefully first, paying particular attention
+to the HASH feature.</p>
+<p>Memoize::Expire is a layer of software that you can insert in between
+Memoize itself and whatever underlying package implements the cache.
+The layer presents a hash variable whose values expire whenever they
+get too old, have been used too often, or both. You tell <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">Memoize</span></code>
+</body>
+</html>
+ to
+use this forgetful hash as its cache instead of the default, which is
+an ordinary hash.</p>
+<p>To specify a real-time timeout, supply the <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">LIFETIME</span></code>
+</body>
+</html>
+ option with a
+numeric value.  Cached data will expire after this many seconds, and
+will be looked up afresh when it expires.  When a data item is looked
+up afresh, its lifetime is reset.</p>
+<p>If you specify <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">NUM_USES</span></code>
+</body>
+</html>
+ with an argument of <i>n</i>, then each cached
+data item will be discarded and looked up afresh after the <i>n</i>th time
+you access it.  When a data item is looked up afresh, its number of
+uses is reset.</p>
+<p>If you specify both arguments, data will be discarded from the cache
+when either expiration condition holds.</p>
+<p>Memoize::Expire uses a real hash internally to store the cached data.
+You can use the <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:34 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">HASH</span></code>
+</body>
+</html>
+ option to Memoize::Expire to supply a tied
+hash in place of the ordinary hash that Memoize::Expire will normally
+use.  You can use this feature to add Memoize::Expire as a layer in
+between a persistent disk hash and Memoize.  If you do this, you get a
+persistent disk cache whose entries expire automatically.  For
+example:</p>
+<pre class="verbatim"><ol><li>  #   Memoize</li><li>  #      |</li><li>  #   Memoize::Expire  enforces data expiration policy</li><li>  #      |</li><li>  #   DB_File  implements persistence of data in a disk file</li><li>  #      |</li><li>  #   Disk file</li><li></li><li>  use Memoize;</li><li>  use Memoize::Expire;</li><li>  use DB_File;</li><li></li><li>  # Set up persistence</li><li>  tie my %disk_cache =&gt; 'DB_File', $filename, O_CREAT|O_RDWR, 0666];</li><li></li><li>  # Set up expiration policy, supplying persistent hash as a target</li><li>  tie my %cache =&gt; 'Memoize::Expire', </li><li>	  	     LIFETIME =&gt; $lifetime,    # In seconds</li><li>		     NUM_USES =&gt; $n_uses,</li><li>                     HASH =&gt; \%disk_cache; </li><li></li><li>  # Set up memoization, supplying expiring persistent hash for cache</li><li>  memoize 'function', SCALAR_CACHE =&gt; [ HASH =&gt; \%cache ];</li></ol></pre><a name="INTERFACE"></a><h1>INTERFACE</h1>
+<p>There is nothing special about Memoize::Expire.  It is just an
+example.  If you don't like the policy that it implements, you are
+free to write your own expiration policy module that implements
+whatever policy you desire.  Here is how to do that.  Let us suppose
+that your module will be named MyExpirePolicy.</p>
+<p>Short summary: You need to create a package that defines four methods:</p>
+<ul>
+<li><a name="TIEHASH"></a><b>TIEHASH</b>
+<p>Construct and return cache object.</p>
+</li>
+<li><a name="EXISTS"></a><b>EXISTS</b>
+<p>Given a function argument, is the corresponding function value in the
+cache, and if so, is it fresh enough to use?</p>
+</li>
+<li><a name="FETCH"></a><b>FETCH</b>
+<p>Given a function argument, look up the corresponding function value in
+the cache and return it.</p>
+</li>
+<li><a name="STORE"></a><b>STORE</b>
+<p>Given a function argument and the corresponding function value, store
+them into the cache.</p>
+</li>
+<li><a name="CLEAR"></a><b>CLEAR</b>
+<p>(Optional.)  Flush the cache completely.</p>
+</li>
+</ul>
+<p>The user who wants the memoization cache to be expired according to
+your policy will say so by writing</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">  <a class="l_k" href="../functions/tie.html">tie</a> <a class="l_k" href="../functions/my.html">my</a> <span class="i">%cache</span> <span class="cm">=&gt;</span> <span class="q">&#39;MyExpirePolicy&#39;</span><span class="cm">,</span> <span class="w">args</span>...<span class="sc">;</span>
+  <span class="w">memoize</span> <span class="q">&#39;function&#39;</span><span class="cm">,</span> <span class="w">SCALAR_CACHE</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="w">HASH</span> <span class="cm">=&gt;</span> \<span class="i">%cache</span><span class="s">]</span><span class="sc">;</span></pre>
+</body>
+</html>
+<p>This will invoke <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">MyExpirePolicy</span><span class="w">-&gt;TIEHASH</span><span class="s">(</span><span class="w">args</span><span class="s">)</span></code>
+</body>
+</html>
+.
+MyExpirePolicy::TIEHASH should do whatever is appropriate to set up
+the cache, and it should return the cache object to the caller.</p>
+<p>For example, MyExpirePolicy::TIEHASH might create an object that
+contains a regular Perl hash (which it will to store the cached
+values) and some extra information about the arguments and how old the
+data is and things like that.  Let us call this object `C'.</p>
+<p>When Memoize needs to check to see if an entry is in the cache
+already, it will invoke <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">C</span><span class="w">-&gt;EXISTS</span><span class="s">(</span><span class="w">key</span><span class="s">)</span></code>
+</body>
+</html>
+.  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">key</span></code>
+</body>
+</html>
+ is the normalized
+function argument.  MyExpirePolicy::EXISTS should return 0 if the key
+is not in the cache, or if it has expired, and 1 if an unexpired value
+is in the cache.  It should <i>not</i> return <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>, because there is a
+bug in some versions of Perl that will cause a spurious FETCH if the
+EXISTS method returns <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>.</p>
+<p>If your EXISTS function returns true, Memoize will try to fetch the
+cached value by invoking <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">C</span><span class="w">-&gt;FETCH</span><span class="s">(</span><span class="w">key</span><span class="s">)</span></code>
+</body>
+</html>
+.  MyExpirePolicy::FETCH should
+return the cached value.  Otherwise, Memoize will call the memoized
+function to compute the appropriate value, and will store it into the
+cache by calling <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">C</span><span class="w">-&gt;STORE</span><span class="s">(</span><span class="w">key</span><span class="cm">,</span> <span class="w">value</span><span class="s">)</span></code>
+</body>
+</html>
+.</p>
+<p>Here is a very brief example of a policy module that expires each
+cache item after ten seconds.</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim"><a name="package-Memoize::TenSecondExpire"></a>	package <span class="i">Memoize::TenSecondExpire</span><span class="sc">;</span>
+
+<a name="TIEHASH"></a>	sub <span class="m">TIEHASH</span> <span class="s">{</span>
+	  <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$package</span><span class="cm">,</span> <span class="i">%args</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span>
+          <a class="l_k" href="../functions/my.html">my</a> <span class="i">$cache</span> = <span class="i">$args</span>{<span class="w">HASH</span>} || <span class="s">{</span><span class="s">}</span><span class="sc">;</span>
+	  <a class="l_k" href="../functions/bless.html">bless</a> <span class="i">$cache</span> <span class="cm">=&gt;</span> <span class="i">$package</span><span class="sc">;</span>
+	<span class="s">}</span>
+
+<a name="EXISTS"></a>	sub <span class="m">EXISTS</span> <span class="s">{</span>
+	  <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$cache</span><span class="cm">,</span> <span class="i">$key</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span>
+	  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><a class="l_k" href="../functions/exists.html">exists</a> <span class="i">$cache</span>-&gt;{<span class="i">$key</span>} &amp;&amp; 
+              <span class="i">$cache</span>-&gt;{<span class="i">$key</span>}{<span class="w">EXPIRE_TIME</span>} &gt; <a class="l_k" href="../functions/time.html">time</a><span class="s">)</span> <span class="s">{</span>
+	    <a class="l_k" href="../functions/return.html">return</a> <span class="n">1</span>
+	  <span class="s">}</span> <a class="l_k" href="../functions/else.html">else</a> <span class="s">{</span>
+	    <a class="l_k" href="../functions/return.html">return</a> <span class="n">0</span><span class="sc">;</span>  <span class="c"># Do NOT return `undef&#39; here.</span>
+	  <span class="s">}</span>
+	<span class="s">}</span>
+
+<a name="FETCH"></a>	sub <span class="m">FETCH</span> <span class="s">{</span>
+	  <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$cache</span><span class="cm">,</span> <span class="i">$key</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span>
+	  <a class="l_k" href="../functions/return.html">return</a> <span class="i">$cache</span>-&gt;{<span class="i">$key</span>}{<span class="w">VALUE</span>}<span class="sc">;</span>
+	<span class="s">}</span>
+
+<a name="STORE"></a>	sub <span class="m">STORE</span> <span class="s">{</span>
+	  <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$cache</span><span class="cm">,</span> <span class="i">$key</span><span class="cm">,</span> <span class="i">$newvalue</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span>
+	  <span class="i">$cache</span>-&gt;{<span class="i">$key</span>}{<span class="w">VALUE</span>} = <span class="i">$newvalue</span><span class="sc">;</span>
+	  <span class="i">$cache</span>-&gt;{<span class="i">$key</span>}{<span class="w">EXPIRE_TIME</span>} = <a class="l_k" href="../functions/time.html">time</a> + <span class="n">10</span><span class="sc">;</span>
+	<span class="s">}</span>
+<a name="EOF"></a></pre>
+</body>
+</html>
+<p>To use this expiration policy, the user would say</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Memoize</span><span class="sc">;</span>
+        <a class="l_k" href="../functions/tie.html">tie</a> <a class="l_k" href="../functions/my.html">my</a> <span class="i">%cache10sec</span> <span class="cm">=&gt;</span> <span class="q">&#39;Memoize::TenSecondExpire&#39;</span><span class="sc">;</span>
+	<span class="w">memoize</span> <span class="q">&#39;function&#39;</span><span class="cm">,</span> <span class="w">SCALAR_CACHE</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="w">HASH</span> <span class="cm">=&gt;</span> \<span class="i">%cache10sec</span><span class="s">]</span><span class="sc">;</span></pre>
+</body>
+</html>
+<p>Memoize would then call <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">function</span></code>
+</body>
+</html>
+ whenever a cached value was
+entirely absent or was older than ten seconds.</p>
+<p>You should always support a <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:34 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">HASH</span></code>
+</body>
+</html>
+ argument to <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">TIEHASH</span></code>
+</body>
+</html>
+ that ties
+the underlying cache so that the user can specify that the cache is
+also persistent or that it has some other interesting semantics.  The
+example above demonstrates how to do this, as does <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">Memoize::Expire</span></code>
+</body>
+</html>
+.</p>
+<p>Another sample module, <a href="http://search.cpan.org/perldoc/Memoize::Saves">Memoize::Saves</a>, is available in a separate
+distribution on CPAN.  It implements a policy that allows you to
+specify that certain function values would always be looked up afresh.
+See the documentation for details.</p>
+<a name="ALTERNATIVES"></a><h1>ALTERNATIVES</h1>
+<p>Brent Powers has a <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">Memoize::ExpireLRU</span></code>
+</body>
+</html>
+ module that was designed to
+work with Memoize and provides expiration of least-recently-used data.
+The cache is held at a fixed number of entries, and when new data
+comes in, the least-recently used data is expired.  See
+<a href="http://search.cpan.org/search?mode=module&amp;query=ExpireLRU">http://search.cpan.org/search?mode=module&amp;query=ExpireLRU</a>.</p>
+<p>Joshua Chamas's Tie::Cache module may be useful as an expiration
+manager.  (If you try this, let me know how it works out.)</p>
+<p>If you develop any useful expiration managers that you think should be
+distributed with Memoize, please let me know.</p>
+<a name="CAVEATS"></a><h1>CAVEATS</h1>
+<p>This module is experimental, and may contain bugs.  Please report bugs
+to the address below.</p>
+<p>Number-of-uses is stored as a 16-bit unsigned integer, so can't exceed
+65535.</p>
+<p>Because of clock granularity, expiration times may occur up to one
+second sooner than you expect.  For example, suppose you store a value
+with a lifetime of ten seconds, and you store it at 12:00:00.998 on a
+certain day.  Memoize will look at the clock and see 12:00:00.  Then
+9.01 seconds later, at 12:00:10.008 you try to read it back.  Memoize
+will look at the clock and see 12:00:10 and conclude that the value
+has expired.  This will probably not occur if you have
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:54 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">Time::HiRes</span></code>
+</body>
+</html>
+ installed.</p>
+<a name="AUTHOR"></a><h1>AUTHOR</h1>
+<p>Mark-Jason Dominus (mjd-perl-memoize+@plover.com)</p>
+<p>Mike Cariaso provided valuable insight into the best way to solve this
+problem.</p>
+<a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<p>perl(1)</p>
+<p>The Memoize man page.</p>
+<p><a href="http://www.plover.com/~mjd/perl/Memoize/">http://www.plover.com/~mjd/perl/Memoize/</a>  (for news and updates)</p>
+<p>I maintain a mailing list on which I occasionally announce new
+versions of Memoize.  The list is for announcements only, not
+discussion.  To join, send an empty message to
+mjd-perl-memoize-request@Plover.com.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#INTERFACE">INTERFACE</a><li><a href="#ALTERNATIVES">ALTERNATIVES</a><li><a href="#CAVEATS">CAVEATS</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#SEE-ALSO">SEE ALSO</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+
+    <div class="footer container-fluid">
+      <footer class="row">
+        <ul class="col-xs-12 col-sm-4 list-unstyled">
+          <li><h4>Site info</h4></li>
+          <li>Site mantained by <a href="mailto:community@opusvl.com">Jon Allen (JJ)</a></li>
+          <li>Docs mantained by <a href="http://lists.cpan.org/showlist.cgi?name=perl5-porters">Perl 5 Porters</a></li>
+	  <li>Development supported by <a href="http://opusvl.com">OpusVL</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Manual</h4></li>
+	  <li><a href="../index-overview.html">Overview</a></li>
+	  <li><a href="../index-tutorials.html">Tutorials</a></li>
+	  <li><a href="../index-faq.html">FAQs</a></li>
+	  <li><a href="../index-history.html">Changes</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Reference</h4></li>
+	  <li><a href="../index-language.html">Language</a></li>
+	  <li><a href="../index-functions.html">Functions</a></li>
+	  <li><a href="../perlop.html">Operators</a></li>
+	  <li><a href="../perlvar.html">Variables</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Modules</h4></li>
+	  <li><a href="../index-modules-A.html">Modules</a></li>
+	  <li><a href="../index-pragmas.html">Pragmas</a></li>
+	  <li><a href="../index-utilities.html">Utilities</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Misc</h4></li>
+	  <li><a href="../index-licence.html">License</a></li>
+	  <li><a href="../index-internals.html">Internals</a></li>
+	  <li><a href="../index-platforms.html">Platforms</a></li>
+        </ul>
+        <div class="col-xs-12 footer-info">
+          <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../static/main.min.js"></script>
+    <!--
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTrackerJJ = _gat._getTracker("UA-1892152-2");
+    pageTrackerJJ._initData();
+    pageTrackerJJ._trackPageview();
+    var pageTrackerRobert = _gat._getTracker("UA-50555-3");
+    pageTrackerRobert._initData();
+    pageTrackerRobert._trackPageview();
+    </script>
+    -->
+  </body>
+</html>

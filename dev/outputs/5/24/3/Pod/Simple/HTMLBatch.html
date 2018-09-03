@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="icon" href="../../static/favicon.ico">
+
+    <title>Pod::Simple::HTMLBatch - perldoc.perl.org</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/main.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="../../static/logo_perl_doc.svg">
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Perl 5.22.1 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="typeahead"><input type="text" class="form-control" placeholder="Search"/></li>
+                <li class="dropdown-header">Perl 5.22</li>
+                <li><a href="#">Perl 5.22.1</a></li>
+                <li><a href="#">Perl 5.22.0</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Perl 5.21</li>
+                <li><a href="#">Perl 5.21.1</a></li>
+                <li><a href="#">Perl 5.21.0</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Manuals<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="../../index-overview.html">Overview</a></li>
+                <li><a href="../../index-tutorials.html">Tutorials</a></li>
+                <li><a href="../../index-faq.html">FAQs</a></li>
+                <li><a href="../../index-history.html">History / Changes</a></li>
+                <li><a href="../../index-licence.html">License</a></li>
+                <li><a href="../../index-language.html">Language</a></li>
+                <li><a href="../../index-functions.html">Functions</a></li>
+                <li><a href="../../perlop.html">Operators</a></li>
+                <li><a href="../../perlvar.html">Special Variables</a></li>
+                <li><a href="../../index-pragmas.html">Pragmas</a></li>
+                <li><a href="../../index-utilities.html">Utilities</a></li>
+                <li><a href="../../index-internals.html">Internals</a></li>
+                <li><a href="../../index-platforms.html">Platform Specific</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Functions<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="typeahead"><input type="text" class="form-control" placeholder="Search"/></li>
+                <li><a href="#">A-Z</a></li>
+                <li><a href="#">By Category</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Most used</li>
+                <li><a href="#">Split</a></li>
+                <li><a href="#">Open</a></li>
+                <li><a href="#">Substr</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Modules<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+		<li>
+		
+                
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+		
+                    <a href="../../index-modules-A.html">A</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-B.html">B</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-C.html">C</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-D.html">D</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-E.html">E</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../../index-modules-F.html">F</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-G.html">G</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-H.html">H</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-I.html">I</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-J.html">J</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../../index-modules-L.html">L</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-M.html">M</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-N.html">N</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-O.html">O</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-P.html">P</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../../index-modules-S.html">S</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-T.html">T</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-U.html">U</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-X.html">X</a>
+                    
+                
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="container-fluid container-internal">
+      <div class="row row-height">
+	<div class="col-sm-4 sidebar">
+          <h3>Section heading</h3>
+          <ul class="list-unstyled">
+            <li><h4>Sub heading</h4></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="The Perl 5 language interpreter">Item 1</a></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="A brief introduction and overview of Perl">Item 2</a></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="How to execute the Perl interpreter">Item 3</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-8 content">
+          <div class="content-container">
+	    
+	    <div id="page_name">
+	      <h1>Pod::Simple::HTMLBatch</h1>
+	    </div>
+	    
+	    <div id="perl_version">
+	      Perl 5 version  documentation
+	    </div>
+  
+	    <div id="breadcrumbs">
+	        
+    <a href="../../index.html">Home</a> &gt;
+    
+      
+        <a href="../../index-modules-P.html">Core modules (P)</a> &gt;
+      
+    
+    Pod::Simple::HTMLBatch
+  
+
+	    </div>
+  
+	    <h1>Pod::Simple::HTMLBatch</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><ul><li><a href="#FROM-THE-COMMAND-LINE">FROM THE COMMAND LINE</a></ul><li><a href="#MAIN-METHODS">MAIN METHODS</a><ul><li><a href="#ACCESSOR-METHODS">ACCESSOR METHODS</a></ul><li><a href="#NOTES-ON-CUSTOMIZATION">NOTES ON CUSTOMIZATION</a><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#SUPPORT">SUPPORT</a><li><a href="#COPYRIGHT-AND-DISCLAIMERS">COPYRIGHT AND DISCLAIMERS</a><li><a href="#AUTHOR">AUTHOR</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>Pod::Simple::HTMLBatch - convert several Pod files to several HTML files</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>  perl -MPod::Simple::HTMLBatch -e 'Pod::Simple::HTMLBatch::go' in out</li></ol></pre><a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>This module is used for running batch-conversions of a lot of HTML
+documents</p>
+<p>This class is NOT a subclass of Pod::Simple::HTML
+(nor of bad old Pod::Html) -- although it uses
+Pod::Simple::HTML for doing the conversion of each document.</p>
+<p>The normal use of this class is like so:</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">  <a class="l_k" href="../../functions/use.html">use</a> <span class="w">Pod::Simple::HTMLBatch</span><span class="sc">;</span>
+  <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$batchconv</span> = <span class="w">Pod::Simple::HTMLBatch</span><span class="w">-&gt;new</span><span class="sc">;</span>
+  <span class="i">$batchconv</span><span class="i">-&gt;some_option</span><span class="s">(</span> <span class="w">some_value</span> <span class="s">)</span><span class="sc">;</span>
+  <span class="i">$batchconv</span><span class="i">-&gt;some_other_option</span><span class="s">(</span> <span class="w">some_other_value</span> <span class="s">)</span><span class="sc">;</span>
+  <span class="i">$batchconv</span><span class="i">-&gt;batch_convert</span><span class="s">(</span> \<span class="i">@search_dirs</span><span class="cm">,</span> <span class="i">$output_dir</span> <span class="s">)</span><span class="sc">;</span></pre>
+</body>
+</html>
+<a name="FROM-THE-COMMAND-LINE"></a><h2>FROM THE COMMAND LINE</h2>
+<p>Note that this class also provides
+(but does not export) the function Pod::Simple::HTMLBatch::go.
+This is basically just a shortcut for <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">Pod::Simple::HTMLBatch</span><span class="w">-&gt;batch_convert</span><span class="s">(</span><span class="i">@ARGV</span><span class="s">)</span></code>
+</body>
+</html>
+.
+It's meant to be handy for calling from the command line.</p>
+<p>However, the shortcut requires that you specify exactly two command-line
+arguments, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">indirs</span></code>
+</body>
+</html>
+ and <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">outdir</span></code>
+</body>
+</html>
+.</p>
+<p>Example:</p>
+<pre class="verbatim"><ol><li>  % mkdir out_html</li><li>  % perl -MPod::Simple::HTMLBatch -e Pod::Simple::HTMLBatch::go @INC out_html</li><li>      (to convert the pod from Perl's @INC</li><li>       files under the directory ./out_html)</li></ol></pre><p>(Note that the command line there contains a literal atsign-I-N-C.  This
+is handled as a special case by batch_convert, in order to save you having
+to enter the odd-looking "" as the first command-line parameter when you
+mean "just use whatever's in @INC".)</p>
+<p>Example:</p>
+<pre class="verbatim"><ol><li>  % mkdir ../seekrut</li><li>  % chmod og-rx ../seekrut</li><li>  % perl -MPod::Simple::HTMLBatch -e Pod::Simple::HTMLBatch::go . ../seekrut</li><li>      (to convert the pod under the current dir into HTML</li><li>       files under the directory ./seekrut)</li></ol></pre><p>Example:</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">  <span class="i">% perl</span> -<span class="w">MPod::Simple::HTMLBatch</span> -e <span class="w">Pod::Simple::HTMLBatch::go</span> <span class="w">happydocs</span> .
+      <span class="s">(</span><span class="w">to</span> <span class="w">convert</span> <span class="w">all</span> <span class="w">pod</span> <span class="w">from</span> <span class="w">happydocs</span> <span class="w">into</span> <span class="w">the</span> <span class="w">current</span> <span class="w">directory</span><span class="s">)</span></pre>
+</body>
+</html>
+<a name="MAIN-METHODS"></a><h1>MAIN METHODS</h1>
+<ul>
+<li><a name="%24batchconv-%3d-Pod%3a%3aSimple%3a%3aHTMLBatch-%3enew%3b"></a><b>$batchconv = Pod::Simple::HTMLBatch-&gt;new;</b>
+<p>This TODO</p>
+</li>
+<li><a name="%24batchconv-%3ebatch_convert(-_indirs_%2c-_outdir_-)%3b"></a><b>$batchconv-&gt;batch_convert( <i>indirs</i>, <i>outdir</i> );</b>
+<p>this TODO</p>
+</li>
+<li><a name="%24batchconv-%3ebatch_convert(-undef----%2c-...)%3b"></a><b>$batchconv-&gt;batch_convert( undef    , ...);</b>
+</li>
+<li><a name="%24batchconv-%3ebatch_convert(-q%7b%40INC%7d%2c-...)%3b"></a><b>$batchconv-&gt;batch_convert( q{@INC}, ...);</b>
+<p>These two values for <i>indirs</i> specify that the normal Perl @INC</p>
+</li>
+<li><a name="%24batchconv-%3ebatch_convert(-%5c%40dirs-%2c-...)%3b"></a><b>$batchconv-&gt;batch_convert( \@dirs , ...);</b>
+<p>This specifies that the input directories are the items in
+the arrayref <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline">\<span class="i">@dirs</span></code>
+</body>
+</html>
+.</p>
+</li>
+<li><a name="%24batchconv-%3ebatch_convert(-%22somedir%22-%2c-...)%3b"></a><b>$batchconv-&gt;batch_convert( "somedir" , ...);</b>
+<p>This specifies that the director "somedir" is the input.
+(This can be an absolute or relative path, it doesn't matter.)</p>
+<p>A common value you might want would be just "." for the current
+directory:</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">     <span class="i">$batchconv</span><span class="i">-&gt;batch_convert</span><span class="s">(</span> <span class="q">&quot;.&quot;</span> <span class="cm">,</span> ...<span class="s">)</span><span class="sc">;</span></pre>
+</body>
+</html>
+</li>
+<li><a name="%24batchconv-%3ebatch_convert(-'somedir%3asomeother%3aalso'-%2c-...)%3b"></a><b>$batchconv-&gt;batch_convert( 'somedir:someother:also' , ...);</b>
+<p>This specifies that you want the dirs "somedir", "someother", and "also"
+scanned, just as if you'd passed the arrayref
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="s">[</span><span class="q">qw( somedir someother also)</span><span class="s">]</span></code>
+</body>
+</html>
+.  Note that a ":"-separator is normal
+under Unix, but Under MSWin, you'll need <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="q">&#39;somedir;someother;also&#39;</span></code>
+</body>
+</html>
+
+instead, since the pathsep on MSWin is ";" instead of ":".  (And
+<i>that</i> is because ":" often comes up in paths, like
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="q">&quot;c:/perl/lib&quot;</span></code>
+</body>
+</html>
+.)</p>
+<p>(Exactly what separator character should be used, is gotten from
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">$Config::Config</span>{<span class="q">&#39;path_sep&#39;</span>}</code>
+</body>
+</html>
+, via the <a href="../../Config.html">Config</a> module.)</p>
+</li>
+<li><a name="%24batchconv-%3ebatch_convert(-...-%2c-undef-)%3b"></a><b>$batchconv-&gt;batch_convert( ... , undef );</b>
+<p>This specifies that you want the HTML output to go into the current
+directory.</p>
+<p>(Note that a missing or undefined value means a different thing in
+the first slot than in the second.  That's so that <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">batch_convert</span><span class="s">(</span><span class="s">)</span></code>
+</body>
+</html>
+
+with no arguments (or undef arguments) means "go from @INC, into
+the current directory.)</p>
+</li>
+<li><a name="%24batchconv-%3ebatch_convert(-...-%2c-'somedir'-)%3b"></a><b>$batchconv-&gt;batch_convert( ... , 'somedir' );</b>
+<p>This specifies that you want the HTML output to go into the
+directory 'somedir'.
+(This can be an absolute or relative path, it doesn't matter.)</p>
+</li>
+</ul>
+<p>Note that you can also call <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">batch_convert</span></code>
+</body>
+</html>
+ as a class method,
+like so:</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">  <span class="w">Pod::Simple::HTMLBatch</span><span class="w">-&gt;batch_convert</span><span class="s">(</span> ... <span class="s">)</span><span class="sc">;</span></pre>
+</body>
+</html>
+<p>That is just short for this:</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">  <span class="w">Pod::Simple::HTMLBatch</span><span class="w">-&gt; new</span><span class="w">-&gt; batch_convert</span><span class="s">(</span>...<span class="s">)</span><span class="sc">;</span></pre>
+</body>
+</html>
+<p>That is, it runs a conversion with default options, for
+whatever inputdirs and output dir you specify.</p>
+<a name="ACCESSOR-METHODS"></a><h2>ACCESSOR METHODS</h2>
+<p>The following are all accessor methods -- that is, they don't do anything
+on their own, but just alter the contents of the conversion object,
+which comprises the options for this particular batch conversion.</p>
+<p>We show the "put" form of the accessors below (i.e., the syntax you use
+for setting the accessor to a specific value).  But you can also
+call each method with no parameters to get its current value.  For
+example, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">$self</span><span class="i">-&gt;contents_file</span><span class="s">(</span><span class="s">)</span></code>
+</body>
+</html>
+ returns the current value of
+the contents_file attribute.</p>
+<ul>
+<li><a name="%24batchconv-%3everbose(-_nonnegative_integer_-)%3b"></a><b>$batchconv-&gt;verbose( <i>nonnegative_integer</i> );</b>
+<p>This controls how verbose to be during batch conversion, as far as
+notes to STDOUT (or whatever is <code class="inline"><a class="l_k" href="../../functions/select.html">select</a></code>'d) about how the conversion
+is going.  If 0, no progress information is printed.
+If 1 (the default value), some progress information is printed.
+Higher values print more information.</p>
+</li>
+<li><a name="%24batchconv-%3eindex(-_true-or-false_-)%3b"></a><b>$batchconv-&gt;index( <i>true-or-false</i> );</b>
+<p>This controls whether or not each HTML page is liable to have a little
+table of contents at the top (which we call an "index" for historical
+reasons).  This is true by default.</p>
+</li>
+<li><a name="%24batchconv-%3econtents_file(-_filename_-)%3b"></a><b>$batchconv-&gt;contents_file( <i>filename</i> );</b>
+<p>If set, should be the name of a file (in the output directory)
+to write the HTML index to.  The default value is "index.html".
+If you set this to a false value, no contents file will be written.</p>
+</li>
+<li><a name="%24batchconv-%3econtents_page_start(-_HTML_string_-)%3b"></a><b>$batchconv-&gt;contents_page_start( <i>HTML_string</i> );</b>
+<p>This specifies what string should be put at the beginning of
+the contents page.
+The default is a string more or less like this:</p>
+<pre class="verbatim"><ol><li>  &lt;html&gt;</li><li>  &lt;head&gt;&lt;title&gt;Perl Documentation&lt;/title&gt;&lt;/head&gt;</li><li>  &lt;body class='contentspage'&gt;</li><li>  &lt;h1&gt;Perl Documentation&lt;/h1&gt;</li></ol></pre></li>
+<li><a name="%24batchconv-%3econtents_page_end(-_HTML_string_-)%3b"></a><b>$batchconv-&gt;contents_page_end( <i>HTML_string</i> );</b>
+<p>This specifies what string should be put at the end of the contents page.
+The default is a string more or less like this:</p>
+<pre class="verbatim"><ol><li>  &lt;p class='contentsfooty'&gt;Generated by</li><li>  Pod::Simple::HTMLBatch v3.01 under Perl v5.008</li><li>  &lt;br &gt;At Fri May 14 22:26:42 2004 GMT,</li><li>  which is Fri May 14 14:26:42 2004 local time.&lt;/p&gt;</li></ol></pre></li>
+<li><a name="%24batchconv-%3eadd_css(-%24url-)%3b"></a><b>$batchconv-&gt;add_css( $url );</b>
+<p>TODO</p>
+</li>
+<li><a name="%24batchconv-%3eadd_javascript(-%24url-)%3b"></a><b>$batchconv-&gt;add_javascript( $url );</b>
+<p>TODO</p>
+</li>
+<li><a name="%24batchconv-%3ecss_flurry(-_true-or-false_-)%3b"></a><b>$batchconv-&gt;css_flurry( <i>true-or-false</i> );</b>
+<p>If true (the default value), we autogenerate some CSS files in the
+output directory, and set our HTML files to use those.
+TODO: continue</p>
+</li>
+<li><a name="%24batchconv-%3ejavascript_flurry(-_true-or-false_-)%3b"></a><b>$batchconv-&gt;javascript_flurry( <i>true-or-false</i> );</b>
+<p>If true (the default value), we autogenerate a JavaScript in the
+output directory, and set our HTML files to use it.  Currently,
+the JavaScript is used only to get the browser to remember what
+stylesheet it prefers.
+TODO: continue</p>
+</li>
+<li><a name="%24batchconv-%3eno_contents_links(-_true-or-false_-)%3b"></a><b>$batchconv-&gt;no_contents_links( <i>true-or-false</i> );</b>
+<p>TODO</p>
+</li>
+<li><a name="%24batchconv-%3ehtml_render_class(-_classname_-)%3b"></a><b>$batchconv-&gt;html_render_class( <i>classname</i> );</b>
+<p>This sets what class is used for rendering the files.
+The default is "Pod::Simple::HTML".  If you set it to something else,
+it should probably be a subclass of Pod::Simple::HTML, and you should
+<code class="inline"><a class="l_k" href="../../functions/require.html">require</a></code> or <code class="inline"><a class="l_k" href="../../functions/use.html">use</a></code> that class so that's it's loaded before
+Pod::Simple::HTMLBatch tries loading it.</p>
+</li>
+<li><a name="%24batchconv-%3esearch_class(-_classname_-)%3b"></a><b>$batchconv-&gt;search_class( <i>classname</i> );</b>
+<p>This sets what class is used for searching for the files.
+The default is "Pod::Simple::Search".  If you set it to something else,
+it should probably be a subclass of Pod::Simple::Search, and you should
+<code class="inline"><a class="l_k" href="../../functions/require.html">require</a></code> or <code class="inline"><a class="l_k" href="../../functions/use.html">use</a></code> that class so that's it's loaded before
+Pod::Simple::HTMLBatch tries loading it.</p>
+</li>
+</ul>
+<a name="NOTES-ON-CUSTOMIZATION"></a><h1>NOTES ON CUSTOMIZATION</h1>
+<p>TODO</p>
+<pre class="verbatim"><ol><li>  call add_css($someurl) to add stylesheet as alternate</li><li>  call add_css($someurl,1) to add as primary stylesheet</li><li></li><li>  call add_javascript</li><li></li><li>  subclass Pod::Simple::HTML and set $batchconv-&gt;html_render_class to</li><li>    that classname</li><li>  and maybe override</li><li>    $page-&gt;batch_mode_page_object_init($self, $module, $infile, $outfile, $depth)</li><li>  or maybe override</li><li>    $batchconv-&gt;batch_mode_page_object_init($page, $module, $infile, $outfile, $depth)</li><li>  subclass Pod::Simple::Search and set $batchconv-&gt;search_class to</li><li>    that classname</li></ol></pre><a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<p><a href="../../Pod/Simple.html">Pod::Simple</a>, <a href="../../Pod/Simple/HTMLBatch.html">Pod::Simple::HTMLBatch</a>, <a href="../../perlpod.html">perlpod</a>, <a href="../../perlpodspec.html">perlpodspec</a></p>
+<a name="SUPPORT"></a><h1>SUPPORT</h1>
+<p>Questions or discussion about POD and Pod::Simple should be sent to the
+pod-people@perl.org mail list. Send an empty email to
+pod-people-subscribe@perl.org to subscribe.</p>
+<p>This module is managed in an open GitHub repository,
+<a href="https://github.com/perl-pod/pod-simple/">https://github.com/perl-pod/pod-simple/</a>. Feel free to fork and contribute, or
+to clone <a href="git://github.com/perl-pod/pod-simple.git">git://github.com/perl-pod/pod-simple.git</a> and send patches!</p>
+<p>Patches against Pod::Simple are welcome. Please send bug reports to
+&lt;bug-pod-simple@rt.cpan.org&gt;.</p>
+<a name="COPYRIGHT-AND-DISCLAIMERS"></a><h1>COPYRIGHT AND DISCLAIMERS</h1>
+<p>Copyright (c) 2002 Sean M. Burke.</p>
+<p>This library is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.</p>
+<p>This program is distributed in the hope that it will be useful, but
+without any warranty; without even the implied warranty of
+merchantability or fitness for a particular purpose.</p>
+<a name="AUTHOR"></a><h1>AUTHOR</h1>
+<p>Pod::Simple was created by Sean M. Burke &lt;sburke@cpan.org&gt;.
+But don't bother him, he's retired.</p>
+<p>Pod::Simple is maintained by:</p>
+<ul>
+<li><a name="*-Allison-Randal-allison%40perl.org"></a><b>Allison Randal <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">allison</span><span class="i">@perl</span>.<span class="w">org</span></code>
+</body>
+</html>
+</b>
+</li>
+<li><a name="*-Hans-Dieter-Pearcey-hdp%40cpan.org"></a><b>Hans Dieter Pearcey <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">hdp</span><span class="i">@cpan</span>.<span class="w">org</span></code>
+</body>
+</html>
+</b>
+</li>
+<li><a name="*-David-E.-Wheeler-dwheeler%40cpan.org"></a><b>David E. Wheeler <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">dwheeler</span><span class="i">@cpan</span>.<span class="w">org</span></code>
+</body>
+</html>
+</b>
+</li>
+</ul>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><ul><li><a href="#FROM-THE-COMMAND-LINE">FROM THE COMMAND LINE</a></ul><li><a href="#MAIN-METHODS">MAIN METHODS</a><ul><li><a href="#ACCESSOR-METHODS">ACCESSOR METHODS</a></ul><li><a href="#NOTES-ON-CUSTOMIZATION">NOTES ON CUSTOMIZATION</a><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#SUPPORT">SUPPORT</a><li><a href="#COPYRIGHT-AND-DISCLAIMERS">COPYRIGHT AND DISCLAIMERS</a><li><a href="#AUTHOR">AUTHOR</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+
+    <div class="footer container-fluid">
+      <footer class="row">
+        <ul class="col-xs-12 col-sm-4 list-unstyled">
+          <li><h4>Site info</h4></li>
+          <li>Site mantained by <a href="mailto:community@opusvl.com">Jon Allen (JJ)</a></li>
+          <li>Docs mantained by <a href="http://lists.cpan.org/showlist.cgi?name=perl5-porters">Perl 5 Porters</a></li>
+	  <li>Development supported by <a href="http://opusvl.com">OpusVL</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Manual</h4></li>
+	  <li><a href="../../index-overview.html">Overview</a></li>
+	  <li><a href="../../index-tutorials.html">Tutorials</a></li>
+	  <li><a href="../../index-faq.html">FAQs</a></li>
+	  <li><a href="../../index-history.html">Changes</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Reference</h4></li>
+	  <li><a href="../../index-language.html">Language</a></li>
+	  <li><a href="../../index-functions.html">Functions</a></li>
+	  <li><a href="../../perlop.html">Operators</a></li>
+	  <li><a href="../../perlvar.html">Variables</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Modules</h4></li>
+	  <li><a href="../../index-modules-A.html">Modules</a></li>
+	  <li><a href="../../index-pragmas.html">Pragmas</a></li>
+	  <li><a href="../../index-utilities.html">Utilities</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Misc</h4></li>
+	  <li><a href="../../index-licence.html">License</a></li>
+	  <li><a href="../../index-internals.html">Internals</a></li>
+	  <li><a href="../../index-platforms.html">Platforms</a></li>
+        </ul>
+        <div class="col-xs-12 footer-info">
+          <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../../static/main.min.js"></script>
+    <!--
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTrackerJJ = _gat._getTracker("UA-1892152-2");
+    pageTrackerJJ._initData();
+    pageTrackerJJ._trackPageview();
+    var pageTrackerRobert = _gat._getTracker("UA-50555-3");
+    pageTrackerRobert._initData();
+    pageTrackerRobert._trackPageview();
+    </script>
+    -->
+  </body>
+</html>

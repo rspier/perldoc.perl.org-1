@@ -1,0 +1,5630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="icon" href="../static/favicon.ico">
+
+    <title>Pod::Checker - perldoc.perl.org</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/main.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="../static/logo_perl_doc.svg">
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Perl 5.22.1 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="typeahead"><input type="text" class="form-control" placeholder="Search"/></li>
+                <li class="dropdown-header">Perl 5.22</li>
+                <li><a href="#">Perl 5.22.1</a></li>
+                <li><a href="#">Perl 5.22.0</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Perl 5.21</li>
+                <li><a href="#">Perl 5.21.1</a></li>
+                <li><a href="#">Perl 5.21.0</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Manuals<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="../index-overview.html">Overview</a></li>
+                <li><a href="../index-tutorials.html">Tutorials</a></li>
+                <li><a href="../index-faq.html">FAQs</a></li>
+                <li><a href="../index-history.html">History / Changes</a></li>
+                <li><a href="../index-licence.html">License</a></li>
+                <li><a href="../index-language.html">Language</a></li>
+                <li><a href="../index-functions.html">Functions</a></li>
+                <li><a href="../perlop.html">Operators</a></li>
+                <li><a href="../perlvar.html">Special Variables</a></li>
+                <li><a href="../index-pragmas.html">Pragmas</a></li>
+                <li><a href="../index-utilities.html">Utilities</a></li>
+                <li><a href="../index-internals.html">Internals</a></li>
+                <li><a href="../index-platforms.html">Platform Specific</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Functions<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="typeahead"><input type="text" class="form-control" placeholder="Search"/></li>
+                <li><a href="#">A-Z</a></li>
+                <li><a href="#">By Category</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Most used</li>
+                <li><a href="#">Split</a></li>
+                <li><a href="#">Open</a></li>
+                <li><a href="#">Substr</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Modules<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+		<li>
+		
+                
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+		
+                    <a href="../index-modules-A.html">A</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-B.html">B</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-C.html">C</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-D.html">D</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-E.html">E</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../index-modules-F.html">F</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-G.html">G</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-H.html">H</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-I.html">I</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-J.html">J</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../index-modules-L.html">L</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-M.html">M</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-N.html">N</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-O.html">O</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-P.html">P</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../index-modules-S.html">S</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-T.html">T</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-U.html">U</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../index-modules-X.html">X</a>
+                    
+                
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="container-fluid container-internal">
+      <div class="row row-height">
+	<div class="col-sm-4 sidebar">
+          <h3>Section heading</h3>
+          <ul class="list-unstyled">
+            <li><h4>Sub heading</h4></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="The Perl 5 language interpreter">Item 1</a></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="A brief introduction and overview of Perl">Item 2</a></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="How to execute the Perl interpreter">Item 3</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-8 content">
+          <div class="content-container">
+	    
+	    <div id="page_name">
+	      <h1>Pod::Checker</h1>
+	    </div>
+	    
+	    <div id="perl_version">
+	      Perl 5 version  documentation
+	    </div>
+  
+	    <div id="breadcrumbs">
+	        
+    <a href="../index.html">Home</a> &gt;
+    
+      
+        <a href="../index-modules-P.html">Core modules (P)</a> &gt;
+      
+    
+    Pod::Checker
+  
+
+	    </div>
+  
+	    <h1>Pod::Checker</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#OPTIONS%2fARGUMENTS">OPTIONS/ARGUMENTS</a><ul><li><a href="#podchecker()">podchecker()</a></ul><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#DIAGNOSTICS">DIAGNOSTICS</a><ul><li><a href="#Errors">Errors</a><li><a href="#Warnings">Warnings</a><li><a href="#Hyperlinks">Hyperlinks</a></ul><li><a href="#RETURN-VALUE">RETURN VALUE</a><li><a href="#EXAMPLES">EXAMPLES</a><li><a href="#INTERFACE">INTERFACE</a><li><a href="#AUTHOR">AUTHOR</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>Pod::Checker, podchecker() - check pod documents for syntax errors</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:37 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Pod::Checker</span><span class="sc">;</span>
+
+  <span class="i">$num_errors</span> = <span class="i">podchecker</span><span class="s">(</span><span class="i">$filepath</span><span class="cm">,</span> <span class="i">$outputpath</span><span class="cm">,</span> <span class="i">%options</span><span class="s">)</span><span class="sc">;</span>
+
+  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$checker</span> = <span class="w">new</span> <span class="w">Pod::Checker</span> <span class="i">%options</span><span class="sc">;</span>
+  <span class="i">$checker</span><span class="i">-&gt;parse_from_file</span><span class="s">(</span><span class="i">$filepath</span><span class="cm">,</span> \<span class="i">*STDERR</span><span class="s">)</span><span class="sc">;</span></pre>
+</body>
+</html>
+<a name="OPTIONS%2fARGUMENTS"></a><h1>OPTIONS/ARGUMENTS</h1>
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">$filepath</span></code>
+</body>
+</html>
+ is the input POD to read and <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">$outputpath</span></code>
+</body>
+</html>
+ is
+where to write POD syntax error messages. Either argument may be a scalar
+indicating a file-path, or else a reference to an open filehandle.
+If unspecified, the input-file it defaults to <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:40 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline">\<span class="i">*STDIN</span></code>
+</body>
+</html>
+, and
+the output-file defaults to <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:49 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline">\<span class="i">*STDERR</span></code>
+</body>
+</html>
+.</p>
+<a name="podchecker()"></a><h2>podchecker()</h2>
+<p>This function can take a hash of options:</p>
+<ul>
+<li><a name="*-warnings*-%3d%3e-_val_"></a><b><b>-warnings</b> =&gt; <i>val</i></b>
+<p>Turn warnings on/off. <i>val</i> is usually 1 for on, but higher values
+trigger additional warnings. See <a href="#Warnings">Warnings</a>.</p>
+</li>
+</ul>
+<a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p><b>podchecker</b> will perform syntax checking of Perl5 POD format documentation.</p>
+<p>Curious/ambitious users are welcome to propose additional features they wish
+to see in <b>Pod::Checker</b> and <b>podchecker</b> and verify that the checks are
+consistent with <a href="../perlpod.html">perlpod</a>.</p>
+<p>The following checks are currently performed:</p>
+<ul>
+<li>
+<p>Unknown '=xxxx' commands, unknown 'X&lt;...&gt;' interior-sequences,
+and unterminated interior sequences.</p>
+</li>
+<li>
+<p>Check for proper balancing of <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=begin</span></code>
+</body>
+</html>
+ and <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=end</span></code>
+</body>
+</html>
+. The contents of such
+a block are generally ignored, i.e. no syntax checks are performed.</p>
+</li>
+<li>
+<p>Check for proper nesting and balancing of <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=over</span></code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=item</span></code>
+</body>
+</html>
+ and <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=back</span></code>
+</body>
+</html>
+.</p>
+</li>
+<li>
+<p>Check for same nested interior-sequences (e.g.
+<code class="inline">L&lt;...L&lt;...&gt;...&gt;</code>).</p>
+</li>
+<li>
+<p>Check for malformed or non-existing entities <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">E</span><span class="q">&lt;...&gt;</span></code>
+</body>
+</html>
+.</p>
+</li>
+<li>
+<p>Check for correct syntax of hyperlinks <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">L</span><span class="q">&lt;...&gt;</span></code>
+</body>
+</html>
+. See <a href="../perlpod.html">perlpod</a>
+for details.</p>
+</li>
+<li>
+<p>Check for unresolved document-internal links. This check may also reveal
+misspelled links that seem to be internal links but should be links
+to something else.</p>
+</li>
+</ul>
+<a name="DIAGNOSTICS"></a><h1>DIAGNOSTICS</h1>
+<a name="Errors"></a><h2>Errors</h2>
+<ul>
+<li><a name="*-empty-%3dheadn"></a><b>empty =headn</b>
+<p>A heading (<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head1</span></code>
+</body>
+</html>
+ or <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head2</span></code>
+</body>
+</html>
+) without any text? That ain't no
+heading!</p>
+</li>
+<li><a name="*-%3dover-on-line-_N_-without-closing-%3dback"></a><b>=over on line <i>N</i> without closing =back</b>
+<p>The <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=over</span></code>
+</body>
+</html>
+ command does not have a corresponding <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=back</span></code>
+</body>
+</html>
+ before the
+next heading (<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head1</span></code>
+</body>
+</html>
+ or <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head2</span></code>
+</body>
+</html>
+) or the end of the file.</p>
+</li>
+<li><a name="*-%3ditem-without-previous-%3dover"></a><b>=item without previous =over</b>
+</li>
+<li><a name="*-%3dback-without-previous-%3dover"></a><b>=back without previous =over</b>
+<p>An <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=item</span></code>
+</body>
+</html>
+ or <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=back</span></code>
+</body>
+</html>
+ command has been found outside a
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=over</span></code>
+</body>
+</html>
+/<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=back</span></code>
+</body>
+</html>
+ block.</p>
+</li>
+<li><a name="*-No-argument-for-%3dbegin"></a><b>No argument for =begin</b>
+<p>A <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=begin</span></code>
+</body>
+</html>
+ command was found that is not followed by the formatter
+specification.</p>
+</li>
+<li><a name="*-%3dend-without-%3dbegin"></a><b>=end without =begin</b>
+<p>A standalone <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=end</span></code>
+</body>
+</html>
+ command was found.</p>
+</li>
+<li><a name="*-Nested-%3dbegin's"></a><b>Nested =begin's</b>
+<p>There were at least two consecutive <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=begin</span></code>
+</body>
+</html>
+ commands without
+the corresponding <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=end</span></code>
+</body>
+</html>
+. Only one <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=begin</span></code>
+</body>
+</html>
+ may be active at
+a time.</p>
+</li>
+<li><a name="*-%3dfor-without-formatter-specification"></a><b>=for without formatter specification</b>
+<p>There is no specification of the formatter after the <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=for</span></code>
+</body>
+</html>
+ command.</p>
+</li>
+<li><a name="*-Apparent-command-%3dfoo-not-preceded-by-blank-line"></a><b>Apparent command =foo not preceded by blank line</b>
+<p>A command which has ended up in the middle of a paragraph or other command,
+such as</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">  =<span class="w">item</span> <span class="w">one</span>
+  =<span class="w">item</span> <span class="w">two</span> &lt;-- <span class="w">bad</span></pre>
+</body>
+</html>
+</li>
+<li><a name="*-unresolved-internal-link-_NAME_"></a><b>unresolved internal link <i>NAME</i></b>
+<p>The given link to <i>NAME</i> does not have a matching node in the current
+POD. This also happened when a single word node name is not enclosed in
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="q">&quot;&quot;</span></code>
+</body>
+</html>
+.</p>
+</li>
+<li><a name="*-Unknown-command-%22_CMD_%22"></a><b>Unknown command "<i>CMD</i>"</b>
+<p>An invalid POD command has been found. Valid are <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head1</span></code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head2</span></code>
+</body>
+</html>
+,
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head3</span></code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head4</span></code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=over</span></code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=item</span></code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=back</span></code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=begin</span></code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=end</span></code>
+</body>
+</html>
+,
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=for</span></code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=pod</span></code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=cut</span></code>
+</body>
+</html>
+</p>
+</li>
+<li><a name="*-Unknown-interior-sequence-%22_SEQ_%22"></a><b>Unknown interior-sequence "<i>SEQ</i>"</b>
+<p>An invalid markup command has been encountered. Valid are:
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">B</span>&lt;&gt;</code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">C</span>&lt;&gt;</code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">E</span>&lt;&gt;</code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">F</span>&lt;&gt;</code>
+</body>
+</html>
+,
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">I</span>&lt;&gt;</code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">L</span>&lt;&gt;</code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">S</span>&lt;&gt;</code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">X</span>&lt;&gt;</code>
+</body>
+</html>
+,
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">Z</span>&lt;&gt;</code>
+</body>
+</html>
+</p>
+</li>
+<li><a name="*-nested-commands-_CMD_%3c..._CMD_%3c...%3e...%3e"></a><b>nested commands <i>CMD</i>&lt;...<i>CMD</i>&lt;...&gt;...&gt;</b>
+<p>Two nested identical markup commands have been found. Generally this
+does not make sense.</p>
+</li>
+<li><a name="*-garbled-entity-_STRING_"></a><b>garbled entity <i>STRING</i></b>
+<p>The <i>STRING</i> found cannot be interpreted as a character entity.</p>
+</li>
+<li><a name="*-Entity-number-out-of-range"></a><b>Entity number out of range</b>
+<p>An entity specified by number (dec, hex, oct) is out of range (1-255).</p>
+</li>
+<li><a name="*-malformed-link-L%3c%3e"></a><b>malformed link L&lt;&gt;</b>
+<p>The link found cannot be parsed because it does not conform to the
+syntax described in <a href="../perlpod.html">perlpod</a>.</p>
+</li>
+<li><a name="*-nonempty-Z%3c%3e"></a><b>nonempty Z&lt;&gt;</b>
+<p>The <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">Z</span>&lt;&gt;</code>
+</body>
+</html>
+ sequence is supposed to be empty.</p>
+</li>
+<li><a name="*-empty-X%3c%3e"></a><b>empty X&lt;&gt;</b>
+<p>The index entry specified contains nothing but whitespace.</p>
+</li>
+<li><a name="*-Spurious-text-after-%3dpod-%2f-%3dcut"></a><b>Spurious text after =pod / =cut</b>
+<p>The commands <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=pod</span></code>
+</body>
+</html>
+ and <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=cut</span></code>
+</body>
+</html>
+ do not take any arguments.</p>
+</li>
+<li><a name="*-Spurious-%3dcut-command"></a><b>Spurious =cut command</b>
+<p>A <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=cut</span></code>
+</body>
+</html>
+ command was found without a preceding POD paragraph.</p>
+</li>
+<li><a name="*-Spurious-%3dpod-command"></a><b>Spurious =pod command</b>
+<p>A <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=pod</span></code>
+</body>
+</html>
+ command was found after a preceding POD paragraph.</p>
+</li>
+<li><a name="*-Spurious-character(s)-after-%3dback"></a><b>Spurious character(s) after =back</b>
+<p>The <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=back</span></code>
+</body>
+</html>
+ command does not take any arguments.</p>
+</li>
+</ul>
+<a name="Warnings"></a><h2>Warnings</h2>
+<p>These may not necessarily cause trouble, but indicate mediocre style.</p>
+<ul>
+<li><a name="*-multiple-occurrence-of-link-target-_name_"></a><b>multiple occurrence of link target <i>name</i></b>
+<p>The POD file has some <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=item</span></code>
+</body>
+</html>
+ and/or <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head</span></code>
+</body>
+</html>
+ commands that have
+the same text. Potential hyperlinks to such a text cannot be unique then.
+This warning is printed only with warning level greater than one.</p>
+</li>
+<li><a name="*-line-containing-nothing-but-whitespace-in-paragraph"></a><b>line containing nothing but whitespace in paragraph</b>
+<p>There is some whitespace on a seemingly empty line. POD is very sensitive
+to such things, so this is flagged. <b>vi</b> users switch on the <b>list</b>
+option to avoid this problem.</p>
+</li>
+<li><a name="*-previous-%3ditem-has-no-contents"></a><b>previous =item has no contents</b>
+<p>There is a list <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=item</span></code>
+</body>
+</html>
+ right above the flagged line that has no
+text contents. You probably want to delete empty items.</p>
+</li>
+<li><a name="*-preceding-non-item-paragraph(s)"></a><b>preceding non-item paragraph(s)</b>
+<p>A list introduced by <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=over</span></code>
+</body>
+</html>
+ starts with a text or verbatim paragraph,
+but continues with <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=item</span></code>
+</body>
+</html>
+s. Move the non-item paragraph out of the
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=over</span></code>
+</body>
+</html>
+/<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=back</span></code>
+</body>
+</html>
+ block.</p>
+</li>
+<li><a name="*-%3ditem-type-mismatch-(_one_-vs.-_two_)"></a><b>=item type mismatch (<i>one</i> vs. <i>two</i>)</b>
+<p>A list started with e.g. a bullet-like <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=item</span></code>
+</body>
+</html>
+ and continued with a
+numbered one. This is obviously inconsistent. For most translators the
+type of the <i>first</i> <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=item</span></code>
+</body>
+</html>
+ determines the type of the list.</p>
+</li>
+<li><a name="*-_N_-unescaped-%3c%3e-in-paragraph"></a><b><i>N</i> unescaped <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:48 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline">&lt;&gt;</code>
+</body>
+</html>
+ in paragraph</b>
+<p>Angle brackets not written as <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="q">&lt;lt&gt;</span></code>
+</body>
+</html>
+ and <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="q">&lt;gt&gt;</span></code>
+</body>
+</html>
+
+can potentially cause errors as they could be misinterpreted as
+markup commands. This is only printed when the -warnings level is
+greater than 1.</p>
+</li>
+<li><a name="*-Unknown-entity"></a><b>Unknown entity</b>
+<p>A character entity was found that does not belong to the standard
+ISO set or the POD specials <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">verbar</span></code>
+</body>
+</html>
+ and <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">sol</span></code>
+</body>
+</html>
+.</p>
+</li>
+<li><a name="*-No-items-in-%3dover"></a><b>No items in =over</b>
+<p>The list opened with <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=over</span></code>
+</body>
+</html>
+ does not contain any items.</p>
+</li>
+<li><a name="*-No-argument-for-%3ditem"></a><b>No argument for =item</b>
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=item</span></code>
+</body>
+</html>
+ without any parameters is deprecated. It should either be followed
+by <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:44 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">*</span></code>
+</body>
+</html>
+ to indicate an unordered list, by a number (optionally followed
+by a dot) to indicate an ordered (numbered) list or simple text for a
+definition list.</p>
+</li>
+<li><a name="*-empty-section-in-previous-paragraph"></a><b>empty section in previous paragraph</b>
+<p>The previous section (introduced by a <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head</span></code>
+</body>
+</html>
+ command) does not contain
+any text. This usually indicates that something is missing. Note: A
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head1</span></code>
+</body>
+</html>
+ followed immediately by <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head2</span></code>
+</body>
+</html>
+ does not trigger this warning.</p>
+</li>
+<li><a name="*-Verbatim-paragraph-in-NAME-section"></a><b>Verbatim paragraph in NAME section</b>
+<p>The NAME section (<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head1 NAME</span></code>
+</body>
+</html>
+) should consist of a single paragraph
+with the script/module name, followed by a dash `-' and a very short
+description of what the thing is good for.</p>
+</li>
+<li><a name="*-%3dhead_n_-without-preceding-higher-level"></a><b>=head<i>n</i> without preceding higher level</b>
+<p>For example if there is a <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head2</span></code>
+</body>
+</html>
+ in the POD file prior to a
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:56 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head1</span></code>
+</body>
+</html>
+.</p>
+</li>
+</ul>
+<a name="Hyperlinks"></a><h2>Hyperlinks</h2>
+<p>There are some warnings with respect to malformed hyperlinks:</p>
+<ul>
+<li><a name="*-ignoring-leading%2ftrailing-whitespace-in-link"></a><b>ignoring leading/trailing whitespace in link</b>
+<p>There is whitespace at the beginning or the end of the contents of
+L&lt;...&gt;.</p>
+</li>
+<li><a name="*-(section)-in-'%24page'-deprecated"></a><b>(section) in '$page' deprecated</b>
+<p>There is a section detected in the page name of L&lt;...&gt;, e.g.
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">L</span><span class="q">&lt;passwd(2)&gt;</span></code>
+</body>
+</html>
+. POD hyperlinks may point to POD documents only.
+Please write <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">C</span><span class="q">&lt;passwd(2)&gt;</span></code>
+</body>
+</html>
+ instead. Some formatters are able
+to expand this to appropriate code. For links to (builtin) functions,
+please say <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">L</span><span class="q">&lt;perlfunc/mkdir&gt;</span></code>
+</body>
+</html>
+, without ().</p>
+</li>
+<li><a name="*-alternative-text%2fnode-'%25s'-contains-non-escaped-%7c-or-%2f"></a><b>alternative text/node '%s' contains non-escaped | or /</b>
+<p>The characters <code class="inline">|</code> and <code class="inline">/</code> are special in the L&lt;...&gt; context.
+Although the hyperlink parser does its best to determine which "/" is
+text and which is a delimiter in case of doubt, one ought to escape
+these literal characters like this:</p>
+<pre class="verbatim"><ol><li>  /     E&lt;sol&gt;</li><li>  |     E&lt;verbar&gt;</li></ol></pre></li>
+</ul>
+<a name="RETURN-VALUE"></a><h1>RETURN VALUE</h1>
+<p><b>podchecker</b> returns the number of POD syntax errors found or -1 if
+there were no POD commands at all found in the file.</p>
+<a name="EXAMPLES"></a><h1>EXAMPLES</h1>
+<p>See <a href="#SYNOPSIS">SYNOPSIS</a></p>
+<a name="INTERFACE"></a><h1>INTERFACE</h1>
+<p>While checking, this module collects document properties, e.g. the nodes
+for hyperlinks (<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=headX</span></code>
+</body>
+</html>
+, <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=item</span></code>
+</body>
+</html>
+) and index entries (<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">X</span>&lt;&gt;</code>
+</body>
+</html>
+).
+POD translators can use this feature to syntax-check and get the nodes in
+a first pass before actually starting to convert. This is expensive in terms
+of execution time, but allows for very robust conversions.</p>
+<p>Since PodParser-1.24 the <b>Pod::Checker</b> module uses only the <b>poderror</b>
+method to print errors and warnings. The summary output (e.g.
+"Pod syntax OK") has been dropped from the module and has been included in
+<b>podchecker</b> (the script). This allows users of <b>Pod::Checker</b> to
+control completely the output behavior. Users of <b>podchecker</b> (the script)
+get the well-known behavior.</p>
+<ul>
+<li><a name="Pod%3a%3aChecker-%3enew(-%25options-)"></a><b><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">Pod::Checker</span><span class="w">-&gt;new</span><span class="s">(</span> <span class="i">%options</span> <span class="s">)</span></code>
+</body>
+</html>
+</b>
+<p>Return a reference to a new Pod::Checker object that inherits from
+Pod::Parser and is used for calling the required methods later. The
+following options are recognized:</p>
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline">-<span class="w">warnings</span> <span class="cm">=&gt;</span> <span class="w">num</span></code>
+</body>
+</html>
+
+  Print warnings if <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">num</span></code>
+</body>
+</html>
+ is true. The higher the value of <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">num</span></code>
+</body>
+</html>
+,
+the more warnings are printed. Currently there are only levels 1 and 2.</p>
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline">-<span class="w">quiet</span> <span class="cm">=&gt;</span> <span class="w">num</span></code>
+</body>
+</html>
+
+  If <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">num</span></code>
+</body>
+</html>
+ is true, do not print any errors/warnings. This is useful
+when Pod::Checker is used to munge POD code into plain text from within
+POD formatters.</p>
+</li>
+<li><a name="%24checker-%3epoderror(-%40args-)"></a><b><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">$checker</span><span class="i">-&gt;poderror</span><span class="s">(</span> <span class="i">@args</span> <span class="s">)</span></code>
+</body>
+</html>
+</b>
+</li>
+<li><a name="%24checker-%3epoderror(-%7b%25opts%7d%2c-%40args-)"></a><b><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">$checker</span><span class="i">-&gt;poderror</span><span class="s">(</span> <span class="s">{</span><span class="i">%opts</span><span class="s">}</span><span class="cm">,</span> <span class="i">@args</span> <span class="s">)</span></code>
+</body>
+</html>
+</b>
+<p>Internal method for printing errors and warnings. If no options are
+given, simply prints "@_". The following options are recognized and used
+to form the output:</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">  -<span class="w">msg</span></pre>
+</body>
+</html>
+<p>A message to print prior to <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">@args</span></code>
+</body>
+</html>
+.</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">  -<span class="w">line</span></pre>
+</body>
+</html>
+<p>The line number the error occurred in.</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">  -<span class="w">file</span></pre>
+</body>
+</html>
+<p>The file (name) the error occurred in.</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">  -<span class="w">severity</span></pre>
+</body>
+</html>
+<p>The error level, should be 'WARNING' or 'ERROR'.</p>
+</li>
+<li><a name="%24checker-%3enum_errors()"></a><b><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">$checker</span><span class="i">-&gt;num_errors</span><span class="s">(</span><span class="s">)</span></code>
+</body>
+</html>
+</b>
+<p>Set (if argument specified) and retrieve the number of errors found.</p>
+</li>
+<li><a name="%24checker-%3enum_warnings()"></a><b><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">$checker</span><span class="i">-&gt;num_warnings</span><span class="s">(</span><span class="s">)</span></code>
+</body>
+</html>
+</b>
+<p>Set (if argument specified) and retrieve the number of warnings found.</p>
+</li>
+<li><a name="%24checker-%3ename()"></a><b><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">$checker</span><span class="i">-&gt;name</span><span class="s">(</span><span class="s">)</span></code>
+</body>
+</html>
+</b>
+<p>Set (if argument specified) and retrieve the canonical name of POD as
+found in the <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=head1 NAME</span></code>
+</body>
+</html>
+ section.</p>
+</li>
+<li><a name="%24checker-%3enode()"></a><b><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">$checker</span><span class="i">-&gt;node</span><span class="s">(</span><span class="s">)</span></code>
+</body>
+</html>
+</b>
+<p>Add (if argument specified) and retrieve the nodes (as defined by <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=headX</span></code>
+</body>
+</html>
+
+and <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="pd">=item</span></code>
+</body>
+</html>
+) of the current POD. The nodes are returned in the order of
+their occurrence. They consist of plain text, each piece of whitespace is
+collapsed to a single blank.</p>
+</li>
+<li><a name="%24checker-%3eidx()"></a><b><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">$checker</span><span class="i">-&gt;idx</span><span class="s">(</span><span class="s">)</span></code>
+</body>
+</html>
+</b>
+<p>Add (if argument specified) and retrieve the index entries (as defined by
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:57 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">X</span>&lt;&gt;</code>
+</body>
+</html>
+) of the current POD. They consist of plain text, each piece
+of whitespace is collapsed to a single blank.</p>
+</li>
+<li><a name="%24checker-%3ehyperlink()"></a><b><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">$checker</span><span class="i">-&gt;hyperlink</span><span class="s">(</span><span class="s">)</span></code>
+</body>
+</html>
+</b>
+<p>Add (if argument specified) and retrieve the hyperlinks (as defined by
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">L</span>&lt;&gt;</code>
+</body>
+</html>
+) of the current POD. They consist of a 2-item array: line
+number and <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:54:58 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">Pod::Hyperlink</span></code>
+</body>
+</html>
+ object.</p>
+</li>
+</ul>
+<a name="AUTHOR"></a><h1>AUTHOR</h1>
+<p>Please report bugs using <a href="http://rt.cpan.org">http://rt.cpan.org</a>.</p>
+<p>Brad Appleton &lt;bradapp@enteract.com&gt; (initial version),
+Marek Rouchal &lt;marekr@cpan.org&gt;</p>
+<p>Based on code for <b>Pod::Text::pod2text()</b> written by
+Tom Christiansen &lt;tchrist@mox.perl.com&gt;</p>
+<p><b>Pod::Checker</b> is part of the Pod-Checker distribution, and is based on
+<a href="../Pod/Parser.html">Pod::Parser</a>.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#OPTIONS%2fARGUMENTS">OPTIONS/ARGUMENTS</a><ul><li><a href="#podchecker()">podchecker()</a></ul><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#DIAGNOSTICS">DIAGNOSTICS</a><ul><li><a href="#Errors">Errors</a><li><a href="#Warnings">Warnings</a><li><a href="#Hyperlinks">Hyperlinks</a></ul><li><a href="#RETURN-VALUE">RETURN VALUE</a><li><a href="#EXAMPLES">EXAMPLES</a><li><a href="#INTERFACE">INTERFACE</a><li><a href="#AUTHOR">AUTHOR</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+
+    <div class="footer container-fluid">
+      <footer class="row">
+        <ul class="col-xs-12 col-sm-4 list-unstyled">
+          <li><h4>Site info</h4></li>
+          <li>Site mantained by <a href="mailto:community@opusvl.com">Jon Allen (JJ)</a></li>
+          <li>Docs mantained by <a href="http://lists.cpan.org/showlist.cgi?name=perl5-porters">Perl 5 Porters</a></li>
+	  <li>Development supported by <a href="http://opusvl.com">OpusVL</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Manual</h4></li>
+	  <li><a href="../index-overview.html">Overview</a></li>
+	  <li><a href="../index-tutorials.html">Tutorials</a></li>
+	  <li><a href="../index-faq.html">FAQs</a></li>
+	  <li><a href="../index-history.html">Changes</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Reference</h4></li>
+	  <li><a href="../index-language.html">Language</a></li>
+	  <li><a href="../index-functions.html">Functions</a></li>
+	  <li><a href="../perlop.html">Operators</a></li>
+	  <li><a href="../perlvar.html">Variables</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Modules</h4></li>
+	  <li><a href="../index-modules-A.html">Modules</a></li>
+	  <li><a href="../index-pragmas.html">Pragmas</a></li>
+	  <li><a href="../index-utilities.html">Utilities</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Misc</h4></li>
+	  <li><a href="../index-licence.html">License</a></li>
+	  <li><a href="../index-internals.html">Internals</a></li>
+	  <li><a href="../index-platforms.html">Platforms</a></li>
+        </ul>
+        <div class="col-xs-12 footer-info">
+          <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../static/main.min.js"></script>
+    <!--
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTrackerJJ = _gat._getTracker("UA-1892152-2");
+    pageTrackerJJ._initData();
+    pageTrackerJJ._trackPageview();
+    var pageTrackerRobert = _gat._getTracker("UA-50555-3");
+    pageTrackerRobert._initData();
+    pageTrackerRobert._trackPageview();
+    </script>
+    -->
+  </body>
+</html>

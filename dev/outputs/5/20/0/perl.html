@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="icon" href="static/favicon.ico">
+
+    <title>perl - perldoc.perl.org</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/main.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="static/logo_perl_doc.svg">
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Perl 5.22.1 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="typeahead"><input type="text" class="form-control" placeholder="Search"/></li>
+                <li class="dropdown-header">Perl 5.22</li>
+                <li><a href="#">Perl 5.22.1</a></li>
+                <li><a href="#">Perl 5.22.0</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Perl 5.21</li>
+                <li><a href="#">Perl 5.21.1</a></li>
+                <li><a href="#">Perl 5.21.0</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Manuals<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="index-overview.html">Overview</a></li>
+                <li><a href="index-tutorials.html">Tutorials</a></li>
+                <li><a href="index-faq.html">FAQs</a></li>
+                <li><a href="index-history.html">History / Changes</a></li>
+                <li><a href="index-licence.html">License</a></li>
+                <li><a href="index-language.html">Language</a></li>
+                <li><a href="index-functions.html">Functions</a></li>
+                <li><a href="perlop.html">Operators</a></li>
+                <li><a href="perlvar.html">Special Variables</a></li>
+                <li><a href="index-pragmas.html">Pragmas</a></li>
+                <li><a href="index-utilities.html">Utilities</a></li>
+                <li><a href="index-internals.html">Internals</a></li>
+                <li><a href="index-platforms.html">Platform Specific</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Functions<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="typeahead"><input type="text" class="form-control" placeholder="Search"/></li>
+                <li><a href="#">A-Z</a></li>
+                <li><a href="#">By Category</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Most used</li>
+                <li><a href="#">Split</a></li>
+                <li><a href="#">Open</a></li>
+                <li><a href="#">Substr</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Modules<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+		<li>
+		
+                
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+		
+                    <a href="index-modules-A.html">A</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-B.html">B</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-C.html">C</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-D.html">D</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-E.html">E</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="index-modules-F.html">F</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-G.html">G</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-H.html">H</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-I.html">I</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-J.html">J</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="index-modules-L.html">L</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-M.html">M</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-N.html">N</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-O.html">O</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-P.html">P</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="index-modules-S.html">S</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-T.html">T</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-U.html">U</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="index-modules-X.html">X</a>
+                    
+                
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="container-fluid container-internal">
+      <div class="row row-height">
+	<div class="col-sm-4 sidebar">
+          <h3>Section heading</h3>
+          <ul class="list-unstyled">
+            <li><h4>Sub heading</h4></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="The Perl 5 language interpreter">Item 1</a></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="A brief introduction and overview of Perl">Item 2</a></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="How to execute the Perl interpreter">Item 3</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-8 content">
+          <div class="content-container">
+	    
+	    <div id="page_name">
+	      <h1>perl</h1>
+	    </div>
+	    
+	    <div id="perl_version">
+	      Perl 5 version 20.0 documentation
+	    </div>
+  
+	    <div id="breadcrumbs">
+	        
+    <a href="index.html">Home</a> &gt;
+    
+      
+        <a href="index-overview.html">Overview</a> &gt;
+      
+    
+    perl
+  
+
+	    </div>
+  
+	    <h1>perl</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#GETTING-HELP">GETTING HELP</a><ul><li><a href="#Overview">Overview</a><li><a href="#Tutorials">Tutorials</a><li><a href="#Reference-Manual">Reference Manual</a><li><a href="#Internals-and-C-Language-Interface">Internals and C Language Interface</a><li><a href="#Miscellaneous">Miscellaneous</a><li><a href="#Language-Specific">Language-Specific</a><li><a href="#Platform-Specific">Platform-Specific</a><li><a href="#Stubs-for-Deleted-Documents">Stubs for Deleted Documents</a></ul><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#AVAILABILITY">AVAILABILITY</a><li><a href="#ENVIRONMENT">ENVIRONMENT</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#FILES">FILES</a><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#DIAGNOSTICS">DIAGNOSTICS</a><li><a href="#BUGS">BUGS</a><li><a href="#NOTES">NOTES</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>perl - The Perl 5 language interpreter</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<p><b>perl</b>	[ <b>-sTtuUWX</b> ]
+	[ <b>-hv</b> ] [ <b>-V</b>[:<i>configvar</i>] ]
+	[ <b>-cw</b> ] [ <b>-d</b>[<b>t</b>][:<i>debugger</i>] ] [ <b>-D</b>[<i>number/list</i>] ]
+	[ <b>-pna</b> ] [ <b>-F</b><i>pattern</i> ] [ <b>-l</b>[<i>octal</i>] ] [ <b>-0</b>[<i>octal/hexadecimal</i>] ]
+	[ <b>-I</b><i>dir</i> ] [ <b>-m</b>[<b>-</b>]<i>module</i> ] [ <b>-M</b>[<b>-</b>]<i>'module...'</i> ] [ <b>-f</b> ]
+	[ <b>-C [<i>number/list</i>] </b>]
+	[ <b>-S</b> ]
+	[ <b>-x</b>[<i>dir</i>] ]
+	[ <b>-i</b>[<i>extension</i>] ]
+	[ [<b>-e</b>|<b>-E</b>] <i>'command'</i> ] [ <b>--</b> ] [ <i>programfile</i> ] [ <i>argument</i> ]...</p>
+<p>For more information on these options, you can run <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:00 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">perldoc</span> <span class="w">perlrun</span></code>
+</body>
+</html>
+.</p>
+<a name="GETTING-HELP"></a><h1>GETTING HELP</h1>
+<p>The <i>perldoc</i> program gives you access to all the documentation that comes
+with Perl.  You can get more documentation, tutorials and community support
+online at <a href="http://www.perl.org/">http://www.perl.org/</a>.</p>
+<p>If you're new to Perl, you should start by running <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:53:27 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">perldoc</span> <span class="w">perlintro</span></code>
+</body>
+</html>
+,
+which is a general intro for beginners and provides some background to help
+you navigate the rest of Perl's extensive documentation.  Run <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:53:27 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">perldoc</span>
+<span class="w">perldoc</span></code>
+</body>
+</html>
+ to learn more things you can do with <i>perldoc</i>.</p>
+<p>For ease of access, the Perl manual has been split up into several sections.</p>
+<a name="Overview"></a><h2>Overview</h2>
+<pre class="verbatim"><ol><li>    perl		Perl overview (this section)</li><li>    <a href="perlintro.html">perlintro</a>		Perl introduction for beginners</li><li>    <a href="perlrun.html">perlrun</a>		Perl execution and options</li><li>    perltoc		Perl documentation table of contents</li></ol></pre><a name="Tutorials"></a><h2>Tutorials</h2>
+<pre class="verbatim"><ol><li>    <a href="perlreftut.html">perlreftut</a>		Perl references short introduction</li><li>    <a href="perldsc.html">perldsc</a>		Perl data structures intro</li><li>    <a href="perllol.html">perllol</a>		Perl data structures: arrays of arrays</li><li></li><li>    <a href="perlrequick.html">perlrequick</a> 	Perl regular expressions quick start</li><li>    <a href="perlretut.html">perlretut</a>		Perl regular expressions tutorial</li><li></li><li>    <a href="perlootut.html">perlootut</a>		Perl OO tutorial for beginners</li><li></li><li>    <a href="perlperf.html">perlperf</a>		Perl Performance and Optimization Techniques</li><li></li><li>    <a href="perlstyle.html">perlstyle</a>		Perl style guide</li><li></li><li>    <a href="perlcheat.html">perlcheat</a>		Perl cheat sheet</li><li>    <a href="perltrap.html">perltrap</a>		Perl traps for the unwary</li><li>    <a href="perldebtut.html">perldebtut</a>		Perl debugging tutorial</li><li></li><li>    <a href="perlfaq.html">perlfaq</a>		Perl frequently asked questions</li><li>      <a href="perlfaq1.html">perlfaq1</a>		General Questions About Perl</li><li>      <a href="perlfaq2.html">perlfaq2</a>		Obtaining and Learning about Perl</li><li>      <a href="perlfaq3.html">perlfaq3</a>		Programming Tools</li><li>      <a href="perlfaq4.html">perlfaq4</a>		Data Manipulation</li><li>      <a href="perlfaq5.html">perlfaq5</a>		Files and Formats</li><li>      <a href="perlfaq6.html">perlfaq6</a>		Regexes</li><li>      <a href="perlfaq7.html">perlfaq7</a>		Perl Language Issues</li><li>      <a href="perlfaq8.html">perlfaq8</a>		System Interaction</li><li>      <a href="perlfaq9.html">perlfaq9</a>		Networking</li></ol></pre><a name="Reference-Manual"></a><h2>Reference Manual</h2>
+<pre class="verbatim"><ol><li>    <a href="perlsyn.html">perlsyn</a>		Perl syntax</li><li>    <a href="perldata.html">perldata</a>		Perl data structures</li><li>    <a href="perlop.html">perlop</a>		Perl operators and precedence</li><li>    <a href="perlsub.html">perlsub</a>		Perl subroutines</li><li>    <a href="perlfunc.html">perlfunc</a>		Perl built-in functions</li><li>      <a href="perlopentut.html">perlopentut</a>	Perl open() tutorial</li><li>      <a href="perlpacktut.html">perlpacktut</a>	Perl pack() and unpack() tutorial</li><li>    <a href="perlpod.html">perlpod</a>		Perl plain old documentation</li><li>    <a href="perlpodspec.html">perlpodspec</a> 	Perl plain old documentation format specification</li><li>    <a href="perlpodstyle.html">perlpodstyle</a>	Perl POD style guide</li><li>    <a href="perldiag.html">perldiag</a>		Perl diagnostic messages</li><li>    <a href="perllexwarn.html">perllexwarn</a> 	Perl warnings and their control</li><li>    <a href="perldebug.html">perldebug</a>		Perl debugging</li><li>    <a href="perlvar.html">perlvar</a>		Perl predefined variables</li><li>    <a href="perlre.html">perlre</a>		Perl regular expressions, the rest of the story</li><li>    <a href="perlrebackslash.html">perlrebackslash</a>	Perl regular expression backslash sequences</li><li>    <a href="perlrecharclass.html">perlrecharclass</a>	Perl regular expression character classes</li><li>    <a href="perlreref.html">perlreref</a>		Perl regular expressions quick reference</li><li>    <a href="perlref.html">perlref</a>		Perl references, the rest of the story</li><li>    <a href="perlform.html">perlform</a>		Perl formats</li><li>    <a href="perlobj.html">perlobj</a>		Perl objects</li><li>    <a href="perltie.html">perltie</a>		Perl objects hidden behind simple variables</li><li>      <a href="perldbmfilter.html">perldbmfilter</a>	Perl DBM filters</li><li></li><li>    <a href="perlipc.html">perlipc</a>		Perl interprocess communication</li><li>    <a href="perlfork.html">perlfork</a>		Perl fork() information</li><li>    <a href="perlnumber.html">perlnumber</a>		Perl number semantics</li><li></li><li>    <a href="perlthrtut.html">perlthrtut</a>		Perl threads tutorial</li><li></li><li>    <a href="perlport.html">perlport</a>		Perl portability guide</li><li>    <a href="perllocale.html">perllocale</a>		Perl locale support</li><li>    <a href="perluniintro.html">perluniintro</a>	Perl Unicode introduction</li><li>    <a href="perlunicode.html">perlunicode</a> 	Perl Unicode support</li><li>    <a href="perlunifaq.html">perlunifaq</a>		Perl Unicode FAQ</li><li>    <a href="perluniprops.html">perluniprops</a>	Index of Unicode properties in Perl</li><li>    <a href="perlunitut.html">perlunitut</a>		Perl Unicode tutorial</li><li>    <a href="perlebcdic.html">perlebcdic</a>		Considerations for running Perl on EBCDIC platforms</li><li></li><li>    <a href="perlsec.html">perlsec</a>		Perl security</li><li></li><li>    <a href="perlmod.html">perlmod</a>		Perl modules: how they work</li><li>    <a href="perlmodlib.html">perlmodlib</a>		Perl modules: how to write and use</li><li>    <a href="perlmodstyle.html">perlmodstyle</a>	Perl modules: how to write modules with style</li><li>    <a href="perlmodinstall.html">perlmodinstall</a>	Perl modules: how to install from CPAN</li><li>    <a href="perlnewmod.html">perlnewmod</a>		Perl modules: preparing a new module for distribution</li><li>    <a href="perlpragma.html">perlpragma</a>		Perl modules: writing a user pragma</li><li></li><li>    <a href="perlutil.html">perlutil</a>		utilities packaged with the Perl distribution</li><li></li><li>    <a href="perlfilter.html">perlfilter</a>		Perl source filters</li><li></li><li>    <a href="perldtrace.html">perldtrace</a>		Perl's support for DTrace</li><li></li><li>    <a href="perlglossary.html">perlglossary</a>	Perl Glossary</li></ol></pre><a name="Internals-and-C-Language-Interface"></a><h2>Internals and C Language Interface</h2>
+<pre class="verbatim"><ol><li>    <a href="perlembed.html">perlembed</a>		Perl ways to embed perl in your C or C++ application</li><li>    <a href="perldebguts.html">perldebguts</a> 	Perl debugging guts and tips</li><li>    <a href="perlxstut.html">perlxstut</a>		Perl XS tutorial</li><li>    <a href="perlxs.html">perlxs</a>		Perl XS application programming interface</li><li>    <a href="perlxstypemap.html">perlxstypemap</a>	Perl XS C/Perl type conversion tools</li><li>    <a href="perlclib.html">perlclib</a>		Internal replacements for standard C library functions</li><li>    <a href="perlguts.html">perlguts</a>		Perl internal functions for those doing extensions</li><li>    <a href="perlcall.html">perlcall</a>		Perl calling conventions from C</li><li>    <a href="perlmroapi.html">perlmroapi</a>		Perl method resolution plugin interface</li><li>    <a href="perlreapi.html">perlreapi</a>		Perl regular expression plugin interface</li><li>    <a href="perlreguts.html">perlreguts</a>		Perl regular expression engine internals</li><li></li><li>    <a href="perlapi.html">perlapi</a>		Perl API listing (autogenerated)</li><li>    <a href="perlintern.html">perlintern</a>		Perl internal functions (autogenerated)</li><li>    <a href="perliol.html">perliol</a>		C API for Perl's implementation of IO in Layers</li><li>    <a href="perlapio.html">perlapio</a>		Perl internal IO abstraction interface</li><li></li><li>    <a href="perlhack.html">perlhack</a>		Perl hackers guide</li><li>    <a href="perlsource.html">perlsource</a>		Guide to the Perl source tree</li><li>    <a href="perlinterp.html">perlinterp</a>		Overview of the Perl interpreter source and how it works</li><li>    <a href="perlhacktut.html">perlhacktut</a> 	Walk through the creation of a simple C code patch</li><li>    <a href="perlhacktips.html">perlhacktips</a>	Tips for Perl core C code hacking</li><li>    <a href="perlpolicy.html">perlpolicy</a>		Perl development policies</li><li>    <a href="perlgit.html">perlgit</a>		Using git with the Perl repository</li></ol></pre><a name="Miscellaneous"></a><h2>Miscellaneous</h2>
+<pre class="verbatim"><ol><li>    <a href="perlbook.html">perlbook</a>		Perl book information</li><li>    <a href="perlcommunity.html">perlcommunity</a>	Perl community information</li><li></li><li>    <a href="perldoc.html">perldoc</a>		Look up Perl documentation in Pod format</li><li></li><li>    <a href="perlhist.html">perlhist</a>		Perl history records</li><li>    <a href="perldelta.html">perldelta</a>		Perl changes since previous version</li><li>    <a href="perl5182delta.html">perl5182delta</a>	Perl changes in version 5.18.2</li><li>    <a href="perl5181delta.html">perl5181delta</a>	Perl changes in version 5.18.1</li><li>    <a href="perl5180delta.html">perl5180delta</a>	Perl changes in version 5.18.0</li><li>    <a href="perl5161delta.html">perl5161delta</a>	Perl changes in version 5.16.1</li><li>    <a href="perl5162delta.html">perl5162delta</a>	Perl changes in version 5.16.2</li><li>    <a href="perl5163delta.html">perl5163delta</a>	Perl changes in version 5.16.3</li><li>    <a href="perl5160delta.html">perl5160delta</a>	Perl changes in version 5.16.0</li><li>    <a href="perl5144delta.html">perl5144delta</a>	Perl changes in version 5.14.4</li><li>    <a href="perl5143delta.html">perl5143delta</a>	Perl changes in version 5.14.3</li><li>    <a href="perl5142delta.html">perl5142delta</a>	Perl changes in version 5.14.2</li><li>    <a href="perl5141delta.html">perl5141delta</a>	Perl changes in version 5.14.1</li><li>    <a href="perl5140delta.html">perl5140delta</a>	Perl changes in version 5.14.0</li><li>    <a href="perl5125delta.html">perl5125delta</a>	Perl changes in version 5.12.5</li><li>    <a href="perl5124delta.html">perl5124delta</a>	Perl changes in version 5.12.4</li><li>    <a href="perl5123delta.html">perl5123delta</a>	Perl changes in version 5.12.3</li><li>    <a href="perl5122delta.html">perl5122delta</a>	Perl changes in version 5.12.2</li><li>    <a href="perl5121delta.html">perl5121delta</a>	Perl changes in version 5.12.1</li><li>    <a href="perl5120delta.html">perl5120delta</a>	Perl changes in version 5.12.0</li><li>    <a href="perl5101delta.html">perl5101delta</a>	Perl changes in version 5.10.1</li><li>    <a href="perl5100delta.html">perl5100delta</a>	Perl changes in version 5.10.0</li><li>    <a href="perl589delta.html">perl589delta</a>	Perl changes in version 5.8.9</li><li>    <a href="perl588delta.html">perl588delta</a>	Perl changes in version 5.8.8</li><li>    <a href="perl587delta.html">perl587delta</a>	Perl changes in version 5.8.7</li><li>    <a href="perl586delta.html">perl586delta</a>	Perl changes in version 5.8.6</li><li>    <a href="perl585delta.html">perl585delta</a>	Perl changes in version 5.8.5</li><li>    <a href="perl584delta.html">perl584delta</a>	Perl changes in version 5.8.4</li><li>    <a href="perl583delta.html">perl583delta</a>	Perl changes in version 5.8.3</li><li>    <a href="perl582delta.html">perl582delta</a>	Perl changes in version 5.8.2</li><li>    <a href="perl581delta.html">perl581delta</a>	Perl changes in version 5.8.1</li><li>    <a href="perl58delta.html">perl58delta</a> 	Perl changes in version 5.8.0</li><li>    <a href="perl561delta.html">perl561delta</a>	Perl changes in version 5.6.1</li><li>    <a href="perl56delta.html">perl56delta</a> 	Perl changes in version 5.6</li><li>    <a href="perl5005delta.html">perl5005delta</a>	Perl changes in version 5.005</li><li>    <a href="perl5004delta.html">perl5004delta</a>	Perl changes in version 5.004</li><li></li><li>    <a href="perlexperiment.html">perlexperiment</a>	A listing of experimental features in Perl</li><li></li><li>    <a href="perlartistic.html">perlartistic</a>	Perl Artistic License</li><li>    <a href="perlgpl.html">perlgpl</a>		GNU General Public License</li></ol></pre><a name="Language-Specific"></a><h2>Language-Specific</h2>
+<pre class="verbatim"><ol><li>    perlcn		Perl for Simplified Chinese (in EUC-CN)</li><li>    perljp		Perl for Japanese (in EUC-JP)</li><li>    perlko		Perl for Korean (in EUC-KR)</li><li>    perltw		Perl for Traditional Chinese (in Big5)</li></ol></pre><a name="Platform-Specific"></a><h2>Platform-Specific</h2>
+<pre class="verbatim"><ol><li>    <a href="perlaix.html">perlaix</a>		Perl notes for AIX</li><li>    <a href="perlamiga.html">perlamiga</a>		Perl notes for AmigaOS</li><li>    <a href="perlandroid.html">perlandroid</a>		Perl notes for Android</li><li>    <a href="perlbs2000.html">perlbs2000</a>		Perl notes for POSIX-BC BS2000</li><li>    <a href="perlce.html">perlce</a>		Perl notes for WinCE</li><li>    <a href="perlcygwin.html">perlcygwin</a>		Perl notes for Cygwin</li><li>    <a href="perldos.html">perldos</a>		Perl notes for DOS</li><li>    <a href="perlfreebsd.html">perlfreebsd</a> 	Perl notes for FreeBSD</li><li>    <a href="perlhaiku.html">perlhaiku</a>		Perl notes for Haiku</li><li>    <a href="perlhpux.html">perlhpux</a>		Perl notes for HP-UX</li><li>    <a href="perlhurd.html">perlhurd</a>		Perl notes for Hurd</li><li>    <a href="perlirix.html">perlirix</a>		Perl notes for Irix</li><li>    <a href="perllinux.html">perllinux</a>		Perl notes for Linux</li><li>    <a href="perlmacos.html">perlmacos</a>		Perl notes for Mac OS (Classic)</li><li>    <a href="perlmacosx.html">perlmacosx</a>		Perl notes for Mac OS X</li><li>    <a href="perlnetware.html">perlnetware</a> 	Perl notes for NetWare</li><li>    <a href="perlopenbsd.html">perlopenbsd</a> 	Perl notes for OpenBSD</li><li>    <a href="perlos2.html">perlos2</a>		Perl notes for OS/2</li><li>    <a href="perlos390.html">perlos390</a>		Perl notes for OS/390</li><li>    <a href="perlos400.html">perlos400</a>		Perl notes for OS/400</li><li>    <a href="perlplan9.html">perlplan9</a>		Perl notes for Plan 9</li><li>    <a href="perlqnx.html">perlqnx</a>		Perl notes for QNX</li><li>    <a href="perlriscos.html">perlriscos</a>		Perl notes for RISC OS</li><li>    <a href="perlsolaris.html">perlsolaris</a> 	Perl notes for Solaris</li><li>    <a href="perlsymbian.html">perlsymbian</a> 	Perl notes for Symbian</li><li>    <a href="perlsynology.html">perlsynology</a> 	Perl notes for Synology</li><li>    <a href="perltru64.html">perltru64</a>		Perl notes for Tru64</li><li>    <a href="perlvms.html">perlvms</a>		Perl notes for VMS</li><li>    <a href="perlvos.html">perlvos</a>		Perl notes for Stratus VOS</li><li>    <a href="perlwin32.html">perlwin32</a>		Perl notes for Windows</li></ol></pre><a name="Stubs-for-Deleted-Documents"></a><h2>Stubs for Deleted Documents</h2>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:00 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">    <span class="w"><a href="perlboot.html">perlboot</a></span>		
+    <span class="w"><a href="perlbot.html">perlbot</a></span>		
+    <span class="w"><a href="perlrepository.html">perlrepository</a></span>
+    <span class="w"><a href="perltodo.html">perltodo</a></span>
+    <span class="w"><a href="perltooc.html">perltooc</a></span>		
+    <span class="w"><a href="perltoot.html">perltoot</a></span></pre>
+</body>
+</html>
+<p>On a Unix-like system, these documentation files will usually also be
+available as manpages for use with the <i>man</i> program.</p>
+<p>Some documentation is not available as man pages, so if a
+cross-reference is not found by man, try it with <a href="perldoc.html">perldoc</a>.  Perldoc can
+also take you directly to documentation for functions (with the <b>-f</b>
+switch). See <code class="inline">perldoc --help</code> (or <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:00 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">perldoc</span> <span class="w">perldoc</span></code>
+</body>
+</html>
+ or <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:00 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">man</span> <span class="w">perldoc</span></code>
+</body>
+</html>
+)
+for other helpful options <a href="perldoc.html">perldoc</a> has to offer.</p>
+<p>In general, if something strange has gone wrong with your program and you're
+not sure where you should look for help, try making your code comply with
+<b>use strict</b> and <b>use warnings</b>.  These will often point out exactly
+where the trouble is.</p>
+<a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>Perl officially stands for Practical Extraction and Report Language,
+except when it doesn't.</p>
+<p>Perl was originally a language optimized for scanning arbitrary
+text files, extracting information from those text files, and printing
+reports based on that information.  It quickly became a good language
+for many system management tasks. Over the years, Perl has grown into
+a general-purpose programming language. It's widely used for everything
+from quick "one-liners" to full-scale application development.</p>
+<p>The language is intended to be practical (easy to use, efficient,
+complete) rather than beautiful (tiny, elegant, minimal).  It combines
+(in the author's opinion, anyway) some of the best features of <b>sed</b>,
+<b>awk</b>, and <b>sh</b>, making it familiar and easy to use for Unix users to
+whip up quick solutions to annoying problems.  Its general-purpose
+programming facilities support procedural, functional, and
+object-oriented programming paradigms, making Perl a comfortable
+language for the long haul on major projects, whatever your bent.</p>
+<p>Perl's roots in text processing haven't been forgotten over the years.
+It still boasts some of the most powerful regular expressions to be
+found anywhere, and its support for Unicode text is world-class.  It
+handles all kinds of structured text, too, through an extensive
+collection of extensions.  Those libraries, collected in the CPAN,
+provide ready-made solutions to an astounding array of problems.  When
+they haven't set the standard themselves, they steal from the best
+-- just like Perl itself.</p>
+<a name="AVAILABILITY"></a><h1>AVAILABILITY</h1>
+<p>Perl is available for most operating systems, including virtually
+all Unix-like platforms.  See <a href="perlport.html#Supported-Platforms">Supported Platforms in perlport</a>
+for a listing.</p>
+<a name="ENVIRONMENT"></a><h1>ENVIRONMENT</h1>
+<p>See <a href="perlrun.html">perlrun</a>.</p>
+<a name="AUTHOR"></a><h1>AUTHOR</h1>
+<p>Larry Wall &lt;larry@wall.org&gt;, with the help of oodles of other folks.</p>
+<p>If your Perl success stories and testimonials may be of help to others 
+who wish to advocate the use of Perl in their applications, 
+or if you wish to simply express your gratitude to Larry and the 
+Perl developers, please write to perl-thanks@perl.org .</p>
+<a name="FILES"></a><h1>FILES</h1>
+<pre class="verbatim"><ol><li> "@INC"			locations of perl libraries</li></ol></pre><a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<pre class="verbatim"><ol><li> http://www.perl.org/       the Perl homepage</li><li> http://www.perl.com/       Perl articles (O'Reilly)</li><li> http://www.cpan.org/       the Comprehensive Perl Archive</li><li> http://www.pm.org/         the Perl Mongers</li></ol></pre><a name="DIAGNOSTICS"></a><h1>DIAGNOSTICS</h1>
+<p>Using the <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:53:27 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">strict</span></code>
+</body>
+</html>
+ pragma ensures that all variables are properly
+declared and prevents other misuses of legacy Perl features.</p>
+<p>The <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:53:27 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span></code>
+</body>
+</html>
+ pragma produces some lovely diagnostics. One can
+also use the <b>-w</b> flag, but its use is normally discouraged, because
+it gets applied to all executed Perl code, including that not under
+your control.</p>
+<p>See <a href="perldiag.html">perldiag</a> for explanations of all Perl's diagnostics.  The <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:53:27 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><a class="l_k" href="functions/use.html">use</a>
+<span class="w">diagnostics</span></code>
+</body>
+</html>
+ pragma automatically turns Perl's normally terse warnings
+and errors into these longer forms.</p>
+<p>Compilation errors will tell you the line number of the error, with an
+indication of the next token or token type that was to be examined.
+(In a script passed to Perl via <b>-e</b> switches, each
+<b>-e</b> is counted as one line.)</p>
+<p>Setuid scripts have additional constraints that can produce error
+messages such as "Insecure dependency".  See <a href="perlsec.html">perlsec</a>.</p>
+<p>Did we mention that you should definitely consider using the <b>use warnings</b>
+pragma?</p>
+<a name="BUGS"></a><h1>BUGS</h1>
+<p>The behavior implied by the <b>use warnings</b> pragma is not mandatory.</p>
+<p>Perl is at the mercy of your machine's definitions of various
+operations such as type casting, atof(), and floating-point
+output with sprintf().</p>
+<p>If your stdio requires a seek or eof between reads and writes on a
+particular stream, so does Perl.  (This doesn't apply to sysread()
+and syswrite().)</p>
+<p>While none of the built-in data types have any arbitrary size limits
+(apart from memory size), there are still a few arbitrary limits:  a
+given variable name may not be longer than 251 characters.  Line numbers
+displayed by diagnostics are internally stored as short integers,
+so they are limited to a maximum of 65535 (higher numbers usually being
+affected by wraparound).</p>
+<p>You may mail your bug reports (be sure to include full configuration
+information as output by the myconfig program in the perl source
+tree, or by <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Wed Aug 22 16:53:27 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">perl</span> -<span class="w">V</span></code>
+</body>
+</html>
+) to perlbug@perl.org .  If you've succeeded
+in compiling perl, the <a href="perlbug.html">perlbug</a> script in the <i>utils/</i> subdirectory
+can be used to help mail in a bug report.</p>
+<p>Perl actually stands for Pathologically Eclectic Rubbish Lister, but
+don't tell anyone I said that.</p>
+<a name="NOTES"></a><h1>NOTES</h1>
+<p>The Perl motto is "There's more than one way to do it."  Divining
+how many more is left as an exercise to the reader.</p>
+<p>The three principal virtues of a programmer are Laziness,
+Impatience, and Hubris.  See the Camel Book for why.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#GETTING-HELP">GETTING HELP</a><ul><li><a href="#Overview">Overview</a><li><a href="#Tutorials">Tutorials</a><li><a href="#Reference-Manual">Reference Manual</a><li><a href="#Internals-and-C-Language-Interface">Internals and C Language Interface</a><li><a href="#Miscellaneous">Miscellaneous</a><li><a href="#Language-Specific">Language-Specific</a><li><a href="#Platform-Specific">Platform-Specific</a><li><a href="#Stubs-for-Deleted-Documents">Stubs for Deleted Documents</a></ul><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#AVAILABILITY">AVAILABILITY</a><li><a href="#ENVIRONMENT">ENVIRONMENT</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#FILES">FILES</a><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#DIAGNOSTICS">DIAGNOSTICS</a><li><a href="#BUGS">BUGS</a><li><a href="#NOTES">NOTES</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+
+    <div class="footer container-fluid">
+      <footer class="row">
+        <ul class="col-xs-12 col-sm-4 list-unstyled">
+          <li><h4>Site info</h4></li>
+          <li>Site mantained by <a href="mailto:community@opusvl.com">Jon Allen (JJ)</a></li>
+          <li>Docs mantained by <a href="http://lists.cpan.org/showlist.cgi?name=perl5-porters">Perl 5 Porters</a></li>
+	  <li>Development supported by <a href="http://opusvl.com">OpusVL</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Manual</h4></li>
+	  <li><a href="index-overview.html">Overview</a></li>
+	  <li><a href="index-tutorials.html">Tutorials</a></li>
+	  <li><a href="index-faq.html">FAQs</a></li>
+	  <li><a href="index-history.html">Changes</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Reference</h4></li>
+	  <li><a href="index-language.html">Language</a></li>
+	  <li><a href="index-functions.html">Functions</a></li>
+	  <li><a href="perlop.html">Operators</a></li>
+	  <li><a href="perlvar.html">Variables</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Modules</h4></li>
+	  <li><a href="index-modules-A.html">Modules</a></li>
+	  <li><a href="index-pragmas.html">Pragmas</a></li>
+	  <li><a href="index-utilities.html">Utilities</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Misc</h4></li>
+	  <li><a href="index-licence.html">License</a></li>
+	  <li><a href="index-internals.html">Internals</a></li>
+	  <li><a href="index-platforms.html">Platforms</a></li>
+        </ul>
+        <div class="col-xs-12 footer-info">
+          <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+        </div>
+      </footer>
+    </div>
+
+    <script src="static/main.min.js"></script>
+    <!--
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTrackerJJ = _gat._getTracker("UA-1892152-2");
+    pageTrackerJJ._initData();
+    pageTrackerJJ._trackPageview();
+    var pageTrackerRobert = _gat._getTracker("UA-50555-3");
+    pageTrackerRobert._initData();
+    pageTrackerRobert._trackPageview();
+    </script>
+    -->
+  </body>
+</html>

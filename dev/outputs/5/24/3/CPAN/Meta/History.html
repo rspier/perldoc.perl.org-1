@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="icon" href="../../static/favicon.ico">
+
+    <title>CPAN::Meta::History - perldoc.perl.org</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/main.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="../../static/logo_perl_doc.svg">
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Perl 5.22.1 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="typeahead"><input type="text" class="form-control" placeholder="Search"/></li>
+                <li class="dropdown-header">Perl 5.22</li>
+                <li><a href="#">Perl 5.22.1</a></li>
+                <li><a href="#">Perl 5.22.0</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Perl 5.21</li>
+                <li><a href="#">Perl 5.21.1</a></li>
+                <li><a href="#">Perl 5.21.0</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Manuals<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="../../index-overview.html">Overview</a></li>
+                <li><a href="../../index-tutorials.html">Tutorials</a></li>
+                <li><a href="../../index-faq.html">FAQs</a></li>
+                <li><a href="../../index-history.html">History / Changes</a></li>
+                <li><a href="../../index-licence.html">License</a></li>
+                <li><a href="../../index-language.html">Language</a></li>
+                <li><a href="../../index-functions.html">Functions</a></li>
+                <li><a href="../../perlop.html">Operators</a></li>
+                <li><a href="../../perlvar.html">Special Variables</a></li>
+                <li><a href="../../index-pragmas.html">Pragmas</a></li>
+                <li><a href="../../index-utilities.html">Utilities</a></li>
+                <li><a href="../../index-internals.html">Internals</a></li>
+                <li><a href="../../index-platforms.html">Platform Specific</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Functions<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="typeahead"><input type="text" class="form-control" placeholder="Search"/></li>
+                <li><a href="#">A-Z</a></li>
+                <li><a href="#">By Category</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Most used</li>
+                <li><a href="#">Split</a></li>
+                <li><a href="#">Open</a></li>
+                <li><a href="#">Substr</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Modules<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+		<li>
+		
+                
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+		
+                    <a href="../../index-modules-A.html">A</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-B.html">B</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-C.html">C</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-D.html">D</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-E.html">E</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../../index-modules-F.html">F</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-G.html">G</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-H.html">H</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-I.html">I</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-J.html">J</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../../index-modules-L.html">L</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-M.html">M</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-N.html">N</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-O.html">O</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-P.html">P</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../../index-modules-S.html">S</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-T.html">T</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-U.html">U</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../index-modules-X.html">X</a>
+                    
+                
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="container-fluid container-internal">
+      <div class="row row-height">
+	<div class="col-sm-4 sidebar">
+          <h3>Section heading</h3>
+          <ul class="list-unstyled">
+            <li><h4>Sub heading</h4></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="The Perl 5 language interpreter">Item 1</a></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="A brief introduction and overview of Perl">Item 2</a></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="How to execute the Perl interpreter">Item 3</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-8 content">
+          <div class="content-container">
+	    
+	    <div id="page_name">
+	      <h1>CPAN::Meta::History</h1>
+	    </div>
+	    
+	    <div id="perl_version">
+	      Perl 5 version  documentation
+	    </div>
+  
+	    <div id="breadcrumbs">
+	        
+    <a href="../../index.html">Home</a> &gt;
+    
+      
+        <a href="../../index-modules-C.html">Core modules (C)</a> &gt;
+      
+    
+    CPAN::Meta::History
+  
+
+	    </div>
+  
+	    <h1>CPAN::Meta::History</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#VERSION">VERSION</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#HISTORY">HISTORY</a><ul><li><a href="#Version-2">Version 2</a><li><a href="#Version-1.4">Version 1.4</a><li><a href="#Version-1.3">Version 1.3</a><li><a href="#Version-1.2">Version 1.2</a><li><a href="#Version-1.1">Version 1.1</a><li><a href="#Version-1.0">Version 1.0</a></ul><li><a href="#AUTHORS">AUTHORS</a><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>CPAN::Meta::History - history of CPAN Meta Spec changes</p>
+<a name="VERSION"></a><h1>VERSION</h1>
+<p>version 2.150005</p>
+<a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>The CPAN Meta Spec has gone through several iterations.  It was
+originally written in HTML and later revised into POD (though published
+in HTML generated from the POD).  Fields were added, removed or changed,
+sometimes by design and sometimes to reflect real-world usage after the
+fact.</p>
+<p>This document reconstructs the history of the CPAN Meta Spec based on
+change logs, repository commit messages and the published HTML files.
+In some cases, particularly prior to version 1.2, the exact version
+when certain fields were introduced or changed is inconsistent between
+sources.  When in doubt, the published HTML files for versions 1.0 to
+1.4 as they existed when version 2 was developed are used as the
+definitive source.</p>
+<p>Starting with version 2, the specification document is part of the
+CPAN-Meta distribution and will be published on CPAN as
+<a href="../../CPAN/Meta/Spec.html">CPAN::Meta::Spec</a>.</p>
+<p>Going forward, specification version numbers will be integers and
+decimal portions will correspond to a release date for the CPAN::Meta
+library.</p>
+<a name="HISTORY"></a><h1>HISTORY</h1>
+<a name="Version-2"></a><h2>Version 2</h2>
+<p>April 2010</p>
+<ul>
+<li>
+<p>Revised spec examples as perl data structures rather than YAML</p>
+</li>
+<li>
+<p>Switched to JSON serialization from YAML</p>
+</li>
+<li>
+<p>Specified allowed version number formats</p>
+</li>
+<li>
+<p>Replaced 'requires', 'build_requires', 'configure_requires',
+'recommends' and 'conflicts' with new 'prereqs' data structure divided
+by <i>phase</i> (configure, build, test, runtime, etc.) and <i>relationship</i>
+(requires, recommends, suggests, conflicts)</p>
+</li>
+<li>
+<p>Added support for 'develop' phase for requirements for maintaining
+a list of authoring tools</p>
+</li>
+<li>
+<p>Changed 'license' to a list and revised the set of valid licenses</p>
+</li>
+<li>
+<p>Made 'dynamic_config' mandatory to reduce confusion</p>
+</li>
+<li>
+<p>Changed 'resources' subkey 'repository' to a hash that clarifies
+repository type, url for browsing and url for checkout</p>
+</li>
+<li>
+<p>Changed 'resources' subkey 'bugtracker' to a hash for either web
+or mailto resource</p>
+</li>
+<li>
+<p>Changed specification of 'optional_features':</p>
+<ul>
+<li>
+<p>Added formal specification and usage guide instead of just example</p>
+</li>
+<li>
+<p>Changed to use new prereqs data structure instead of individual keys</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Clarified intended use of 'author' as generalized contact list</p>
+</li>
+<li>
+<p>Added 'release_status' field to indicate stable, testing or unstable
+status to provide hints to indexers</p>
+</li>
+<li>
+<p>Added 'description' field for a longer description of the distribution</p>
+</li>
+<li>
+<p>Formalized use of "x_" or "X_" for all custom keys not listed in the
+official spec</p>
+</li>
+</ul>
+<a name="Version-1.4"></a><h2>Version 1.4</h2>
+<p>June 2008</p>
+<ul>
+<li>
+<p>Noted explicit support for 'perl' in prerequisites</p>
+</li>
+<li>
+<p>Added 'configure_requires' prerequisite type</p>
+</li>
+<li>
+<p>Changed 'optional_features'</p>
+<ul>
+<li>
+<p>Example corrected to show map of maps instead of list of maps
+(though descriptive text said 'map' even in v1.3)</p>
+</li>
+<li>
+<p>Removed 'requires_packages', 'requires_os' and 'excluded_os'
+as valid subkeys</p>
+</li>
+</ul>
+</li>
+</ul>
+<a name="Version-1.3"></a><h2>Version 1.3</h2>
+<p>November 2006</p>
+<ul>
+<li>
+<p>Added 'no_index' subkey 'directory' and removed 'dir' to match actual
+usage in the wild</p>
+</li>
+<li>
+<p>Added a 'repository' subkey to 'resources'</p>
+</li>
+</ul>
+<a name="Version-1.2"></a><h2>Version 1.2</h2>
+<p>August 2005</p>
+<ul>
+<li>
+<p>Re-wrote and restructured spec in POD syntax</p>
+</li>
+<li>
+<p>Changed 'name' to be mandatory</p>
+</li>
+<li>
+<p>Changed 'generated_by' to be mandatory</p>
+</li>
+<li>
+<p>Changed 'license' to be mandatory</p>
+</li>
+<li>
+<p>Added version range specifications for prerequisites</p>
+</li>
+<li>
+<p>Added required 'abstract' field</p>
+</li>
+<li>
+<p>Added required 'author' field</p>
+</li>
+<li>
+<p>Added required 'meta-spec' field to define 'version' (and 'url') of the
+CPAN Meta Spec used for metadata</p>
+</li>
+<li>
+<p>Added 'provides' field</p>
+</li>
+<li>
+<p>Added 'no_index' field and deprecated 'private' field.  'no_index'
+subkeys include 'file', 'dir', 'package' and 'namespace'</p>
+</li>
+<li>
+<p>Added 'keywords' field</p>
+</li>
+<li>
+<p>Added 'resources' field with subkeys 'homepage', 'license', and
+'bugtracker'</p>
+</li>
+<li>
+<p>Added 'optional_features' field as an alternate under 'recommends'.
+Includes 'description', 'requires', 'build_requires', 'conflicts',
+'requires_packages', 'requires_os' and 'excluded_os' as valid subkeys</p>
+</li>
+<li>
+<p>Removed 'license_uri' field</p>
+</li>
+</ul>
+<a name="Version-1.1"></a><h2>Version 1.1</h2>
+<p>May 2003</p>
+<ul>
+<li>
+<p>Changed 'version' to be mandatory</p>
+</li>
+<li>
+<p>Added 'private' field</p>
+</li>
+<li>
+<p>Added 'license_uri' field</p>
+</li>
+</ul>
+<a name="Version-1.0"></a><h2>Version 1.0</h2>
+<p>March 2003</p>
+<ul>
+<li>
+<p>Original release (in HTML format only)</p>
+</li>
+<li>
+<p>Included 'name', 'version', 'license', 'distribution_type', 'requires',
+'recommends', 'build_requires', 'conflicts', 'dynamic_config',
+'generated_by'</p>
+</li>
+</ul>
+<a name="AUTHORS"></a><h1>AUTHORS</h1>
+<ul>
+<li>
+<p>David Golden &lt;dagolden@cpan.org&gt;</p>
+</li>
+<li>
+<p>Ricardo Signes &lt;rjbs@cpan.org&gt;</p>
+</li>
+</ul>
+<a name="COPYRIGHT-AND-LICENSE"></a><h1>COPYRIGHT AND LICENSE</h1>
+<p>This software is copyright (c) 2010 by David Golden and Ricardo Signes.</p>
+<p>This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#VERSION">VERSION</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#HISTORY">HISTORY</a><ul><li><a href="#Version-2">Version 2</a><li><a href="#Version-1.4">Version 1.4</a><li><a href="#Version-1.3">Version 1.3</a><li><a href="#Version-1.2">Version 1.2</a><li><a href="#Version-1.1">Version 1.1</a><li><a href="#Version-1.0">Version 1.0</a></ul><li><a href="#AUTHORS">AUTHORS</a><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+
+    <div class="footer container-fluid">
+      <footer class="row">
+        <ul class="col-xs-12 col-sm-4 list-unstyled">
+          <li><h4>Site info</h4></li>
+          <li>Site mantained by <a href="mailto:community@opusvl.com">Jon Allen (JJ)</a></li>
+          <li>Docs mantained by <a href="http://lists.cpan.org/showlist.cgi?name=perl5-porters">Perl 5 Porters</a></li>
+	  <li>Development supported by <a href="http://opusvl.com">OpusVL</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Manual</h4></li>
+	  <li><a href="../../index-overview.html">Overview</a></li>
+	  <li><a href="../../index-tutorials.html">Tutorials</a></li>
+	  <li><a href="../../index-faq.html">FAQs</a></li>
+	  <li><a href="../../index-history.html">Changes</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Reference</h4></li>
+	  <li><a href="../../index-language.html">Language</a></li>
+	  <li><a href="../../index-functions.html">Functions</a></li>
+	  <li><a href="../../perlop.html">Operators</a></li>
+	  <li><a href="../../perlvar.html">Variables</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Modules</h4></li>
+	  <li><a href="../../index-modules-A.html">Modules</a></li>
+	  <li><a href="../../index-pragmas.html">Pragmas</a></li>
+	  <li><a href="../../index-utilities.html">Utilities</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Misc</h4></li>
+	  <li><a href="../../index-licence.html">License</a></li>
+	  <li><a href="../../index-internals.html">Internals</a></li>
+	  <li><a href="../../index-platforms.html">Platforms</a></li>
+        </ul>
+        <div class="col-xs-12 footer-info">
+          <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../../static/main.min.js"></script>
+    <!--
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTrackerJJ = _gat._getTracker("UA-1892152-2");
+    pageTrackerJJ._initData();
+    pageTrackerJJ._trackPageview();
+    var pageTrackerRobert = _gat._getTracker("UA-50555-3");
+    pageTrackerRobert._initData();
+    pageTrackerRobert._trackPageview();
+    </script>
+    -->
+  </body>
+</html>

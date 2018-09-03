@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="icon" href="../../../static/favicon.ico">
+
+    <title>Test::Builder::IO::Scalar - perldoc.perl.org</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../static/main.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="../../../static/logo_perl_doc.svg">
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Perl 5.22.1 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="typeahead"><input type="text" class="form-control" placeholder="Search"/></li>
+                <li class="dropdown-header">Perl 5.22</li>
+                <li><a href="#">Perl 5.22.1</a></li>
+                <li><a href="#">Perl 5.22.0</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Perl 5.21</li>
+                <li><a href="#">Perl 5.21.1</a></li>
+                <li><a href="#">Perl 5.21.0</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Manuals<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="../../../index-overview.html">Overview</a></li>
+                <li><a href="../../../index-tutorials.html">Tutorials</a></li>
+                <li><a href="../../../index-faq.html">FAQs</a></li>
+                <li><a href="../../../index-history.html">History / Changes</a></li>
+                <li><a href="../../../index-licence.html">License</a></li>
+                <li><a href="../../../index-language.html">Language</a></li>
+                <li><a href="../../../index-functions.html">Functions</a></li>
+                <li><a href="../../../perlop.html">Operators</a></li>
+                <li><a href="../../../perlvar.html">Special Variables</a></li>
+                <li><a href="../../../index-pragmas.html">Pragmas</a></li>
+                <li><a href="../../../index-utilities.html">Utilities</a></li>
+                <li><a href="../../../index-internals.html">Internals</a></li>
+                <li><a href="../../../index-platforms.html">Platform Specific</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Functions<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="typeahead"><input type="text" class="form-control" placeholder="Search"/></li>
+                <li><a href="#">A-Z</a></li>
+                <li><a href="#">By Category</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Most used</li>
+                <li><a href="#">Split</a></li>
+                <li><a href="#">Open</a></li>
+                <li><a href="#">Substr</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Modules<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+		<li>
+		
+                
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+                  
+		    
+		  
+		
+                  
+		
+                  
+		
+		
+                    <a href="../../../index-modules-A.html">A</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-B.html">B</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-C.html">C</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-D.html">D</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-E.html">E</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../../../index-modules-F.html">F</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-G.html">G</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-H.html">H</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-I.html">I</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-J.html">J</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../../../index-modules-L.html">L</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-M.html">M</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-N.html">N</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-O.html">O</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-P.html">P</a>
+                    
+                      
+                        <li>
+                      
+                    
+                
+                    <a href="../../../index-modules-S.html">S</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-T.html">T</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-U.html">U</a>
+                    
+                      
+                        &bull;
+                      
+                    
+                
+                    <a href="../../../index-modules-X.html">X</a>
+                    
+                
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="container-fluid container-internal">
+      <div class="row row-height">
+	<div class="col-sm-4 sidebar">
+          <h3>Section heading</h3>
+          <ul class="list-unstyled">
+            <li><h4>Sub heading</h4></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="The Perl 5 language interpreter">Item 1</a></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="A brief introduction and overview of Perl">Item 2</a></li>
+            <li><a href="" class="links" data-toggle="tooltip" data-placement="right" title="How to execute the Perl interpreter">Item 3</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-8 content">
+          <div class="content-container">
+	    
+	    <div id="page_name">
+	      <h1>Test::Builder::IO::Scalar</h1>
+	    </div>
+	    
+	    <div id="perl_version">
+	      Perl 5 version  documentation
+	    </div>
+  
+	    <div id="breadcrumbs">
+	        
+    <a href="../../../index.html">Home</a> &gt;
+    
+      
+        <a href="../../../index-modules-T.html">Core modules (T)</a> &gt;
+      
+    
+    Test::Builder::IO::Scalar
+  
+
+	    </div>
+  
+	    <h1>Test::Builder::IO::Scalar</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#COPYRIGHT-and-LICENSE">COPYRIGHT and LICENSE</a><ul><li><a href="#Construction">Construction</a><li><a href="#Input-and-output">Input and output</a><li><a href="#Seeking%2ftelling-and-other-attributes">Seeking/telling and other attributes</a></ul><li><a href="#WARNINGS">WARNINGS</a><li><a href="#VERSION">VERSION</a><li><a href="#AUTHORS">AUTHORS</a><ul><li><a href="#Primary-Maintainer">Primary Maintainer</a><li><a href="#Principal-author">Principal author</a><li><a href="#Other-contributors">Other contributors</a></ul><li><a href="#SEE-ALSO">SEE ALSO</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>Test::Builder::IO::Scalar - A copy of IO::Scalar for Test::Builder</p>
+<a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>This is a copy of <a href="http://search.cpan.org/perldoc/IO::Scalar">IO::Scalar</a> which ships with <a href="../../../Test/Builder.html">Test::Builder</a> to
+support scalar references as filehandles on Perl 5.6.  Newer
+versions of Perl simply use <code class="inline"><a class="l_k" href="../../../functions/open.html">open()</a></code>'s built in support.</p>
+<p><a href="../../../Test/Builder.html">Test::Builder</a> can not have dependencies on other modules without
+careful consideration, so its simply been copied into the distribution.</p>
+<a name="COPYRIGHT-and-LICENSE"></a><h1>COPYRIGHT and LICENSE</h1>
+<p>This file came from the "IO-stringy" Perl5 toolkit.</p>
+<p>Copyright (c) 1996 by Eryq.  All rights reserved.
+Copyright (c) 1999,2001 by ZeeGee Software Inc.  All rights reserved.</p>
+<p>This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.</p>
+<a name="Construction"></a><h2>Construction</h2>
+<ul>
+<li><a name="new-%5bARGS...%5d"></a><b>new [ARGS...]</b>
+<p><i>Class method.</i>
+Return a new, unattached scalar handle.
+If any arguments are given, they're sent to open().</p>
+</li>
+<li><a name="open-%5bSCALARREF%5d"></a><b>open [SCALARREF]</b>
+<p><i>Instance method.</i>
+Open the scalar handle on a new scalar, pointed to by SCALARREF.
+If no SCALARREF is given, a "private" scalar is created to hold
+the file data.</p>
+<p>Returns the self object on success, undefined on error.</p>
+</li>
+<li><a name="opened"></a><b>opened</b>
+<p><i>Instance method.</i>
+Is the scalar handle opened on something?</p>
+</li>
+<li><a name="close"></a><b>close</b>
+<p><i>Instance method.</i>
+Disassociate the scalar handle from its underlying scalar.
+Done automatically on destroy.</p>
+</li>
+</ul>
+<a name="Input-and-output"></a><h2>Input and output</h2>
+<ul>
+<li><a name="flush"></a><b>flush</b>
+<p><i>Instance method.</i>
+No-op, provided for OO compatibility.</p>
+</li>
+<li><a name="getc"></a><b>getc</b>
+<p><i>Instance method.</i>
+Return the next character, or undef if none remain.</p>
+</li>
+<li><a name="getline"></a><b>getline</b>
+<p><i>Instance method.</i>
+Return the next line, or undef on end of string.
+Can safely be called in an array context.
+Currently, lines are delimited by "\n".</p>
+</li>
+<li><a name="getlines"></a><b>getlines</b>
+<p><i>Instance method.</i>
+Get all remaining lines.
+It will croak() if accidentally called in a scalar context.</p>
+</li>
+<li><a name="print-ARGS..."></a><b>print ARGS...</b>
+<p><i>Instance method.</i>
+Print ARGS to the underlying scalar.</p>
+<p><b>Warning:</b> this continues to always cause a seek to the end
+of the string, but if you perform seek()s and tell()s, it is
+still safer to explicitly seek-to-end before subsequent print()s.</p>
+</li>
+<li><a name="read-BUF%2c-NBYTES%2c-%5bOFFSET%5d"></a><b>read BUF, NBYTES, [OFFSET]</b>
+<p><i>Instance method.</i>
+Read some bytes from the scalar.
+Returns the number of bytes actually read, 0 on end-of-file, undef on error.</p>
+</li>
+<li><a name="write-BUF%2c-NBYTES%2c-%5bOFFSET%5d"></a><b>write BUF, NBYTES, [OFFSET]</b>
+<p><i>Instance method.</i>
+Write some bytes to the scalar.</p>
+</li>
+<li><a name="sysread-BUF%2c-LEN%2c-%5bOFFSET%5d"></a><b>sysread BUF, LEN, [OFFSET]</b>
+<p><i>Instance method.</i>
+Read some bytes from the scalar.
+Returns the number of bytes actually read, 0 on end-of-file, undef on error.</p>
+</li>
+<li><a name="syswrite-BUF%2c-NBYTES%2c-%5bOFFSET%5d"></a><b>syswrite BUF, NBYTES, [OFFSET]</b>
+<p><i>Instance method.</i>
+Write some bytes to the scalar.</p>
+</li>
+</ul>
+<a name="Seeking%2ftelling-and-other-attributes"></a><h2>Seeking/telling and other attributes</h2>
+<ul>
+<li><a name="autoflush"></a><b>autoflush</b>
+<p><i>Instance method.</i>
+No-op, provided for OO compatibility.</p>
+</li>
+<li><a name="binmode"></a><b>binmode</b>
+<p><i>Instance method.</i>
+No-op, provided for OO compatibility.</p>
+</li>
+<li><a name="clearerr"></a><b>clearerr</b>
+<p><i>Instance method.</i>  Clear the error and EOF flags.  A no-op.</p>
+</li>
+<li><a name="eof"></a><b>eof</b>
+<p><i>Instance method.</i>  Are we at end of file?</p>
+</li>
+<li><a name="seek-OFFSET%2c-WHENCE"></a><b>seek OFFSET, WHENCE</b>
+<p><i>Instance method.</i>  Seek to a given position in the stream.</p>
+</li>
+<li><a name="sysseek-OFFSET%2c-WHENCE"></a><b>sysseek OFFSET, WHENCE</b>
+<p><i>Instance method.</i> Identical to <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:39 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><a class="l_k" href="../../../functions/seek.html">seek</a> <span class="w">OFFSET</span><span class="cm">,</span> <span class="w">WHENCE</span></code>
+</body>
+</html>
+, <i>q.v.</i></p>
+</li>
+<li><a name="tell"></a><b>tell</b>
+<p><i>Instance method.</i>
+Return the current position in the stream, as a numeric offset.</p>
+</li>
+<li><a name="use_RS-%5bYESNO%5d"></a><b>use_RS [YESNO]</b>
+<p><i>Instance method.</i>
+<b>Deprecated and ignored.</b>
+Obey the current setting of $/, like IO::Handle does?
+Default is false in 1.x, but cold-welded true in 2.x and later.</p>
+</li>
+<li><a name="setpos-POS"></a><b>setpos POS</b>
+<p><i>Instance method.</i>
+Set the current position, using the opaque value returned by <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:39 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">getpos</span><span class="s">(</span><span class="s">)</span></code>
+</body>
+</html>
+.</p>
+</li>
+<li><a name="getpos"></a><b>getpos</b>
+<p><i>Instance method.</i>
+Return the current position in the string, as an opaque object.</p>
+</li>
+<li><a name="sref"></a><b>sref</b>
+<p><i>Instance method.</i>
+Return a reference to the underlying scalar.</p>
+</li>
+</ul>
+<a name="WARNINGS"></a><h1>WARNINGS</h1>
+<p>Perl's TIEHANDLE spec was incomplete prior to 5.005_57;
+it was missing support for <code class="inline"><a class="l_k" href="../../../functions/seek.html">seek()</a></code>, <code class="inline"><a class="l_k" href="../../../functions/tell.html">tell()</a></code>, and <code class="inline"><a class="l_k" href="../../../functions/eof.html">eof()</a></code>.
+Attempting to use these functions with an IO::Scalar will not work
+prior to 5.005_57. IO::Scalar will not have the relevant methods
+invoked; and even worse, this kind of bug can lie dormant for a while.
+If you turn warnings on (via <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:39 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">$^W</span></code>
+</body>
+</html>
+ or <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:39 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="w">perl</span> -w</code>
+</body>
+</html>
+),
+and you see something like this...</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:39 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">    <span class="w">attempt</span> <span class="w">to</span> <a class="l_k" href="../../../functions/seek.html">seek</a> <span class="w">on</span> <span class="w">unopened</span> <span class="w">filehandle</span></pre>
+</body>
+</html>
+<p>...then you are probably trying to use one of these functions
+on an IO::Scalar with an old Perl.  The remedy is to simply
+use the OO version; e.g.:</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:39 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<pre class="verbatim">    <span class="i">$SH</span><span class="i">-&gt;seek</span><span class="s">(</span><span class="n">0</span><span class="cm">,</span><span class="n">0</span><span class="s">)</span><span class="sc">;</span>    <span class="c">### GOOD: will work on any 5.005</span>
+    <a class="l_k" href="../../../functions/seek.html">seek</a><span class="s">(</span><span class="i">$SH</span><span class="cm">,</span><span class="n">0</span><span class="cm">,</span><span class="n">0</span><span class="s">)</span><span class="sc">;</span>     <span class="c">### WARNING: will only work on 5.005_57 and beyond</span></pre>
+</body>
+</html>
+<a name="VERSION"></a><h1>VERSION</h1>
+<p>$Id: Scalar.pm,v 1.6 2005/02/10 21:21:53 dfs Exp $</p>
+<a name="AUTHORS"></a><h1>AUTHORS</h1>
+<a name="Primary-Maintainer"></a><h2>Primary Maintainer</h2>
+<p>David F. Skoll (<i>dfs@roaringpenguin.com</i>).</p>
+<a name="Principal-author"></a><h2>Principal author</h2>
+<p>Eryq (<i>eryq@zeegee.com</i>).
+President, ZeeGee Software Inc (<i><a href="http://www.zeegee.com">http://www.zeegee.com</a></i>).</p>
+<a name="Other-contributors"></a><h2>Other contributors</h2>
+<p>The full set of contributors always includes the folks mentioned
+in <a href="http://search.cpan.org/perldoc/IO::Stringy#CHANGE-LOG">CHANGE LOG in IO::Stringy</a>.  But just the same, special
+thanks to the following individuals for their invaluable contributions
+(if I've forgotten or misspelled your name, please email me!):</p>
+<p><i>Andy Glew,</i>
+for contributing <code class="inline"><a class="l_k" href="../../../functions/getc.html">getc()</a></code>.</p>
+<p><i>Brandon Browning,</i>
+for suggesting <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:39 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">opened</span><span class="s">(</span><span class="s">)</span></code>
+</body>
+</html>
+.</p>
+<p><i>David Richter,</i>
+for finding and fixing the bug in <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:39 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">PRINTF</span><span class="s">(</span><span class="s">)</span></code>
+</body>
+</html>
+.</p>
+<p><i>Eric L. Brine,</i>
+for his offset-using read() and write() implementations.</p>
+<p><i>Richard Jones,</i>
+for his patches to massively improve the performance of <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>">
+<!-- Generated by perltidy on Mon Sep  3 11:12:39 2018 -->
+<html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>">
+<head>
+<title>perltidy</title>
+<style type="text/css">
+<!--
+/* default style sheet generated by perltidy */
+body {background: #FFFFFF; color: #000000}
+pre { color: #000000; 
+      background: #FFFFFF;
+      font-family: courier;
+    } 
+
+.c  { color: #000000;} /* comment */
+.cm { color: #000000;} /* comma */
+.co { color: #000000;} /* colon */
+.h  { color: #000000;} /* here-doc-target */
+.hh { color: #000000;} /* here-doc-text */
+.i  { color: #000000;} /* identifier */
+.j  { color: #000000;} /* label */
+.k  { color: #000000;} /* keyword */
+.m  { color: #000000;} /* subroutine */
+.n  { color: #000000;} /* numeric */
+.p  { color: #000000;} /* paren */
+.pd { color: #000000;} /* pod-text */
+.pu { color: #000000;} /* punctuation */
+.q  { color: #000000;} /* quote */
+.s  { color: #000000;} /* structure */
+.sc { color: #000000;} /* semicolon */
+.v  { color: #000000;} /* v-string */
+.w  { color: #000000;} /* bareword */
+-->
+</style>
+</head>
+<body>
+<a name="-top-"></a>
+<h1>perltidy</h1>
+<hr />
+<!-- contents of filename: perltidy -->
+<code class="inline"><span class="i">getline</span><span class="s">(</span><span class="s">)</span></code>
+</body>
+</html>
+
+and add <code class="inline"><a class="l_k" href="../../../functions/sysread.html">sysread</a></code> and <code class="inline"><a class="l_k" href="../../../functions/syswrite.html">syswrite</a></code>.</p>
+<p><i>B. K. Oxley (binkley),</i>
+for stringification and inheritance improvements,
+and sundry good ideas.</p>
+<p><i>Doug Wilson,</i>
+for the IO::Handle inheritance and automatic tie-ing.</p>
+<a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<p><a href="http://search.cpan.org/perldoc/IO::String">IO::String</a>, which is quite similar but which was designed
+more-recently and with an IO::Handle-like interface in mind,
+so you could mix OO- and native-filehandle usage without using tied().</p>
+<p><i>Note:</i> as of version 2.x, these classes all work like
+their IO::Handle counterparts, so we have comparable
+functionality to IO::String.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#COPYRIGHT-and-LICENSE">COPYRIGHT and LICENSE</a><ul><li><a href="#Construction">Construction</a><li><a href="#Input-and-output">Input and output</a><li><a href="#Seeking%2ftelling-and-other-attributes">Seeking/telling and other attributes</a></ul><li><a href="#WARNINGS">WARNINGS</a><li><a href="#VERSION">VERSION</a><li><a href="#AUTHORS">AUTHORS</a><ul><li><a href="#Primary-Maintainer">Primary Maintainer</a><li><a href="#Principal-author">Principal author</a><li><a href="#Other-contributors">Other contributors</a></ul><li><a href="#SEE-ALSO">SEE ALSO</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+
+    <div class="footer container-fluid">
+      <footer class="row">
+        <ul class="col-xs-12 col-sm-4 list-unstyled">
+          <li><h4>Site info</h4></li>
+          <li>Site mantained by <a href="mailto:community@opusvl.com">Jon Allen (JJ)</a></li>
+          <li>Docs mantained by <a href="http://lists.cpan.org/showlist.cgi?name=perl5-porters">Perl 5 Porters</a></li>
+	  <li>Development supported by <a href="http://opusvl.com">OpusVL</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Manual</h4></li>
+	  <li><a href="../../../index-overview.html">Overview</a></li>
+	  <li><a href="../../../index-tutorials.html">Tutorials</a></li>
+	  <li><a href="../../../index-faq.html">FAQs</a></li>
+	  <li><a href="../../../index-history.html">Changes</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Reference</h4></li>
+	  <li><a href="../../../index-language.html">Language</a></li>
+	  <li><a href="../../../index-functions.html">Functions</a></li>
+	  <li><a href="../../../perlop.html">Operators</a></li>
+	  <li><a href="../../../perlvar.html">Variables</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Modules</h4></li>
+	  <li><a href="../../../index-modules-A.html">Modules</a></li>
+	  <li><a href="../../../index-pragmas.html">Pragmas</a></li>
+	  <li><a href="../../../index-utilities.html">Utilities</a></li>
+        </ul>
+        <ul class="col-xs-12 col-sm-2 list-unstyled">
+          <li><h4>Misc</h4></li>
+	  <li><a href="../../../index-licence.html">License</a></li>
+	  <li><a href="../../../index-internals.html">Internals</a></li>
+	  <li><a href="../../../index-platforms.html">Platforms</a></li>
+        </ul>
+        <div class="col-xs-12 footer-info">
+          <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../../../static/main.min.js"></script>
+    <!--
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTrackerJJ = _gat._getTracker("UA-1892152-2");
+    pageTrackerJJ._initData();
+    pageTrackerJJ._trackPageview();
+    var pageTrackerRobert = _gat._getTracker("UA-50555-3");
+    pageTrackerRobert._initData();
+    pageTrackerRobert._trackPageview();
+    </script>
+    -->
+  </body>
+</html>
