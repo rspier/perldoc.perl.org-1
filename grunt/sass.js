@@ -1,19 +1,19 @@
-module.exports = function() {
+module.exports = function () {
 
-var sass;
+  var sass;
 
-sass = {
+  sass = {
     options: {
-        // compress : true,
-        sourceMap: false,
+      // compress : true,
+      sourceMap: false,
     },
     style: {
       files: {
-        'public/css/main.min.css': 'assets/scss/main.scss'
+        'outputs/public/css/main.min.css': 'assets/scss/main.scss'
       }
     },
   };
 
-return sass;
+  return sass;
 
 };

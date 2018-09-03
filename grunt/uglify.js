@@ -20,7 +20,7 @@ module.exports = function () {
         'assets/js/libs/highlight.pack.js',
         'assets/js/main.js',
       ],
-      dest: 'public/js/main.min.js'
+      dest: 'outputs/public/js/main.min.js'
     },
   };
 
