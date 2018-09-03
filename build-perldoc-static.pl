@@ -25,8 +25,8 @@ use constant TT_INCLUDE_PATH => "$Bin/templates";
 my %specifiers = (
   'output-path' => '=s',
   'perl'        => '=s',
-  'download'    => '!',
-  'pdf'         => '!',
+  # 'download'    => '!',
+  # 'pdf'         => '!',
 );                  
 my %options;
 GetOptions( \%options, optionspec(%specifiers) );
