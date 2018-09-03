@@ -24,12 +24,10 @@
     <h2>[% az.letter %]</h2>
     <ul>
       [% FOREACH function IN az.functions %]
-        <li>
-          <a href="functions/[% function.url %]">[% function.name %]</a>
-          [% IF function.description %]
-            - [% function.description %]
-          [% END %]
-        </li>
+        <li><a href="functions/[% function.url %]">[% function.name %]</a>
+        [% IF function.description %]
+          - [% function.description %]
+        [% END %]
       [% END %]
     </ul>
   [% END %]

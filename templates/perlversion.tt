@@ -1,9 +1,9 @@
 <script language="JavaScript" type="text/javascript">
-  function selectPerlVersion(element) {
-    if (element.value.substring(0,1) == '/') {
-      location.href = element.value;
-    }
+function selectPerlVersion(element) {
+  if (element.value.substring(0,1) == '/') {
+    location.href = element.value;
   }
+}
 </script>
 
 <select id="perl_version_select" name="version-chooser" onChange="selectPerlVersion(this)">

@@ -1,0 +1,4 @@
+~/projects/perldoc/builds/perl-5.20.0/perl-5.20.0 » perl ../../../build-perldoc-html.pl -output-path ~/projects/perldoc/outputs/5/20/0 -perl 
+"~/projects/perldoc/builds/perl-5.20.0/perl-5.20.0/install/bin/perl5.20.0"~/projects/perldoc/builds/perl-5.20.0/perl-5.20.0 » perl 
+../../../build-perldoc-html.pl -output-path ~/projects/perldoc/outputs/5/20/0 -perl 
+"~/projects/perldoc/builds/perl-5.20.0/perl-5.20.0/install/bin/perl5.20.0"

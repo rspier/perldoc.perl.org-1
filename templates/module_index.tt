@@ -13,11 +13,9 @@
 </div>
 <ul>
   [% FOREACH module IN module_links %]
-    <li>
-      <a href="[% path %][% module.url %]">[% module.name %]</a>
-      [% IF module.title %]
-        - [% module.title %]
-      [% END %]
-    </li>
+    <li><a href="[% path %][% module.url %]">[% module.name %]</a>
+    [% IF module.title %]
+      - [% module.title %]
+    [% END %]
   [% END %]
 </ul>

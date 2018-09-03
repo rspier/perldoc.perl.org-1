@@ -1,3 +1,14 @@
+[% IF NOT me.major  %]
+    [% SET major = latest.major %]
+    [% SET minor = latest.minor %]
+[% ELSE %]
+    [% SET major = me.major %]
+    [% SET minor = me.minor %]
+[% END %]
+
+MAJOR: [% major %]
+MINOR: [% minor %]
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <link rel="icon" href="/public/img/favicon.ico">
-    <title> 5.[% latest.major %].[% latest.minor %] Documentation - Perl Language</title>
+    <title> 5.[% major %].[% minor %] Documentation - Perl Language</title>
     <!-- core CSS -->
     <link href="/public/css/main.min.css" rel="stylesheet">
     <!-- Fonts -->
@@ -23,7 +34,7 @@
     <div class="wrapper">
       <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
         <a class="navbar-brand" href="/">
-          <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml"> [% site_title %]</object>
+          <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml"> Perl Documentation Logo</object>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -33,13 +44,13 @@
             <li class="nav-item dropdown">
               <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                [% FOREACH major IN versions.keys.sort.reverse %]
+                [% FOREACH option_version IN versions.keys.sort.reverse %]
                    <p class='dropdown-item major-version'>
-                    5.[% major %]
+                    5.[% option_version %]
                    </p>
                     <div class="dropdown-divider"></div>
-                      [% FOREACH minor IN versions.item(major).keys.sort.reverse %]
-                          <a class='dropdown-item minor-version' href="/5/[% major %]/[% minor %]">5.[% major %].[% minor %]</a> 
+                      [% FOREACH option_minor IN versions.item(option_version).keys.sort.reverse %]
+                          <a class='dropdown-item minor-version' href="5/[% option_version %]/[% option_minor %]">5.[% option_version %].[% option_minor %]</a> 
                       [% END %]
                       [% UNLESS loop.last %]
                         <div class="dropdown-divider"></div>

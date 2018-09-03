@@ -7,7 +7,7 @@
 
 <ul>
 [% FOREACH cat IN function_cat %]
-  <li><a href="#[% cat.link %]">[% cat.name %]</a></li>
+  <li><a href="#[% cat.link %]">[% cat.name %]</a>
 [% END %]
 </ul>
 
@@ -16,12 +16,10 @@
   <h2>[% cat.name %]</h2>
   <ul>
     [% FOREACH function IN cat.functions %]
-      <li>
-        <a href="functions/[% function.url %]">[% function.name %]</a>
-        [% IF function.description %]
-          - [% function.description %]
-        [% END %]
-      </li>
+      <li><a href="functions/[% function.url %]">[% function.name %]</a>
+      [% IF function.description %]
+        - [% function.description %]
+      [% END %]
     [% END %]
   </ul>
 [% END %]

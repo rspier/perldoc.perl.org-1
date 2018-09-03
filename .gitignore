@@ -2,3 +2,6 @@ node_modules/
 .sass-cache/*
 package-lock.json
 config.codekit3
+builds/
+outputs/
+syntax.cache

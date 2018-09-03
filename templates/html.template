@@ -57,7 +57,7 @@
         <li><a href="http://perlbuzz.com">Perl Buzz</a></li>
         <li><a href="http://perlsphere.net">Perlsphere</a></li>
         <li><a href="http://planet.perl.org">Planet Perl</a></li>
-        <li><a href="http://news.perlfoundation.org/">TPF news</a></li>
+	<li><a href="http://news.perlfoundation.org/">TPF news</a></li>
         <li><a href="http://use.perl.org">Use Perl</a></li>
       </ul>
       <h2>See also:</h2>
@@ -73,10 +73,10 @@
       <h2>Contact:</h2>
       <ul>
         <li>Site maintained by<br><a href="http://perl.jonallen.info">Jon Allen</a>
-          (<a href="http://perl.jonallen.info">JJ</a>)
-        </li>
+            (<a href="http://perl.jonallen.info">JJ</a>)</li>
         <li class="spaced">Last updated on<br>{$last_update}</li>
-      	<li class="spaced">See the <a href="http://perl.jonallen.info/projects/perldoc">project page</a> for more details</li>
+	<li class="spaced">See the <a href="http://perl.jonallen.info/projects/perldoc">project page</a> for
+	more details</li>
       </ul>
     </div>
   </div>
@@ -88,7 +88,7 @@
         <div id="contentHeaderCentre">-- Perl {$perl_version} documentation --</div>
         <div id="contentHeaderRight"><a href="#" onClick="showRight()">Show toolbar</a></div>
       </div>
-      <div clas='breadcrumb' id="breadCrumbs">{$breadcrumb}</div>
+      <div id="breadCrumbs">{$breadcrumb}</div>
       <script language="JavaScript">fromSearch();</script>
       <div id="contentBody">{$content}</div>
       <div id="contentFooter"><a href="http://www.perl.org"><img src="{$path}perlpowered.png" border=0></a></div>

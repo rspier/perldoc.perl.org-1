@@ -2,9 +2,8 @@
 <ul>
   [% FOREACH page IN section_pages %]
     <li><a href="[% page.link %]">[% page.name %]</a>
-      [% IF page.title %]
-        - [% page.title %]
-      [% END %]
-    </li>
+    [% IF page.title %]
+      - [% page.title %]
+    [% END %]
   [% END %]
 </ul>
