@@ -6,11 +6,18 @@
   "devDependencies": {
     "bootstrap": "^4.1.2",
     "grunt": "^1.0.3",
+    "grunt-compress-images": "^1.0.4",
+    "grunt-contrib-imagemin": "^2.0.1",
     "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
+    "grunt-image": "^4.2.0",
     "jquery": "^3.3.1",
     "popper": "^1.0.1"
+  },
+  "dependencies": {
+    "imagemin-mozjpeg": "^7.0.0",
+    "popper.js": "^1.14.4"
   }
 }

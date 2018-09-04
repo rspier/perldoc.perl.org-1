@@ -1,27 +1,31 @@
-module.exports = function() {
+module.exports = function () {
 
-var watch;
+  var watch;
 
-watch = {
-  options: {
-    spawn: false
-  },
-  configFiles: {
-    files: [ 'Gruntfile.js', 'grunt/*.js' ],
+  watch = {
     options: {
-      reload: true
+      spawn: false
+    },
+    configFiles: {
+      files: ['Gruntfile.js', 'grunt/*.js'],
+      options: {
+        reload: true
+      }
+    },
+    css: {
+      files: ['assets/scss/*.scss', 'assets/scss/**/*.scss', 'assets/scss/**/**/*.scss'],
+      tasks: ['sass']
+    },
+    js: {
+      files: ['assets/js/*.js', 'assets/js/**/*.js'],
+      tasks: ['uglify']
+    },
+    images: {
+      files: ['public/img/*.*'],
+      tasks: ['image']
     }
-  },
-  css: {
-    files: [ 'assets/scss/*.scss', 'assets/scss/**/*.scss','assets/scss/**/**/*.scss' ],
-    tasks: [ 'sass' ]
-  },
-  js: {
-    files: [ 'assets/js/*.js', 'assets/js/**/*.js' ],
-    tasks: [ 'uglify' ]
-  },
-};
+  };
 
-return watch;
+  return watch;
 
 };

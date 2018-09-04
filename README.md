@@ -19,3 +19,30 @@ perl ../../../../build-perldoc-html.pl -output-path ~/projects/gen-perldoc/outpu
 ```
 
 IF the directory ENV is not present - compile has failed and the version will not have any documentation and wont appear in the navigation neither
+
+Using Grunt to compile / optimize Sass, JS and Images
+
+This will install the required dependencies that will allow you to update / optimize / improve and remove code from the website
+
+```
+npm install
+```
+
+There are a few tasks that have been created by default
+
+- image - optimize and copy images from the root into the outputs folder
+- sass - compile, optimize and export code into the outputs folder
+- uglify - compile, optimize, transpile and export code into the outputs folder
+  For development, open up a terminal and navigate to the current project
+
+```
+grunt watch
+```
+
+this will watch all the souce folders and recreate/ recompile files as needed
+
+```
+grunt
+```
+
+this command will run all tasks (sass, js, images) and compile the build into the outputs/public folder
