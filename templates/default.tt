@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <link rel="icon" href="[% path %]static/favicon.ico">
+    <link rel="icon" href="/public/img/favicon.ico">
 
     <title>[% pagename %] - [% site_title %]</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="[% path %]static/main.min.css" rel="stylesheet">
+    <link href="/public/css/main.min.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
@@ -187,7 +187,7 @@
       </footer>
     </div>
 
-    <script src="[% path %]static/main.min.js"></script>
+    <script src="/public/static/main.min.js"></script>
     <!--
     <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
