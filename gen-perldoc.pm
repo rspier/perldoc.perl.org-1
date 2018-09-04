@@ -149,8 +149,8 @@ my $global = {
         '5_8_9' => 'exit 1',
         '5_10_0' => 'exit 1',
         '5_10_1' => 'exit 1',
-        default => 'exit 1',
-#        default => 'mkdir ../env && sh Configure -de -Dprefix="../env" && make && make install',
+        # default => 'exit 1',
+       default => 'mkdir -p ../env && sh Configure -de -Dprefix="../env" && make && make install',
     },
 };
 
