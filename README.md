@@ -35,6 +35,10 @@ There are 2 major files that can modified to change the strctural integrity of t
 - landing page content links automatically generated
 - footer automatically generated
 
+Modifying the templates while developing will require rebuilding the actual html files
+
+Using `perl gen-perldoc.pm force` will rewrite the html files so please use it with caution as it will recreate all the html files insde the Outputs folder
+
 ### Assets developing
 
 Using Grunt to compile / optimize Sass, JS and Images
