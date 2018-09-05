@@ -151,6 +151,7 @@ my $global = {
 #        default => 'exit 1',
         default => 'mkdir -p ../env && sh Configure -de -Dprefix="../env" && make && make install',
     },
+    force => ($ARGV[0] && $ARGV[0] eq 'force') ? "yes" : "no"
 };
 
 sub main { 
@@ -192,7 +193,7 @@ sub do_work {
             if ($global->{sources}->{$major}->{$minor}->{state} eq 'extracted_ok') {
                 $global->{sources}->{$major}->{$minor} = build_perl($global->{sources}->{$major}->{$minor});
             }
-            if ($global->{sources}->{$major}->{$minor}->{state} eq 'build_ok') {
+            if ($global->{sources}->{$major}->{$minor}->{state} eq 'build_ok' || ($global->{force} && $global->{sources}->{$major}->{$minor}->{state} eq 'done') ) {
                 my $rp = $global->{sources}->{$major}->{$minor};
 
                 {

@@ -1,24 +1,41 @@
-# gen-perldoc
+# Perl Documentation Website
 
-A script to convert base perl pod files into html
+Thir repo contains all the scrips that are neccessary to develop the documentation website locally and then just deploy with a simple copy/paste to the server.
 
-navigate to Builds directory and into the first version you want to build
+## gen-perldoc.pm
 
-navigate to version / env directory
+A script to download perl versions, compile them and convert base perl pod files into html
 
-make sure you change the output directory to the directory you are in
+Using the scripts
 
-```
-mkdir -p ~/projects/gen-perldoc/outputs/5/x/x
-```
+Running the script bellow will create the `builds` and `outputs` folders that contain each version of Perl released and its documentation.
 
-update the script bellow and run the script
-
-```
-perl ../../../../build-perldoc-html.pl -output-path ~/projects/gen-perldoc/outputs/5/x/x -perl ~/projects/gen-perldoc/builds/perl-5.x.x/env/bin/perl
+```bash
+perl gen-perldoc.pm
 ```
 
-IF the directory ENV is not present - compile has failed and the version will not have any documentation and wont appear in the navigation neither
+This script will run once per day so that if a new version is release this is downloaded, compiled and it's documentation released to the site automatically.
+
+## Developing locally and modifying the templates
+
+### Template modifying
+
+There are 2 major files that can modified to change the strctural integrity of the static html files.
+
+`***default.tt***` - template for the actual documentation pages
+
+- navigation automatically generated
+- links on the sidebar automatically generated
+- content automatically generated
+- footer automatically generated
+
+`***main_index.tt***` main landing pages for each release
+
+- navigation automatically generated
+- landing page content links automatically generated
+- footer automatically generated
+
+### Assets developing
 
 Using Grunt to compile / optimize Sass, JS and Images
 
