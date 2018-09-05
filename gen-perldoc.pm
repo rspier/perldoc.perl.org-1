@@ -22,6 +22,7 @@ use File::Find;
 use Cwd;
 use Template;
 use Perldoc::Config;
+use JSON::MaybeXS;
 
 =head1 NAME
 
@@ -151,7 +152,8 @@ my $global = {
 #        default => 'exit 1',
         default => 'mkdir -p ../env && sh Configure -de -Dprefix="../env" && make && make install',
     },
-    force => ($ARGV[0] && $ARGV[0] eq 'force') ? "yes" : "no"
+    force => ($ARGV[0] && $ARGV[0] eq 'force') ? "yes" : "no",
+    js => JSON::MaybeXS->new()
 };
 
 sub main { 
@@ -195,10 +197,10 @@ sub do_work {
             }
             if ($global->{sources}->{$major}->{$minor}->{state} eq 'build_ok' || ($global->{force} && $global->{sources}->{$major}->{$minor}->{state} eq 'done') ) {
                 my $rp = $global->{sources}->{$major}->{$minor};
+                my $path_to_output  = join('/',$global->{config}->{'output-dir'},5,$major,$minor);
 
                 {
                     # Write out the POD extractor script
-                    my $path_to_output  = join('/',$global->{config}->{'output-dir'},5,$major,$minor);
                     my $pod_extractor   = join('/',$rp->{local_path},'extract_pod.sh');
                     my $built_perl_dir  = join('/',$rp->{local_path},'env');
                     my $built_perl_bin  = join('/',$built_perl_dir,'bin','perl');
@@ -206,7 +208,7 @@ sub do_work {
                     open(my $fh,'>',$pod_extractor);
                     print $fh '#!/bin/sh'."\n";
                     print $fh 'cd "'.$built_perl_dir.'"'." && mkdir -p \"$path_to_output\"\n";
-                    print $fh 'perl "'.$pod_gen_path.'" -output-path '.$path_to_output.' -perl '.$built_perl_bin;
+                    print $fh 'perl "'.$pod_gen_path.'" -output-path '.$path_to_output.' -perl '.$built_perl_bin.' -major '.$major.' -minor '.$minor;
                     close($fh);
                 }
 
@@ -217,15 +219,14 @@ sub do_work {
                 print "Extracting Pods(Output): $output\n";
                 print "Extracting pods: $output\n";
 
-                # Forcing success
-                $output = 0;
-
-                if ($output) {
-                    $global->{sources}->{$major}->{$minor} = set_state($rp,'podextract_bad');
-                } else {
+                # Path test for pod extraction
+                my $pod_test = join('/',$path_to_output,'index-faq.html');
+                if (-e $pod_test) {
                     $global->{sources}->{$major}->{$minor} = set_state($rp,'podextract_ok');
                     $ttenv->{versions}->{$major}->{$minor} = $minor;
                     push @versions,[$major,$minor];
+                } else {
+                    $global->{sources}->{$major}->{$minor} = set_state($rp,'podextract_bad');
                 }
             }
         }
@@ -288,6 +289,12 @@ sub do_work {
     # Write the output to the output directory
     my $main_index = join('/',$global->{config}->{'output-dir'},'index.html');
     write_html($main_index,$output);
+
+    # Write the passed jsons out to passed.json
+    my $json_path = join('/',$global->{config}->{'output-dir'},'versions.json');
+    open(my $fh,'>',$json_path);
+    print $fh $global->{js}->encode($ttenv);
+    close($fh);
 }
 
 sub write_html {

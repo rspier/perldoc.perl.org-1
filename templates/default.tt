@@ -12,13 +12,6 @@
 
   <body class="body container-fluid ">
     <div class="wrapper">
-      [% IF NOT me.major  %]
-          [% SET major = latest.major %]
-          [% SET minor = latest.minor %]
-      [% ELSE %]
-          [% SET major = me.major %]
-          [% SET minor = me.minor %]
-      [% END %]
         <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
           <a class="navbar-brand" href="/">
             <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
@@ -30,19 +23,7 @@
             <div class="nav navbar-nav navbar-right">
               <li class="nav-item dropdown">
                 <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  [% FOREACH option_version IN versions.keys.sort.reverse %]
-                    <p class='dropdown-item major-version'>
-                      5.[% option_version %]
-                    </p>
-                      <div class="dropdown-divider"></div>
-                        [% FOREACH option_minor IN versions.item(option_version).keys.sort.reverse %]
-                            <a class='dropdown-item minor-version' href="/5/[% option_version %]/[% option_minor %]">5.[% option_version %].[% option_minor %]</a> 
-                        [% END %]
-                        [% UNLESS loop.last %]
-                          <div class="dropdown-divider"></div>
-                        [% END %]
-                  [% END %]
+                <div class="dropdown-menu" id="dopdown-menu-links" aria-labelledby="navbarDropdown">
                 </div>
               </li>
               <li class="nav-item dropdown">

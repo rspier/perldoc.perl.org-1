@@ -32,9 +32,9 @@ use constant TT_INCLUDE_PATH => "$Bin/templates";
 
 my %specifiers = (
   'output-path' => '=s',
-  # 'download'    => '!',
-  # 'pdf'         => '!',
   'perl'        => '=s',
+  'major'       => '=n',
+  'minor'       => '=n',
 );                  
 my %options;
 GetOptions( \%options, optionspec(%specifiers) );
@@ -154,6 +154,7 @@ foreach my $section (Perldoc::Section::list()) {
   $index_data{pageaddress} = "index-$section.html";
   $index_data{content_tt}  = 'section_index.tt';
   $index_data{module_az}   = \@module_az_links;
+  $index_data{options}     = \%options;
   
   foreach my $page (Perldoc::Section::pages($section)) {
     (my $page_link = $page) =~ s/::/\//g;
@@ -178,7 +179,7 @@ foreach my $section (Perldoc::Section::list()) {
     $page_data{module_az}   = \@module_az_links;
     $page_data{breadcrumbs} = [ {name=>Perldoc::Section::name($section), url=>"index-$section.html"} ];
     $page_data{content_tt}  = 'page.tt';
-    # $page_data{pdf_link}    = "$page_link.pdf";
+    $page_data{pdf_link}    = "$page_link.pdf";
     $page_data{pod_html}    = Perldoc::Page::Convert::html($page);
     $page_data{pod_html}    =~ s!<(pre class="verbatim")>(.+?)<(/pre)>!autolink($1,$2,$3,$page_data{path})!sge if ($page eq 'perl');
     $page_data{page_index}  = Perldoc::Page::Convert::index($page);
@@ -228,7 +229,7 @@ foreach my $module_index ('A'..'Z') {
     $module_data{breadcrumbs} = [ 
                                   {name=>"Core modules ($module_index)", url=>"index-modules-$module_index.html"} ];
     $module_data{content_tt}  = 'page.tt';
-    # $module_data{pdf_link}    = "$module_link.pdf";
+    $module_data{pdf_link}    = "$module_link.pdf";
     $module_data{module_az}   = \@module_az_links;
     $module_data{pod_html}    = Perldoc::Page::Convert::html($module);
     $module_data{page_index}  = Perldoc::Page::Convert::index($module);
@@ -323,7 +324,7 @@ $function_data{pageaddress} = 'perlfunc.html';
 $function_data{contentpage} = 1;
 $function_data{pagename}    = 'perlfunc';
 $function_data{content_tt}  = 'function_page.tt';
-# $function_data{pdf_link}    = "perlfunc.pdf";
+$function_data{pdf_link}    = "perlfunc.pdf";
 $function_data{pod_html}    = Perldoc::Page::Convert::html('perlfunc');
     
 $filename = catfile($Perldoc::Config::option{output_path},$function_data{pageaddress});
@@ -334,9 +335,9 @@ $function_template->process('default.tt',{%Perldoc::Config::option, %function_da
 
 #--Function variables------------------------------------------------------
 
-# undef $function_data{pdf_link};
-# $function_data{pagedepth}   = 1;
-# $function_data{path}        = '../' x $function_data{pagedepth};
+undef $function_data{pdf_link};
+$function_data{pagedepth}   = 1;
+$function_data{path}        = '../' x $function_data{pagedepth};
 
 
 #--Create individual function pages----------------------------------------
