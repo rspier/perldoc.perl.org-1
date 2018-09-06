@@ -30,7 +30,7 @@
           <div class="nav navbar-nav navbar-right">
             <li class="nav-item dropdown">
               <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
                 [% FOREACH option_version IN versions.keys.sort.reverse %]
                    <p class='dropdown-item major-version'>
                     5.[% option_version %]
