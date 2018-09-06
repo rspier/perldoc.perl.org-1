@@ -9,7 +9,6 @@
     <link href="/public/css/main.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
   </head>
-
   <body class="body container-fluid ">
     <div class="wrapper">
         <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
@@ -23,7 +22,7 @@
             <div class="nav navbar-nav navbar-right">
               <li class="nav-item dropdown">
                 <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
-                <div class="dropdown-menu" id="dopdown-menu-links" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -44,23 +43,6 @@
                   <a class="dropdown-item" href="/5/[% major %]/[% minor %]/index-platforms.html">Platform Specific</a>
                 </div>
               </li>
-              <!-- <li class="nav-item dropdown">
-                <a id="navbarDropdown2" href="#" class="dropdown-toggle  nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Functions</a>
-                <div aria-labelledby="navbarDropdown2" class="dropdown-menu">
-                  <div class="dropdown-item">
-                    <form class="form-inline">
-                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
-                  </div>
-                  <a class="dropdown-item" href="/5/[% major %]/[% minor %]/index-functions.html">A-Z</a>
-                  <a class="dropdown-item" href="/5/[% major %]/[% minor %]/index-functions-by-cat.html">By Category</a>
-                  <div class="dropdown-divider"></div>
-                  a class="dropdown-item" href="#">Most used</a>
-                  <a class="dropdown-item" href="#">Split</a>
-                  <a class="dropdown-item" href="#">Open</a>
-                  <a class="dropdown-item" href="#">Substr</a> 
-                </div>
-              </li>-->
               <li class="nav-item dropdown">
                 <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
                 <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
@@ -105,18 +87,10 @@
             </div>
           </div>
           <div class="row">
-              <!-- <aside class="col-sm-4 sidebar">
-                <ul>
-                    <li><a href="[% page.link %]">[% page.index %]</a>
-                </ul>
-              </aside> -->
               <article class="col-sm-12 content">
                 <div class="documentation-wrapper">
-                  <div id="page_name">
-                    <h1>[% pagename %]</h1>
-                  </div>
                   <div id="perl_version">
-                    Perl 5 version [% perl5_version %] documentation
+                    <p class='page-title'> Perl 5 version [% perl5_version %] documentation</p>
                   </div>
                   [% INCLUDE $content_tt %]
                 </div>
@@ -224,19 +198,5 @@
       </div>
     </footer>
     <script src="/public/js/main.min.js"></script>
-    <!--
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    var pageTrackerJJ = _gat._getTracker("UA-1892152-2");
-    pageTrackerJJ._initData();
-    pageTrackerJJ._trackPageview();
-    var pageTrackerRobert = _gat._getTracker("UA-50555-3");
-    pageTrackerRobert._initData();
-    pageTrackerRobert._trackPageview();
-    </script>
-    -->
   </body>
 </html>

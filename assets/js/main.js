@@ -73,44 +73,44 @@ $(function () {
       configurable: true
     });
   }
-  var allversions = document.getElementById('dopdown-menu-links')
-  var majorVersion = document.createElement('p')
-  majorVersion.classList.add('dropdown-item', 'major-version')
-  var dividerDiv = document.createElement('div')
-  dividerDiv.classList.add('dropdown-divider')
-  var minorVersion = document.createElement('a')
-  minorVersion.classList.add('dropdown-item', 'minor-version')
-  var menuItems;
 
+  var menuItems;
+  var latestVersions;
   (function () {
     fetch('/versions.json')
       .then(function (res) {
         return res.json()
       }).then(function (data) {
         menuItems = Object.assign({}, data.versions)
+        latestVersions = Object.assign({}, data.latest)
       })
   })()
 
   setTimeout(function () {
+      var allversions = document.getElementById('dropdown-menu-links')
+      var majorVersion = document.createElement('p')
+      majorVersion.classList.add('dropdown-item', 'major-version')
+      var dividerDiv = document.createElement('div')
+      dividerDiv.classList.add('dropdown-divider')
+      var minorVersion = document.createElement('a')
+      minorVersion.classList.add('dropdown-item', 'minor-version')
       // create array of major versions
       var menuItemsArray = Object.keys(menuItems).map(function (key) {
         return [Number(key), Object.keys(menuItems[key]).map(function (lastKey) {
           return Number(lastKey)
         })]
       })
-      console.log(menuItemsArray);
 
       menuItemsArray.forEach(function (el) {
-        majorVersion.innerHTML = el[0]
-        allversions.appendChild(majorVersion)
+        majorVersion.innerHTML = el
+        if (allversions) {
+          allversions.appendChild(majorVersion)
+        }
 
       })
-
-
-
-
+      console.log('menuItemsArray', menuItemsArray, 'menu', allversions);
     },
-    150);
+    250);
 
   // for each major in .json create
   //                   <p class='dropdown-item major-version'> major </p>

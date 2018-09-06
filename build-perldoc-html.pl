@@ -335,7 +335,7 @@ $function_template->process('default.tt',{%Perldoc::Config::option, %function_da
 
 #--Function variables------------------------------------------------------
 
-undef $function_data{pdf_link};
+# undef $function_data{pdf_link};
 $function_data{pagedepth}   = 1;
 $function_data{path}        = '../' x $function_data{pagedepth};
 
