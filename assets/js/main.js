@@ -1,10 +1,12 @@
-if (typeof Object.assign != 'function') {
+if (typeof Object.assign != "function") {
   // Must be writable: true, enumerable: false, configurable: true
   Object.defineProperty(Object, "assign", {
-    value: function assign(target, varArgs) { // .length of function is 2
-      'use strict';
-      if (target == null) { // TypeError if undefined or null
-        throw new TypeError('Cannot convert undefined or null to object');
+    value: function assign(target, varArgs) {
+      // .length of function is 2
+      "use strict";
+      if (target == null) {
+        // TypeError if undefined or null
+        throw new TypeError("Cannot convert undefined or null to object");
       }
 
       var to = Object(target);
@@ -12,7 +14,8 @@ if (typeof Object.assign != 'function') {
       for (var index = 1; index < arguments.length; index++) {
         var nextSource = arguments[index];
 
-        if (nextSource != null) { // Skip over if undefined or null
+        if (nextSource != null) {
+          // Skip over if undefined or null
           for (var nextKey in nextSource) {
             // Avoid bugs when hasOwnProperty is shadowed
             if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
@@ -27,98 +30,138 @@ if (typeof Object.assign != 'function') {
     configurable: true
   });
 }
-$(function () {
+// Production steps of ECMA-262, Edition 5, 15.4.4.18
+// Reference: http://es5.github.io/#x15.4.4.18
+if (!Array.prototype.forEach) {
+  Array.prototype.forEach = function(callback /*, thisArg*/) {
+    var T, k;
 
-  $('pre code').each(function (i, block) {
-    hljs.highlightBlock(block);
+    if (this == null) {
+      throw new TypeError("this is null or not defined");
+    }
+
+    // 1. Let O be the result of calling toObject() passing the
+    // |this| value as the argument.
+    var O = Object(this);
+
+    // 2. Let lenValue be the result of calling the Get() internal
+    // method of O with the argument "length".
+    // 3. Let len be toUint32(lenValue).
+    var len = O.length >>> 0;
+
+    // 4. If isCallable(callback) is false, throw a TypeError exception.
+    // See: http://es5.github.com/#x9.11
+    if (typeof callback !== "function") {
+      throw new TypeError(callback + " is not a function");
+    }
+
+    // 5. If thisArg was supplied, let T be thisArg; else let
+    // T be undefined.
+    if (arguments.length > 1) {
+      T = arguments[1];
+    }
+
+    // 6. Let k be 0.
+    k = 0;
+
+    // 7. Repeat while k < len.
+    while (k < len) {
+      var kValue;
+
+      // a. Let Pk be ToString(k).
+      //    This is implicit for LHS operands of the in operator.
+      // b. Let kPresent be the result of calling the HasProperty
+      //    internal method of O with argument Pk.
+      //    This step can be combined with c.
+      // c. If kPresent is true, then
+      if (k in O) {
+        // i. Let kValue be the result of calling the Get internal
+        // method of O with argument Pk.
+        kValue = O[k];
+
+        // ii. Call the Call internal method of callback with T as
+        // the this value and argument list containing kValue, k, and O.
+        callback.call(T, kValue, k, O);
+      }
+      // d. Increase k by 1.
+      k++;
+    }
+    // 8. return undefined.
+  };
+}
+$("pre code").each(function(i, block) {
+  hljs.highlightBlock(block);
+});
+
+function navHeight() {
+  var navHeight = document.querySelector("nav").offsetHeight;
+  $(".wrapper").css({
+    "padding-top": navHeight + "px"
   });
+}
 
-  function navHeight() {
-    var navHeight = document.querySelector('nav').offsetHeight
-    $('.wrapper').css({
-      "padding-top": navHeight + 'px'
+navHeight();
+
+window.addEventListener("resize", navHeight);
+window.addEventListener("orientationchange", navHeight);
+
+var menuItems;
+var latestVersions;
+var checkMenuItems = function() {
+  fetch("/versions.json")
+    .then(function(res) {
+      return res.json();
     })
-  }
+    .then(function(data) {
+      menuItems = Object.assign({}, data.versions);
+      latestVersions = Object.assign({}, data.latest);
+    });
+};
 
-  navHeight()
+checkMenuItems();
 
-  window.addEventListener('resize', navHeight)
-  window.addEventListener('orientationchange', navHeight)
-  if (typeof Object.assign != 'function') {
-    // Must be writable: true, enumerable: false, configurable: true
-    Object.defineProperty(Object, "assign", {
-      value: function assign(target, varArgs) { // .length of function is 2
-        'use strict';
-        if (target == null) { // TypeError if undefined or null
-          throw new TypeError('Cannot convert undefined or null to object');
-        }
+setTimeout(function() {
+  var allversions = document.getElementById("dropdown-menu-links");
 
-        var to = Object(target);
+  // create array of major versions
+  var menuItemsArray = Object.keys(menuItems).map(function(key) {
+    return [
+      Number(key),
+      Object.keys(menuItems[key]).map(function(lastKey) {
+        return Number(lastKey);
+      })
+    ];
+  });
+  menuItemsArray = menuItemsArray.sort().reverse();
 
-        for (var index = 1; index < arguments.length; index++) {
-          var nextSource = arguments[index];
+  if (allversions) {
+    menuItemsArray.forEach(function(el, index) {
+      var majorVersion = document.createElement("p");
+      majorVersion.classList.add("dropdown-item", "major-version");
+      var dividerDiv = document.createElement("div");
+      dividerDiv.classList.add("dropdown-divider");
+      majorVersion.innerHTML = el[0];
+      allversions.appendChild(majorVersion);
 
-          if (nextSource != null) { // Skip over if undefined or null
-            for (var nextKey in nextSource) {
-              // Avoid bugs when hasOwnProperty is shadowed
-              if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-                to[nextKey] = nextSource[nextKey];
-              }
-            }
-          }
-        }
-        return to;
-      },
-      writable: true,
-      configurable: true
+      el[1].forEach(function(minorEl) {
+        var minorVersion = document.createElement("a");
+        minorVersion.classList.add("dropdown-item", "minor-version");
+        minorVersion.innerHTML = "5." + el[0] + "." + minorEl;
+        minorVersion.setAttribute("href", "/5/" + el[0] + "/" + minorEl);
+        allversions.appendChild(minorVersion);
+        allversions.appendChild(dividerDiv);
+      });
+      console.log(allversions);
     });
   }
+}, 250);
 
-  var menuItems;
-  var latestVersions;
-  (function () {
-    fetch('/versions.json')
-      .then(function (res) {
-        return res.json()
-      }).then(function (data) {
-        menuItems = Object.assign({}, data.versions)
-        latestVersions = Object.assign({}, data.latest)
-      })
-  })()
-
-  setTimeout(function () {
-      var allversions = document.getElementById('dropdown-menu-links')
-      var majorVersion = document.createElement('p')
-      majorVersion.classList.add('dropdown-item', 'major-version')
-      var dividerDiv = document.createElement('div')
-      dividerDiv.classList.add('dropdown-divider')
-      var minorVersion = document.createElement('a')
-      minorVersion.classList.add('dropdown-item', 'minor-version')
-      // create array of major versions
-      var menuItemsArray = Object.keys(menuItems).map(function (key) {
-        return [Number(key), Object.keys(menuItems[key]).map(function (lastKey) {
-          return Number(lastKey)
-        })]
-      })
-
-      menuItemsArray.forEach(function (el) {
-        majorVersion.innerHTML = el
-        if (allversions) {
-          allversions.appendChild(majorVersion)
-        }
-
-      })
-      console.log('menuItemsArray', menuItemsArray, 'menu', allversions);
-    },
-    250);
-
-  // for each major in .json create
-  //                   <p class='dropdown-item major-version'> major </p>
-  //                  <div class="dropdown-divider" ></div>   
-  // for each minor in major version create 
-  //                           <a class='dropdown-item minor-version' href="/5/major/minor">5. major. minor</a>
-  // append minor to major
-  // append major to id(dopdown-menu-links)
-  //  while (major.lopp.not.last) add( '<div class = "dropdown-divider" > < /div>')
-  // 
-})
+// for each major in .json create
+//                   <p class='dropdown-item major-version'> major </p>
+//                  <div class="dropdown-divider" ></div>
+// for each minor in major version create
+//                           <a class='dropdown-item minor-version' href="/5/major/minor">5. major. minor</a>
+// append minor to major
+// append major to id(dopdown-menu-links)
+//  while (major.lopp.not.last) add( '<div class = "dropdown-divider" > < /div>')
+//
