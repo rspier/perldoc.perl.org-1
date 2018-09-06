@@ -45,7 +45,7 @@ Using Grunt to compile / optimize Sass, JS and Images
 
 This will install the required dependencies that will allow you to update / optimize / improve and remove code from the website
 
-```
+```bash
 npm install
 ```
 
@@ -56,14 +56,20 @@ There are a few tasks that have been created by default
 - uglify - compile, optimize, transpile and export code into the outputs folder
   For development, open up a terminal and navigate to the current project
 
-```
+```bash
 grunt watch
 ```
 
 this will watch all the souce folders and recreate/ recompile files as needed
 
-```
+```bash
 grunt
 ```
 
 this command will run all tasks (sass, js, images) and compile the build into the outputs/public folder
+
+local simple http server
+
+```bash
+python -m SimpleHTTPServer 8000
+```

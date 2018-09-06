@@ -4,6 +4,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -37,7 +38,18 @@ object {
         color: rgba($color: #fff, $alpha: 1);
       }
     }
+
+    .dropdown-menu {
+      &.show {
+        overflow-x: scroll;
+        max-height: 75vh;
+      }
+    }
   }
+}
+
+.fixed-top {
+  position: absolute;
 }
 
 .bg-perl {

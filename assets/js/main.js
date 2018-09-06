@@ -33,7 +33,7 @@ if (typeof Object.assign != "function") {
 // Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.io/#x15.4.4.18
 if (!Array.prototype.forEach) {
-  Array.prototype.forEach = function(callback /*, thisArg*/) {
+  Array.prototype.forEach = function (callback /*, thisArg*/ ) {
     var T, k;
 
     if (this == null) {
@@ -89,7 +89,7 @@ if (!Array.prototype.forEach) {
     // 8. return undefined.
   };
 }
-$("pre code").each(function(i, block) {
+$("pre code").each(function (i, block) {
   hljs.highlightBlock(block);
 });
 
@@ -107,12 +107,12 @@ window.addEventListener("orientationchange", navHeight);
 
 var menuItems;
 var latestVersions;
-var checkMenuItems = function() {
+var checkMenuItems = function () {
   fetch("/versions.json")
-    .then(function(res) {
+    .then(function (res) {
       return res.json();
     })
-    .then(function(data) {
+    .then(function (data) {
       menuItems = Object.assign({}, data.versions);
       latestVersions = Object.assign({}, data.latest);
     });
@@ -120,14 +120,14 @@ var checkMenuItems = function() {
 
 checkMenuItems();
 
-setTimeout(function() {
+setTimeout(function () {
   var allversions = document.getElementById("dropdown-menu-links");
 
   // create array of major versions
-  var menuItemsArray = Object.keys(menuItems).map(function(key) {
+  var menuItemsArray = Object.keys(menuItems).map(function (key) {
     return [
       Number(key),
-      Object.keys(menuItems[key]).map(function(lastKey) {
+      Object.keys(menuItems[key]).map(function (lastKey) {
         return Number(lastKey);
       })
     ];
@@ -135,7 +135,7 @@ setTimeout(function() {
   menuItemsArray = menuItemsArray.sort().reverse();
 
   if (allversions) {
-    menuItemsArray.forEach(function(el, index) {
+    menuItemsArray.forEach(function (el, index) {
       var majorVersion = document.createElement("p");
       majorVersion.classList.add("dropdown-item", "major-version");
       var dividerDiv = document.createElement("div");
@@ -143,7 +143,7 @@ setTimeout(function() {
       majorVersion.innerHTML = el[0];
       allversions.appendChild(majorVersion);
 
-      el[1].forEach(function(minorEl) {
+      el[1].forEach(function (minorEl) {
         var minorVersion = document.createElement("a");
         minorVersion.classList.add("dropdown-item", "minor-version");
         minorVersion.innerHTML = "5." + el[0] + "." + minorEl;
@@ -151,17 +151,6 @@ setTimeout(function() {
         allversions.appendChild(minorVersion);
         allversions.appendChild(dividerDiv);
       });
-      console.log(allversions);
     });
   }
 }, 250);
-
-// for each major in .json create
-//                   <p class='dropdown-item major-version'> major </p>
-//                  <div class="dropdown-divider" ></div>
-// for each minor in major version create
-//                           <a class='dropdown-item minor-version' href="/5/major/minor">5. major. minor</a>
-// append minor to major
-// append major to id(dopdown-menu-links)
-//  while (major.lopp.not.last) add( '<div class = "dropdown-divider" > < /div>')
-//
