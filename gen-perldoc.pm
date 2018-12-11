@@ -189,6 +189,7 @@ sub do_work {
 
     foreach my $major (keys %{ $global->{sources} }) {
         foreach my $minor (keys %{ $global->{sources}->{$major} }) {
+	    if ($global->{sources}->{$major}->{$minor}->{state} eq 'podextract_ok') { $global->{sources}->{$major}->{$minor}->{state} = 'build_ok' }
             if ($global->{sources}->{$major}->{$minor}->{state} eq 'download_ok') {
                 $global->{sources}->{$major}->{$minor} = extract_tarball($global->{sources}->{$major}->{$minor});
             }

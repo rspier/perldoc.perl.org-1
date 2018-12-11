@@ -107,7 +107,7 @@
                 <h4>Site info</h4>
               </li>
               <li>Site mantained by
-                <a href="mailto:community@opusvl.com">OpusVL</a>
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
               </li>
               <li>Docs mantained by
                 <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
