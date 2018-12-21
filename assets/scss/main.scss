@@ -1,9 +1,20 @@
-@import "bootstrap/scss/bootstrap.scss";
+@import 'bootstrap/scss/bootstrap';
 
 $ccc: #ccc;
 $green: #228b22;
 $black: #000;
 $lightred: #cd5555;
+$lightblue: #00688b;
+$purple: #8b008b;
+$brightred: #f00;
+$lightpurple: #b452cd;
+$darkergreen: #253;
+$lightbg: #dde4eb;
+$lightgray: #eed;
+$white: #fff;
+$darkbrown: #262626;
+$lightnumberbg: #d8d8d8;
+$darkergray: #3f3f3f;
 
 .c {
   color: $green;
@@ -24,31 +35,27 @@ $lightred: #cd5555;
   font-style: italic;
 }
 
-
 .i {
-  color: #00688B;
+  color: $lightblue;
 }
-
 
 .j {
   color: $lightred;
   font-weight: bold;
 }
 
-
 .k {
-  color: #8B008B;
+  color: $purple;
   font-weight: bold;
 }
 
-
 .m {
-  color: #FF0000;
+  color: $brightred;
   font-weight: bold;
 }
 
 .n {
-  color: #B452CD;
+  color: $lightpurple;
 }
 
 .p {
@@ -65,7 +72,7 @@ $lightred: #cd5555;
 }
 
 .q {
-  color: $lightred;
+  color: $black;
 }
 
 .s,
@@ -74,7 +81,7 @@ $lightred: #cd5555;
 }
 
 .v {
-  color: #B452CD;
+  color: $lightpurple;
 }
 
 .w {
@@ -87,12 +94,12 @@ a {
     &:link,
     &:visited,
     &:active {
-      color: #8B008B;
+      color: $purple;
       font-weight: bold;
     }
 
     &:hover {
-      color: #225533;
+      color: $darkergreen;
       font-weight: bold;
     }
   }
@@ -106,13 +113,13 @@ a {
     }
 
     &:hover {
-      color: #225533;
+      color: $darkergreen;
     }
   }
 }
 
 code.inline {
-  background: #b8c7ce;
+  background: $lightbg;
   border: 1px solid $ccc;
   padding: 5px 10px;
 }
@@ -120,28 +127,28 @@ code.inline {
 pre {
   &.verbatim {
 
-    background: #b8c7ce;
+    background: $lightbg;
     border: 1px solid $ccc;
     padding: 3px;
     white-space: pre-wrap;
     word-wrap: break-word;
 
     ol {
-      background-color: #d8d8d8;
-      color: #3f3f3f;
+      background-color: $lightnumberbg;
+      color: darkergray;
       margin-bottom: 0;
       margin-top: 0;
 
       li {
-        background: #b8c7ce;
-        color: #262626;
+        background: $lightbg;
+        color: $darkbrown;
         padding-bottom: 2px;
       }
     }
   }
 
   &.indent {
-    background: #eeeedd;
+    background: $lightgray;
     border: 1px solid $ccc;
     margin-left: 30px;
     margin-right: 30px;
@@ -177,14 +184,14 @@ object {
   .navbar-nav {
     .nav-link {
       padding: 1rem;
-      color: rgba($color: #fff, $alpha: 1);
+      color: rgba($color: white, $alpha: 1);
 
       &:hover,
       &:active,
       &:visited,
       &.active {
         background-color: darken($color: $primary, $amount: 5%);
-        color: rgba($color: #fff, $alpha: 1);
+        color: rgba($color: white, $alpha: 1);
       }
     }
 

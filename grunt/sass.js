@@ -4,7 +4,7 @@ module.exports = function () {
 
   sass = {
     options: {
-      compress: true,
+      style: 'compressed',
       sourceMap: false,
     },
     style: {
