@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>perl5112delta - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/14/2/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/14/2/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/14/2/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/14/2/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/14/2/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/14/2/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/14/2/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/14/2/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/14/2/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/14/2/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/14/2/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/14/2/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/14/2/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/14/2/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/14/2/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/14/2/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="index.html">Home</a> &gt;
+    
+      
+        <a href="index-history.html">History / Changes</a> &gt;
+      
+    
+    perl5112delta
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 14.2 documentation</p>
+                  </div>
+                  <h1>perl5112delta</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#Core-Enhancements">Core Enhancements</a><ul><li><a href="#qr-overloading">qr overloading</a><li><a href="#Pluggable-keywords">Pluggable keywords</a><li><a href="#APIs-for-more-internals">APIs for more internals</a><li><a href="#Overridable-function-lookup">Overridable function lookup</a></ul><li><a href="#Modules-and-Pragmata">Modules and Pragmata</a><ul><li><a href="#New-Modules-and-Pragmata">New Modules and Pragmata</a><li><a href="#Pragmata-Changes">Pragmata Changes</a><li><a href="#Updated-Modules">Updated Modules</a></ul><li><a href="#Utility-Changes">Utility Changes</a><li><a href="#Performance-Enhancements">Performance Enhancements</a><li><a href="#New-or-Changed-Diagnostics">New or Changed Diagnostics</a><li><a href="#Changed-Internals">Changed Internals</a><li><a href="#New-Tests">New Tests</a><li><a href="#Known-Problems">Known Problems</a><li><a href="#Deprecations">Deprecations</a><ul><li><a href="#Use-of-%3a%3d-to-mean-an-empty-attribute-list-is-now-deprecated.">Use of := to mean an empty attribute list is now deprecated.</a></ul><li><a href="#Acknowledgements">Acknowledgements</a><li><a href="#Reporting-Bugs">Reporting Bugs</a><li><a href="#SEE-ALSO">SEE ALSO</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>perl5112delta - what is new for perl v5.11.2</p>
+<a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>This document describes differences between the 5.11.1 release and the
+5.11.2 release.</p>
+<a name="Core-Enhancements"></a><h1>Core Enhancements</h1>
+<a name="qr-overloading"></a><h2>qr overloading</h2>
+<p>It is now possible to overload the <code class="inline"><a class="l_k" href="functions/qr.html">qr//</a></code> operator, that is,
+conversion to regexp, like it was already possible to overload
+conversion to boolean, string or number of objects. It is invoked when
+an object appears on the right hand side of the <code class="inline">=~</code>
+ operator, or when
+it is interpolated into a regexp. See <a href="http://search.cpan.org/perldoc/overload">overload</a>.</p>
+<a name="Pluggable-keywords"></a><h2>Pluggable keywords</h2>
+<p>Extension modules can now cleanly hook into the Perl parser to define
+new kinds of keyword-headed expression and compound statement. The
+syntax following the keyword is defined entirely by the extension. This
+allow a completely non-Perl sublanguage to be parsed inline, with the
+right ops cleanly generated. This feature is currently considered
+experimental.</p>
+<p>See <a href="perlapi.html#PL_keyword_plugin">PL_keyword_plugin in perlapi</a> for the mechanism. The Perl core
+source distribution also includes a new module
+<a href="http://search.cpan.org/perldoc/XS::APItest::KeywordRPN">XS::APItest::KeywordRPN</a>, which implements reverse Polish notation
+arithmetic via pluggable keywords. This module is mainly used for test
+purposes, and is not normally installed, but also serves as an example
+of how to use the new mechanism.</p>
+<a name="APIs-for-more-internals"></a><h2>APIs for more internals</h2>
+<p>The lowest layers of the lexer and parts of the pad system now have C
+APIs available to XS extensions. These are necessary to support proper
+use of pluggable keywords, but have other uses too. The new APIs are
+experimental, and only cover a small proportion of what would be
+necessary to take full advantage of the core's facilities in these
+areas. It is intended that the Perl 5.13 development cycle will see the
+addition of a full range of clean, supported interfaces.</p>
+<a name="Overridable-function-lookup"></a><h2>Overridable function lookup</h2>
+<p>Where an extension module hooks the creation of rv2cv ops to modify the
+subroutine lookup process, this now works correctly for bareword
+subroutine calls. This means that prototypes on subroutines referenced
+this way will be processed correctly. (Previously bareword subroutine
+names were initially looked up, for parsing purposes, by an unhookable
+mechanism, so extensions could only properly influence subroutine names
+that appeared with an <code class="inline"><span class="i">&amp;</span></code>
+ sigil.)</p>
+<a name="Modules-and-Pragmata"></a><h1>Modules and Pragmata</h1>
+<a name="New-Modules-and-Pragmata"></a><h2>New Modules and Pragmata</h2>
+<ul>
+<li><a name="legacy"></a><b><code class="inline"><span class="w">legacy</span></code>
+</b>
+<p>Preserves legacy behaviors or enable new non-default behaviors.
+Currently the only behaviour concerns semantics for the 128 characters
+on ASCII systems that have the 8th bit set.</p>
+</li>
+</ul>
+<a name="Pragmata-Changes"></a><h2>Pragmata Changes</h2>
+<ul>
+<li><a name="diagnostics"></a><b><code class="inline"><span class="w">diagnostics</span></code>
+</b>
+<p>Supports %.0f formatting internally.</p>
+</li>
+<li><a name="overload"></a><b><code class="inline"><span class="w">overload</span></code>
+</b>
+<p>Allow overloading of 'qr'.</p>
+</li>
+</ul>
+<a name="Updated-Modules"></a><h2>Updated Modules</h2>
+<ul>
+<li><a name="B%3a%3aConcise"></a><b><code class="inline"><span class="w">B::Concise</span></code>
+</b>
+<p>Optimize reversing an array in-place, avoid using defined %hash in core
+code and tests.</p>
+</li>
+<li><a name="B%3a%3aDeparse"></a><b><code class="inline"><span class="w">B::Deparse</span></code>
+</b>
+<p>Teach B::Deparse about in-place reverse.</p>
+</li>
+<li><a name="Carp"></a><b><code class="inline"><span class="w">Carp</span></code>
+</b>
+<p>Refine Carp caller() fix and add tests.</p>
+</li>
+<li><a name="Compress%3a%3aZlib"></a><b><code class="inline"><span class="w">Compress::Zlib</span></code>
+</b>
+<p>Updated to 2.022.</p>
+</li>
+<li><a name="CPANPLUS"></a><b><code class="inline"><span class="w">CPANPLUS</span></code>
+</b>
+<p>Updated to 0.89_09.</p>
+</li>
+<li><a name="Encode"></a><b><code class="inline"><span class="w">Encode</span></code>
+</b>
+<p>Updated to 2.38.</p>
+</li>
+<li><a name="ExtUtils%3a%3aCBuilder"></a><b><code class="inline"><span class="w">ExtUtils::CBuilder</span></code>
+</b>
+<p>Updated to 0.27.</p>
+</li>
+<li><a name="Env"></a><b><code class="inline"><span class="w">Env</span></code>
+</b>
+<p>Add EXISTS and DELETE methods to Env.pm.</p>
+</li>
+<li><a name="File%3a%3aFetch"></a><b><code class="inline"><span class="w">File::Fetch</span></code>
+</b>
+<p>Updated to 0.22.</p>
+</li>
+<li><a name="I8N%3a%3aLanginfo"></a><b><code class="inline"><span class="w">I8N::Langinfo</span></code>
+</b>
+<p>Correctly document export of I18N::Langinfo.</p>
+</li>
+<li><a name="I8N%3a%3aLangTags"></a><b><code class="inline"><span class="w">I8N::LangTags</span></code>
+</b>
+<p>In I18N::LangTags::Detect, avoid using defined @array and defined
+%hash.</p>
+</li>
+<li><a name="IO%3a%3aCompress"></a><b><code class="inline"><span class="w">IO::Compress</span></code>
+</b>
+<p>Updated to 2.022.</p>
+</li>
+<li><a name="IPC%3a%3aCmd"></a><b><code class="inline"><span class="w">IPC::Cmd</span></code>
+</b>
+<p>Updated to 0.54.</p>
+</li>
+<li><a name="List%3a%3aUtil"></a><b><code class="inline"><span class="w">List::Util</span></code>
+</b>
+<p>Updated to 1.22.</p>
+</li>
+<li><a name="Locale%3a%3aMaketext"></a><b><code class="inline"><span class="w">Locale::Maketext</span></code>
+</b>
+<p>In Locale::Maketext, avoid using defined @array and defined %hash.
+Convert the odd Locale::Maketext test out from Test to Test::More.</p>
+</li>
+<li><a name="Module%3a%3aBuild"></a><b><code class="inline"><span class="w">Module::Build</span></code>
+</b>
+<p>Updated to 0.35_08.</p>
+</li>
+<li><a name="Module%3a%3aCoreList"></a><b><code class="inline"><span class="w">Module::CoreList</span></code>
+</b>
+<p>Implemented is_deprecated().</p>
+</li>
+<li><a name="Pod%3a%3aSimple"></a><b><code class="inline"><span class="w">Pod::Simple</span></code>
+</b>
+<p>Updated to 3.10.</p>
+</li>
+<li><a name="Scalar%3a%3aUtil"></a><b><code class="inline"><span class="w">Scalar::Util</span></code>
+</b>
+<p>Updated to 1.22.</p>
+</li>
+<li><a name="Switch"></a><b><code class="inline"><span class="w">Switch</span></code>
+</b>
+<p>Updated to 2.16.</p>
+</li>
+</ul>
+<a name="Utility-Changes"></a><h1>Utility Changes</h1>
+<ul>
+<li><a name="_a2p_"></a><b><i>a2p</i></b>
+<p>Fixed bugs with the match() operator in list context, remove mention of
+$[.</p>
+</li>
+</ul>
+<a name="Performance-Enhancements"></a><h1>Performance Enhancements</h1>
+<ul>
+<li>
+<p>Reversing an array to itself (as in <code class="inline"><span class="i">@a</span> = <a class="l_k" href="functions/reverse.html">reverse</a> <span class="i">@a</span></code>
+) in void context
+now happens in-place and is several orders of magnitude faster than it
+used to be. It will also preserve non-existent elements whenever
+possible, i.e. for non magical arrays or tied arrays with <code class="inline"><span class="w">EXISTS</span></code>
+ and
+<code class="inline"><span class="w">DELETE</span></code>
+ methods.</p>
+</li>
+</ul>
+<a name="New-or-Changed-Diagnostics"></a><h1>New or Changed Diagnostics</h1>
+<p>Several new diagnostics, see <a href="perldiag.html">perldiag</a> for details.</p>
+<ul>
+<li><a name="Bad-plugin-affecting-keyword-'%25s'"></a><b><code class="inline"><span class="w">Bad</span> <span class="w">plugin</span> <span class="w">affecting</span> <span class="w">keyword</span> <span class="q">&#39;%s&#39;</span></code>
+</b>
+</li>
+<li><a name="gmtime(%25.0f)-too-large"></a><b><code class="inline"><a class="l_k" href="functions/gmtime.html">gmtime</a><span class="s">(</span><span class="i">%.</span><span class="n">0</span><span class="w">f</span><span class="s">)</span> <span class="w">too</span> <span class="w">large</span></code>
+</b>
+</li>
+<li><a name="Lexing-code-attempted-to-stuff-non-Latin-1-character-into-Latin-1-input"></a><b><code class="inline"><span class="w">Lexing</span> <span class="w">code</span> <span class="w">attempted</span> <span class="w">to</span> <span class="w">stuff</span> <span class="w">non</span>-<span class="w">Latin</span>-<span class="n">1</span> <span class="w">character</span> <span class="w">into</span> <span class="w">Latin</span>-<span class="n">1</span> <span class="w">input</span></code>
+</b>
+</li>
+<li><a name="Lexing-code-internal-error-(%25s)"></a><b><code class="inline"><span class="w">Lexing</span> <span class="w">code</span> <span class="w">internal</span> <span class="w">error</span> <span class="s">(</span><span class="i">%s</span><span class="s">)</span></code>
+</b>
+</li>
+<li><a name="localtime(%25.0f)-too-large"></a><b><code class="inline"><a class="l_k" href="functions/localtime.html">localtime</a><span class="s">(</span><span class="i">%.</span><span class="n">0</span><span class="w">f</span><span class="s">)</span> <span class="w">too</span> <span class="w">large</span></code>
+</b>
+</li>
+<li><a name="Overloaded-dereference-did-not-return-a-reference"></a><b><code class="inline"><span class="w">Overloaded</span> <span class="w">dereference</span> <span class="w">did</span> <a class="l_k" href="functions/not.html">not</a> <a class="l_k" href="functions/return.html">return</a> <span class="w">a</span> <span class="w">reference</span></code>
+</b>
+</li>
+<li><a name="Overloaded-qr-did-not-return-a-REGEXP"></a><b><code class="inline"><span class="w">Overloaded</span> <span class="q">qr did</span> <a class="l_k" href="functions/not.html">not</a> <a class="l_k" href="functions/return.html">return</a> <span class="w">a</span> <span class="w">REGEXP</span></code>
+</b>
+</li>
+<li><a name="Perl_pmflag()-is-deprecated%2c-and-will-be-removed-from-the-XS-API"></a><b><code class="inline"><span class="i">Perl_pmflag</span><span class="s">(</span><span class="s">)</span> <span class="w">is</span> <span class="w">deprecated</span><span class="cm">,</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">will</span> <span class="w">be</span> <span class="w">removed</span> <span class="w">from</span> <span class="w">the</span> <span class="w">XS</span> <span class="w">API</span></code>
+</b>
+</li>
+</ul>
+<p>One diagnostic has been removed:</p>
+<ul>
+<li><a name="Runaway-format"></a><b><code class="inline"><span class="w">Runaway</span> <a class="l_k" href="functions/format.html">format</a></code>
+</b>
+</li>
+</ul>
+<a name="Changed-Internals"></a><h1>Changed Internals</h1>
+<ul>
+<li>
+<p><code class="inline"><span class="w">Perl_pmflag</span></code>
+ has been removed from the public API. Calling it now
+generates a deprecation warning, and it will be removed in a future
+release. Although listed as part of the API, it was never documented,
+and only ever used in <i>toke.c</i>, and prior to 5.10, <i>regcomp.c</i>. In
+core, it has been replaced by a static function.</p>
+</li>
+</ul>
+<a name="New-Tests"></a><h1>New Tests</h1>
+<ul>
+<li><a name="_t%2fop%2fwhile_readdir.t_"></a><b><i>t/op/while_readdir.t</i></b>
+<p>Test that a bare readdir in while loop sets $_.</p>
+</li>
+</ul>
+<a name="Known-Problems"></a><h1>Known Problems</h1>
+<ul>
+<li><a name="Known-test-failures-on-VMS"></a><b>Known test failures on VMS</b>
+<p>Perl 5.11.2 fails a small set of core and CPAN tests as of this
+release. With luck, that'll be sorted out for 5.11.3.</p>
+</li>
+</ul>
+<a name="Deprecations"></a><h1>Deprecations</h1>
+<p>The following items are now deprecated.</p>
+<a name="Use-of-%3a%3d-to-mean-an-empty-attribute-list-is-now-deprecated."></a><h2>Use of <code class="inline"><span class="j">:</span>=</code>
+ to mean an empty attribute list is now deprecated.</h2>
+<p>An accident of Perl's parser meant that these constructions were all
+equivalent:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$pi</span> <span class="co">:</span>= <span class="n">4</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$pi</span> <span class="co">:</span> = <span class="n">4</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$pi</span> <span class="co">:</span>  = <span class="n">4</span><span class="sc">;</span></li></ol></pre><p>with the <code class="inline"><span class="j">:</span></code>
+ being treated as the start of an attribute list, which
+ends before the <code class="inline">=</code>
+. As whitespace is not significant here, all are
+parsed as an empty attribute list, hence all the above are equivalent
+to, and better written as</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$pi</span> = <span class="n">4</span><span class="sc">;</span></li></ol></pre><p>because no attribute processing is done for an empty list.</p>
+<p>As is, this meant that <code class="inline"><span class="j">:</span>=</code>
+ cannot be used as a new token, without
+silently changing the meaning of existing code. Hence that particular
+form is now deprecated, and will become a syntax error. If it is
+absolutely necessary to have empty attribute lists (for example,
+because of a code generator) then avoid the warning by adding a space
+before the <code class="inline">=</code>
+.</p>
+<a name="Acknowledgements"></a><h1>Acknowledgements</h1>
+<p>Perl 5.11.2 represents approximately 3 weeks development since Perl
+5.11.1 and contains 29,992 lines of changes across 458 files from 38
+authors and committers:</p>
+<p>Abhijit Menon-Sen, Abigail, Ben Morrow, Bo Borgerson, Brad Gilbert,
+Bram, Chris Williams, Craig A. Berry, Daniel Frederick Crisman, Dave
+Rolsky, David E. Wheeler, David Golden, Eric Brine, Father
+Chrysostomos, Frank Wiegand, Gerard Goossen, Gisle Aas, Graham Barr,
+Harmen, H.Merijn Brand, Jan Dubois, Jerry D. Hedden, Jesse Vincent,
+Karl Williamson, Kevin Ryde, Leon Brocard, Nicholas Clark, Paul
+Marquess, Philippe Bruhat, Rafael Garcia-Suarez, Sisyphus, Steffen
+Mueller, Steve Hay, Steve Peters, Vincent Pit, Yuval Kogman, Yves
+Orton, and Zefram.</p>
+<p>Many of the changes included in this version originated in the CPAN
+modules included in Perl's core. We're grateful to the entire CPAN
+community for helping Perl to flourish.</p>
+<a name="Reporting-Bugs"></a><h1>Reporting Bugs</h1>
+<p>If you find what you think is a bug, you might check the articles
+recently posted to the comp.lang.perl.misc newsgroup and the perl bug
+database at <a href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a> . There may also be information
+at <a href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page.</p>
+<p>If you believe you have an unreported bug, please run the <b>perlbug</b>
+program included with your release. Be sure to trim your bug down to a
+tiny but sufficient test case. Your bug report, along with the output
+of <code class="inline"><span class="w">perl</span> -<span class="w">V</span></code>
+, will be sent off to perlbug@perl.org to be analysed by
+the Perl porting team.</p>
+<p>If the bug you are reporting has security implications, which make it
+inappropriate to send to a publicly archived mailing list, then please
+send it to perl5-security-report@perl.org. This points to a closed
+subscription unarchived mailing list, which includes all the core
+committers, who be able to help assess the impact of issues, figure out
+a resolution, and help co-ordinate the release of patches to mitigate
+or fix the problem across all platforms on which Perl is supported.
+Please only use this address for security issues in the Perl core, not
+for modules independently distributed on CPAN.</p>
+<a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<p>The <i>Changes</i> file for an explanation of how to view exhaustive
+details on what changed.</p>
+<p>The <i>INSTALL</i> file for how to build Perl.</p>
+<p>The <i>README</i> file for general stuff.</p>
+<p>The <i>Artistic</i> and <i>Copying</i> files for copyright information.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#Core-Enhancements">Core Enhancements</a><ul><li><a href="#qr-overloading">qr overloading</a><li><a href="#Pluggable-keywords">Pluggable keywords</a><li><a href="#APIs-for-more-internals">APIs for more internals</a><li><a href="#Overridable-function-lookup">Overridable function lookup</a></ul><li><a href="#Modules-and-Pragmata">Modules and Pragmata</a><ul><li><a href="#New-Modules-and-Pragmata">New Modules and Pragmata</a><li><a href="#Pragmata-Changes">Pragmata Changes</a><li><a href="#Updated-Modules">Updated Modules</a></ul><li><a href="#Utility-Changes">Utility Changes</a><li><a href="#Performance-Enhancements">Performance Enhancements</a><li><a href="#New-or-Changed-Diagnostics">New or Changed Diagnostics</a><li><a href="#Changed-Internals">Changed Internals</a><li><a href="#New-Tests">New Tests</a><li><a href="#Known-Problems">Known Problems</a><li><a href="#Deprecations">Deprecations</a><ul><li><a href="#Use-of-%3a%3d-to-mean-an-empty-attribute-list-is-now-deprecated.">Use of := to mean an empty attribute list is now deprecated.</a></ul><li><a href="#Acknowledgements">Acknowledgements</a><li><a href="#Reporting-Bugs">Reporting Bugs</a><li><a href="#SEE-ALSO">SEE ALSO</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/14/2/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

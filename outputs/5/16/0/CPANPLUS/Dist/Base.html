@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>CPANPLUS::Dist::Base - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/16/0/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/16/0/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/16/0/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/16/0/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/16/0/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/16/0/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/16/0/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/16/0/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/16/0/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/16/0/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/16/0/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/16/0/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/16/0/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/16/0/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/16/0/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/16/0/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../../index.html">Home</a> &gt;
+    
+      
+        <a href="../../index-modules-C.html">Core modules (C)</a> &gt;
+      
+    
+    CPANPLUS::Dist::Base
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 16.0 documentation</p>
+                  </div>
+                  <h1>CPANPLUS::Dist::Base</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#FLOW">FLOW</a><li><a href="#METHODS">METHODS</a><ul><li><a href="#%40subs-%3d-%24Class-%3emethods">@subs = $Class->methods</a><li><a href="#%24bool-%3d-%24Class-%3eformat_available">$bool = $Class->format_available</a><li><a href="#%24bool-%3d-%24dist-%3einit">$bool = $dist->init</a><li><a href="#%24bool-%3d-%24dist-%3eprepare">$bool = $dist->prepare</a><li><a href="#%24bool-%3d-%24dist-%3ecreate">$bool = $dist->create</a><li><a href="#%24bool-%3d-%24dist-%3einstall">$bool = $dist->install</a><li><a href="#%24bool-%3d-%24dist-%3euninstall">$bool = $dist->uninstall</a></ul></ul><a name="NAME"></a><h1>NAME</h1>
+<p>CPANPLUS::Dist::Base - Base class for custom distribution classes</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li><a name="package-CPANPLUS::Dist::MY_IMPLEMENTATION"></a>    package <span class="i">CPANPLUS::Dist::MY_IMPLEMENTATION</span></li><li></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">base</span> <span class="q">&#39;CPANPLUS::Dist::Base&#39;</span><span class="sc">;</span></li><li></li><li><a name="prepare"></a>    sub <span class="m">prepare</span> <span class="s">{</span></li><li>        <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$dist</span> = <a class="l_k" href="../../functions/shift.html">shift</a><span class="sc">;</span></li><li></li><li>        <span class="c">### do the &#39;standard&#39; things</span></li><li>        <span class="i">$dist</span><span class="i">-&gt;SUPER::prepare</span><span class="s">(</span> <span class="i">@_</span> <span class="s">)</span> <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/return.html">return</a><span class="sc">;</span></li><li></li><li>        <span class="c">### do MY_IMPLEMENTATION specific things</span></li><li>        ...</li><li></li><li>        <span class="c">### don&#39;t forget to set the status!</span></li><li>        <a class="l_k" href="../../functions/return.html">return</a> <span class="i">$dist</span><span class="i">-&gt;status</span><span class="i">-&gt;prepared</span><span class="s">(</span> <span class="i">$SUCCESS</span> ? <span class="n">1</span> <span class="co">:</span> <span class="n">0</span> <span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>CPANPLUS::Dist::Base functions as a base class for all custom
+distribution implementations. It does all the mundane work
+CPANPLUS would have done without a custom distribution, so you
+can override just the parts you need to make your own implementation
+work.</p>
+<a name="FLOW"></a><h1>FLOW</h1>
+<p>Below is a brief outline when and in which order methods in this
+class are called:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$Class</span><span class="i">-&gt;format_available</span><span class="sc">;</span>   <span class="c"># can we use this class on this system?</span></li><li></li><li>    <span class="i">$dist</span><span class="i">-&gt;init</span><span class="sc">;</span>                <span class="c"># set up custom accessors, etc</span></li><li>    <span class="i">$dist</span><span class="i">-&gt;prepare</span><span class="sc">;</span>             <span class="c"># find/write meta information</span></li><li>    <span class="i">$dist</span><span class="i">-&gt;create</span><span class="sc">;</span>              <span class="c"># write the distribution file</span></li><li>    <span class="i">$dist</span><span class="i">-&gt;install</span><span class="sc">;</span>             <span class="c"># install the distribution file</span></li><li></li><li>    <span class="i">$dist</span><span class="i">-&gt;uninstall</span><span class="sc">;</span>           <span class="c"># remove the distribution (OPTIONAL)</span></li></ol></pre><a name="METHODS"></a><h1>METHODS</h1>
+<a name="%40subs-%3d-%24Class-%3emethods"></a><h2>@subs = $Class-&gt;methods</h2>
+<p>Returns a list of methods that this class implements that you can
+override.</p>
+<a name="%24bool-%3d-%24Class-%3eformat_available"></a><h2>$bool = $Class-&gt;format_available</h2>
+<p>This method is called when someone requests a module to be installed
+via the superclass. This gives you the opportunity to check if all
+the needed requirements to build and install this distribution have
+been met.</p>
+<p>For example, you might need a command line program, or a certain perl
+module installed to do your job. Now is the time to check.</p>
+<p>Simply return true if the request can proceed and false if it can not.</p>
+<p>The <code class="inline"><span class="w">CPANPLUS::Dist::Base</span></code>
+ implementation always returns true.</p>
+<a name="%24bool-%3d-%24dist-%3einit"></a><h2>$bool = $dist-&gt;init</h2>
+<p>This method is called just after the new dist object is set up and
+before the <code class="inline"><span class="w">prepare</span></code>
+ method is called. This is the time to set up
+the object so it can be used with your class.</p>
+<p>For example, you might want to add extra accessors to the <code class="inline"><span class="w">status</span></code>
+
+object, which you might do as follows:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$dist</span><span class="i">-&gt;status</span><span class="i">-&gt;mk_accessors</span><span class="s">(</span> <span class="q">qw[my_implementation_accessor]</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The <code class="inline"><span class="w">status</span></code>
+ object is implemented as an instance of the
+<code class="inline"><span class="w">Object::Accessor</span></code>
+ class. Please refer to its documentation for
+details.</p>
+<p>Return true if the initialization was successful, and false if it was
+not.</p>
+<p>The <code class="inline"><span class="w">CPANPLUS::Dist::Base</span></code>
+ implementation does not alter your object
+and always returns true.</p>
+<a name="%24bool-%3d-%24dist-%3eprepare"></a><h2>$bool = $dist-&gt;prepare</h2>
+<p>This runs the preparation step of your distribution. This step is meant
+to set up the environment so the <code class="inline"><span class="w">create</span></code>
+ step can create the actual
+distribution(file).
+A <code class="inline"><span class="w">prepare</span></code>
+ call in the standard <code class="inline"><span class="w">ExtUtils::MakeMaker</span></code>
+ distribution
+would, for example, run <code class="inline"><span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span></code>
+ to find the dependencies
+for a distribution. For a <code class="inline"><span class="w">debian</span></code>
+ distribution, this is where you
+would write all the metafiles required for the <code class="inline"><span class="w">dpkg</span>-<span class="i">*</span></code>
+ tools.</p>
+<p>The <code class="inline"><span class="w">CPANPLUS::Dist::Base</span></code>
+ implementation simply calls the underlying
+distribution class (Typically <code class="inline"><span class="w">CPANPLUS::Dist::MM</span></code>
+ or
+<code class="inline"><span class="w">CPANPLUS::Dist::Build</span></code>
+).</p>
+<p>Sets <code class="inline"><span class="i">$dist</span><span class="i">-&gt;status</span><span class="i">-&gt;prepared</span></code>
+ to the return value of this function.
+If you override this method, you should make sure to set this value.</p>
+<a name="%24bool-%3d-%24dist-%3ecreate"></a><h2>$bool = $dist-&gt;create</h2>
+<p>This runs the creation step of your distribution. This step is meant
+to follow up on the <code class="inline"><span class="w">prepare</span></code>
+ call, that set up your environment so
+the <code class="inline"><span class="w">create</span></code>
+ step can create the actual distribution(file).
+A <code class="inline"><span class="w">create</span></code>
+ call in the standard <code class="inline"><span class="w">ExtUtils::MakeMaker</span></code>
+ distribution
+would, for example, run <code class="inline"><span class="w">make</span></code>
+ and <code class="inline"><span class="w">make</span> <span class="w">test</span></code>
+ to build and test
+a distribution. For a <code class="inline"><span class="w">debian</span></code>
+ distribution, this is where you
+would create the actual <code class="inline">.<span class="w">deb</span></code>
+ file using <code class="inline"><span class="w">dpkg</span></code>
+.</p>
+<p>The <code class="inline"><span class="w">CPANPLUS::Dist::Base</span></code>
+ implementation simply calls the underlying
+distribution class (Typically <code class="inline"><span class="w">CPANPLUS::Dist::MM</span></code>
+ or
+<code class="inline"><span class="w">CPANPLUS::Dist::Build</span></code>
+).</p>
+<p>Sets <code class="inline"><span class="i">$dist</span><span class="i">-&gt;status</span><span class="i">-&gt;dist</span></code>
+ to the location of the created
+distribution.
+If you override this method, you should make sure to set this value.</p>
+<p>Sets <code class="inline"><span class="i">$dist</span><span class="i">-&gt;status</span><span class="i">-&gt;created</span></code>
+ to the return value of this function.
+If you override this method, you should make sure to set this value.</p>
+<a name="%24bool-%3d-%24dist-%3einstall"></a><h2>$bool = $dist-&gt;install</h2>
+<p>This runs the install step of your distribution. This step is meant
+to follow up on the <code class="inline"><span class="w">create</span></code>
+ call, which prepared a distribution(file)
+to install.
+A <code class="inline"><span class="w">create</span></code>
+ call in the standard <code class="inline"><span class="w">ExtUtils::MakeMaker</span></code>
+ distribution
+would, for example, run <code class="inline"><span class="w">make</span> <span class="w">install</span></code>
+ to copy the distribution files
+to their final destination. For a <code class="inline"><span class="w">debian</span></code>
+ distribution, this is where
+you would run <code class="inline"><span class="w">dpkg</span> --<span class="w">install</span></code>
+ on the created <code class="inline">.<span class="w">deb</span></code>
+ file.</p>
+<p>The <code class="inline"><span class="w">CPANPLUS::Dist::Base</span></code>
+ implementation simply calls the underlying
+distribution class (Typically <code class="inline"><span class="w">CPANPLUS::Dist::MM</span></code>
+ or
+<code class="inline"><span class="w">CPANPLUS::Dist::Build</span></code>
+).</p>
+<p>Sets <code class="inline"><span class="i">$dist</span><span class="i">-&gt;status</span><span class="i">-&gt;installed</span></code>
+ to the return value of this function.
+If you override this method, you should make sure to set this value.</p>
+<a name="%24bool-%3d-%24dist-%3euninstall"></a><h2>$bool = $dist-&gt;uninstall</h2>
+<p>This runs the uninstall step of your distribution. This step is meant
+to remove the distribution from the file system.
+A <code class="inline"><span class="w">uninstall</span></code>
+ call in the standard <code class="inline"><span class="w">ExtUtils::MakeMaker</span></code>
+ distribution
+would, for example, run <code class="inline"><span class="w">make</span> <span class="w">uninstall</span></code>
+ to remove the distribution
+files the file system. For a <code class="inline"><span class="w">debian</span></code>
+ distribution, this is where you
+would run <code class="inline"><span class="w">dpkg</span> --<span class="w">uninstall</span> <span class="w">PACKAGE</span></code>
+.</p>
+<p>The <code class="inline"><span class="w">CPANPLUS::Dist::Base</span></code>
+ implementation simply calls the underlying
+distribution class (Typically <code class="inline"><span class="w">CPANPLUS::Dist::MM</span></code>
+ or
+<code class="inline"><span class="w">CPANPLUS::Dist::Build</span></code>
+).</p>
+<p>Sets <code class="inline"><span class="i">$dist</span><span class="i">-&gt;status</span><span class="i">-&gt;uninstalled</span></code>
+ to the return value of this function.
+If you override this method, you should make sure to set this value.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#FLOW">FLOW</a><li><a href="#METHODS">METHODS</a><ul><li><a href="#%40subs-%3d-%24Class-%3emethods">@subs = $Class->methods</a><li><a href="#%24bool-%3d-%24Class-%3eformat_available">$bool = $Class->format_available</a><li><a href="#%24bool-%3d-%24dist-%3einit">$bool = $dist->init</a><li><a href="#%24bool-%3d-%24dist-%3eprepare">$bool = $dist->prepare</a><li><a href="#%24bool-%3d-%24dist-%3ecreate">$bool = $dist->create</a><li><a href="#%24bool-%3d-%24dist-%3einstall">$bool = $dist->install</a><li><a href="#%24bool-%3d-%24dist-%3euninstall">$bool = $dist->uninstall</a></ul></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/0/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

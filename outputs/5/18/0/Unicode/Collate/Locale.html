@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>Unicode::Collate::Locale - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/18/0/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/18/0/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/18/0/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/18/0/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/18/0/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/18/0/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/18/0/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/18/0/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/18/0/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/18/0/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/18/0/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/18/0/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/18/0/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/18/0/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/18/0/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/18/0/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../../index.html">Home</a> &gt;
+    
+      
+        <a href="../../index-modules-U.html">Core modules (U)</a> &gt;
+      
+    
+    Unicode::Collate::Locale
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 18.0 documentation</p>
+                  </div>
+                  <h1>Unicode::Collate::Locale</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><ul><li><a href="#Constructor">Constructor</a><li><a href="#Methods">Methods</a><li><a href="#A-list-of-tailorable-locales">A list of tailorable locales</a></ul><li><a href="#INSTALL">INSTALL</a><li><a href="#CAVEAT">CAVEAT</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#SEE-ALSO">SEE ALSO</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>Unicode::Collate::Locale - Linguistic tailoring for DUCET via Unicode::Collate</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../../functions/use.html">use</a> <span class="w">Unicode::Collate::Locale</span><span class="sc">;</span></li><li></li><li>  <span class="c">#construct</span></li><li>  <span class="i">$Collator</span> = <span class="w">Unicode::Collate::Locale</span>-&gt;</li><li>      <span class="w">new</span><span class="s">(</span><span class="w">locale</span> <span class="cm">=&gt;</span> <span class="i">$locale_name</span><span class="cm">,</span> <span class="i">%tailoring</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="c">#sort</span></li><li>  <span class="i">@sorted</span> = <span class="i">$Collator</span><span class="i">-&gt;sort</span><span class="s">(</span><span class="i">@not_sorted</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="c">#compare</span></li><li>  <span class="i">$result</span> = <span class="i">$Collator</span><span class="i">-&gt;cmp</span><span class="s">(</span><span class="i">$a</span><span class="cm">,</span> <span class="i">$b</span><span class="s">)</span><span class="sc">;</span> <span class="c"># returns 1, 0, or -1.</span></li></ol></pre><p><b>Note:</b> Strings in <code class="inline"><span class="i">@not_sorted</span></code>
+, <code class="inline"><span class="i">$a</span></code>
+ and <code class="inline"><span class="i">$b</span></code>
+ are interpreted
+according to Perl's Unicode support. See <a href="../../perlunicode.html">perlunicode</a>,
+<a href="../../perluniintro.html">perluniintro</a>, <a href="../../perlunitut.html">perlunitut</a>, <a href="../../perlunifaq.html">perlunifaq</a>, <a href="../../utf8.html">utf8</a>.
+Otherwise you can use <code class="inline"><span class="w">preprocess</span></code>
+ (cf. <code class="inline"><span class="w">Unicode::Collate</span></code>
+)
+or should decode them before.</p>
+<a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>This module provides linguistic tailoring for it
+taking advantage of <code class="inline"><span class="w">Unicode::Collate</span></code>
+.</p>
+<a name="Constructor"></a><h2>Constructor</h2>
+<p>The <code class="inline"><span class="w">new</span></code>
+ method returns a collator object.</p>
+<p>A parameter list for the constructor is a hash, which can include
+a special key <code class="inline"><span class="w">locale</span></code>
+ and its value (case-insensitive) standing
+for a Unicode base language code (two or three-letter).
+For example, <code class="inline"><span class="w">Unicode::Collate::Locale</span><span class="w">-&gt;new</span><span class="s">(</span><span class="w">locale</span> <span class="cm">=&gt;</span> <span class="q">&#39;FR&#39;</span><span class="s">)</span></code>
+
+returns a collator tailored for French.</p>
+<p><code class="inline"><span class="i">$locale_name</span></code>
+ may be suffixed with a Unicode script code (four-letter),
+a Unicode region code, a Unicode language variant code. These codes are
+case-insensitive, and separated with <code class="inline"><span class="q">&#39;_&#39;</span></code>
+ or <code class="inline"><span class="q">&#39;-&#39;</span></code>
+.
+E.g. <code class="inline"><span class="w">en_US</span></code>
+ for English in USA,
+<code class="inline"><span class="w">az_Cyrl</span></code>
+ for Azerbaijani in the Cyrillic script,
+<code class="inline"><span class="w">es_ES_traditional</span></code>
+ for Spanish in Spain (Traditional).</p>
+<p>If <code class="inline"><span class="i">$locale_name</span></code>
+ is not available,
+fallback is selected in the following order:</p>
+<pre class="verbatim"><ol><li>    <span class="n">1.</span> <span class="w">language</span> <span class="w">with</span> <span class="w">a</span> <span class="w">variant</span> <span class="w">code</span></li><li>    <span class="n">2.</span> <span class="w">language</span> <span class="w">with</span> <span class="w">a</span> <span class="w">script</span> <span class="w">code</span></li><li>    <span class="n">3.</span> <span class="w">language</span> <span class="w">with</span> <span class="w">a</span> <span class="w">region</span> <span class="w">code</span></li><li>    <span class="n">4.</span> <span class="w">language</span></li><li>    <span class="n">5.</span> <span class="w">default</span></li></ol></pre><p>Tailoring tags provided by <code class="inline"><span class="w">Unicode::Collate</span></code>
+ are allowed as long as
+they are not used for <code class="inline"><span class="w">locale</span></code>
+ support.  Esp. the <code class="inline"><span class="w">table</span></code>
+ tag
+is always untailorable, since it is reserved for DUCET.</p>
+<p>However <code class="inline"><span class="w">entry</span></code>
+ is allowed, even if it is used for <code class="inline"><span class="w">locale</span></code>
+ support,
+to add or override mappings.</p>
+<p>E.g. a collator for French, which ignores diacritics and case difference
+(i.e. level 1), with reversed case ordering and no normalization.</p>
+<pre class="verbatim"><ol><li>    <span class="w">Unicode::Collate::Locale</span><span class="w">-&gt;new</span><span class="s">(</span></li><li>        <span class="w">level</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>        <span class="w">locale</span> <span class="cm">=&gt;</span> <span class="q">&#39;fr&#39;</span><span class="cm">,</span></li><li>        <span class="w">upper_before_lower</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>        <span class="w">normalization</span> <span class="cm">=&gt;</span> <a class="l_k" href="../../functions/undef.html">undef</a></li><li>    <span class="s">)</span></li></ol></pre><p>Overriding a behavior already tailored by <code class="inline"><span class="w">locale</span></code>
+ is disallowed
+if such a tailoring is passed to <code class="inline"><span class="i">new</span><span class="s">(</span><span class="s">)</span></code>
+.</p>
+<pre class="verbatim"><ol><li>    <span class="w">Unicode::Collate::Locale</span><span class="w">-&gt;new</span><span class="s">(</span></li><li>        <span class="w">locale</span> <span class="cm">=&gt;</span> <span class="q">&#39;da&#39;</span><span class="cm">,</span></li><li>        <span class="w">upper_before_lower</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="cm">,</span> <span class="c"># causes error as reserved by &#39;da&#39;</span></li><li>    <span class="s">)</span></li></ol></pre><p>However <code class="inline"><span class="i">change</span><span class="s">(</span><span class="s">)</span></code>
+ inherited from <code class="inline"><span class="w">Unicode::Collate</span></code>
+ allows
+such a tailoring that is reserved by <code class="inline"><span class="w">locale</span></code>
+. Examples:</p>
+<pre class="verbatim"><ol><li>    <span class="i">new</span><span class="s">(</span><span class="w">locale</span> <span class="cm">=&gt;</span> <span class="q">&#39;ca&#39;</span><span class="s">)</span><span class="i">-&gt;change</span><span class="s">(</span><span class="w">backwards</span> <span class="cm">=&gt;</span> <a class="l_k" href="../../functions/undef.html">undef</a><span class="s">)</span></li><li>    <span class="i">new</span><span class="s">(</span><span class="w">locale</span> <span class="cm">=&gt;</span> <span class="q">&#39;da&#39;</span><span class="s">)</span><span class="i">-&gt;change</span><span class="s">(</span><span class="w">upper_before_lower</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="s">)</span></li><li>    <span class="i">new</span><span class="s">(</span><span class="w">locale</span> <span class="cm">=&gt;</span> <span class="q">&#39;ja&#39;</span><span class="s">)</span><span class="i">-&gt;change</span><span class="s">(</span><span class="w">overrideCJK</span> <span class="cm">=&gt;</span> <a class="l_k" href="../../functions/undef.html">undef</a><span class="s">)</span></li></ol></pre><a name="Methods"></a><h2>Methods</h2>
+<p><code class="inline"><span class="w">Unicode::Collate::Locale</span></code>
+ is a subclass of <code class="inline"><span class="w">Unicode::Collate</span></code>
+
+and methods other than <code class="inline"><span class="w">new</span></code>
+ are inherited from <code class="inline"><span class="w">Unicode::Collate</span></code>
+.</p>
+<p>Here is a list of additional methods:</p>
+<ul>
+<li><a name="%24Collator-%3egetlocale"></a><b><code class="inline"><span class="i">$Collator</span><span class="i">-&gt;getlocale</span></code>
+</b>
+<p>Returns a language code accepted and used actually on collation.
+If linguistic tailoring is not provided for a language code you passed
+(intensionally for some languages, or due to the incomplete implementation),
+this method returns a string <code class="inline"><span class="q">&#39;default&#39;</span></code>
+ meaning no special tailoring.</p>
+</li>
+<li><a name="%24Collator-%3elocale_version"></a><b><code class="inline"><span class="i">$Collator</span><span class="i">-&gt;locale_version</span></code>
+</b>
+<p>(Since Unicode::Collate::Locale 0.87)
+Returns the version number (perhaps <code class="inline"><span class="q">/\d\.\d\d/</span></code>
+) of the locale, as that
+of <i>Locale/*.pl</i>.</p>
+<p><b>Note:</b> <i>Locale/*.pl</i> that a collator uses should be identified by
+a combination of return values from <code class="inline"><span class="w">getlocale</span></code>
+ and <code class="inline"><span class="w">locale_version</span></code>
+.</p>
+</li>
+</ul>
+<a name="A-list-of-tailorable-locales"></a><h2>A list of tailorable locales</h2>
+<pre class="verbatim"><ol><li>      <span class="w">locale</span> <span class="w">name</span>       <span class="w">description</span></li><li>    --------------------------------------------------------------</li><li>      <span class="w">af</span>                <span class="w">Afrikaans</span></li><li>      <span class="w">ar</span>                <span class="w">Arabic</span></li><li>      <span class="w">as</span>                <span class="w">Assamese</span></li><li>      <span class="w">az</span>                <span class="w">Azerbaijani</span> <span class="s">(</span><span class="w">Azeri</span><span class="s">)</span></li><li>      <span class="w">be</span>                <span class="w">Belarusian</span></li><li>      <span class="w">bg</span>                <span class="w">Bulgarian</span></li><li>      <span class="w">bn</span>                <span class="w">Bengali</span></li><li>      <span class="w">bs</span>                <span class="w">Bosnian</span></li><li>      <span class="w">bs_Cyrl</span>           <span class="w">Bosnian</span> <span class="w">in</span> <span class="w">Cyrillic</span> <span class="s">(</span><span class="w">tailored</span> <span class="w">as</span> <span class="w">Serbian</span><span class="s">)</span></li><li>      <span class="w">ca</span>                <span class="w">Catalan</span></li><li>      <span class="w">cs</span>                <span class="w">Czech</span></li><li>      <span class="w">cy</span>                <span class="w">Welsh</span></li><li>      <span class="w">da</span>                <span class="w">Danish</span></li><li>      <span class="w">de__phonebook</span>     <span class="w">German</span> <span class="s">(</span><span class="w">umlaut</span> <span class="w">as</span> <span class="q">&#39;ae&#39;</span><span class="cm">,</span> <span class="q">&#39;oe&#39;</span><span class="cm">,</span> <span class="q">&#39;ue&#39;</span><span class="s">)</span></li><li>      <span class="w">ee</span>                <span class="w">Ewe</span></li><li>      <span class="w">eo</span>                <span class="w">Esperanto</span></li><li>      <span class="w">es</span>                <span class="w">Spanish</span></li><li>      <span class="w">es__traditional</span>   <span class="w">Spanish</span> <span class="s">(</span><span class="q">&#39;ch&#39;</span> <a class="l_k" href="../../functions/and.html">and</a> <span class="q">&#39;ll&#39;</span> <span class="w">as</span> <span class="w">a</span> <span class="w">grapheme</span><span class="s">)</span></li><li>      <span class="w">et</span>                <span class="w">Estonian</span></li><li>      <span class="w">fa</span>                <span class="w">Persian</span></li><li>      <span class="w">fi</span>                <span class="w">Finnish</span> <span class="s">(</span><span class="w">v</span> <a class="l_k" href="../../functions/and.html">and</a> <span class="w">w</span> <span class="w">are</span> <span class="w">primary</span> <span class="w">equal</span><span class="s">)</span></li><li>      <span class="w">fi__phonebook</span>     <span class="w">Finnish</span> <span class="s">(</span><span class="w">v</span> <a class="l_k" href="../../functions/and.html">and</a> <span class="w">w</span> <span class="w">as</span> <span class="w">separate</span> <span class="w">characters</span><span class="s">)</span></li><li>      <span class="w">fil</span>               <span class="w">Filipino</span></li><li>      <span class="w">fo</span>                <span class="w">Faroese</span></li><li>      <span class="w">fr</span>                <span class="w">French</span></li><li>      <span class="w">gu</span>                <span class="w">Gujarati</span></li><li>      <span class="w">ha</span>                <span class="w">Hausa</span></li><li>      <span class="w">haw</span>               <span class="w">Hawaiian</span></li><li>      <span class="w">hi</span>                <span class="w">Hindi</span></li><li>      <span class="w">hr</span>                <span class="w">Croatian</span></li><li>      <span class="w">hu</span>                <span class="w">Hungarian</span></li><li>      <span class="w">hy</span>                <span class="w">Armenian</span></li><li>      <span class="w">ig</span>                <span class="w">Igbo</span></li><li>      <span class="w">is</span>                <span class="w">Icelandic</span></li><li>      <span class="w">ja</span>                <span class="w">Japanese</span> <span class="s">[</span><span class="n">1</span><span class="s">]</span></li><li>      <span class="w">kk</span>                <span class="w">Kazakh</span></li><li>      <span class="w">kl</span>                <span class="w">Kalaallisut</span></li><li>      <span class="w">kn</span>                <span class="w">Kannada</span></li><li>      <span class="w">ko</span>                <span class="w">Korean</span> <span class="s">[</span><span class="n">2</span><span class="s">]</span></li><li>      <span class="w">kok</span>               <span class="w">Konkani</span></li><li>      <span class="w">ln</span>                <span class="w">Lingala</span></li><li>      <a class="l_k" href="../../functions/lt.html">lt</a>                <span class="w">Lithuanian</span></li><li>      <span class="w">lv</span>                <span class="w">Latvian</span></li><li>      <span class="w">mk</span>                <span class="w">Macedonian</span></li><li>      <span class="w">ml</span>                <span class="w">Malayalam</span></li><li>      <span class="w">mr</span>                <span class="w">Marathi</span></li><li>      <span class="w">mt</span>                <span class="w">Maltese</span></li><li>      <span class="w">nb</span>                <span class="w">Norwegian</span> <span class="w">Bokmal</span></li><li>      <span class="w">nn</span>                <span class="w">Norwegian</span> <span class="w">Nynorsk</span></li><li>      <span class="w">nso</span>               <span class="w">Northern</span> <span class="w">Sotho</span></li><li>      <span class="w">om</span>                <span class="w">Oromo</span></li><li>      <a class="l_k" href="../../functions/or.html">or</a>                <span class="w">Oriya</span></li><li>      <span class="w">pa</span>                <span class="w">Punjabi</span></li><li>      <span class="w">pl</span>                <span class="w">Polish</span></li><li>      <span class="w">ro</span>                <span class="w">Romanian</span></li><li>      <span class="w">ru</span>                <span class="w">Russian</span></li><li>      <span class="w">sa</span>                <span class="w">Sanskrit</span></li><li>      <span class="w">se</span>                <span class="w">Northern</span> <span class="w">Sami</span></li><li>      <span class="w">si</span>                <span class="w">Sinhala</span></li><li>      <span class="w">si__dictionary</span>    <span class="w">Sinhala</span> <span class="s">(</span><span class="w">U</span>+<span class="n">0</span><span class="w">DA5</span> = <span class="w">U</span>+<span class="n">0</span><span class="w">DA2</span><span class="cm">,</span><span class="n">0</span><span class="w">DCA</span><span class="cm">,</span><span class="n">0</span><span class="w">DA4</span><span class="s">)</span></li><li>      <span class="w">sk</span>                <span class="w">Slovak</span></li><li>      <span class="w">sl</span>                <span class="w">Slovenian</span></li><li>      <span class="w">sq</span>                <span class="w">Albanian</span></li><li>      <span class="w">sr</span>                <span class="w">Serbian</span></li><li>      <span class="w">sr_Latn</span>           <span class="w">Serbian</span> <span class="w">in</span> <span class="w">Latin</span> <span class="s">(</span><span class="w">tailored</span> <span class="w">as</span> <span class="w">Croatian</span><span class="s">)</span></li><li>      <span class="w">sv</span>                <span class="w">Swedish</span> <span class="s">(</span><span class="w">v</span> <a class="l_k" href="../../functions/and.html">and</a> <span class="w">w</span> <span class="w">are</span> <span class="w">primary</span> <span class="w">equal</span><span class="s">)</span></li><li>      <span class="w">sv__reformed</span>      <span class="w">Swedish</span> <span class="s">(</span><span class="w">v</span> <a class="l_k" href="../../functions/and.html">and</a> <span class="w">w</span> <span class="w">as</span> <span class="w">separate</span> <span class="w">characters</span><span class="s">)</span></li><li>      <span class="w">ta</span>                <span class="w">Tamil</span></li><li>      <span class="w">te</span>                <span class="w">Telugu</span></li><li>      <span class="w">th</span>                <span class="w">Thai</span></li><li>      <span class="w">tn</span>                <span class="w">Tswana</span></li><li>      <span class="w">to</span>                <span class="w">Tonga</span></li><li>      <span class="q">tr                Turkish</span></li><li>      <span class="q">      uk                Ukrainian</span></li><li>      <span class="q">      ur                Urdu</span></li><li>      <span class="q">      vi                Vietnamese</span></li><li>      <span class="q">      wae               Walser</span></li><li>      <span class="q">      wo                Wolof</span></li><li>      <span class="q">      yo                Yoruba</span></li><li>      <span class="q">      zh                Chinese</span></li><li>      <span class="q">      zh__big5han       Chinese (ideographs: big5 order)</span></li><li>      <span class="q">      zh__gb2312han     Chinese (ideographs: GB-2312 order)</span></li><li>      <span class="q">      zh__pinyin        Chinese (ideographs: pinyin order) [3]</span></li><li>      <span class="q">      zh__stroke        Chinese (ideographs: stroke order) [3]</span></li><li>      <span class="q">      zh__zhuyin        Chinese (ideographs: zhuyin order) [3]</span></li><li>    <span class="q">    --------------------------------------------------------------</span></li></ol></pre><p>Locales according to the default UCA rules include
+chr (Cherokee),
+de (German),
+en (English),
+ga (Irish),
+id (Indonesian),
+it (Italian),
+ka (Georgian),
+ms (Malay),
+nl (Dutch),
+pt (Portuguese),
+st (Southern Sotho),
+sw (Swahili),
+xh (Xhosa),
+zu (Zulu).</p>
+<p><b>Note</b></p>
+<p>[1] ja: Ideographs are sorted in JIS X 0208 order.
+Fullwidth and halfwidth forms are identical to their regular form.
+The difference between hiragana and katakana is at the 4th level,
+the comparison also requires <code class="inline"><span class="s">(</span><span class="w">variable</span> <span class="cm">=&gt;</span> <span class="q">&#39;Non-ignorable&#39;</span><span class="s">)</span></code>
+,
+and then <code class="inline"><span class="w">katakana_before_hiragana</span></code>
+ has no effect.</p>
+<p>[2] ko: Plenty of ideographs are sorted by their reading. Such
+an ideograph is primary (level 1) equal to, and secondary (level 2)
+greater than, the corresponding hangul syllable.</p>
+<p>[3] zh__pinyin, zh__stroke and zh__zhuyin: implemented alt='short',
+where a smaller number of ideographs are tailored.</p>
+<p>Note: 'pinyin' is in latin, 'zhuyin' is in bopomofo.</p>
+<a name="INSTALL"></a><h1>INSTALL</h1>
+<p>Installation of <code class="inline"><span class="w">Unicode::Collate::Locale</span></code>
+ requires <i>Collate/Locale.pm</i>,
+<i>Collate/Locale/*.pm</i>, <i>Collate/CJK/*.pm</i> and <i>Collate/allkeys.txt</i>.
+On building, <code class="inline"><span class="w">Unicode::Collate::Locale</span></code>
+ doesn't require any of <i>data/*.txt</i>,
+<i>gendata/*</i>, and <i>mklocale</i>.
+Tests for <code class="inline"><span class="w">Unicode::Collate::Locale</span></code>
+ are named <i>t/loc_*.t</i>.</p>
+<a name="CAVEAT"></a><h1>CAVEAT</h1>
+<ul>
+<li><a name="tailoring-is-not-maximum"></a><b>tailoring is not maximum</b>
+<p>Even if a certain letter is tailored, its equivalent would not always
+tailored as well as it. For example, even though W is tailored,
+fullwidth W (<code class="inline"><span class="w">U</span>+<span class="w">FF37</span></code>
+), W with acute (<code class="inline"><span class="w">U</span>+<span class="n">1E82</span></code>
+), etc. are not
+tailored. The result may depend on whether source strings are
+normalized or not, and whether decomposed or composed.
+Thus <code class="inline"><span class="s">(</span><span class="w">normalization</span> <span class="cm">=&gt;</span> <a class="l_k" href="../../functions/undef.html">undef</a><span class="s">)</span></code>
+ is less preferred.</p>
+</li>
+</ul>
+<a name="AUTHOR"></a><h1>AUTHOR</h1>
+<p>The Unicode::Collate::Locale module for perl was written
+by SADAHIRO Tomoyuki, &lt;SADAHIRO@cpan.org&gt;.
+This module is Copyright(C) 2004-2012, SADAHIRO Tomoyuki. Japan.
+All rights reserved.</p>
+<p>This module is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.</p>
+<a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<ul>
+<li><a name="Unicode-Collation-Algorithm---UTS-%2310"></a><b>Unicode Collation Algorithm - UTS #10</b>
+<p><a href="http://www.unicode.org/reports/tr10/">http://www.unicode.org/reports/tr10/</a></p>
+</li>
+<li><a name="The-Default-Unicode-Collation-Element-Table-(DUCET)"></a><b>The Default Unicode Collation Element Table (DUCET)</b>
+<p><a href="http://www.unicode.org/Public/UCA/latest/allkeys.txt">http://www.unicode.org/Public/UCA/latest/allkeys.txt</a></p>
+</li>
+<li><a name="Unicode-Locale-Data-Markup-Language-(LDML)---UTS-%2335"></a><b>Unicode Locale Data Markup Language (LDML) - UTS #35</b>
+<p><a href="http://www.unicode.org/reports/tr35/">http://www.unicode.org/reports/tr35/</a></p>
+</li>
+<li><a name="CLDR---Unicode-Common-Locale-Data-Repository"></a><b>CLDR - Unicode Common Locale Data Repository</b>
+<p><a href="http://cldr.unicode.org/">http://cldr.unicode.org/</a></p>
+</li>
+<li><a name="the-Unicode%3a%3aCollate-manpage"></a><b><a href="../../Unicode/Collate.html">Unicode::Collate</a></b>
+</li>
+<li><a name="the-Unicode%3a%3aNormalize-manpage"></a><b><a href="../../Unicode/Normalize.html">Unicode::Normalize</a></b>
+</li>
+</ul>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><ul><li><a href="#Constructor">Constructor</a><li><a href="#Methods">Methods</a><li><a href="#A-list-of-tailorable-locales">A list of tailorable locales</a></ul><li><a href="#INSTALL">INSTALL</a><li><a href="#CAVEAT">CAVEAT</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#SEE-ALSO">SEE ALSO</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/0/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

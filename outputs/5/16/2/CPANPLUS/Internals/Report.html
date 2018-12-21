@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>CPANPLUS::Internals::Report - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/16/2/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/16/2/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/16/2/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/16/2/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/16/2/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/16/2/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/16/2/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/16/2/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/16/2/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/16/2/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/16/2/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/16/2/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/16/2/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/16/2/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/16/2/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/16/2/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../../index.html">Home</a> &gt;
+    
+      
+        <a href="../../index-modules-C.html">Core modules (C)</a> &gt;
+      
+    
+    CPANPLUS::Internals::Report
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 16.2 documentation</p>
+                  </div>
+                  <h1>CPANPLUS::Internals::Report</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#METHODS">METHODS</a><ul><li><a href="#%24bool-%3d-%24cb-%3e_have_query_report_modules">$bool = $cb->_have_query_report_modules</a><li><a href="#%24bool-%3d-%24cb-%3e_have_send_report_modules">$bool = $cb->_have_send_report_modules</a><li><a href="#%40list-%3d-%24cb-%3e_query_report(-module-%3d%3e-%24modobj%2c-%5ball_versions-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d-)">@list = $cb->_query_report( module => $modobj, [all_versions => BOOL, verbose => BOOL] )</a><li><a href="#%24bool-%3d-%24cb-%3e_send_report(-module-%3d%3e-%24modobj%2c-buffer-%3d%3e-%24make_output%2c-failed-%3d%3e-BOOL%2c-%5bsave-%3d%3e-BOOL%2c-address-%3d%3e-%24email_to%2c-verbose-%3d%3e-BOOL%2c-force-%3d%3e-BOOL%5d)%3b">$bool = $cb->_send_report( module => $modobj, buffer => $make_output, failed => BOOL, [save => BOOL, address => $email_to, verbose => BOOL, force => BOOL]);</a></ul></ul><a name="NAME"></a><h1>NAME</h1>
+<p>CPANPLUS::Internals::Report - internals for sending test reports</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>  <span class="c">### enable test reporting</span></li><li>  <span class="i">$cb</span><span class="i">-&gt;configure_object</span><span class="i">-&gt;set_conf</span><span class="s">(</span> <span class="w">cpantest</span> <span class="cm">=&gt;</span> <span class="n">1</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="c">### set custom mx host, shouldn&#39;t normally be needed</span></li><li>  <span class="i">$cb</span><span class="i">-&gt;configure_object</span><span class="i">-&gt;set_conf</span><span class="s">(</span> <span class="w">cpantest_mx</span> <span class="cm">=&gt;</span> <span class="q">&#39;smtp.example.com&#39;</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>This module provides all the functionality to send test reports to
+<code class="inline"><a href="http://testers.cpan.org">http://testers.cpan.org</a></code> using the <code class="inline"><span class="w">Test::Reporter</span></code>
+ module.</p>
+<p>All methods will be called automatically if you have <code class="inline"><span class="w">CPANPLUS</span></code>
+
+configured to enable test reporting (see the <code class="inline"><span class="w">SYNOPSIS</span></code>
+).</p>
+<a name="METHODS"></a><h1>METHODS</h1>
+<a name="%24bool-%3d-%24cb-%3e_have_query_report_modules"></a><h2>$bool = $cb-&gt;_have_query_report_modules</h2>
+<p>This function checks if all the required modules are here for querying
+reports. It returns true and loads them if they are, or returns false
+otherwise.</p>
+<a name="%24bool-%3d-%24cb-%3e_have_send_report_modules"></a><h2>$bool = $cb-&gt;_have_send_report_modules</h2>
+<p>This function checks if all the required modules are here for sending
+reports. It returns true and loads them if they are, or returns false
+otherwise.</p>
+<a name="%40list-%3d-%24cb-%3e_query_report(-module-%3d%3e-%24modobj%2c-%5ball_versions-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d-)"></a><h2>@list = $cb-&gt;_query_report( module =&gt; $modobj, [all_versions =&gt; BOOL, verbose =&gt; BOOL] )</h2>
+<p>This function queries the CPAN testers database at
+<i><a href="http://testers.cpan.org/">http://testers.cpan.org/</a></i> for test results of specified module objects,
+module names or distributions.</p>
+<p>The optional argument <code class="inline"><span class="w">all_versions</span></code>
+ controls whether all versions of
+a given distribution should be grabbed.  It defaults to false
+(fetching only reports for the current version).</p>
+<p>Returns the a list with the following data structures (for CPANPLUS
+version 0.042) on success, or false on failure. The contents of the
+data structure depends on what <i><a href="http://testers.cpan.org">http://testers.cpan.org</a></i> returns,
+but generally looks like this:</p>
+<pre class="verbatim"><ol><li>          <span class="s">{</span></li><li>            <span class="q">&#39;grade&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;PASS&#39;</span><span class="cm">,</span></li><li>            <span class="q">&#39;dist&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;CPANPLUS-0.042&#39;</span><span class="cm">,</span></li><li>            <span class="q">&#39;platform&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;i686-pld-linux-thread-multi&#39;</span></li><li>            <span class="q">&#39;details&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;<a href="http://nntp.x.perl.org/group/perl.cpan.testers/98316">http://nntp.x.perl.org/group/perl.cpan.testers/98316</a>&#39;</span></li><li>            ...</li><li>          <span class="s">}</span><span class="cm">,</span></li><li>          <span class="s">{</span></li><li>            <span class="q">&#39;grade&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;PASS&#39;</span><span class="cm">,</span></li><li>            <span class="q">&#39;dist&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;CPANPLUS-0.042&#39;</span><span class="cm">,</span></li><li>            <span class="q">&#39;platform&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;i686-linux-thread-multi&#39;</span></li><li>            <span class="q">&#39;details&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;<a href="http://nntp.x.perl.org/group/perl.cpan.testers/99416">http://nntp.x.perl.org/group/perl.cpan.testers/99416</a>&#39;</span></li><li>            ...</li><li>          <span class="s">}</span><span class="cm">,</span></li><li>          <span class="s">{</span></li><li>            <span class="q">&#39;grade&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;FAIL&#39;</span><span class="cm">,</span></li><li>            <span class="q">&#39;dist&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;CPANPLUS-0.042&#39;</span><span class="cm">,</span></li><li>            <span class="q">&#39;platform&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;cygwin-multi-64int&#39;</span><span class="cm">,</span></li><li>            <span class="q">&#39;details&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;<a href="http://nntp.x.perl.org/group/perl.cpan.testers/99371">http://nntp.x.perl.org/group/perl.cpan.testers/99371</a>&#39;</span></li><li>            ...</li><li>          <span class="s">}</span><span class="cm">,</span></li><li>          <span class="s">{</span></li><li>            <span class="q">&#39;grade&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;FAIL&#39;</span><span class="cm">,</span></li><li>            <span class="q">&#39;dist&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;CPANPLUS-0.042&#39;</span><span class="cm">,</span></li><li>            <span class="q">&#39;platform&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;i586-linux&#39;</span><span class="cm">,</span></li><li>            <span class="q">&#39;details&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;<a href="http://nntp.x.perl.org/group/perl.cpan.testers/99396">http://nntp.x.perl.org/group/perl.cpan.testers/99396</a>&#39;</span></li><li>            ...</li><li>          <span class="s">}</span><span class="cm">,</span></li></ol></pre><p>The status of the test can be one of the following:
+UNKNOWN, PASS, FAIL or NA (not applicable).</p>
+<a name="%24bool-%3d-%24cb-%3e_send_report(-module-%3d%3e-%24modobj%2c-buffer-%3d%3e-%24make_output%2c-failed-%3d%3e-BOOL%2c-%5bsave-%3d%3e-BOOL%2c-address-%3d%3e-%24email_to%2c-verbose-%3d%3e-BOOL%2c-force-%3d%3e-BOOL%5d)%3b"></a><h2>$bool = $cb-&gt;_send_report( module =&gt; $modobj, buffer =&gt; $make_output, failed =&gt; BOOL, [save =&gt; BOOL, address =&gt; $email_to, verbose =&gt; BOOL, force =&gt; BOOL]);</h2>
+<p>This function sends a testers report to <code class="inline"><span class="w">cpan</span>-<span class="w">testers</span><span class="i">@perl</span>.<span class="w">org</span></code>
+ for a
+particular distribution.
+It returns true on success, and false on failure.</p>
+<p>It takes the following options:</p>
+<ul>
+<li><a name="module"></a><b>module</b>
+<p>The module object of this particular distribution</p>
+</li>
+<li><a name="buffer"></a><b>buffer</b>
+<p>The output buffer from the 'make/make test' process</p>
+</li>
+<li><a name="failed"></a><b>failed</b>
+<p>Boolean indicating if the 'make/make test' went wrong</p>
+</li>
+<li><a name="save"></a><b>save</b>
+<p>Boolean indicating if the report should be saved locally instead of
+mailed out. If provided, this function will return the location the
+report was saved to, rather than a simple boolean 'TRUE'.</p>
+<p>Defaults to false.</p>
+</li>
+<li><a name="address"></a><b>address</b>
+<p>The email address to mail the report for. You should never need to
+override this, but it might be useful for debugging purposes.</p>
+<p>Defaults to <code class="inline"><span class="w">cpan</span>-<span class="w">testers</span><span class="i">@perl</span>.<span class="w">org</span></code>
+.</p>
+</li>
+<li><a name="verbose"></a><b>verbose</b>
+<p>Boolean indicating on whether or not to be verbose.</p>
+<p>Defaults to your configuration settings</p>
+</li>
+<li><a name="force"></a><b>force</b>
+<p>Boolean indicating whether to force the sending, even if the max
+amount of reports for fails have already been reached, or if you
+may already have sent it before.</p>
+<p>Defaults to your configuration settings</p>
+</li>
+</ul>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#METHODS">METHODS</a><ul><li><a href="#%24bool-%3d-%24cb-%3e_have_query_report_modules">$bool = $cb->_have_query_report_modules</a><li><a href="#%24bool-%3d-%24cb-%3e_have_send_report_modules">$bool = $cb->_have_send_report_modules</a><li><a href="#%40list-%3d-%24cb-%3e_query_report(-module-%3d%3e-%24modobj%2c-%5ball_versions-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d-)">@list = $cb->_query_report( module => $modobj, [all_versions => BOOL, verbose => BOOL] )</a><li><a href="#%24bool-%3d-%24cb-%3e_send_report(-module-%3d%3e-%24modobj%2c-buffer-%3d%3e-%24make_output%2c-failed-%3d%3e-BOOL%2c-%5bsave-%3d%3e-BOOL%2c-address-%3d%3e-%24email_to%2c-verbose-%3d%3e-BOOL%2c-force-%3d%3e-BOOL%5d)%3b">$bool = $cb->_send_report( module => $modobj, buffer => $make_output, failed => BOOL, [save => BOOL, address => $email_to, verbose => BOOL, force => BOOL]);</a></ul></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/2/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

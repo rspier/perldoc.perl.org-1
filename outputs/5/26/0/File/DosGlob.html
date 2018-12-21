@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>File::DosGlob - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/26/0/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/26/0/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/26/0/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/26/0/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/26/0/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/26/0/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/26/0/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/26/0/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/26/0/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/26/0/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/26/0/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/26/0/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/26/0/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/26/0/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/26/0/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/26/0/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../index.html">Home</a> &gt;
+    
+      
+        <a href="../index-modules-F.html">Core modules (F)</a> &gt;
+      
+    
+    File::DosGlob
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 26.0 documentation</p>
+                  </div>
+                  <h1>File::DosGlob</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#EXPORTS-(by-request-only)">EXPORTS (by request only)</a><li><a href="#BUGS">BUGS</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#HISTORY">HISTORY</a><li><a href="#SEE-ALSO">SEE ALSO</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>File::DosGlob - DOS like globbing and then some</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/require.html">require</a> <span class="n">5.004</span><span class="sc">;</span></li><li></li><li>    <span class="c"># override CORE::glob in current package</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">File::DosGlob</span> <span class="q">&#39;glob&#39;</span><span class="sc">;</span></li><li></li><li>    <span class="c"># override CORE::glob in ALL packages (use with extreme caution!)</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">File::DosGlob</span> <span class="q">&#39;GLOBAL_glob&#39;</span><span class="sc">;</span></li><li></li><li>    <span class="i">@perlfiles</span> = <a class="l_k" href="../functions/glob.html">glob</a>  <span class="q">&quot;..\\pe?l/*.p?&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&lt;..\\pe?l/*.p?&gt;</span><span class="sc">;</span></li><li></li><li>    <span class="c"># from the command line (overrides only in main::)</span></li><li>    &gt; <span class="w">perl</span> -<span class="w">MFile::DosGlob</span>=<a class="l_k" href="../functions/glob.html">glob</a> -e <span class="q">&quot;print &lt;../pe*/*p?&gt;&quot;</span></li></ol></pre><a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>A module that implements DOS-like globbing with a few enhancements.
+It is largely compatible with perlglob.exe (the M$ setargv.obj
+version) in all but one respect--it understands wildcards in
+directory components.</p>
+<p>For example, <code class="inline"><span class="q">&lt;..\\l*b\\file/*glob.p?&gt;</span></code>
+ will work as expected (in
+that it will find something like '..\lib\File/DosGlob.pm' alright).
+Note that all path components are case-insensitive, and that
+backslashes and forward slashes are both accepted, and preserved.
+You may have to double the backslashes if you are putting them in
+literally, due to double-quotish parsing of the pattern by perl.</p>
+<p>Spaces in the argument delimit distinct patterns, so
+<code class="inline"><a class="l_k" href="../functions/glob.html">glob</a><span class="s">(</span><span class="q">&#39;*.exe *.dll&#39;</span><span class="s">)</span></code>
+ globs all filenames that end in <code class="inline">.<span class="w">exe</span></code>
+
+or <code class="inline">.<span class="w">dll</span></code>
+.  If you want to put in literal spaces in the glob
+pattern, you can escape them with either double quotes, or backslashes.
+e.g. <code class="inline"><a class="l_k" href="../functions/glob.html">glob</a><span class="s">(</span><span class="q">&#39;c:/&quot;Program Files&quot;/*/*.dll&#39;</span><span class="s">)</span></code>
+, or
+<code class="inline"><a class="l_k" href="../functions/glob.html">glob</a><span class="s">(</span><span class="q">&#39;c:/Program\ Files/*/*.dll&#39;</span><span class="s">)</span></code>
+.  The argument is tokenized using
+<code class="inline"><span class="i">Text::ParseWords::parse_line</span><span class="s">(</span><span class="s">)</span></code>
+, so see <a href="../Text/ParseWords.html">Text::ParseWords</a> for details
+of the quoting rules used.</p>
+<p>Extending it to csh patterns is left as an exercise to the reader.</p>
+<a name="EXPORTS-(by-request-only)"></a><h1>EXPORTS (by request only)</h1>
+<p>glob()</p>
+<a name="BUGS"></a><h1>BUGS</h1>
+<p>Should probably be built into the core, and needs to stop
+pandering to DOS habits.  Needs a dose of optimization too.</p>
+<a name="AUTHOR"></a><h1>AUTHOR</h1>
+<p>Gurusamy Sarathy &lt;gsar@activestate.com&gt;</p>
+<a name="HISTORY"></a><h1>HISTORY</h1>
+<ul>
+<li>
+<p>Support for globally overriding glob() (GSAR 3-JUN-98)</p>
+</li>
+<li>
+<p>Scalar context, independent iterator context fixes (GSAR 15-SEP-97)</p>
+</li>
+<li>
+<p>A few dir-vs-file optimizations result in glob importation being
+10 times faster than using perlglob.exe, and using perlglob.bat is
+only twice as slow as perlglob.exe (GSAR 28-MAY-97)</p>
+</li>
+<li>
+<p>Several cleanups prompted by lack of compatible perlglob.exe
+under Borland (GSAR 27-MAY-97)</p>
+</li>
+<li>
+<p>Initial version (GSAR 20-FEB-97)</p>
+</li>
+</ul>
+<a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<p>perl</p>
+<p>perlglob.bat</p>
+<p>Text::ParseWords</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#EXPORTS-(by-request-only)">EXPORTS (by request only)</a><li><a href="#BUGS">BUGS</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#HISTORY">HISTORY</a><li><a href="#SEE-ALSO">SEE ALSO</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/0/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

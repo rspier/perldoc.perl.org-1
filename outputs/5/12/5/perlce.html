@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>perlce - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/12/5/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/12/5/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/12/5/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/12/5/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/12/5/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/12/5/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/12/5/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/12/5/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/12/5/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/12/5/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/12/5/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/12/5/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/12/5/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/12/5/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/12/5/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/12/5/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="index.html">Home</a> &gt;
+    
+      
+        <a href="index-platforms.html">Platform specific</a> &gt;
+      
+    
+    perlce
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 12.5 documentation</p>
+                  </div>
+                  <h1>perlce</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#Building-Perl-for-WinCE">Building Perl for WinCE</a><ul><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#General-explanations-on-cross-compiling-WinCE">General explanations on cross-compiling WinCE</a><li><a href="#BUILD">BUILD</a></ul><li><a href="#Using-Perl-on-WinCE">Using Perl on WinCE</a><ul><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#LIMITATIONS">LIMITATIONS</a><li><a href="#ENVIRONMENT">ENVIRONMENT</a><li><a href="#REGISTRY">REGISTRY</a><li><a href="#XS">XS</a><li><a href="#BUGS">BUGS</a><li><a href="#INSTALLATION">INSTALLATION</a></ul><li><a href="#ACKNOWLEDGEMENTS">ACKNOWLEDGEMENTS</a><li><a href="#History-of-WinCE-port">History of WinCE port</a><li><a href="#AUTHORS">AUTHORS</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>perlce - Perl for WinCE</p>
+<a name="Building-Perl-for-WinCE"></a><h1>Building Perl for WinCE</h1>
+<a name="DESCRIPTION"></a><h2>DESCRIPTION</h2>
+<p>This file gives the instructions for building Perl5.8 and above for
+WinCE.  Please read and understand the terms under which this
+software is distributed.</p>
+<a name="General-explanations-on-cross-compiling-WinCE"></a><h2>General explanations on cross-compiling WinCE</h2>
+<ul>
+<li>
+<p><code class="inline"><span class="w">miniperl</span></code>
+ is built. This is a single executable (without DLL), intended
+to run on Win32, and it will facilitate remaining build process; all binaries
+built after it are foreign and should not run locally.</p>
+<p><code class="inline"><span class="w">miniperl</span></code>
+ is built using <code class="inline">.<span class="q">/win32/</span><span class="w">Makefile</span></code>
+; this is part of normal
+build process invoked as dependency from wince/Makefile.ce</p>
+</li>
+<li>
+<p>After <code class="inline"><span class="w">miniperl</span></code>
+ is built, <code class="inline"><span class="w">configpm</span></code>
+ is invoked to create right <code class="inline"><span class="w">Config</span>.<span class="w">pm</span></code>
+
+in right place and its corresponding Cross.pm.</p>
+<p>Unlike Win32 build, miniperl will not have <code class="inline"><span class="w">Config</span>.<span class="w">pm</span></code>
+ of host within reach;
+it rather will use <code class="inline"><span class="w">Config</span>.<span class="w">pm</span></code>
+ from within cross-compilation directories.</p>
+<p>File <code class="inline"><span class="w">Cross</span>.<span class="w">pm</span></code>
+ is dead simple: for given cross-architecture places in @INC
+a path where perl modules are, and right <code class="inline"><span class="w">Config</span>.<span class="w">pm</span></code>
+ in that place.</p>
+<p>That said, <code class="inline"><span class="w">miniperl</span> -<span class="w">Ilib</span> -<span class="w">MConfig</span> -<span class="w">we</span> <span class="n">1</span></code>
+ should report an error, because
+it can not find <code class="inline"><span class="w">Config</span>.<span class="w">pm</span></code>
+. If it does not give an error -- wrong <code class="inline"><span class="w">Config</span>.<span class="w">pm</span></code>
+
+is substituted, and resulting binaries will be a mess.</p>
+<p><code class="inline"><span class="w">miniperl</span> -<span class="w">MCross</span> -<span class="w">MConfig</span> -<span class="w">we</span> <span class="n">1</span></code>
+ should run okay, and it will provide right
+<code class="inline"><span class="w">Config</span>.<span class="w">pm</span></code>
+ for further compilations.</p>
+</li>
+<li>
+<p>During extensions build phase, a script <code class="inline">.<span class="q">/win32/</span><span class="w">buldext</span>.<span class="w">pl</span></code>
+ is invoked,
+which in turn steps in <code class="inline">.<span class="q">/ext</span></code>
+ subdirectories and performs a build of
+each extension in turn.</p>
+<p>All invokes of <code class="inline"><span class="w">Makefile</span>.<span class="w">PL</span></code>
+ are provided with <code class="inline">-<span class="w">MCross</span></code>
+ so to enable cross-
+compile.</p>
+</li>
+</ul>
+<a name="BUILD"></a><h2>BUILD</h2>
+<p>This section describes the steps to be performed to build PerlCE.
+You may find additional information about building perl for WinCE
+at <a href="http://perlce.sourceforge.net">http://perlce.sourceforge.net</a> and some pre-built binaries.</p>
+<a name="Tools-%26-SDK"></a><h3>Tools &amp; SDK</h3>
+<p>For compiling, you need following:</p>
+<ul>
+<li><a name="*-Microsoft-Embedded-Visual-Tools"></a><b>Microsoft Embedded Visual Tools</b>
+</li>
+<li><a name="*-Microsoft-Visual-C%2b%2b"></a><b>Microsoft Visual C++</b>
+</li>
+<li><a name="*-Rainer-Keuchel's-celib-sources"></a><b>Rainer Keuchel's celib-sources</b>
+</li>
+<li><a name="*-Rainer-Keuchel's-console-sources"></a><b>Rainer Keuchel's console-sources</b>
+</li>
+</ul>
+<p>Needed source files can be downloaded at
+<a href="http://www.rainer-keuchel.de/wince/dirlist.html">http://www.rainer-keuchel.de/wince/dirlist.html</a></p>
+<a name="Make"></a><h3>Make</h3>
+<p>Normally you only need to edit <code class="inline">.<span class="q">/win32/ce</span>-<span class="w">helpers</span>/<span class="w">compile</span>.<span class="w">bat</span></code>
+
+to reflect your system and run it.</p>
+<p>File <code class="inline">.<span class="q">/win32/ce</span>-<span class="w">helpers</span>/<span class="w">compile</span>.<span class="w">bat</span></code>
+ is actually a wrapper to call
+<code class="inline"><span class="w">nmake</span> -f <span class="w">makefile</span>.<span class="w">ce</span></code>
+ with appropriate parameters and it accepts extra
+parameters and forwards them to <code class="inline"><span class="w">nmake</span></code>
+ command as additional
+arguments. You should pass target this way.</p>
+<p>To prepare distribution you need to do following:</p>
+<ul>
+<li><a name="*-go-to-.%2fwin32-subdirectory"></a><b>go to <code class="inline">.<span class="q">/win32</span></code>
+ subdirectory</b>
+</li>
+<li><a name="*-edit-file-.%2fwin32%2fce-helpers%2fcompile.bat"></a><b>edit file <code class="inline">.<span class="q">/win32/ce</span>-<span class="w">helpers</span>/<span class="w">compile</span>.<span class="w">bat</span></code>
+</b>
+</li>
+<li><a name="*-run----compile.bat"></a><b>run 
+  compile.bat</b>
+</li>
+<li><a name="*-run----compile.bat-dist"></a><b>run 
+  compile.bat dist</b>
+</li>
+</ul>
+<p><code class="inline"><span class="w">Makefile</span>.<span class="w">ce</span></code>
+ has <code class="inline"><span class="w">CROSS_NAME</span></code>
+ macro, and it is used further to refer to
+your cross-compilation scheme. You could assign a name to it, but this
+is not necessary, because by default it is assigned after your machine
+configuration name, such as "wince-sh3-hpc-wce211", and this is enough
+to distinguish different builds at the same time. This option could be
+handy for several different builds on same platform to perform, say,
+threaded build. In a following example we assume that all required
+environment variables are set properly for C cross-compiler (a special
+*.bat file could fit perfectly to this purpose) and your <code class="inline"><span class="w">compile</span>.<span class="w">bat</span></code>
+
+has proper "MACHINE" parameter set, to, say, <code class="inline"><span class="w">wince</span>-<span class="w">mips</span>-<span class="w">pocket</span>-<span class="w">wce300</span></code>
+.</p>
+<pre class="verbatim"><ol><li>  <span class="w">compile</span>.<span class="w">bat</span></li><li>  <span class="w">compile</span>.<span class="w">bat</span> <span class="w">dist</span></li><li>  <span class="w">compile</span>.<span class="w">bat</span> <span class="w">CROSS_NAME</span>=<span class="w">mips</span>-<span class="w">wce300</span>-<span class="w">thr</span> <span class="q">&quot;USE_ITHREADS=define&quot;</span> <span class="q">&quot;USE_IMP_SYS=define&quot;</span> <span class="q">&quot;USE_MULTI=define&quot;</span></li><li>  <span class="w">compile</span>.<span class="w">bat</span> <span class="w">CROSS_NAME</span>=<span class="w">mips</span>-<span class="w">wce300</span>-<span class="w">thr</span> <span class="q">&quot;USE_ITHREADS=define&quot;</span> <span class="q">&quot;USE_IMP_SYS=define&quot;</span> <span class="q">&quot;USE_MULTI=define&quot;</span> <span class="w">dist</span></li></ol></pre><p>If all goes okay and no errors during a build, you'll get two independent
+distributions: <code class="inline"><span class="w">wince</span>-<span class="w">mips</span>-<span class="w">pocket</span>-<span class="w">wce300</span></code>
+ and <code class="inline"><span class="w">mips</span>-<span class="w">wce300</span>-<span class="w">thr</span></code>
+.</p>
+<p>Target <code class="inline"><span class="w">dist</span></code>
+ prepares distribution file set. Target <code class="inline"><span class="w">zipdist</span></code>
+ performs
+same as <code class="inline"><span class="w">dist</span></code>
+ but additionally compresses distribution files into zip
+archive.</p>
+<p>NOTE: during a build there could be created a number (or one) of <code class="inline"><span class="w">Config</span>.<span class="w">pm</span></code>
+
+for cross-compilation ("foreign" <code class="inline"><span class="w">Config</span>.<span class="w">pm</span></code>
+) and those are hidden inside
+<code class="inline">..<span class="q">/xlib/</span><span class="i">$(</span><span class="w">CROSS_NAME</span><span class="p">)</span></code>
+ with other auxilary files, but, and this is important to
+note, there should be <b>no</b> <code class="inline"><span class="w">Config</span>.<span class="w">pm</span></code>
+ for host miniperl.
+If you'll get an error that perl could not find Config.pm somewhere in building
+process this means something went wrong. Most probably you forgot to
+specify a cross-compilation when invoking miniperl.exe to Makefile.PL
+When building an extension for cross-compilation your command line should
+look like</p>
+<pre class="verbatim"><ol><li>  ..\<span class="w">miniperl</span>.<span class="w">exe</span> -<span class="w">I</span>..\<span class="w">lib</span> -<span class="w">MCross</span>=<span class="w">mips</span>-<span class="w">wce300</span>-<span class="w">thr</span> <span class="w">Makefile</span>.<span class="w">PL</span></li></ol></pre><p>or just</p>
+<pre class="verbatim"><ol><li>  ..\<span class="w">miniperl</span>.<span class="w">exe</span> -<span class="w">I</span>..\<span class="w">lib</span> -<span class="w">MCross</span> <span class="w">Makefile</span>.<span class="w">PL</span></li></ol></pre><p>to refer a cross-compilation that was created last time.</p>
+<p>All questions related to building for WinCE devices could be asked in
+<i>perlce-user@lists.sourceforge.net</i> mailing list.</p>
+<a name="Using-Perl-on-WinCE"></a><h1>Using Perl on WinCE</h1>
+<a name="DESCRIPTION"></a><h2>DESCRIPTION</h2>
+<p>PerlCE is currently linked with a simple console window, so it also
+works on non-hpc devices.</p>
+<p>The simple stdio implementation creates the files <code class="inline"><span class="w">stdin</span>.<span class="w">txt</span></code>
+,
+<code class="inline"><span class="w">stdout</span>.<span class="w">txt</span></code>
+ and <code class="inline"><span class="w">stderr</span>.<span class="w">txt</span></code>
+, so you might examine them if your
+console has only a liminted number of cols.</p>
+<p>When exitcode is non-zero, a message box appears, otherwise the
+console closes, so you might have to catch an exit with
+status 0 in your program to see any output.</p>
+<p>stdout/stderr now go into the files <code class="inline"><span class="q">/perl-stdout.txt</span></code>
+ and
+<code class="inline"><span class="q">/perl-stderr.txt.</span></code>
+</p>
+<p>PerlIDE is handy to deal with perlce.</p>
+<a name="LIMITATIONS"></a><h2>LIMITATIONS</h2>
+<p>No fork(), pipe(), popen() etc.</p>
+<a name="ENVIRONMENT"></a><h2>ENVIRONMENT</h2>
+<p>All environment vars must be stored in HKLM\Environment as
+strings. They are read at process startup.</p>
+<ul>
+<li><a name="PERL5LIB"></a><b>PERL5LIB</b>
+<p>Usual perl lib path (semi-list).</p>
+</li>
+<li><a name="PATH"></a><b>PATH</b>
+<p>Semi-list for executables.</p>
+</li>
+<li><a name="TMP"></a><b>TMP</b>
+<p>- Tempdir.</p>
+</li>
+<li><a name="UNIXROOTPATH"></a><b>UNIXROOTPATH</b>
+<p>- Root for accessing some special files, i.e. <code class="inline"><span class="q">/dev/</span><span class="w">null</span></code>
+, <code class="inline"><span class="q">/etc/services</span></code>
+.</p>
+</li>
+<li><a name="ROWS%2fCOLS"></a><b>ROWS/COLS</b>
+<p>- Rows/cols for console.</p>
+</li>
+<li><a name="HOME"></a><b>HOME</b>
+<p>- Home directory.</p>
+</li>
+<li><a name="CONSOLEFONTSIZE"></a><b>CONSOLEFONTSIZE</b>
+<p>- Size for console font.</p>
+</li>
+</ul>
+<p>You can set these with cereg.exe, a (remote) registry editor
+or via the PerlIDE.</p>
+<a name="REGISTRY"></a><h2>REGISTRY</h2>
+<p>To start perl by clicking on a perl source file, you have
+to make the according entries in HKCR (see <code class="inline"><span class="w">ce</span>-<span class="w">helpers</span>/<span class="w">wince</span>-<span class="w">reg</span>.<span class="w">bat</span></code>
+).
+cereg.exe (which must be executed on a desktop pc with
+ActiveSync) is reported not to work on some devices.
+You have to create the registry entries by hand using a 
+registry editor.</p>
+<a name="XS"></a><h2>XS</h2>
+<p>The following Win32-Methods are built-in:</p>
+<pre class="verbatim"><ol><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::GetCwd&quot;</span><span class="cm">,</span> <span class="w">w32_GetCwd</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::SetCwd&quot;</span><span class="cm">,</span> <span class="w">w32_SetCwd</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::GetTickCount&quot;</span><span class="cm">,</span> <span class="w">w32_GetTickCount</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::GetOSVersion&quot;</span><span class="cm">,</span> <span class="w">w32_GetOSVersion</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::IsWinNT&quot;</span><span class="cm">,</span> <span class="w">w32_IsWinNT</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::IsWin95&quot;</span><span class="cm">,</span> <span class="w">w32_IsWin95</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::IsWinCE&quot;</span><span class="cm">,</span> <span class="w">w32_IsWinCE</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::CopyFile&quot;</span><span class="cm">,</span> <span class="w">w32_CopyFile</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::Sleep&quot;</span><span class="cm">,</span> <span class="w">w32_Sleep</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::MessageBox&quot;</span><span class="cm">,</span> <span class="w">w32_MessageBox</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::GetPowerStatus&quot;</span><span class="cm">,</span> <span class="w">w32_GetPowerStatus</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::GetOemInfo&quot;</span><span class="cm">,</span> <span class="w">w32_GetOemInfo</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::ShellEx&quot;</span><span class="cm">,</span> <span class="w">w32_ShellEx</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a name="BUGS"></a><h2>BUGS</h2>
+<p>Opening files for read-write is currently not supported if
+they use stdio (normal perl file handles).</p>
+<p>If you find bugs or if it does not work at all on your
+device, send mail to the address below. Please report
+the details of your device (processor, ceversion, 
+devicetype (hpc/palm/pocket)) and the date of the downloaded
+files.</p>
+<a name="INSTALLATION"></a><h2>INSTALLATION</h2>
+<p>Currently installation instructions are at <a href="http://perlce.sourceforge.net/">http://perlce.sourceforge.net/</a>.</p>
+<p>After installation &amp; testing processes will stabilize, information will
+be more precise.</p>
+<a name="ACKNOWLEDGEMENTS"></a><h1>ACKNOWLEDGEMENTS</h1>
+<p>The port for Win32 was used as a reference.</p>
+<a name="History-of-WinCE-port"></a><h1>History of WinCE port</h1>
+<dl>
+<dt>5.</dt><dd><a name="5.6.0"></a><b>6.0</b>
+<p>Initial port of perl to WinCE. It was performed in separate directory
+named <code class="inline"><span class="w">wince</span></code>
+. This port was based on contents of <code class="inline">.<span class="q">/win32</span></code>
+ directory.
+<code class="inline"><span class="w">miniperl</span></code>
+ was not built, user must have HOST perl and properly edit 
+<code class="inline"><span class="w">makefile</span>.<span class="w">ce</span></code>
+ to reflect this.</p>
+</dd>
+<dt>5.</dt><dd><a name="5.8.0"></a><b>8.0</b>
+<p>wince port was kept in the same <code class="inline">.<span class="q">/wince</span></code>
+ directory, and <code class="inline"><span class="w">wince</span>/<span class="w">Makefile</span>.<span class="w">ce</span></code>
+
+was used to invoke native compiler to create HOST miniperl, which then
+facilitates cross-compiling process.
+Extension building support was added.</p>
+</dd>
+<dt>5.</dt><dd><a name="5.9.4"></a><b>9.4</b>
+<p>Two directories <code class="inline">.<span class="q">/win32</span></code>
+ and <code class="inline">.<span class="q">/wince</span></code>
+ were merged, so perlce build
+process comes in <code class="inline">.<span class="q">/win32</span></code>
+ directory.</p>
+</dd>
+</dl>
+<a name="AUTHORS"></a><h1>AUTHORS</h1>
+<ul>
+<li><a name="Rainer-Keuchel-%3ccoyxc%40rainer-keuchel.de%3e"></a><b>Rainer Keuchel &lt;coyxc@rainer-keuchel.de&gt;</b>
+<p>provided initial port of Perl, which appears to be most essential work, as
+it was a breakthrough on having Perl ported at all.
+Many thanks and obligations to Rainer!</p>
+</li>
+<li><a name="Vadim-Konovalov"></a><b>Vadim Konovalov</b>
+<p>made further support of WinCE port.</p>
+</li>
+</ul>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#Building-Perl-for-WinCE">Building Perl for WinCE</a><ul><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#General-explanations-on-cross-compiling-WinCE">General explanations on cross-compiling WinCE</a><li><a href="#BUILD">BUILD</a></ul><li><a href="#Using-Perl-on-WinCE">Using Perl on WinCE</a><ul><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#LIMITATIONS">LIMITATIONS</a><li><a href="#ENVIRONMENT">ENVIRONMENT</a><li><a href="#REGISTRY">REGISTRY</a><li><a href="#XS">XS</a><li><a href="#BUGS">BUGS</a><li><a href="#INSTALLATION">INSTALLATION</a></ul><li><a href="#ACKNOWLEDGEMENTS">ACKNOWLEDGEMENTS</a><li><a href="#History-of-WinCE-port">History of WinCE port</a><li><a href="#AUTHORS">AUTHORS</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/12/5/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

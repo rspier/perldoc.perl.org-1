@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>Net::POP3 - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/20/0/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/20/0/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/20/0/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/20/0/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/20/0/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/20/0/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/20/0/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/20/0/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/20/0/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/20/0/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/20/0/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/20/0/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/20/0/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/20/0/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/20/0/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/20/0/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../index.html">Home</a> &gt;
+    
+      
+        <a href="../index-modules-N.html">Core modules (N)</a> &gt;
+      
+    
+    Net::POP3
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 20.0 documentation</p>
+                  </div>
+                  <h1>Net::POP3</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#CONSTRUCTOR">CONSTRUCTOR</a><li><a href="#METHODS">METHODS</a><li><a href="#NOTES">NOTES</a><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#COPYRIGHT">COPYRIGHT</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>Net::POP3 - Post Office Protocol 3 Client class (RFC1939)</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Net::POP3</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Constructors</span></li><li>    <span class="i">$pop</span> = <span class="w">Net::POP3</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;pop3host&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$pop</span> = <span class="w">Net::POP3</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;pop3host&#39;</span><span class="cm">,</span> <span class="w">Timeout</span> <span class="cm">=&gt;</span> <span class="n">60</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">$pop</span><span class="i">-&gt;login</span><span class="s">(</span><span class="i">$username</span><span class="cm">,</span> <span class="i">$password</span><span class="s">)</span> &gt; <span class="n">0</span><span class="s">)</span> <span class="s">{</span></li><li>      <a class="l_k" href="../functions/my.html">my</a> <span class="i">$msgnums</span> = <span class="i">$pop</span><span class="i">-&gt;list</span><span class="sc">;</span> <span class="c"># hashref of msgnum =&gt; size</span></li><li>      <a class="l_k" href="../functions/foreach.html">foreach</a> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$msgnum</span> <span class="s">(</span><a class="l_k" href="../functions/keys.html">keys</a> <span class="i">%$msgnums</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$msg</span> = <span class="i">$pop</span><span class="i">-&gt;get</span><span class="s">(</span><span class="i">$msgnum</span><span class="s">)</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="i">@$msg</span><span class="sc">;</span></li><li>        <span class="i">$pop</span><span class="i">-&gt;delete</span><span class="s">(</span><span class="i">$msgnum</span><span class="s">)</span><span class="sc">;</span></li><li>      <span class="s">}</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="i">$pop</span><span class="i">-&gt;quit</span><span class="sc">;</span></li></ol></pre><a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>This module implements a client interface to the POP3 protocol, enabling
+a perl5 application to talk to POP3 servers. This documentation assumes
+that you are familiar with the POP3 protocol described in RFC1939.</p>
+<p>A new Net::POP3 object must be created with the <i>new</i> method. Once
+this has been done, all POP3 commands are accessed via method calls
+on the object.</p>
+<p>The Net::POP3 class is a subclass of Net::Cmd and IO::Socket::INET.</p>
+<a name="CONSTRUCTOR"></a><h1>CONSTRUCTOR</h1>
+<ul>
+<li><a name="new-(-%5b-HOST-%5d-%5b%2c-OPTIONS-%5d-)"></a><b>new ( [ HOST ] [, OPTIONS ] )</b>
+<p>This is the constructor for a new Net::POP3 object. <code class="inline"><span class="w">HOST</span></code>
+ is the
+name of the remote host to which an POP3 connection is required.</p>
+<p><code class="inline"><span class="w">HOST</span></code>
+ is optional. If <code class="inline"><span class="w">HOST</span></code>
+ is not given then it may instead be
+passed as the <code class="inline"><span class="w">Host</span></code>
+ option described below. If neither is given then
+the <code class="inline"><span class="w">POP3_Hosts</span></code>
+ specified in <code class="inline"><span class="w">Net::Config</span></code>
+ will be used.</p>
+<p><code class="inline"><span class="w">OPTIONS</span></code>
+ are passed in a hash like fashion, using key and value pairs.
+Possible options are:</p>
+<p><b>Host</b> - POP3 host to connect to. It may be a single scalar, as defined for
+the <code class="inline"><span class="w">PeerAddr</span></code>
+ option in <a href="../IO/Socket/INET.html">IO::Socket::INET</a>, or a reference to
+an array with hosts to try in turn. The <a href="#host">host</a> method will return the value
+which was used to connect to the host.</p>
+<p><b>ResvPort</b> - If given then the socket for the <code class="inline"><span class="w">Net::POP3</span></code>
+ object
+will be bound to the local port given using <code class="inline"><a class="l_k" href="../functions/bind.html">bind</a></code> when the socket is
+created.</p>
+<p><b>Timeout</b> - Maximum time, in seconds, to wait for a response from the
+POP3 server (default: 120)</p>
+<p><b>Debug</b> - Enable debugging information</p>
+</li>
+</ul>
+<a name="METHODS"></a><h1>METHODS</h1>
+<p>Unless otherwise stated all methods return either a <i>true</i> or <i>false</i>
+value, with <i>true</i> meaning that the operation was a success. When a method
+states that it returns a value, failure will be returned as <i>undef</i> or an
+empty list.</p>
+<p><code class="inline"><span class="w">Net::POP3</span></code>
+ inherits from <code class="inline"><span class="w">Net::Cmd</span></code>
+ so methods defined in <code class="inline"><span class="w">Net::Cmd</span></code>
+ may
+be used to send commands to the remote POP3 server in addition to the methods
+documented here.</p>
+<ul>
+<li><a name="auth-(-USERNAME%2c-PASSWORD-)"></a><b>auth ( USERNAME, PASSWORD )</b>
+<p>Attempt SASL authentication.</p>
+</li>
+<li><a name="user-(-USER-)"></a><b>user ( USER )</b>
+<p>Send the USER command.</p>
+</li>
+<li><a name="pass-(-PASS-)"></a><b>pass ( PASS )</b>
+<p>Send the PASS command. Returns the number of messages in the mailbox.</p>
+</li>
+<li><a name="login-(-%5b-USER-%5b%2c-PASS-%5d%5d-)"></a><b>login ( [ USER [, PASS ]] )</b>
+<p>Send both the USER and PASS commands. If <code class="inline"><span class="w">PASS</span></code>
+ is not given the
+<code class="inline"><span class="w">Net::POP3</span></code>
+ uses <code class="inline"><span class="w">Net::Netrc</span></code>
+ to lookup the password using the host
+and username. If the username is not specified then the current user name
+will be used.</p>
+<p>Returns the number of messages in the mailbox. However if there are no
+messages on the server the string <code class="inline"><span class="q">&quot;0E0&quot;</span></code>
+ will be returned. This is
+will give a true value in a boolean context, but zero in a numeric context.</p>
+<p>If there was an error authenticating the user then <i>undef</i> will be returned.</p>
+</li>
+<li><a name="apop-(-%5b-USER-%5b%2c-PASS-%5d%5d-)"></a><b>apop ( [ USER [, PASS ]] )</b>
+<p>Authenticate with the server identifying as <code class="inline"><span class="w">USER</span></code>
+ with password <code class="inline"><span class="w">PASS</span></code>
+.
+Similar to <a href="#login">login</a>, but the password is not sent in clear text.</p>
+<p>To use this method you must have the Digest::MD5 or the MD5 module installed,
+otherwise this method will return <i>undef</i>.</p>
+</li>
+<li><a name="banner-()"></a><b>banner ()</b>
+<p>Return the sever's connection banner</p>
+</li>
+<li><a name="capa-()"></a><b>capa ()</b>
+<p>Return a reference to a hash of the capabilities of the server.  APOP
+is added as a pseudo capability.  Note that I've been unable to
+find a list of the standard capability values, and some appear to
+be multi-word and some are not.  We make an attempt at intelligently
+parsing them, but it may not be correct.</p>
+</li>
+<li><a name="capabilities-()"></a><b>capabilities ()</b>
+<p>Just like capa, but only uses a cache from the last time we asked
+the server, so as to avoid asking more than once.</p>
+</li>
+<li><a name="top-(-MSGNUM-%5b%2c-NUMLINES-%5d-)"></a><b>top ( MSGNUM [, NUMLINES ] )</b>
+<p>Get the header and the first <code class="inline"><span class="w">NUMLINES</span></code>
+ of the body for the message
+<code class="inline"><span class="w">MSGNUM</span></code>
+. Returns a reference to an array which contains the lines of text
+read from the server.</p>
+</li>
+<li><a name="list-(-%5b-MSGNUM-%5d-)"></a><b>list ( [ MSGNUM ] )</b>
+<p>If called with an argument the <code class="inline"><span class="w">list</span></code>
+ returns the size of the message
+in octets.</p>
+<p>If called without arguments a reference to a hash is returned. The
+keys will be the <code class="inline"><span class="w">MSGNUM</span></code>
+'s of all undeleted messages and the values will
+be their size in octets.</p>
+</li>
+<li><a name="get-(-MSGNUM-%5b%2c-FH-%5d-)"></a><b>get ( MSGNUM [, FH ] )</b>
+<p>Get the message <code class="inline"><span class="w">MSGNUM</span></code>
+ from the remote mailbox. If <code class="inline"><span class="w">FH</span></code>
+ is not given
+then get returns a reference to an array which contains the lines of
+text read from the server. If <code class="inline"><span class="w">FH</span></code>
+ is given then the lines returned
+from the server are printed to the filehandle <code class="inline"><span class="w">FH</span></code>
+.</p>
+</li>
+<li><a name="getfh-(-MSGNUM-)"></a><b>getfh ( MSGNUM )</b>
+<p>As per get(), but returns a tied filehandle.  Reading from this
+filehandle returns the requested message.  The filehandle will return
+EOF at the end of the message and should not be reused.</p>
+</li>
+<li><a name="last-()"></a><b>last ()</b>
+<p>Returns the highest <code class="inline"><span class="w">MSGNUM</span></code>
+ of all the messages accessed.</p>
+</li>
+<li><a name="popstat-()"></a><b>popstat ()</b>
+<p>Returns a list of two elements. These are the number of undeleted
+elements and the size of the mbox in octets.</p>
+</li>
+<li><a name="ping-(-USER-)"></a><b>ping ( USER )</b>
+<p>Returns a list of two elements. These are the number of new messages
+and the total number of messages for <code class="inline"><span class="w">USER</span></code>
+.</p>
+</li>
+<li><a name="uidl-(-%5b-MSGNUM-%5d-)"></a><b>uidl ( [ MSGNUM ] )</b>
+<p>Returns a unique identifier for <code class="inline"><span class="w">MSGNUM</span></code>
+ if given. If <code class="inline"><span class="w">MSGNUM</span></code>
+ is not
+given <code class="inline"><span class="w">uidl</span></code>
+ returns a reference to a hash where the keys are the
+message numbers and the values are the unique identifiers.</p>
+</li>
+<li><a name="delete-(-MSGNUM-)"></a><b>delete ( MSGNUM )</b>
+<p>Mark message <code class="inline"><span class="w">MSGNUM</span></code>
+ to be deleted from the remote mailbox. All messages
+that are marked to be deleted will be removed from the remote mailbox
+when the server connection closed.</p>
+</li>
+<li><a name="reset-()"></a><b>reset ()</b>
+<p>Reset the status of the remote POP3 server. This includes resetting the
+status of all messages to not be deleted.</p>
+</li>
+<li><a name="quit-()"></a><b>quit ()</b>
+<p>Quit and close the connection to the remote POP3 server. Any messages marked
+as deleted will be deleted from the remote mailbox.</p>
+</li>
+</ul>
+<a name="NOTES"></a><h1>NOTES</h1>
+<p>If a <code class="inline"><span class="w">Net::POP3</span></code>
+ object goes out of scope before <code class="inline"><span class="w">quit</span></code>
+ method is called
+then the <code class="inline"><a class="l_k" href="../functions/reset.html">reset</a></code> method will called before the connection is closed. This
+means that any messages marked to be deleted will not be.</p>
+<a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<p><a href="../Net/Netrc.html">Net::Netrc</a>,
+<a href="../Net/Cmd.html">Net::Cmd</a></p>
+<a name="AUTHOR"></a><h1>AUTHOR</h1>
+<p>Graham Barr &lt;gbarr@pobox.com&gt;</p>
+<a name="COPYRIGHT"></a><h1>COPYRIGHT</h1>
+<p>Copyright (c) 1995-2003 Graham Barr. All rights reserved.
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#CONSTRUCTOR">CONSTRUCTOR</a><li><a href="#METHODS">METHODS</a><li><a href="#NOTES">NOTES</a><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#COPYRIGHT">COPYRIGHT</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/0/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

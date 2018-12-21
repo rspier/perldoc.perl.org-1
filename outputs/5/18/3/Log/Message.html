@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>Log::Message - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/18/3/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/18/3/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/18/3/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/18/3/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/18/3/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/18/3/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/18/3/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/18/3/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/18/3/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/18/3/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/18/3/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/18/3/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/18/3/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/18/3/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/18/3/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/18/3/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../index.html">Home</a> &gt;
+    
+      
+        <a href="../index-modules-L.html">Core modules (L)</a> &gt;
+      
+    
+    Log::Message
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 18.3 documentation</p>
+                  </div>
+                  <h1>Log::Message</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#Hierarchy">Hierarchy</a><li><a href="#Options">Options</a><li><a href="#Methods">Methods</a><ul><li><a href="#new">new</a><li><a href="#store">store</a><li><a href="#retrieve">retrieve</a><li><a href="#first">first</a><li><a href="#last">last</a><li><a href="#flush">flush</a></ul><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#Acknowledgements">Acknowledgements</a><li><a href="#COPYRIGHT">COPYRIGHT</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>Log::Message - A generic message storing mechanism;</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Log::Message</span> <span class="w">private</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="cm">,</span> <span class="w">config</span> <span class="cm">=&gt;</span> <span class="q">&#39;/our/cf_file&#39;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$log</span> = <span class="w">Log::Message</span><span class="w">-&gt;new</span><span class="s">(</span>    <span class="w">private</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>                                    <span class="w">level</span>   <span class="cm">=&gt;</span> <span class="q">&#39;log&#39;</span><span class="cm">,</span></li><li>                                    <span class="w">config</span>  <span class="cm">=&gt;</span> <span class="q">&#39;/my/cf_file&#39;</span><span class="cm">,</span></li><li>                               <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$log</span><span class="i">-&gt;store</span><span class="s">(</span><span class="q">&#39;this is my first message&#39;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$log</span><span class="i">-&gt;store</span><span class="s">(</span>    <span class="w">message</span> <span class="cm">=&gt;</span> <span class="q">&#39;message #2&#39;</span><span class="cm">,</span></li><li>                    <span class="w">tag</span>     <span class="cm">=&gt;</span> <span class="q">&#39;MY_TAG&#39;</span><span class="cm">,</span></li><li>                    <span class="w">level</span>   <span class="cm">=&gt;</span> <span class="q">&#39;carp&#39;</span><span class="cm">,</span></li><li>                    <span class="w">extra</span>   <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">&#39;this is an argument to the handler&#39;</span><span class="s">]</span><span class="cm">,</span></li><li>               <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@last_five_items</span> = <span class="i">$log</span><span class="i">-&gt;retrieve</span><span class="s">(</span><span class="n">5</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@items</span> = <span class="i">$log</span><span class="i">-&gt;retrieve</span><span class="s">(</span> <span class="w">tag</span>     <span class="cm">=&gt;</span> <span class="q">qr/my_tag/i</span><span class="cm">,</span></li><li>                                <span class="w">message</span> <span class="cm">=&gt;</span> <span class="q">qr/\d/</span><span class="cm">,</span></li><li>                                <span class="w">remove</span>  <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>                              <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@items</span> = <span class="i">$log</span><span class="i">-&gt;final</span><span class="s">(</span> <span class="w">level</span> <span class="cm">=&gt;</span> <span class="q">qr/carp/</span><span class="cm">,</span> <span class="w">amount</span> <span class="cm">=&gt;</span> <span class="n">2</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$first_error</span> = <span class="i">$log</span><span class="i">-&gt;first</span><span class="s">(</span><span class="s">)</span></li><li></li><li>    <span class="c"># croak with the last error on the stack</span></li><li>    <span class="i">$log</span><span class="i">-&gt;final</span><span class="i">-&gt;croak</span><span class="sc">;</span></li><li></li><li>    <span class="c"># empty the stack</span></li><li>    <span class="i">$log</span><span class="i">-&gt;flush</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>Log::Message is a generic message storage mechanism.
+It allows you to store messages on a stack -- either shared or private
+-- and assign meta-data to it.
+Some meta-data will automatically be added for you, like a timestamp
+and a stack trace, but some can be filled in by the user, like a tag
+by which to identify it or group it, and a level at which to handle
+the message (for example, log it, or die with it)</p>
+<p>Log::Message also provides a powerful way of searching through items
+by regexes on messages, tags and level.</p>
+<a name="Hierarchy"></a><h1>Hierarchy</h1>
+<p>There are 4 modules of interest when dealing with the Log::Message::*
+modules:</p>
+<ul>
+<li><a name="Log%3a%3aMessage"></a><b>Log::Message</b>
+<p>Log::Message provides a few methods to manipulate the stack it keeps.
+It has the option of keeping either a private or a public stack.
+More on this below.</p>
+</li>
+<li><a name="Log%3a%3aMessage%3a%3aItem"></a><b>Log::Message::Item</b>
+<p>These are individual message items, which are objects that contain
+the user message as well as the meta-data described above.
+See the <a href="../Log/Message/Item.html">Log::Message::Item</a> manpage to see how to extract this
+meta-data and how to work with the Item objects.
+You should never need to create your own Item objects, but knowing
+about their methods and accessors is important if you want to write
+your own handlers. (See below)</p>
+</li>
+<li><a name="Log%3a%3aMessage%3a%3aHandlers"></a><b>Log::Message::Handlers</b>
+<p>These are a collection of handlers that will be called for a level
+that is used on a <a href="../Log/Message/Item.html">Log::Message::Item</a> object.
+For example, if a message is logged with the 'carp' level, the 'carp'
+handler from <a href="../Log/Message/Handlers.html">Log::Message::Handlers</a> will be called.
+See the <a href="../Log/Message/Handlers.html">Log::Message::Handlers</a> manpage for more explanation about how
+handlers work, which one are available and how to create your own.</p>
+</li>
+<li><a name="Log%3a%3aMessage%3a%3aConfig"></a><b>Log::Message::Config</b>
+<p>Per Log::Message object, there is a configuration required that will
+fill in defaults if the user did not specify arguments to override
+them (like for example what tag will be set if none was provided),
+<a href="../Log/Message/Config.html">Log::Message::Config</a> handles the creation of these configurations.</p>
+<p>Configuration can be specified in 4 ways:</p>
+<ul>
+<li>
+<p>As a configuration file when you <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">Log::Message</span></code>
+</p>
+</li>
+<li>
+<p>As arguments when you <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">Log::Message</span></code>
+</p>
+</li>
+<li>
+<p>As a configuration file when you create a new <a href="../Log/Message.html">Log::Message</a> object.
+(The config will then only apply to that object if you marked it as
+private)</p>
+</li>
+<li>
+<p>As arguments when you create a new Log::Message object.</p>
+<p>You should never need to use the <a href="../Log/Message/Config.html">Log::Message::Config</a> module yourself,
+as this is transparently done by <a href="../Log/Message.html">Log::Message</a>, but its manpage does
+provide an explanation of how you can create a config file.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a name="Options"></a><h1>Options</h1>
+<p>When using Log::Message, or creating a new Log::Message object, you can
+supply various options to alter its behaviour.
+Of course, there are sensible defaults should you choose to omit these
+options.</p>
+<p>Below an explanation of all the options and how they work.</p>
+<ul>
+<li><a name="config"></a><b>config</b>
+<p>The path to a configuration file to be read.
+See the manpage of <a href="../Log/Message/Config.html">Log::Message::Config</a> for the required format</p>
+<p>These options will be overridden by any explicit arguments passed.</p>
+</li>
+<li><a name="private"></a><b>private</b>
+<p>Whether to create, by default, private or shared objects.
+If you choose to create shared objects, all Log::Message objects will
+use the same stack.</p>
+<p>This means that even though every module may make its own $log object
+they will still be sharing the same error stack on which they are
+putting errors and from which they are retrieving.</p>
+<p>This can be useful in big projects.</p>
+<p>If you choose to create a private object, then the stack will of
+course be private to this object, but it will still fall back to the
+shared config should no private config or overriding arguments be
+provided.</p>
+</li>
+<li><a name="verbose"></a><b>verbose</b>
+<p>Log::Message makes use of another module to validate its arguments,
+which is called <a href="../Params/Check.html">Params::Check</a>, which is a lightweight, yet
+powerful input checker and parser. (See the <a href="../Params/Check.html">Params::Check</a>
+manpage for details).</p>
+<p>The verbose setting will control whether this module will
+generate warnings if something improper is passed as input, or merely
+silently returns undef, at which point Log::Message will generate a
+warning.</p>
+<p>It's best to just leave this at its default value, which is '1'</p>
+</li>
+<li><a name="tag"></a><b>tag</b>
+<p>The tag to add to messages if none was provided. If neither your
+config, nor any specific arguments supply a tag, then Log::Message will
+set it to 'NONE'</p>
+<p>Tags are useful for searching on or grouping by. For example, you
+could tag all the messages you want to go to the user as 'USER ERROR'
+and all those that are only debug information with 'DEBUG'.</p>
+<p>At the end of your program, you could then print all the ones tagged
+'USER ERROR' to STDOUT, and those marked 'DEBUG' to a log file.</p>
+</li>
+<li><a name="level"></a><b>level</b>
+<p><code class="inline"><span class="w">level</span></code>
+ describes what action to take when a message is logged. Just
+like <code class="inline"><span class="w">tag</span></code>
+, Log::Message will provide a default (which is 'log') if
+neither your config file, nor any explicit arguments are given to
+override it.</p>
+<p>See the Log::Message::Handlers manpage to see what handlers are
+available by default and what they do, as well as to how to add your
+own handlers.</p>
+</li>
+<li><a name="remove"></a><b>remove</b>
+<p>This indicates whether or not to automatically remove the messages
+from the stack when you've retrieved them.
+The default setting provided by Log::Message is '0': do not remove.</p>
+</li>
+<li><a name="chrono"></a><b>chrono</b>
+<p>This indicates whether messages should always be fetched in
+chronological order or not.
+This simply means that you can choose whether, when retrieving items,
+the item most recently added should be returned first, or the one that
+had been added most long ago.</p>
+<p>The default is to return the newest ones first</p>
+</li>
+</ul>
+<a name="Methods"></a><h1>Methods</h1>
+<a name="new"></a><h2>new</h2>
+<p>This creates a new Log::Message object; The parameters it takes are
+described in the <code class="inline"><span class="w">Options</span></code>
+ section below and let it just be repeated
+that you can use these options like this:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$log</span> = <span class="w">Log::Message</span><span class="w">-&gt;new</span><span class="s">(</span> <span class="i">%options</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>as well as during <code class="inline"><a class="l_k" href="../functions/use.html">use</a></code> time, like this:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Log::Message</span> <span class="w">option1</span> <span class="cm">=&gt;</span> <span class="w">value</span><span class="cm">,</span> <span class="w">option2</span> <span class="cm">=&gt;</span> <span class="w">value</span></li></ol></pre><p>There are but 3 rules to keep in mind:</p>
+<ul>
+<li>
+<p>Provided arguments take precedence over a configuration file.</p>
+</li>
+<li>
+<p>Arguments to new take precedence over options provided at <code class="inline"><a class="l_k" href="../functions/use.html">use</a></code> time</p>
+</li>
+<li>
+<p>An object marked private will always have an empty stack to begin with</p>
+</li>
+</ul>
+<a name="store"></a><h2>store</h2>
+<p>This will create a new Item object and store it on the stack.</p>
+<p>Possible arguments you can give to it are:</p>
+<ul>
+<li><a name="message"></a><b>message</b>
+<p>This is the only argument that is required. If no other arguments
+are given, you may even leave off the <code class="inline"><span class="w">message</span></code>
+ key. The argument
+will then automatically be assumed to be the message.</p>
+</li>
+<li><a name="tag"></a><b>tag</b>
+<p>The tag to add to this message. If not provided, Log::Message will look
+in your configuration for one.</p>
+</li>
+<li><a name="level"></a><b>level</b>
+<p>The level at which this message should be handled. If not provided,
+Log::Message will look in your configuration for one.</p>
+</li>
+<li><a name="extra"></a><b>extra</b>
+<p>This is an array ref with arguments passed to the handler for this
+message, when it is called from store();</p>
+<p>The handler will receive them as a normal list</p>
+</li>
+</ul>
+<p>store() will return true upon success and undef upon failure, as well
+as issue a warning as to why it failed.</p>
+<a name="retrieve"></a><h2>retrieve</h2>
+<p>This will retrieve all message items matching the criteria specified
+from the stack.</p>
+<p>Here are the criteria you can discriminate on:</p>
+<ul>
+<li><a name="tag"></a><b>tag</b>
+<p>A regex to which the tag must adhere. For example <code class="inline"><a class="l_k" href="../functions/qr.html">qr/\w/</a></code>.</p>
+</li>
+<li><a name="level"></a><b>level</b>
+<p>A regex to which the level must adhere.</p>
+</li>
+<li><a name="message"></a><b>message</b>
+<p>A regex to which the message must adhere.</p>
+</li>
+<li><a name="amount"></a><b>amount</b>
+<p>Maximum amount of errors to return</p>
+</li>
+<li><a name="chrono"></a><b>chrono</b>
+<p>Return in chronological order, or not?</p>
+</li>
+<li><a name="remove"></a><b>remove</b>
+<p>Remove items from the stack upon retrieval?</p>
+</li>
+</ul>
+<p>In scalar context it will return the first item matching your criteria
+and in list context, it will return all of them.</p>
+<p>If an error occurs while retrieving, a warning will be issued and
+undef will be returned.</p>
+<a name="first"></a><h2>first</h2>
+<p>This is a shortcut for retrieving the first item(s) stored on the
+stack. It will default to only retrieving one if called with no
+arguments, and will always return results in chronological order.</p>
+<p>If you only supply one argument, it is assumed to be the amount you
+wish returned.</p>
+<p>Furthermore, it can take the same arguments as <code class="inline"><span class="w">retrieve</span></code>
+ can.</p>
+<a name="last"></a><h2>last</h2>
+<p>This is a shortcut for retrieving the last item(s) stored on the
+stack. It will default to only retrieving one if called with no
+arguments, and will always return results in reverse chronological
+order.</p>
+<p>If you only supply one argument, it is assumed to be the amount you
+wish returned.</p>
+<p>Furthermore, it can take the same arguments as <code class="inline"><span class="w">retrieve</span></code>
+ can.</p>
+<a name="flush"></a><h2>flush</h2>
+<p>This removes all items from the stack and returns them to the caller</p>
+<a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<p><a href="../Log/Message/Item.html">Log::Message::Item</a>, <a href="../Log/Message/Handlers.html">Log::Message::Handlers</a>, <a href="../Log/Message/Config.html">Log::Message::Config</a></p>
+<a name="AUTHOR"></a><h1>AUTHOR</h1>
+<p>This module by
+Jos Boumans &lt;kane@cpan.org&gt;.</p>
+<a name="Acknowledgements"></a><h1>Acknowledgements</h1>
+<p>Thanks to Ann Barcomb for her suggestions.</p>
+<a name="COPYRIGHT"></a><h1>COPYRIGHT</h1>
+<p>This module is
+copyright (c) 2002 Jos Boumans &lt;kane@cpan.org&gt;.
+All rights reserved.</p>
+<p>This library is free software;
+you may redistribute and/or modify it under the same
+terms as Perl itself.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#Hierarchy">Hierarchy</a><li><a href="#Options">Options</a><li><a href="#Methods">Methods</a><ul><li><a href="#new">new</a><li><a href="#store">store</a><li><a href="#retrieve">retrieve</a><li><a href="#first">first</a><li><a href="#last">last</a><li><a href="#flush">flush</a></ul><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#Acknowledgements">Acknowledgements</a><li><a href="#COPYRIGHT">COPYRIGHT</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/3/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

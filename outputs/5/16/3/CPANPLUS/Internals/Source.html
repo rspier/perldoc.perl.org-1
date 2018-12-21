@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>CPANPLUS::Internals::Source - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/16/3/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/16/3/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/16/3/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/16/3/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/16/3/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/16/3/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/16/3/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/16/3/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/16/3/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/16/3/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/16/3/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/16/3/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/16/3/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/16/3/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/16/3/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../../index.html">Home</a> &gt;
+    
+      
+        <a href="../../index-modules-C.html">Core modules (C)</a> &gt;
+      
+    
+    CPANPLUS::Internals::Source
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 16.3 documentation</p>
+                  </div>
+                  <h1>CPANPLUS::Internals::Source</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#METHODS">METHODS</a><ul><li><a href="#%24cb-%3e_build_trees(-uptodate-%3d%3e-BOOL%2c-%5buse_stored-%3d%3e-BOOL%2c-path-%3d%3e-%24path%2c-verbose-%3d%3e-BOOL%5d-)">$cb->_build_trees( uptodate => BOOL, [use_stored => BOOL, path => $path, verbose => BOOL] )</a><li><a href="#%24cb-%3e_check_trees(-%5bupdate_source-%3d%3e-BOOL%2c-path-%3d%3e-PATH%2c-verbose-%3d%3e-BOOL%5d-)">$cb->_check_trees( [update_source => BOOL, path => PATH, verbose => BOOL] )</a><li><a href="#%24cb-%3e__check_uptodate(-file-%3d%3e-%24file%2c-name-%3d%3e-%24name%2c-%5bupdate_source-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d-)">$cb->__check_uptodate( file => $file, name => $name, [update_source => BOOL, verbose => BOOL] )</a><li><a href="#%24cb-%3e_update_source(-name-%3d%3e-%24name%2c-%5bpath-%3d%3e-%24path%2c-verbose-%3d%3e-BOOL%5d-)">$cb->_update_source( name => $name, [path => $path, verbose => BOOL] )</a><li><a href="#%24cb-%3e__create_author_tree(%5bpath-%3d%3e-%24path%2c-uptodate-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d)">$cb->__create_author_tree([path => $path, uptodate => BOOL, verbose => BOOL])</a><li><a href="#%24cb-%3e_create_mod_tree(%5bpath-%3d%3e-%24path%2c-uptodate-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d)">$cb->_create_mod_tree([path => $path, uptodate => BOOL, verbose => BOOL])</a><li><a href="#%24cb-%3e__create_dslip_tree(%5bpath-%3d%3e-%24path%2c-uptodate-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d)">$cb->__create_dslip_tree([path => $path, uptodate => BOOL, verbose => BOOL])</a><li><a href="#%24cb-%3e_dslip_defs-()">$cb->_dslip_defs ()</a><li><a href="#%24file-%3d-%24cb-%3e_add_custom_module_source(-uri-%3d%3e-URI%2c-%5bverbose-%3d%3e-BOOL%5d-)%3b">$file = $cb->_add_custom_module_source( uri => URI, [verbose => BOOL] );</a><li><a href="#%24index-%3d-%24cb-%3e__custom_module_source_index_file(-uri-%3d%3e-%24uri-)%3b">$index = $cb->__custom_module_source_index_file( uri => $uri );</a><li><a href="#%24file-%3d-%24cb-%3e_remove_custom_module_source(-uri-%3d%3e-URI%2c-%5bverbose-%3d%3e-BOOL%5d-)%3b">$file = $cb->_remove_custom_module_source( uri => URI, [verbose => BOOL] );</a><li><a href="#%25files-%3d-%24cb-%3e__list_custom_module_sources">%files = $cb->__list_custom_module_sources</a><li><a href="#%24bool-%3d-%24cb-%3e__update_custom_module_sources(-%5bverbose-%3d%3e-BOOL%5d-)%3b">$bool = $cb->__update_custom_module_sources( [verbose => BOOL] );</a><li><a href="#%24ok-%3d-%24cb-%3e__update_custom_module_source">$ok = $cb->__update_custom_module_source</a><li><a href="#%24bool-%3d-%24cb-%3e__write_custom_module_index(-path-%3d%3e-%2fpath%2fto%2fpackages%2c-%5bto-%3d%3e-%2fpath%2fto%2findex%2ffile%2c-verbose-%3d%3e-BOOL%5d-)">$bool = $cb->__write_custom_module_index( path => /path/to/packages, [to => /path/to/index/file, verbose => BOOL] )</a><li><a href="#%24bool-%3d-%24cb-%3e__create_custom_module_entries(-%5bverbose-%3d%3e-BOOL%5d-)">$bool = $cb->__create_custom_module_entries( [verbose => BOOL] )</a></ul></ul><a name="NAME"></a><h1>NAME</h1>
+<p>CPANPLUS::Internals::Source - internals for updating source files</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>    <span class="c">### lazy load author/module trees ###</span></li><li></li><li>    <span class="i">$cb</span><span class="i">-&gt;_author_tree</span><span class="sc">;</span></li><li>    <span class="i">$cb</span><span class="i">-&gt;_module_tree</span><span class="sc">;</span></li></ol></pre><a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>CPANPLUS::Internals::Source controls the updating of source files and
+the parsing of them into usable module/author trees to be used by
+<code class="inline"><span class="w">CPANPLUS</span></code>
+.</p>
+<p>Functions exist to check if source files are still <code class="inline"><span class="w">good</span> <span class="w">to</span> <a class="l_k" href="../../functions/use.html">use</a></code>
+ as
+well as update them, and then parse them.</p>
+<p>The flow looks like this:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$cb</span><span class="i">-&gt;_author_tree</span> || <span class="i">$cb</span><span class="i">-&gt;_module_tree</span></li><li>        <span class="i">$cb</span><span class="i">-&gt;_check_trees</span></li><li>            <span class="i">$cb</span><span class="i">-&gt;__check_uptodate</span></li><li>                <span class="i">$cb</span><span class="i">-&gt;_update_source</span></li><li>            <span class="i">$cb</span><span class="i">-&gt;__update_custom_module_sources</span></li><li>                <span class="i">$cb</span><span class="i">-&gt;__update_custom_module_source</span></li><li>        <span class="i">$cb</span><span class="i">-&gt;_build_trees</span></li><li>            <span class="c">### engine methods</span></li><li>            {   <span class="i">$cb</span><span class="i">-&gt;_init_trees</span><span class="sc">;</span></li><li>                <span class="i">$cb</span><span class="i">-&gt;_standard_trees_completed</span></li><li>                <span class="i">$cb</span><span class="i">-&gt;_custom_trees_completed</span></li><li>            }</li><li>            <span class="i">$cb</span><span class="i">-&gt;__create_author_tree</span></li><li>                <span class="c">### engine methods</span></li><li>                { <span class="i">$cb</span><span class="i">-&gt;_add_author_object</span> }</li><li>            <span class="i">$cb</span><span class="i">-&gt;__create_module_tree</span></li><li>                <span class="i">$cb</span><span class="i">-&gt;__create_dslip_tree</span></li><li>                <span class="c">### engine methods</span></li><li>                { <span class="i">$cb</span><span class="i">-&gt;_add_module_object</span> }</li><li>            <span class="i">$cb</span><span class="i">-&gt;__create_custom_module_entries</span></li><li></li><li>    <span class="i">$cb</span><span class="i">-&gt;_dslip_defs</span></li></ol></pre><a name="METHODS"></a><h1>METHODS</h1>
+<a name="%24cb-%3e_build_trees(-uptodate-%3d%3e-BOOL%2c-%5buse_stored-%3d%3e-BOOL%2c-path-%3d%3e-%24path%2c-verbose-%3d%3e-BOOL%5d-)"></a><h2>$cb-&gt;_build_trees( uptodate =&gt; BOOL, [use_stored =&gt; BOOL, path =&gt; $path, verbose =&gt; BOOL] )</h2>
+<p>This method rebuilds the author- and module-trees from source.</p>
+<p>It takes the following arguments:</p>
+<ul>
+<li><a name="uptodate"></a><b>uptodate</b>
+<p>Indicates whether any on disk caches are still ok to use.</p>
+</li>
+<li><a name="path"></a><b>path</b>
+<p>The absolute path to the directory holding the source files.</p>
+</li>
+<li><a name="verbose"></a><b>verbose</b>
+<p>A boolean flag indicating whether or not to be verbose.</p>
+</li>
+<li><a name="use_stored"></a><b>use_stored</b>
+<p>A boolean flag indicating whether or not it is ok to use previously
+stored trees. Defaults to true.</p>
+</li>
+</ul>
+<p>Returns a boolean indicating success.</p>
+<a name="%24cb-%3e_check_trees(-%5bupdate_source-%3d%3e-BOOL%2c-path-%3d%3e-PATH%2c-verbose-%3d%3e-BOOL%5d-)"></a><h2>$cb-&gt;_check_trees( [update_source =&gt; BOOL, path =&gt; PATH, verbose =&gt; BOOL] )</h2>
+<p>Retrieve source files and return a boolean indicating whether or not
+the source files are up to date.</p>
+<p>Takes several arguments:</p>
+<ul>
+<li><a name="update_source"></a><b>update_source</b>
+<p>A flag to force re-fetching of the source files, even
+if they are still up to date.</p>
+</li>
+<li><a name="path"></a><b>path</b>
+<p>The absolute path to the directory holding the source files.</p>
+</li>
+<li><a name="verbose"></a><b>verbose</b>
+<p>A boolean flag indicating whether or not to be verbose.</p>
+</li>
+</ul>
+<p>Will get information from the config file by default.</p>
+<a name="%24cb-%3e__check_uptodate(-file-%3d%3e-%24file%2c-name-%3d%3e-%24name%2c-%5bupdate_source-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d-)"></a><h2>$cb-&gt;__check_uptodate( file =&gt; $file, name =&gt; $name, [update_source =&gt; BOOL, verbose =&gt; BOOL] )</h2>
+<p><code class="inline"><span class="w">__check_uptodate</span></code>
+ checks if a given source file is still up-to-date
+and if not, or when <code class="inline"><span class="w">update_source</span></code>
+ is true, will re-fetch the source
+file.</p>
+<p>Takes the following arguments:</p>
+<ul>
+<li><a name="file"></a><b>file</b>
+<p>The source file to check.</p>
+</li>
+<li><a name="name"></a><b>name</b>
+<p>The internal shortcut name for the source file (used for config
+lookups).</p>
+</li>
+<li><a name="update_source"></a><b>update_source</b>
+<p>Flag to force updating of sourcefiles regardless.</p>
+</li>
+<li><a name="verbose"></a><b>verbose</b>
+<p>Boolean to indicate whether to be verbose or not.</p>
+</li>
+</ul>
+<p>Returns a boolean value indicating whether the current files are up
+to date or not.</p>
+<a name="%24cb-%3e_update_source(-name-%3d%3e-%24name%2c-%5bpath-%3d%3e-%24path%2c-verbose-%3d%3e-BOOL%5d-)"></a><h2>$cb-&gt;_update_source( name =&gt; $name, [path =&gt; $path, verbose =&gt; BOOL] )</h2>
+<p>This method does the actual fetching of source files.</p>
+<p>It takes the following arguments:</p>
+<ul>
+<li><a name="name"></a><b>name</b>
+<p>The internal shortcut name for the source file (used for config
+lookups).</p>
+</li>
+<li><a name="path"></a><b>path</b>
+<p>The full path where to write the files.</p>
+</li>
+<li><a name="verbose"></a><b>verbose</b>
+<p>Boolean to indicate whether to be verbose or not.</p>
+</li>
+</ul>
+<p>Returns a boolean to indicate success.</p>
+<a name="%24cb-%3e__create_author_tree(%5bpath-%3d%3e-%24path%2c-uptodate-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d)"></a><h2>$cb-&gt;__create_author_tree([path =&gt; $path, uptodate =&gt; BOOL, verbose =&gt; BOOL])</h2>
+<p>This method opens a source files and parses its contents into a
+searchable author-tree or restores a file-cached version of a
+previous parse, if the sources are uptodate and the file-cache exists.</p>
+<p>It takes the following arguments:</p>
+<ul>
+<li><a name="uptodate"></a><b>uptodate</b>
+<p>A flag indicating whether the file-cache is uptodate or not.</p>
+</li>
+<li><a name="path"></a><b>path</b>
+<p>The absolute path to the directory holding the source files.</p>
+</li>
+<li><a name="verbose"></a><b>verbose</b>
+<p>A boolean flag indicating whether or not to be verbose.</p>
+</li>
+</ul>
+<p>Will get information from the config file by default.</p>
+<p>Returns a tree on success, false on failure.</p>
+<a name="%24cb-%3e_create_mod_tree(%5bpath-%3d%3e-%24path%2c-uptodate-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d)"></a><h2>$cb-&gt;_create_mod_tree([path =&gt; $path, uptodate =&gt; BOOL, verbose =&gt; BOOL])</h2>
+<p>This method opens a source files and parses its contents into a
+searchable module-tree or restores a file-cached version of a
+previous parse, if the sources are uptodate and the file-cache exists.</p>
+<p>It takes the following arguments:</p>
+<ul>
+<li><a name="uptodate"></a><b>uptodate</b>
+<p>A flag indicating whether the file-cache is up-to-date or not.</p>
+</li>
+<li><a name="path"></a><b>path</b>
+<p>The absolute path to the directory holding the source files.</p>
+</li>
+<li><a name="verbose"></a><b>verbose</b>
+<p>A boolean flag indicating whether or not to be verbose.</p>
+</li>
+</ul>
+<p>Will get information from the config file by default.</p>
+<p>Returns a tree on success, false on failure.</p>
+<a name="%24cb-%3e__create_dslip_tree(%5bpath-%3d%3e-%24path%2c-uptodate-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d)"></a><h2>$cb-&gt;__create_dslip_tree([path =&gt; $path, uptodate =&gt; BOOL, verbose =&gt; BOOL])</h2>
+<p>This method opens a source files and parses its contents into a
+searchable dslip-tree or restores a file-cached version of a
+previous parse, if the sources are uptodate and the file-cache exists.</p>
+<p>It takes the following arguments:</p>
+<ul>
+<li><a name="uptodate"></a><b>uptodate</b>
+<p>A flag indicating whether the file-cache is uptodate or not.</p>
+</li>
+<li><a name="path"></a><b>path</b>
+<p>The absolute path to the directory holding the source files.</p>
+</li>
+<li><a name="verbose"></a><b>verbose</b>
+<p>A boolean flag indicating whether or not to be verbose.</p>
+</li>
+</ul>
+<p>Will get information from the config file by default.</p>
+<p>Returns a tree on success, false on failure.</p>
+<a name="%24cb-%3e_dslip_defs-()"></a><h2>$cb-&gt;_dslip_defs ()</h2>
+<p>This function returns the definition structure (ARRAYREF) of the
+dslip tree.</p>
+<a name="%24file-%3d-%24cb-%3e_add_custom_module_source(-uri-%3d%3e-URI%2c-%5bverbose-%3d%3e-BOOL%5d-)%3b"></a><h2>$file = $cb-&gt;_add_custom_module_source( uri =&gt; URI, [verbose =&gt; BOOL] );</h2>
+<p>Adds a custom source index and updates it based on the provided URI.</p>
+<p>Returns the full path to the index file on success or false on failure.</p>
+<a name="%24index-%3d-%24cb-%3e__custom_module_source_index_file(-uri-%3d%3e-%24uri-)%3b"></a><h2>$index = $cb-&gt;__custom_module_source_index_file( uri =&gt; $uri );</h2>
+<p>Returns the full path to the encoded index file for <code class="inline"><span class="i">$uri</span></code>
+, as used by
+all <code class="inline"><span class="w">custom</span> <span class="w">module</span> <span class="w">source</span></code>
+ routines.</p>
+<a name="%24file-%3d-%24cb-%3e_remove_custom_module_source(-uri-%3d%3e-URI%2c-%5bverbose-%3d%3e-BOOL%5d-)%3b"></a><h2>$file = $cb-&gt;_remove_custom_module_source( uri =&gt; URI, [verbose =&gt; BOOL] );</h2>
+<p>Removes a custom index file based on the URI provided.</p>
+<p>Returns the full path to the index file on success or false on failure.</p>
+<a name="%25files-%3d-%24cb-%3e__list_custom_module_sources"></a><h2>%files = $cb-&gt;__list_custom_module_sources</h2>
+<p>This method scans the 'custom-sources' directory in your base directory
+for additional sources to include in your module tree.</p>
+<p>Returns a list of key value pairs as follows:</p>
+<pre class="verbatim"><ol><li>  <span class="q">/full/path</span>/<span class="w">to</span>/<span class="w">source</span>/<span class="w">file</span><span class="i">%3Fencoded</span> <span class="cm">=&gt;</span> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">decoded</span><span class="q">/mirror/path</span></li></ol></pre><a name="%24bool-%3d-%24cb-%3e__update_custom_module_sources(-%5bverbose-%3d%3e-BOOL%5d-)%3b"></a><h2>$bool = $cb-&gt;__update_custom_module_sources( [verbose =&gt; BOOL] );</h2>
+<p>Attempts to update all the index files to your custom module sources.</p>
+<p>If the index is missing, and it's a <code class="inline"><a href="file://">file://</a></code> uri, it will generate
+a new local index for you.</p>
+<p>Return true on success, false on failure.</p>
+<a name="%24ok-%3d-%24cb-%3e__update_custom_module_source"></a><h2>$ok = $cb-&gt;__update_custom_module_source</h2>
+<p>Attempts to update all the index files to your custom module sources.</p>
+<p>If the index is missing, and it's a <code class="inline"><a href="file://">file://</a></code> uri, it will generate
+a new local index for you.</p>
+<p>Return true on success, false on failure.</p>
+<a name="%24bool-%3d-%24cb-%3e__write_custom_module_index(-path-%3d%3e-%2fpath%2fto%2fpackages%2c-%5bto-%3d%3e-%2fpath%2fto%2findex%2ffile%2c-verbose-%3d%3e-BOOL%5d-)"></a><h2>$bool = $cb-&gt;__write_custom_module_index( path =&gt; /path/to/packages, [to =&gt; /path/to/index/file, verbose =&gt; BOOL] )</h2>
+<p>Scans the <code class="inline"><span class="w">path</span></code>
+ you provided for packages and writes an index with all
+the available packages to <code class="inline"><span class="i">$path</span>/<span class="w">packages</span>.<span class="w">txt</span></code>
+. If you'd like the index
+to be written to a different file, provide the <code class="inline"><span class="w">to</span></code>
+ argument.</p>
+<p>Returns true on success and false on failure.</p>
+<a name="%24bool-%3d-%24cb-%3e__create_custom_module_entries(-%5bverbose-%3d%3e-BOOL%5d-)"></a><h2>$bool = $cb-&gt;__create_custom_module_entries( [verbose =&gt; BOOL] )</h2>
+<p>Creates entries in the module tree based upon the files as returned
+by <code class="inline"><span class="w">__list_custom_module_sources</span></code>
+.</p>
+<p>Returns true on success, false on failure.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#METHODS">METHODS</a><ul><li><a href="#%24cb-%3e_build_trees(-uptodate-%3d%3e-BOOL%2c-%5buse_stored-%3d%3e-BOOL%2c-path-%3d%3e-%24path%2c-verbose-%3d%3e-BOOL%5d-)">$cb->_build_trees( uptodate => BOOL, [use_stored => BOOL, path => $path, verbose => BOOL] )</a><li><a href="#%24cb-%3e_check_trees(-%5bupdate_source-%3d%3e-BOOL%2c-path-%3d%3e-PATH%2c-verbose-%3d%3e-BOOL%5d-)">$cb->_check_trees( [update_source => BOOL, path => PATH, verbose => BOOL] )</a><li><a href="#%24cb-%3e__check_uptodate(-file-%3d%3e-%24file%2c-name-%3d%3e-%24name%2c-%5bupdate_source-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d-)">$cb->__check_uptodate( file => $file, name => $name, [update_source => BOOL, verbose => BOOL] )</a><li><a href="#%24cb-%3e_update_source(-name-%3d%3e-%24name%2c-%5bpath-%3d%3e-%24path%2c-verbose-%3d%3e-BOOL%5d-)">$cb->_update_source( name => $name, [path => $path, verbose => BOOL] )</a><li><a href="#%24cb-%3e__create_author_tree(%5bpath-%3d%3e-%24path%2c-uptodate-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d)">$cb->__create_author_tree([path => $path, uptodate => BOOL, verbose => BOOL])</a><li><a href="#%24cb-%3e_create_mod_tree(%5bpath-%3d%3e-%24path%2c-uptodate-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d)">$cb->_create_mod_tree([path => $path, uptodate => BOOL, verbose => BOOL])</a><li><a href="#%24cb-%3e__create_dslip_tree(%5bpath-%3d%3e-%24path%2c-uptodate-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d)">$cb->__create_dslip_tree([path => $path, uptodate => BOOL, verbose => BOOL])</a><li><a href="#%24cb-%3e_dslip_defs-()">$cb->_dslip_defs ()</a><li><a href="#%24file-%3d-%24cb-%3e_add_custom_module_source(-uri-%3d%3e-URI%2c-%5bverbose-%3d%3e-BOOL%5d-)%3b">$file = $cb->_add_custom_module_source( uri => URI, [verbose => BOOL] );</a><li><a href="#%24index-%3d-%24cb-%3e__custom_module_source_index_file(-uri-%3d%3e-%24uri-)%3b">$index = $cb->__custom_module_source_index_file( uri => $uri );</a><li><a href="#%24file-%3d-%24cb-%3e_remove_custom_module_source(-uri-%3d%3e-URI%2c-%5bverbose-%3d%3e-BOOL%5d-)%3b">$file = $cb->_remove_custom_module_source( uri => URI, [verbose => BOOL] );</a><li><a href="#%25files-%3d-%24cb-%3e__list_custom_module_sources">%files = $cb->__list_custom_module_sources</a><li><a href="#%24bool-%3d-%24cb-%3e__update_custom_module_sources(-%5bverbose-%3d%3e-BOOL%5d-)%3b">$bool = $cb->__update_custom_module_sources( [verbose => BOOL] );</a><li><a href="#%24ok-%3d-%24cb-%3e__update_custom_module_source">$ok = $cb->__update_custom_module_source</a><li><a href="#%24bool-%3d-%24cb-%3e__write_custom_module_index(-path-%3d%3e-%2fpath%2fto%2fpackages%2c-%5bto-%3d%3e-%2fpath%2fto%2findex%2ffile%2c-verbose-%3d%3e-BOOL%5d-)">$bool = $cb->__write_custom_module_index( path => /path/to/packages, [to => /path/to/index/file, verbose => BOOL] )</a><li><a href="#%24bool-%3d-%24cb-%3e__create_custom_module_entries(-%5bverbose-%3d%3e-BOOL%5d-)">$bool = $cb->__create_custom_module_entries( [verbose => BOOL] )</a></ul></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

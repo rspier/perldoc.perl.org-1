@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>Core modules (C) - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/26/3/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/26/3/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/26/3/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/26/3/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/26/3/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/26/3/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/26/3/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/26/3/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/26/3/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/26/3/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/26/3/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/26/3/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/26/3/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/26/3/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/26/3/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="index.html">Home</a> &gt;
+    
+      
+    
+    Core modules (C)
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 26.3 documentation</p>
+                  </div>
+                  <h1>Core modules (C)</h1>
+<div class="mod_az_list">
+  
+    
+      <a href="index-modules-A.html">A</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-B.html">B</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-C.html">C</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-D.html">D</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-E.html">E</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-F.html">F</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-G.html">G</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-H.html">H</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-I.html">I</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-J.html">J</a>
+    
+    
+      |
+    
+  
+    
+      K
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-L.html">L</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-M.html">M</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-N.html">N</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-O.html">O</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-P.html">P</a>
+    
+    
+      |
+    
+  
+    
+      Q
+    
+    
+      |
+    
+  
+    
+      R
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-S.html">S</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-T.html">T</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-U.html">U</a>
+    
+    
+      |
+    
+  
+    
+      V
+    
+    
+      |
+    
+  
+    
+      W
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-X.html">X</a>
+    
+    
+      |
+    
+  
+    
+      Y
+    
+    
+      |
+    
+  
+    
+      Z
+    
+    
+  
+</div>
+<ul>
+  
+    <li><a href="Carp.html">Carp</a>
+    
+      - alternative warn and die for modules
+    
+  
+    <li><a href="Class/Struct.html">Class::Struct</a>
+    
+      - declare struct-like datatypes as Perl classes
+    
+  
+    <li><a href="Compress/Raw/Bzip2.html">Compress::Raw::Bzip2</a>
+    
+      - Low-Level Interface to bzip2 compression library
+    
+  
+    <li><a href="Compress/Raw/Zlib.html">Compress::Raw::Zlib</a>
+    
+      - Low-Level Interface to zlib compression library
+    
+  
+    <li><a href="Compress/Zlib.html">Compress::Zlib</a>
+    
+      - Interface to zlib compression library
+    
+  
+    <li><a href="Config.html">Config</a>
+    
+      - access Perl configuration information
+    
+  
+    <li><a href="Config/Extensions.html">Config::Extensions</a>
+    
+      - hash lookup of which core extensions were built.
+    
+  
+    <li><a href="CPAN.html">CPAN</a>
+    
+      - query, download and build perl modules from CPAN sites
+    
+  
+    <li><a href="CPAN/Debug.html">CPAN::Debug</a>
+    
+      - internal debugging for CPAN.pm
+    
+  
+    <li><a href="CPAN/Distroprefs.html">CPAN::Distroprefs</a>
+    
+      - read and match distroprefs
+    
+  
+    <li><a href="CPAN/FirstTime.html">CPAN::FirstTime</a>
+    
+      - Utility for CPAN::Config file Initialization
+    
+  
+    <li><a href="CPAN/HandleConfig.html">CPAN::HandleConfig</a>
+    
+      - internal configuration handling for CPAN.pm
+    
+  
+    <li><a href="CPAN/Kwalify.html">CPAN::Kwalify</a>
+    
+      - Interface between CPAN.pm and Kwalify.pm
+    
+  
+    <li><a href="CPAN/Meta.html">CPAN::Meta</a>
+    
+      - the distribution metadata for a CPAN dist
+    
+  
+    <li><a href="CPAN/Meta/Converter.html">CPAN::Meta::Converter</a>
+    
+      - Convert CPAN distribution metadata structures
+    
+  
+    <li><a href="CPAN/Meta/Feature.html">CPAN::Meta::Feature</a>
+    
+      - an optional feature provided by a CPAN distribution
+    
+  
+    <li><a href="CPAN/Meta/History.html">CPAN::Meta::History</a>
+    
+      - history of CPAN Meta Spec changes
+    
+  
+    <li><a href="CPAN/Meta/Prereqs.html">CPAN::Meta::Prereqs</a>
+    
+      - a set of distribution prerequisites by phase and type
+    
+  
+    <li><a href="CPAN/Meta/Requirements.html">CPAN::Meta::Requirements</a>
+    
+      - a set of version requirements for a CPAN dist
+    
+  
+    <li><a href="CPAN/Meta/Spec.html">CPAN::Meta::Spec</a>
+    
+      - specification for CPAN distribution metadata
+    
+  
+    <li><a href="CPAN/Meta/Validator.html">CPAN::Meta::Validator</a>
+    
+      - validate CPAN distribution metadata structures
+    
+  
+    <li><a href="CPAN/Meta/YAML.html">CPAN::Meta::YAML</a>
+    
+      - Read and write a subset of YAML for CPAN Meta files
+    
+  
+    <li><a href="CPAN/Mirrors.html">CPAN::Mirrors</a>
+    
+      - Get CPAN mirror information and select a fast one
+    
+  
+    <li><a href="CPAN/Nox.html">CPAN::Nox</a>
+    
+      - Wrapper around CPAN.pm without using any XS module
+    
+  
+    <li><a href="CPAN/Queue.html">CPAN::Queue</a>
+    
+      - internal queue support for CPAN.pm
+    
+  
+    <li><a href="CPAN/Tarzip.html">CPAN::Tarzip</a>
+    
+      - internal handling of tar archives for CPAN.pm
+    
+  
+    <li><a href="CPAN/Version.html">CPAN::Version</a>
+    
+      - utility functions to compare CPAN versions
+    
+  
+    <li><a href="Cwd.html">Cwd</a>
+    
+      - get pathname of current working directory
+    
+  
+</ul>
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

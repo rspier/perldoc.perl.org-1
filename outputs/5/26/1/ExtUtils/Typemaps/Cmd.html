@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>ExtUtils::Typemaps::Cmd - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/26/1/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/26/1/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/26/1/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/26/1/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/26/1/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/26/1/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/26/1/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/26/1/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/26/1/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/26/1/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/26/1/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/26/1/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/26/1/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/26/1/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/26/1/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/26/1/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../../index.html">Home</a> &gt;
+    
+      
+        <a href="../../index-modules-E.html">Core modules (E)</a> &gt;
+      
+    
+    ExtUtils::Typemaps::Cmd
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 26.1 documentation</p>
+                  </div>
+                  <h1>ExtUtils::Typemaps::Cmd</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#EXPORTED-FUNCTIONS">EXPORTED FUNCTIONS</a><ul><li><a href="#embeddable_typemap">embeddable_typemap</a></ul><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#COPYRIGHT-%26-LICENSE">COPYRIGHT & LICENSE</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>ExtUtils::Typemaps::Cmd - Quick commands for handling typemaps</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<p>From XS:</p>
+<pre class="verbatim"><ol><li>  <span class="j">INCLUDE_COMMAND:</span> <span class="i">$^X</span> -<span class="w">MExtUtils::Typemaps::Cmd</span> \</li><li>                   -e <span class="q">&quot;print embeddable_typemap(q{Excommunicated})&quot;</span></li></ol></pre><p>Loads <code class="inline"><span class="w">ExtUtils::Typemaps::Excommunicated</span></code>
+, instantiates an object,
+and dumps it as an embeddable typemap for use directly in your XS file.</p>
+<a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>This is a helper module for <a href="../../ExtUtils/Typemaps.html">ExtUtils::Typemaps</a> for quick
+one-liners, specifically for inclusion of shared typemaps
+that live on CPAN into an XS file (see SYNOPSIS).</p>
+<p>For this reason, the following functions are exported by default:</p>
+<a name="EXPORTED-FUNCTIONS"></a><h1>EXPORTED FUNCTIONS</h1>
+<a name="embeddable_typemap"></a><h2>embeddable_typemap</h2>
+<p>Given a list of identifiers, <code class="inline"><span class="w">embeddable_typemap</span></code>
+
+tries to load typemaps from a file of the given name(s),
+or from a module that is an <code class="inline"><span class="w">ExtUtils::Typemaps</span></code>
+ subclass.</p>
+<p>Returns a string representation of the merged typemaps that can
+be included verbatim into XS. Example:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../../functions/print.html">print</a> <span class="i">embeddable_typemap</span><span class="s">(</span></li><li>    <span class="q">&quot;Excommunicated&quot;</span><span class="cm">,</span> <span class="q">&quot;ExtUtils::Typemaps::Basic&quot;</span><span class="cm">,</span> <span class="q">&quot;./typemap&quot;</span></li><li>  <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>This will try to load a module <code class="inline"><span class="w">ExtUtils::Typemaps::Excommunicated</span></code>
+
+and use it as an <code class="inline"><span class="w">ExtUtils::Typemaps</span></code>
+ subclass. If that fails, it'll
+try loading <code class="inline"><span class="w">Excommunicated</span></code>
+ as a module, if that fails, it'll try to
+read a file called <i>Excommunicated</i>. It'll work similarly for the
+second argument, but the third will be loaded as a file first.</p>
+<p>After loading all typemap files or modules, it will merge them in the
+specified order and dump the result as an embeddable typemap.</p>
+<a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<p><a href="../../ExtUtils/Typemaps.html">ExtUtils::Typemaps</a></p>
+<p><a href="../../perlxs.html">perlxs</a></p>
+<a name="AUTHOR"></a><h1>AUTHOR</h1>
+<p>Steffen Mueller <code class="inline">&lt;<span class="w">smueller</span><span class="i">@cpan</span>.<span class="w">org</span></code>
+&gt;</p>
+<a name="COPYRIGHT-%26-LICENSE"></a><h1>COPYRIGHT &amp; LICENSE</h1>
+<p>Copyright 2012 Steffen Mueller</p>
+<p>This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#EXPORTED-FUNCTIONS">EXPORTED FUNCTIONS</a><ul><li><a href="#embeddable_typemap">embeddable_typemap</a></ul><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#COPYRIGHT-%26-LICENSE">COPYRIGHT & LICENSE</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/1/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

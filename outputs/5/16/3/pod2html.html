@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>pod2html - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/16/3/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/16/3/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/16/3/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/16/3/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/16/3/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/16/3/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/16/3/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/16/3/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/16/3/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/16/3/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/16/3/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/16/3/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/16/3/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/16/3/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/16/3/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="index.html">Home</a> &gt;
+    
+      
+        <a href="index-utilities.html">Utilities</a> &gt;
+      
+    
+    pod2html
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 16.3 documentation</p>
+                  </div>
+                  <h1>pod2html</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#ARGUMENTS">ARGUMENTS</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#BUGS">BUGS</a><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#COPYRIGHT">COPYRIGHT</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>pod2html - convert .pod files to .html files</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>    <span class="w">pod2html</span> --<span class="w">help</span> --<span class="w">htmlroot</span>=<span class="q">&lt;name&gt;</span> --<span class="w">infile</span>=<span class="q">&lt;name&gt;</span> --<span class="w">outfile</span>=<span class="q">&lt;name&gt;</span></li><li>             --<span class="w">podpath</span>=<span class="q">&lt;name&gt;</span><span class="co">:</span>...<span class="co">:</span><span class="q">&lt;name&gt;</span> --<span class="w">podroot</span>=<span class="q">&lt;name&gt;</span></li><li>             --<span class="w">recurse</span> --<span class="w">norecurse</span> --<span class="w">verbose</span></li><li>             --<a class="l_k" href="functions/index.html">index</a> --<span class="w">noindex</span> --<span class="w">title</span>=<span class="q">&lt;name&gt;</span></li></ol></pre><a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>Converts files from pod format (see <a href="perlpod.html">perlpod</a>) to HTML format.</p>
+<a name="ARGUMENTS"></a><h1>ARGUMENTS</h1>
+<p>pod2html takes the following arguments:</p>
+<ul>
+<li><a name="help"></a><b>help</b>
+<pre class="verbatim"><ol><li>  --<span class="w">help</span></li></ol></pre><p>Displays the usage message.</p>
+</li>
+<li><a name="htmlroot"></a><b>htmlroot</b>
+<pre class="verbatim"><ol><li>  --<span class="w">htmlroot</span>=<span class="w">name</span></li></ol></pre><p>Sets the base URL for the HTML files.  When cross-references are made,
+the HTML root is prepended to the URL.</p>
+</li>
+<li><a name="infile"></a><b>infile</b>
+<pre class="verbatim"><ol><li>  --<span class="w">infile</span>=<span class="w">name</span></li></ol></pre><p>Specify the pod file to convert.  Input is taken from STDIN if no
+infile is specified.</p>
+</li>
+<li><a name="outfile"></a><b>outfile</b>
+<pre class="verbatim"><ol><li>  --<span class="w">outfile</span>=<span class="w">name</span></li></ol></pre><p>Specify the HTML file to create.  Output goes to STDOUT if no outfile
+is specified.</p>
+</li>
+<li><a name="podroot"></a><b>podroot</b>
+<pre class="verbatim"><ol><li>  --<span class="w">podroot</span>=<span class="w">name</span></li></ol></pre><p>Specify the base directory for finding library pods.</p>
+</li>
+<li><a name="podpath"></a><b>podpath</b>
+<pre class="verbatim"><ol><li>  --<span class="w">podpath</span>=<span class="w">name</span><span class="co">:</span>...<span class="co">:</span><span class="w">name</span></li></ol></pre><p>Specify which subdirectories of the podroot contain pod files whose
+HTML converted forms can be linked-to in cross-references.</p>
+</li>
+<li><a name="index"></a><b>index</b>
+<pre class="verbatim"><ol><li>  --<a class="l_k" href="functions/index.html">index</a></li></ol></pre><p>Generate an index at the top of the HTML file (default behaviour).</p>
+</li>
+<li><a name="noindex"></a><b>noindex</b>
+<pre class="verbatim"><ol><li>  --<span class="w">noindex</span></li></ol></pre><p>Do not generate an index at the top of the HTML file.</p>
+</li>
+<li><a name="recurse"></a><b>recurse</b>
+<pre class="verbatim"><ol><li>  --<span class="w">recurse</span></li></ol></pre><p>Recurse into subdirectories specified in podpath (default behaviour).</p>
+</li>
+<li><a name="norecurse"></a><b>norecurse</b>
+<pre class="verbatim"><ol><li>  --<span class="w">norecurse</span></li></ol></pre><p>Do not recurse into subdirectories specified in podpath.</p>
+</li>
+<li><a name="title"></a><b>title</b>
+<pre class="verbatim"><ol><li>  --<span class="w">title</span>=<span class="w">title</span></li></ol></pre><p>Specify the title of the resulting HTML file.</p>
+</li>
+<li><a name="verbose"></a><b>verbose</b>
+<pre class="verbatim"><ol><li>  --<span class="w">verbose</span></li></ol></pre><p>Display progress messages.</p>
+</li>
+</ul>
+<a name="AUTHOR"></a><h1>AUTHOR</h1>
+<p>Tom Christiansen, &lt;tchrist@perl.com&gt;.</p>
+<a name="BUGS"></a><h1>BUGS</h1>
+<p>See <a href="Pod/Html.html">Pod::Html</a> for a list of known bugs in the translator.</p>
+<a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<p><a href="perlpod.html">perlpod</a>, <a href="Pod/Html.html">Pod::Html</a></p>
+<a name="COPYRIGHT"></a><h1>COPYRIGHT</h1>
+<p>This program is distributed under the Artistic License.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#ARGUMENTS">ARGUMENTS</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#BUGS">BUGS</a><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#COPYRIGHT">COPYRIGHT</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

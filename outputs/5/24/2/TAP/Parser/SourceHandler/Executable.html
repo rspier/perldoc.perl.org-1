@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>TAP::Parser::SourceHandler::Executable - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/24/2/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/24/2/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/24/2/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/24/2/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/24/2/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/24/2/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/24/2/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/24/2/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/24/2/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/24/2/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/24/2/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/24/2/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/24/2/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/24/2/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/24/2/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/24/2/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../../../index.html">Home</a> &gt;
+    
+      
+        <a href="../../../index-modules-T.html">Core modules (T)</a> &gt;
+      
+    
+    TAP::Parser::SourceHandler::Executable
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 24.2 documentation</p>
+                  </div>
+                  <h1>TAP::Parser::SourceHandler::Executable</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#VERSION">VERSION</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#METHODS">METHODS</a><ul><li><a href="#Class-Methods">Class Methods</a></ul><li><a href="#SUBCLASSING">SUBCLASSING</a><ul><li><a href="#Example">Example</a></ul><li><a href="#SEE-ALSO">SEE ALSO</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>TAP::Parser::SourceHandler::Executable - Stream output from an executable TAP source</p>
+<a name="VERSION"></a><h1>VERSION</h1>
+<p>Version 3.36</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../../../functions/use.html">use</a> <span class="w">TAP::Parser::Source</span><span class="sc">;</span></li><li>  <a class="l_k" href="../../../functions/use.html">use</a> <span class="w">TAP::Parser::SourceHandler::Executable</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="../../../functions/my.html">my</a> <span class="i">$source</span> = <span class="w">TAP::Parser::Source</span><span class="w">-&gt;new</span><span class="w">-&gt;raw</span><span class="s">(</span><span class="s">[</span><span class="q">&#39;/usr/bin/ruby&#39;</span><span class="cm">,</span> <span class="q">&#39;mytest.rb&#39;</span><span class="s">]</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">$source</span><span class="i">-&gt;assemble_meta</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="../../../functions/my.html">my</a> <span class="i">$class</span> = <span class="q">&#39;TAP::Parser::SourceHandler::Executable&#39;</span><span class="sc">;</span></li><li>  <a class="l_k" href="../../../functions/my.html">my</a> <span class="i">$vote</span>  = <span class="i">$class</span><span class="i">-&gt;can_handle</span><span class="s">(</span> <span class="i">$source</span> <span class="s">)</span><span class="sc">;</span></li><li>  <a class="l_k" href="../../../functions/my.html">my</a> <span class="i">$iter</span>  = <span class="i">$class</span><span class="i">-&gt;make_iterator</span><span class="s">(</span> <span class="i">$source</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>This is an <i>executable</i> <a href="../../../TAP/Parser/SourceHandler.html">TAP::Parser::SourceHandler</a> - it has 2 jobs:</p>
+<p>1. Figure out if the <a href="../../../TAP/Parser/Source.html">TAP::Parser::Source</a> it's given is an executable
+   command (<a href="#can_handle">can_handle</a>).</p>
+<p>2. Creates an iterator for executable commands (<a href="#make_iterator">make_iterator</a>).</p>
+<p>Unless you're writing a plugin or subclassing <a href="../../../TAP/Parser.html">TAP::Parser</a>, you
+probably won't need to use this module directly.</p>
+<a name="METHODS"></a><h1>METHODS</h1>
+<a name="Class-Methods"></a><h2>Class Methods</h2>
+<a name="can_handle"></a><h3><code class="inline"><span class="w">can_handle</span></code>
+</h3>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../../../functions/my.html">my</a> <span class="i">$vote</span> = <span class="i">$class</span><span class="i">-&gt;can_handle</span><span class="s">(</span> <span class="i">$source</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Only votes if $source looks like an executable file. Casts the
+following votes:</p>
+<pre class="verbatim"><ol><li>  <span class="n">0.9</span>  <a class="l_k" href="../../../functions/if.html">if</a> <span class="w">it&#39;s</span> <span class="w">a</span> <span class="w">hash</span> <span class="w">with</span> <span class="w">an</span> <span class="q">&#39;exec&#39;</span> <span class="w">key</span></li><li>  <span class="n">0.8</span>  <a class="l_k" href="../../../functions/if.html">if</a> <span class="w">it&#39;s</span> <span class="w">a</span> .<span class="w">bat</span> <span class="w">file</span></li><li>  <span class="n">0.75</span> <a class="l_k" href="../../../functions/if.html">if</a> <span class="w">it&#39;s</span> <span class="w">got</span> <span class="w">an</span> <span class="w">execute</span> <span class="w">bit</span> <span class="w">set</span></li></ol></pre><a name="make_iterator"></a><h3><code class="inline"><span class="w">make_iterator</span></code>
+</h3>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../../../functions/my.html">my</a> <span class="i">$iterator</span> = <span class="i">$class</span><span class="i">-&gt;make_iterator</span><span class="s">(</span> <span class="i">$source</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Returns a new <a href="../../../TAP/Parser/Iterator/Process.html">TAP::Parser::Iterator::Process</a> for the source.
+<code class="inline"><span class="i">$source</span><span class="i">-&gt;raw</span></code>
+ must be in one of the following forms:</p>
+<pre class="verbatim"><ol><li>  <span class="s">{</span> <span class="w">exec</span> <span class="cm">=&gt;</span> <span class="s">[</span> <span class="i">@exec</span> <span class="s">]</span> <span class="s">}</span></li><li></li><li>  <span class="s">[</span> <span class="i">@exec</span> <span class="s">]</span></li><li></li><li>  <span class="i">$file</span></li></ol></pre><p><code class="inline"><span class="w">croak</span></code>
+s on error.</p>
+<a name="iterator_class"></a><h3><code class="inline"><span class="w">iterator_class</span></code>
+</h3>
+<p>The class of iterator to use, override if you're sub-classing.  Defaults
+to <a href="../../../TAP/Parser/Iterator/Process.html">TAP::Parser::Iterator::Process</a>.</p>
+<a name="SUBCLASSING"></a><h1>SUBCLASSING</h1>
+<p>Please see <a href="../../../TAP/Parser.html#SUBCLASSING">SUBCLASSING in TAP::Parser</a> for a subclassing overview.</p>
+<a name="Example"></a><h2>Example</h2>
+<pre class="verbatim"><ol><li><a name="package-MyRubySourceHandler"></a>  package <span class="i">MyRubySourceHandler</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="../../../functions/use.html">use</a> <span class="w">strict</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="../../../functions/use.html">use</a> <span class="w">Carp</span> <span class="q">qw( croak )</span><span class="sc">;</span></li><li>  <a class="l_k" href="../../../functions/use.html">use</a> <span class="w">TAP::Parser::SourceHandler::Executable</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="../../../functions/use.html">use</a> <span class="w">base</span> <span class="q">&#39;TAP::Parser::SourceHandler::Executable&#39;</span><span class="sc">;</span></li><li></li><li>  <span class="c"># expect $handler-&gt;([&#39;mytest.rb&#39;, &#39;cmdline&#39;, &#39;args&#39;]);</span></li><li><a name="make_iterator"></a>  sub <span class="m">make_iterator</span> <span class="s">{</span></li><li>    <a class="l_k" href="../../../functions/my.html">my</a> <span class="s">(</span><span class="i">$self</span><span class="cm">,</span> <span class="i">$source</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../../functions/my.html">my</a> <span class="i">@test_args</span> = <span class="i">@</span>{ <span class="i">$source</span><span class="i">-&gt;test_args</span> }<span class="sc">;</span></li><li>    <a class="l_k" href="../../../functions/my.html">my</a> <span class="i">$rb_file</span>   = <span class="i">$test_args</span>[<span class="n">0</span>]<span class="sc">;</span></li><li>    <span class="i">croak</span><span class="s">(</span><span class="q">&quot;error: Ruby file &#39;$rb_file&#39; not found!&quot;</span><span class="s">)</span> <a class="l_k" href="../../../functions/unless.html">unless</a> <span class="s">(</span>-f <span class="i">$rb_file</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../../functions/return.html">return</a> <span class="i">$self</span><span class="i">-&gt;SUPER::raw_source</span><span class="s">(</span><span class="s">[</span><span class="q">&#39;/usr/bin/ruby&#39;</span><span class="cm">,</span> <span class="i">@test_args</span><span class="s">]</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<p><a href="../../../TAP/Object.html">TAP::Object</a>,
+<a href="../../../TAP/Parser.html">TAP::Parser</a>,
+<a href="../../../TAP/Parser/IteratorFactory.html">TAP::Parser::IteratorFactory</a>,
+<a href="../../../TAP/Parser/SourceHandler.html">TAP::Parser::SourceHandler</a>,
+<a href="../../../TAP/Parser/SourceHandler/Perl.html">TAP::Parser::SourceHandler::Perl</a>,
+<a href="../../../TAP/Parser/SourceHandler/File.html">TAP::Parser::SourceHandler::File</a>,
+<a href="../../../TAP/Parser/SourceHandler/Handle.html">TAP::Parser::SourceHandler::Handle</a>,
+<a href="../../../TAP/Parser/SourceHandler/RawTAP.html">TAP::Parser::SourceHandler::RawTAP</a></p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#VERSION">VERSION</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#METHODS">METHODS</a><ul><li><a href="#Class-Methods">Class Methods</a></ul><li><a href="#SUBCLASSING">SUBCLASSING</a><ul><li><a href="#Example">Example</a></ul><li><a href="#SEE-ALSO">SEE ALSO</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/2/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

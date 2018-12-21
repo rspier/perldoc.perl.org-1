@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>App::Prove::State - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/24/4/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/24/4/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/24/4/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/24/4/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/24/4/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/24/4/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/24/4/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/24/4/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/24/4/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/24/4/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/24/4/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/24/4/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/24/4/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/24/4/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/24/4/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/24/4/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../../index.html">Home</a> &gt;
+    
+      
+        <a href="../../index-modules-A.html">Core modules (A)</a> &gt;
+      
+    
+    App::Prove::State
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 24.4 documentation</p>
+                  </div>
+                  <h1>App::Prove::State</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#VERSION">VERSION</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#METHODS">METHODS</a><ul><li><a href="#Class-Methods">Class Methods</a><li><a href="#result_class">result_class</a><li><a href="#extensions">extensions</a><li><a href="#results">results</a><li><a href="#commit">commit</a><li><a href="#Instance-Methods">Instance Methods</a></ul></ul><a name="NAME"></a><h1>NAME</h1>
+<p>App::Prove::State - State storage for the <code class="inline"><span class="w">prove</span></code>
+ command.</p>
+<a name="VERSION"></a><h1>VERSION</h1>
+<p>Version 3.36</p>
+<a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>The <code class="inline"><span class="w">prove</span></code>
+ command supports a <code class="inline">--<span class="w">state</span></code>
+ option that instructs it to
+store persistent state across runs. This module implements that state
+and the operations that may be performed on it.</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>    <span class="c"># Re-run failed tests</span></li><li>    <span class="i">$ prove</span> --<span class="w">state</span>=<span class="w">failed</span><span class="cm">,</span><span class="w">save</span> -<span class="w">rbv</span></li></ol></pre><a name="METHODS"></a><h1>METHODS</h1>
+<a name="Class-Methods"></a><h2>Class Methods</h2>
+<a name="new"></a><h3><code class="inline"><span class="w">new</span></code>
+</h3>
+<p>Accepts a hashref with the following key/value pairs:</p>
+<ul>
+<li><a name="*-store"></a><b><code class="inline"><span class="w">store</span></code>
+</b>
+<p>The filename of the data store holding the data that App::Prove::State reads.</p>
+</li>
+<li><a name="*-extensions-(optional)"></a><b><code class="inline"><span class="w">extensions</span></code>
+ (optional)</b>
+<p>The test name extensions.  Defaults to <code class="inline">.<span class="w">t</span></code>
+.</p>
+</li>
+<li><a name="*-result_class-(optional)"></a><b><code class="inline"><span class="w">result_class</span></code>
+ (optional)</b>
+<p>The name of the <code class="inline"><span class="w">result_class</span></code>
+.  Defaults to <code class="inline"><span class="w">App::Prove::State::Result</span></code>
+.</p>
+</li>
+</ul>
+<a name="result_class"></a><h2><code class="inline"><span class="w">result_class</span></code>
+</h2>
+<p>Getter/setter for the name of the class used for tracking test results.  This
+class should either subclass from <code class="inline"><span class="w">App::Prove::State::Result</span></code>
+ or provide an
+identical interface.</p>
+<a name="extensions"></a><h2><code class="inline"><span class="w">extensions</span></code>
+</h2>
+<p>Get or set the list of extensions that files must have in order to be
+considered tests. Defaults to ['.t'].</p>
+<a name="results"></a><h2><code class="inline"><span class="w">results</span></code>
+</h2>
+<p>Get the results of the last test run.  Returns a <code class="inline"><span class="i">result_class</span><span class="s">(</span><span class="s">)</span></code>
+ instance.</p>
+<a name="commit"></a><h2><code class="inline"><span class="w">commit</span></code>
+</h2>
+<p>Save the test results. Should be called after all tests have run.</p>
+<a name="Instance-Methods"></a><h2>Instance Methods</h2>
+<a name="apply_switch"></a><h3><code class="inline"><span class="w">apply_switch</span></code>
+</h3>
+<pre class="verbatim"><ol><li> <span class="i">$self</span><span class="i">-&gt;apply_switch</span><span class="s">(</span><span class="q">&#39;failed,save&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Apply a list of switch options to the state, updating the internal
+object state as a result. Nothing is returned.</p>
+<p>Diagnostics:
+    - "Illegal state option: %s"</p>
+<ul>
+<li><a name="last"></a><b><code class="inline"><a class="l_k" href="../../functions/last.html">last</a></code></b>
+<p>Run in the same order as last time</p>
+</li>
+<li><a name="failed"></a><b><code class="inline"><span class="w">failed</span></code>
+</b>
+<p>Run only the failed tests from last time</p>
+</li>
+<li><a name="passed"></a><b><code class="inline"><span class="w">passed</span></code>
+</b>
+<p>Run only the passed tests from last time</p>
+</li>
+<li><a name="all"></a><b><code class="inline"><span class="w">all</span></code>
+</b>
+<p>Run all tests in normal order</p>
+</li>
+<li><a name="hot"></a><b><code class="inline"><span class="w">hot</span></code>
+</b>
+<p>Run the tests that most recently failed first</p>
+</li>
+<li><a name="todo"></a><b><code class="inline"><span class="w">todo</span></code>
+</b>
+<p>Run the tests ordered by number of todos.</p>
+</li>
+<li><a name="slow"></a><b><code class="inline"><span class="w">slow</span></code>
+</b>
+<p>Run the tests in slowest to fastest order.</p>
+</li>
+<li><a name="fast"></a><b><code class="inline"><span class="w">fast</span></code>
+</b>
+<p>Run test tests in fastest to slowest order.</p>
+</li>
+<li><a name="new"></a><b><code class="inline"><span class="w">new</span></code>
+</b>
+<p>Run the tests in newest to oldest order.</p>
+</li>
+<li><a name="old"></a><b><code class="inline"><span class="w">old</span></code>
+</b>
+<p>Run the tests in oldest to newest order.</p>
+</li>
+<li><a name="save"></a><b><code class="inline"><span class="w">save</span></code>
+</b>
+<p>Save the state on exit.</p>
+</li>
+</ul>
+<a name="get_tests"></a><h3><code class="inline"><span class="w">get_tests</span></code>
+</h3>
+<p>Given a list of args get the names of tests that should run</p>
+<a name="observe_test"></a><h3><code class="inline"><span class="w">observe_test</span></code>
+</h3>
+<p>Store the results of a test.</p>
+<a name="save"></a><h3><code class="inline"><span class="w">save</span></code>
+</h3>
+<p>Write the state to a file.</p>
+<a name="load"></a><h3><code class="inline"><span class="w">load</span></code>
+</h3>
+<p>Load the state from a file</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#VERSION">VERSION</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#METHODS">METHODS</a><ul><li><a href="#Class-Methods">Class Methods</a><li><a href="#result_class">result_class</a><li><a href="#extensions">extensions</a><li><a href="#results">results</a><li><a href="#commit">commit</a><li><a href="#Instance-Methods">Instance Methods</a></ul></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/4/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

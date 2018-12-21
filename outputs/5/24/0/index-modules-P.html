@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>Core modules (P) - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/24/0/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/24/0/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/24/0/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/24/0/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/24/0/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/24/0/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/24/0/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/24/0/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/24/0/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/24/0/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/24/0/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/24/0/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/24/0/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/24/0/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/24/0/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/24/0/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="index.html">Home</a> &gt;
+    
+      
+    
+    Core modules (P)
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 24.0 documentation</p>
+                  </div>
+                  <h1>Core modules (P)</h1>
+<div class="mod_az_list">
+  
+    
+      <a href="index-modules-A.html">A</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-B.html">B</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-C.html">C</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-D.html">D</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-E.html">E</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-F.html">F</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-G.html">G</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-H.html">H</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-I.html">I</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-J.html">J</a>
+    
+    
+      |
+    
+  
+    
+      K
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-L.html">L</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-M.html">M</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-N.html">N</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-O.html">O</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-P.html">P</a>
+    
+    
+      |
+    
+  
+    
+      Q
+    
+    
+      |
+    
+  
+    
+      R
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-S.html">S</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-T.html">T</a>
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-U.html">U</a>
+    
+    
+      |
+    
+  
+    
+      V
+    
+    
+      |
+    
+  
+    
+      W
+    
+    
+      |
+    
+  
+    
+      <a href="index-modules-X.html">X</a>
+    
+    
+      |
+    
+  
+    
+      Y
+    
+    
+      |
+    
+  
+    
+      Z
+    
+    
+  
+</div>
+<ul>
+  
+    <li><a href="Params/Check.html">Params::Check</a>
+    
+      - A generic input parsing/checking mechanism.
+    
+  
+    <li><a href="Parse/CPAN/Meta.html">Parse::CPAN::Meta</a>
+    
+      - Parse META.yml and META.json CPAN metadata files
+    
+  
+    <li><a href="Perl/OSType.html">Perl::OSType</a>
+    
+      - Map Perl operating system names to generic types
+    
+  
+    <li><a href="PerlIO.html">PerlIO</a>
+    
+      - On demand loader for PerlIO layers and root of PerlIO::* name space
+    
+  
+    <li><a href="PerlIO/encoding.html">PerlIO::encoding</a>
+    
+      - encoding layer
+    
+  
+    <li><a href="PerlIO/mmap.html">PerlIO::mmap</a>
+    
+      - Memory mapped IO
+    
+  
+    <li><a href="PerlIO/scalar.html">PerlIO::scalar</a>
+    
+      - in-memory IO, scalar IO
+    
+  
+    <li><a href="PerlIO/via.html">PerlIO::via</a>
+    
+      - Helper class for PerlIO layers implemented in perl
+    
+  
+    <li><a href="PerlIO/via/QuotedPrint.html">PerlIO::via::QuotedPrint</a>
+    
+      - PerlIO layer for quoted-printable strings
+    
+  
+    <li><a href="Pod/Checker.html">Pod::Checker</a>
+    
+      - check pod documents for syntax errors
+    
+  
+    <li><a href="Pod/Escapes.html">Pod::Escapes</a>
+    
+      - for resolving Pod E&lt;...&gt; sequences
+    
+  
+    <li><a href="Pod/Find.html">Pod::Find</a>
+    
+      - find POD documents in directory trees
+    
+  
+    <li><a href="Pod/Functions.html">Pod::Functions</a>
+    
+      - Group Perl's functions a la perlfunc.pod
+    
+  
+    <li><a href="Pod/Html.html">Pod::Html</a>
+    
+      - module to convert pod files to HTML
+    
+  
+    <li><a href="Pod/InputObjects.html">Pod::InputObjects</a>
+    
+      - objects representing POD input paragraphs, commands, etc.
+    
+  
+    <li><a href="Pod/Man.html">Pod::Man</a>
+    
+      - Convert POD data to formatted *roff input
+    
+  
+    <li><a href="Pod/ParseLink.html">Pod::ParseLink</a>
+    
+      - Parse an L&lt;&gt; formatting code in POD text
+    
+  
+    <li><a href="Pod/Parser.html">Pod::Parser</a>
+    
+      - base class for creating POD filters and translators
+    
+  
+    <li><a href="Pod/ParseUtils.html">Pod::ParseUtils</a>
+    
+      - helpers for POD parsing and conversion
+    
+  
+    <li><a href="Pod/Perldoc.html">Pod::Perldoc</a>
+    
+      - Look up Perl documentation in Pod format.
+    
+  
+    <li><a href="Pod/Perldoc/BaseTo.html">Pod::Perldoc::BaseTo</a>
+    
+      - Base for Pod::Perldoc formatters
+    
+  
+    <li><a href="Pod/Perldoc/GetOptsOO.html">Pod::Perldoc::GetOptsOO</a>
+    
+      - Customized option parser for Pod::Perldoc
+    
+  
+    <li><a href="Pod/Perldoc/ToANSI.html">Pod::Perldoc::ToANSI</a>
+    
+      - render Pod with ANSI color escapes 
+    
+  
+    <li><a href="Pod/Perldoc/ToChecker.html">Pod::Perldoc::ToChecker</a>
+    
+      - let Perldoc check Pod for errors
+    
+  
+    <li><a href="Pod/Perldoc/ToMan.html">Pod::Perldoc::ToMan</a>
+    
+      - let Perldoc render Pod as man pages
+    
+  
+    <li><a href="Pod/Perldoc/ToNroff.html">Pod::Perldoc::ToNroff</a>
+    
+      - let Perldoc convert Pod to nroff
+    
+  
+    <li><a href="Pod/Perldoc/ToPod.html">Pod::Perldoc::ToPod</a>
+    
+      - let Perldoc render Pod as ... Pod!
+    
+  
+    <li><a href="Pod/Perldoc/ToRtf.html">Pod::Perldoc::ToRtf</a>
+    
+      - let Perldoc render Pod as RTF
+    
+  
+    <li><a href="Pod/Perldoc/ToTerm.html">Pod::Perldoc::ToTerm</a>
+    
+      - render Pod with terminal escapes 
+    
+  
+    <li><a href="Pod/Perldoc/ToText.html">Pod::Perldoc::ToText</a>
+    
+      - let Perldoc render Pod as plaintext
+    
+  
+    <li><a href="Pod/Perldoc/ToTk.html">Pod::Perldoc::ToTk</a>
+    
+      - let Perldoc use Tk::Pod to render Pod
+    
+  
+    <li><a href="Pod/Perldoc/ToXml.html">Pod::Perldoc::ToXml</a>
+    
+      - let Perldoc render Pod as XML
+    
+  
+    <li><a href="Pod/PlainText.html">Pod::PlainText</a>
+    
+      - Convert POD data to formatted ASCII text
+    
+  
+    <li><a href="Pod/Select.html">Pod::Select</a>
+    
+      - extract selected sections of POD from input
+    
+  
+    <li><a href="Pod/Simple.html">Pod::Simple</a>
+    
+      - framework for parsing Pod
+    
+  
+    <li><a href="Pod/Simple/Checker.html">Pod::Simple::Checker</a>
+    
+      - check the Pod syntax of a document
+    
+  
+    <li><a href="Pod/Simple/Debug.html">Pod::Simple::Debug</a>
+    
+      - put Pod::Simple into trace/debug mode
+    
+  
+    <li><a href="Pod/Simple/DumpAsText.html">Pod::Simple::DumpAsText</a>
+    
+      - dump Pod-parsing events as text
+    
+  
+    <li><a href="Pod/Simple/DumpAsXML.html">Pod::Simple::DumpAsXML</a>
+    
+      - turn Pod into XML
+    
+  
+    <li><a href="Pod/Simple/HTML.html">Pod::Simple::HTML</a>
+    
+      - convert Pod to HTML
+    
+  
+    <li><a href="Pod/Simple/HTMLBatch.html">Pod::Simple::HTMLBatch</a>
+    
+      - convert several Pod files to several HTML files
+    
+  
+    <li><a href="Pod/Simple/LinkSection.html">Pod::Simple::LinkSection</a>
+    
+      - represent "section" attributes of L codes
+    
+  
+    <li><a href="Pod/Simple/Methody.html">Pod::Simple::Methody</a>
+    
+      - turn Pod::Simple events into method calls
+    
+  
+    <li><a href="Pod/Simple/PullParser.html">Pod::Simple::PullParser</a>
+    
+      - a pull-parser interface to parsing Pod
+    
+  
+    <li><a href="Pod/Simple/PullParserEndToken.html">Pod::Simple::PullParserEndToken</a>
+    
+      - end-tokens from Pod::Simple::PullParser
+    
+  
+    <li><a href="Pod/Simple/PullParserStartToken.html">Pod::Simple::PullParserStartToken</a>
+    
+      - start-tokens from Pod::Simple::PullParser
+    
+  
+    <li><a href="Pod/Simple/PullParserTextToken.html">Pod::Simple::PullParserTextToken</a>
+    
+      - text-tokens from Pod::Simple::PullParser
+    
+  
+    <li><a href="Pod/Simple/PullParserToken.html">Pod::Simple::PullParserToken</a>
+    
+      - tokens from Pod::Simple::PullParser
+    
+  
+    <li><a href="Pod/Simple/RTF.html">Pod::Simple::RTF</a>
+    
+      - format Pod as RTF
+    
+  
+    <li><a href="Pod/Simple/Search.html">Pod::Simple::Search</a>
+    
+      - find POD documents in directory trees
+    
+  
+    <li><a href="Pod/Simple/SimpleTree.html">Pod::Simple::SimpleTree</a>
+    
+      - parse Pod into a simple parse tree 
+    
+  
+    <li><a href="Pod/Simple/Text.html">Pod::Simple::Text</a>
+    
+      - format Pod as plaintext
+    
+  
+    <li><a href="Pod/Simple/TextContent.html">Pod::Simple::TextContent</a>
+    
+      - get the text content of Pod
+    
+  
+    <li><a href="Pod/Simple/XHTML.html">Pod::Simple::XHTML</a>
+    
+      - format Pod as validating XHTML
+    
+  
+    <li><a href="Pod/Simple/XMLOutStream.html">Pod::Simple::XMLOutStream</a>
+    
+      - turn Pod into XML
+    
+  
+    <li><a href="Pod/Text.html">Pod::Text</a>
+    
+      - Convert POD data to formatted text
+    
+  
+    <li><a href="Pod/Text/Color.html">Pod::Text::Color</a>
+    
+      - Convert POD data to formatted color ASCII text
+    
+  
+    <li><a href="Pod/Text/Overstrike.html">Pod::Text::Overstrike</a>
+    
+      - =for stopwords
+overstrike
+    
+  
+    <li><a href="Pod/Text/Termcap.html">Pod::Text::Termcap</a>
+    
+      - Convert POD data to ASCII text with format escapes
+    
+  
+    <li><a href="Pod/Usage.html">Pod::Usage</a>
+    
+      - print a usage message from embedded pod documentation
+    
+  
+    <li><a href="POSIX.html">POSIX</a>
+    
+      - Perl interface to IEEE Std 1003.1
+    
+  
+</ul>
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/24/0/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

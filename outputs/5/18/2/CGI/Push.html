@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>CGI::Push - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/18/2/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/18/2/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/18/2/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/18/2/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/18/2/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/18/2/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/18/2/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/18/2/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/18/2/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/18/2/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/18/2/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/18/2/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/18/2/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/18/2/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/18/2/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../index.html">Home</a> &gt;
+    
+      
+        <a href="../index-modules-C.html">Core modules (C)</a> &gt;
+      
+    
+    CGI::Push
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 18.2 documentation</p>
+                  </div>
+                  <h1>CGI::Push</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#USING-CGI%3a%3aPush">USING CGI::Push</a><ul><li><a href="#Heterogeneous-Pages">Heterogeneous Pages</a><li><a href="#Changing-the-Page-Delay-on-the-Fly">Changing the Page Delay on the Fly</a></ul><li><a href="#INSTALLING-CGI%3a%3aPush-SCRIPTS">INSTALLING CGI::Push SCRIPTS</a><li><a href="#AUTHOR-INFORMATION">AUTHOR INFORMATION</a><li><a href="#BUGS">BUGS</a><li><a href="#SEE-ALSO">SEE ALSO</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>CGI::Push - Simple Interface to Server Push</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">CGI::Push</span> <span class="q">qw(:standard)</span><span class="sc">;</span></li><li></li><li>    <span class="i">do_push</span><span class="s">(</span>-<span class="w">next_page</span><span class="cm">=&gt;</span>\<span class="i">&amp;next_page</span><span class="cm">,</span></li><li>            -<span class="w">last_page</span><span class="cm">=&gt;</span>\<span class="i">&amp;last_page</span><span class="cm">,</span></li><li>            -<span class="w">delay</span><span class="cm">=&gt;</span><span class="n">0.5</span><span class="s">)</span><span class="sc">;</span></li><li></li><li><a name="next_page"></a>    sub <span class="m">next_page</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a><span class="s">(</span><span class="i">$q</span><span class="cm">,</span><span class="i">$counter</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <a class="l_k" href="../functions/undef.html">undef</a> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$counter</span> &gt;= <span class="n">10</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="i">start_html</span><span class="s">(</span><span class="q">&#39;Test&#39;</span><span class="s">)</span><span class="cm">,</span></li><li>               <span class="i">h1</span><span class="s">(</span><span class="q">&#39;Visible&#39;</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="cm">,</span></li><li>               <span class="q">&quot;This page has been called &quot;</span><span class="cm">,</span> <span class="i">strong</span><span class="s">(</span><span class="i">$counter</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot; times&quot;</span><span class="cm">,</span></li><li>               <span class="i">end_html</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li><a name="last_page"></a>    sub <span class="m">last_page</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a><span class="s">(</span><span class="i">$q</span><span class="cm">,</span><span class="i">$counter</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="i">start_html</span><span class="s">(</span><span class="q">&#39;Done&#39;</span><span class="s">)</span><span class="cm">,</span></li><li>               <span class="i">h1</span><span class="s">(</span><span class="q">&#39;Finished&#39;</span><span class="s">)</span><span class="cm">,</span></li><li>               <span class="i">strong</span><span class="s">(</span><span class="i">$counter</span> - <span class="n">1</span><span class="s">)</span><span class="cm">,</span><span class="q">&#39; iterations.&#39;</span><span class="cm">,</span></li><li>               <span class="w">end_html</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>CGI::Push is a subclass of the CGI object created by CGI.pm.  It is
+specialized for server push operations, which allow you to create
+animated pages whose content changes at regular intervals.</p>
+<p>You provide CGI::Push with a pointer to a subroutine that will draw
+one page.  Every time your subroutine is called, it generates a new
+page.  The contents of the page will be transmitted to the browser
+in such a way that it will replace what was there beforehand.  The
+technique will work with HTML pages as well as with graphics files, 
+allowing you to create animated GIFs.</p>
+<p>Only Netscape Navigator supports server push.  Internet Explorer
+browsers do not.</p>
+<a name="USING-CGI%3a%3aPush"></a><h1>USING CGI::Push</h1>
+<p>CGI::Push adds one new method to the standard CGI suite, do_push().
+When you call this method, you pass it a reference to a subroutine
+that is responsible for drawing each new page, an interval delay, and
+an optional subroutine for drawing the last page.  Other optional
+parameters include most of those recognized by the CGI header()
+method.</p>
+<p>You may call do_push() in the object oriented manner or not, as you
+prefer:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">CGI::Push</span><span class="sc">;</span></li><li>    <span class="i">$q</span> = <span class="w">new</span> <span class="w">CGI::Push</span><span class="sc">;</span></li><li>    <span class="i">$q</span><span class="i">-&gt;do_push</span><span class="s">(</span>-<span class="w">next_page</span><span class="cm">=&gt;</span>\<span class="i">&amp;draw_a_page</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>        -<a class="l_k" href="../functions/or.html">or</a>-</li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">CGI::Push</span> <span class="q">qw(:standard)</span><span class="sc">;</span></li><li>    <span class="i">do_push</span><span class="s">(</span>-<span class="w">next_page</span><span class="cm">=&gt;</span>\<span class="i">&amp;draw_a_page</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Parameters are as follows:</p>
+<ul>
+<li><a name="-next_page"></a><b>-next_page</b>
+<pre class="verbatim"><ol><li>    <span class="i">do_push</span><span class="s">(</span>-<span class="w">next_page</span><span class="cm">=&gt;</span>\<span class="i">&amp;my_draw_routine</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>This required parameter points to a reference to a subroutine responsible for
+drawing each new page.  The subroutine should expect two parameters
+consisting of the CGI object and a counter indicating the number
+of times the subroutine has been called.  It should return the
+contents of the page as an <b>array</b> of one or more items to print.  
+It can return a false value (or an empty array) in order to abort the
+redrawing loop and print out the final page (if any)</p>
+<pre class="verbatim"><ol><li><a name="my_draw_routine"></a>    sub <span class="m">my_draw_routine</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a><span class="s">(</span><span class="i">$q</span><span class="cm">,</span><span class="i">$counter</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <a class="l_k" href="../functions/undef.html">undef</a> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$counter</span> &gt; <span class="n">100</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="i">start_html</span><span class="s">(</span><span class="q">&#39;testing&#39;</span><span class="s">)</span><span class="cm">,</span></li><li>               <span class="i">h1</span><span class="s">(</span><span class="q">&#39;testing&#39;</span><span class="s">)</span><span class="cm">,</span></li><li>               <span class="q">&quot;This page called $counter times&quot;</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>You are of course free to refer to create and use global variables
+within your draw routine in order to achieve special effects.</p>
+</li>
+<li><a name="-last_page"></a><b>-last_page</b>
+<p>This optional parameter points to a reference to the subroutine
+responsible for drawing the last page of the series.  It is called
+after the -next_page routine returns a false value.  The subroutine
+itself should have exactly the same calling conventions as the
+-next_page routine.</p>
+</li>
+<li><a name="-type"></a><b>-type</b>
+<p>This optional parameter indicates the content type of each page.  It
+defaults to "text/html".  Normally the module assumes that each page
+is of a homogeneous MIME type.  However if you provide either of the
+magic values "heterogeneous" or "dynamic" (the latter provided for the
+convenience of those who hate long parameter names), you can specify
+the MIME type -- and other header fields -- on a per-page basis.  See 
+"heterogeneous pages" for more details.</p>
+</li>
+<li><a name="-delay"></a><b>-delay</b>
+<p>This indicates the delay, in seconds, between frames.  Smaller delays
+refresh the page faster.  Fractional values are allowed.</p>
+<p><b>If not specified, -delay will default to 1 second</b></p>
+</li>
+<li><a name="-cookie%2c--target%2c--expires%2c--nph"></a><b>-cookie, -target, -expires, -nph</b>
+<p>These have the same meaning as the like-named parameters in
+CGI::header().</p>
+<p>If not specified, -nph will default to 1 (as needed for many servers, see below).</p>
+</li>
+</ul>
+<a name="Heterogeneous-Pages"></a><h2>Heterogeneous Pages</h2>
+<p>Ordinarily all pages displayed by CGI::Push share a common MIME type.
+However by providing a value of "heterogeneous" or "dynamic" in the
+do_push() -type parameter, you can specify the MIME type of each page
+on a case-by-case basis.</p>
+<p>If you use this option, you will be responsible for producing the
+HTTP header for each page.  Simply modify your draw routine to
+look like this:</p>
+<pre class="verbatim"><ol><li><a name="my_draw_routine"></a>    sub <span class="m">my_draw_routine</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a><span class="s">(</span><span class="i">$q</span><span class="cm">,</span><span class="i">$counter</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="i">header</span><span class="s">(</span><span class="q">&#39;text/html&#39;</span><span class="s">)</span><span class="cm">,</span>   <span class="c"># note we&#39;re producing the header here</span></li><li>               <span class="i">start_html</span><span class="s">(</span><span class="q">&#39;testing&#39;</span><span class="s">)</span><span class="cm">,</span></li><li>               <span class="i">h1</span><span class="s">(</span><span class="q">&#39;testing&#39;</span><span class="s">)</span><span class="cm">,</span></li><li>               <span class="q">&quot;This page called $counter times&quot;</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>You can add any header fields that you like, but some (cookies and
+status fields included) may not be interpreted by the browser.  One
+interesting effect is to display a series of pages, then, after the
+last page, to redirect the browser to a new URL.  Because redirect() 
+does b&lt;not&gt; work, the easiest way is with a -refresh header field,
+as shown below:</p>
+<pre class="verbatim"><ol><li><a name="my_draw_routine"></a>    sub <span class="m">my_draw_routine</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a><span class="s">(</span><span class="i">$q</span><span class="cm">,</span><span class="i">$counter</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <a class="l_k" href="../functions/undef.html">undef</a> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$counter</span> &gt; <span class="n">10</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="i">header</span><span class="s">(</span><span class="q">&#39;text/html&#39;</span><span class="s">)</span><span class="cm">,</span>   <span class="c"># note we&#39;re producing the header here</span></li><li>               <span class="i">start_html</span><span class="s">(</span><span class="q">&#39;testing&#39;</span><span class="s">)</span><span class="cm">,</span></li><li>               <span class="i">h1</span><span class="s">(</span><span class="q">&#39;testing&#39;</span><span class="s">)</span><span class="cm">,</span></li><li>               <span class="q">&quot;This page called $counter times&quot;</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li><a name="my_last_page"></a>    sub <span class="m">my_last_page</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="i">header</span><span class="s">(</span>-<span class="w">refresh</span><span class="cm">=&gt;</span><span class="q">&#39;5; URL=<a href="http://somewhere.else/finished.html">http://somewhere.else/finished.html</a>&#39;</span><span class="cm">,</span></li><li>                      -<span class="w">type</span><span class="cm">=&gt;</span><span class="q">&#39;text/html&#39;</span><span class="s">)</span><span class="cm">,</span></li><li>               <span class="i">start_html</span><span class="s">(</span><span class="q">&#39;Moved&#39;</span><span class="s">)</span><span class="cm">,</span></li><li>               <span class="i">h1</span><span class="s">(</span><span class="q">&#39;This is the last page&#39;</span><span class="s">)</span><span class="cm">,</span></li><li>               <span class="q">&#39;Goodbye!&#39;</span></li><li>               <span class="w">hr</span><span class="cm">,</span></li><li>               <span class="w">end_html</span><span class="sc">;</span> </li><li>    <span class="s">}</span></li></ol></pre><a name="Changing-the-Page-Delay-on-the-Fly"></a><h2>Changing the Page Delay on the Fly</h2>
+<p>If you would like to control the delay between pages on a page-by-page
+basis, call push_delay() from within your draw routine.  push_delay()
+takes a single numeric argument representing the number of seconds you
+wish to delay after the current page is displayed and before
+displaying the next one.  The delay may be fractional.  Without
+parameters, push_delay() just returns the current delay.</p>
+<a name="INSTALLING-CGI%3a%3aPush-SCRIPTS"></a><h1>INSTALLING CGI::Push SCRIPTS</h1>
+<p>Server push scripts must be installed as no-parsed-header (NPH)
+scripts in order to work correctly on many servers.  On Unix systems,
+this is most often accomplished by prefixing the script's name with "nph-".  
+Recognition of NPH scripts happens automatically with WebSTAR and 
+Microsoft IIS.  Users of other servers should see their documentation
+for help.</p>
+<p>Apache web server from version 1.3b2 on does not need server
+push scripts installed as NPH scripts: the -nph parameter to do_push()
+may be set to a false value to disable the extra headers needed by an
+NPH script.</p>
+<a name="AUTHOR-INFORMATION"></a><h1>AUTHOR INFORMATION</h1>
+<p>Copyright 1995-1998, Lincoln D. Stein.  All rights reserved.</p>
+<p>This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.</p>
+<p>Address bug reports and comments to: lstein@cshl.org</p>
+<a name="BUGS"></a><h1>BUGS</h1>
+<p>This section intentionally left blank.</p>
+<a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<p><a href="../CGI/Carp.html">CGI::Carp</a>, <a href="../CGI.html">CGI</a></p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#USING-CGI%3a%3aPush">USING CGI::Push</a><ul><li><a href="#Heterogeneous-Pages">Heterogeneous Pages</a><li><a href="#Changing-the-Page-Delay-on-the-Fly">Changing the Page Delay on the Fly</a></ul><li><a href="#INSTALLING-CGI%3a%3aPush-SCRIPTS">INSTALLING CGI::Push SCRIPTS</a><li><a href="#AUTHOR-INFORMATION">AUTHOR INFORMATION</a><li><a href="#BUGS">BUGS</a><li><a href="#SEE-ALSO">SEE ALSO</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

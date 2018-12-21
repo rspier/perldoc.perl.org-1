@@ -17,6 +17,7 @@
     "popper": "^1.0.1"
   },
   "dependencies": {
+    "highlight.js": "^9.13.1",
     "imagemin-mozjpeg": "^7.0.0",
     "popper.js": "^1.14.4"
   }

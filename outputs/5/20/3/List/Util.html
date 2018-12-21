@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>List::Util - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/20/3/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/20/3/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/20/3/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/20/3/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/20/3/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/20/3/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/20/3/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/20/3/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/20/3/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/20/3/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/20/3/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/20/3/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/20/3/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/20/3/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/20/3/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/20/3/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../index.html">Home</a> &gt;
+    
+      
+        <a href="../index-modules-L.html">Core modules (L)</a> &gt;
+      
+    
+    List::Util
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 20.3 documentation</p>
+                  </div>
+                  <h1>List::Util</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#LIST-REDUCTION-FUNCTIONS">LIST-REDUCTION FUNCTIONS</a><ul><li><a href="#%24result-%3d-reduce-%7b-BLOCK-%7d-%40list">$result = reduce { BLOCK } @list</a><li><a href="#%24b-%3d-any-%7b-BLOCK-%7d-%40list">$b = any { BLOCK } @list</a><li><a href="#%24b-%3d-all-%7b-BLOCK-%7d-%40list">$b = all { BLOCK } @list</a><li><a href="#%24b-%3d-none-%7b-BLOCK-%7d-%40list">$b = none { BLOCK } @list</a><li><a href="#%24b-%3d-notall-%7b-BLOCK-%7d-%40list">$b = notall { BLOCK } @list</a><li><a href="#%24val-%3d-first-%7b-BLOCK-%7d-%40list">$val = first { BLOCK } @list</a><li><a href="#%24num-%3d-max-%40list">$num = max @list</a><li><a href="#%24str-%3d-maxstr-%40list">$str = maxstr @list</a><li><a href="#%24num-%3d-min-%40list">$num = min @list</a><li><a href="#%24str-%3d-minstr-%40list">$str = minstr @list</a><li><a href="#%24num-%3d-product-%40list">$num = product @list</a><li><a href="#%24num_or_undef-%3d-sum-%40list">$num_or_undef = sum @list</a><li><a href="#%24num-%3d-sum0-%40list">$num = sum0 @list</a></ul><li><a href="#KEY%2fVALUE-PAIR-LIST-FUNCTIONS">KEY/VALUE PAIR LIST FUNCTIONS</a><ul><li><a href="#%40kvlist-%3d-pairgrep-%7b-BLOCK-%7d-%40kvlist">@kvlist = pairgrep { BLOCK } @kvlist</a><li><a href="#%24count-%3d-pairgrep-%7b-BLOCK-%7d-%40kvlist">$count = pairgrep { BLOCK } @kvlist</a><li><a href="#(-%24key%2c-%24val-)-%3d-pairfirst-%7b-BLOCK-%7d-%40kvlist">( $key, $val ) = pairfirst { BLOCK } @kvlist</a><li><a href="#%24found-%3d-pairfirst-%7b-BLOCK-%7d-%40kvlist">$found = pairfirst { BLOCK } @kvlist</a><li><a href="#%40list-%3d-pairmap-%7b-BLOCK-%7d-%40kvlist">@list = pairmap { BLOCK } @kvlist</a><li><a href="#%24count-%3d-pairmap-%7b-BLOCK-%7d-%40kvlist">$count = pairmap { BLOCK } @kvlist</a><li><a href="#%40pairs-%3d-pairs-%40kvlist">@pairs = pairs @kvlist</a><li><a href="#%40keys-%3d-pairkeys-%40kvlist">@keys = pairkeys @kvlist</a><li><a href="#%40values-%3d-pairvalues-%40kvlist">@values = pairvalues @kvlist</a></ul><li><a href="#OTHER-FUNCTIONS">OTHER FUNCTIONS</a><ul><li><a href="#%40values-%3d-shuffle-%40values">@values = shuffle @values</a></ul><li><a href="#KNOWN-BUGS">KNOWN BUGS</a><li><a href="#SUGGESTED-ADDITIONS">SUGGESTED ADDITIONS</a><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#COPYRIGHT">COPYRIGHT</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>List::Util - A selection of general-utility list subroutines</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">List::Util</span> <span class="q">qw(first max maxstr min minstr reduce shuffle sum)</span><span class="sc">;</span></li></ol></pre><a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p><code class="inline"><span class="w">List::Util</span></code>
+ contains a selection of subroutines that people have expressed
+would be nice to have in the perl core, but the usage would not really be high
+enough to warrant the use of a keyword, and the size so small such that being
+individual extensions would be wasteful.</p>
+<p>By default <code class="inline"><span class="w">List::Util</span></code>
+ does not export any subroutines.</p>
+<a name="LIST-REDUCTION-FUNCTIONS"></a><h1>LIST-REDUCTION FUNCTIONS</h1>
+<p>The following set of functions all reduce a list down to a single value.</p>
+<a name="%24result-%3d-reduce-%7b-BLOCK-%7d-%40list"></a><h2>$result = reduce { BLOCK } @list</h2>
+<p>Reduces <code class="inline"><span class="i">@list</span></code>
+ by calling <code class="inline"><span class="w">BLOCK</span></code>
+ in a scalar context multiple times,
+setting <code class="inline"><span class="i">$a</span></code>
+ and <code class="inline"><span class="i">$b</span></code>
+ each time. The first call will be with <code class="inline"><span class="i">$a</span></code>
+ and <code class="inline"><span class="i">$b</span></code>
+
+set to the first two elements of the list, subsequent calls will be done by
+setting <code class="inline"><span class="i">$a</span></code>
+ to the result of the previous call and <code class="inline"><span class="i">$b</span></code>
+ to the next element
+in the list.</p>
+<p>Returns the result of the last call to the <code class="inline"><span class="w">BLOCK</span></code>
+. If <code class="inline"><span class="i">@list</span></code>
+ is empty then
+<code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> is returned. If <code class="inline"><span class="i">@list</span></code>
+ only contains one element then that element
+is returned and <code class="inline"><span class="w">BLOCK</span></code>
+ is not executed.</p>
+<p>The following examples all demonstrate how <code class="inline"><span class="w">reduce</span></code>
+ could be used to implement
+the other list-reduction functions in this module. (They are not in fact
+implemented like this, but instead in a more efficient manner in individual C
+functions).</p>
+<pre class="verbatim"><ol><li>    <span class="i">$foo</span> = <span class="i">reduce</span> <span class="s">{</span> <a class="l_k" href="../functions/defined.html">defined</a><span class="s">(</span><span class="i">$a</span><span class="s">)</span>            ? <span class="i">$a</span> <span class="co">:</span></li><li>                    <span class="i">$code</span>-&gt;<span class="s">(</span><a class="l_k" href="../functions/local.html">local</a> <span class="i">$_</span> = <span class="i">$b</span><span class="s">)</span> ? <span class="i">$b</span> <span class="co">:</span></li><li>                                             <a class="l_k" href="../functions/undef.html">undef</a> <span class="s">}</span> <a class="l_k" href="../functions/undef.html">undef</a><span class="cm">,</span> <span class="i">@list</span> <span class="c"># first</span></li><li></li><li>    <span class="i">$foo</span> = <span class="i">reduce</span> <span class="s">{</span> <span class="i">$a</span> &gt; <span class="i">$b</span> ? <span class="i">$a</span> <span class="co">:</span> <span class="i">$b</span> <span class="s">}</span> <span class="n">1</span>..<span class="n">10</span>       <span class="c"># max</span></li><li>    <span class="i">$foo</span> = <span class="i">reduce</span> <span class="s">{</span> <span class="i">$a</span> <a class="l_k" href="../functions/gt.html">gt</a> <span class="i">$b</span> ? <span class="i">$a</span> <span class="co">:</span> <span class="i">$b</span> <span class="s">}</span> <span class="q">&#39;A&#39;</span>..<span class="q">&#39;Z&#39;</span>   <span class="c"># maxstr</span></li><li>    <span class="i">$foo</span> = <span class="i">reduce</span> <span class="s">{</span> <span class="i">$a</span> &lt; <span class="i">$b</span> ? <span class="i">$a</span> <span class="co">:</span> <span class="i">$b</span> <span class="s">}</span> <span class="n">1</span>..<span class="n">10</span>       <span class="c"># min</span></li><li>    <span class="i">$foo</span> = <span class="i">reduce</span> <span class="s">{</span> <span class="i">$a</span> <a class="l_k" href="../functions/lt.html">lt</a> <span class="i">$b</span> ? <span class="i">$a</span> <span class="co">:</span> <span class="i">$b</span> <span class="s">}</span> <span class="q">&#39;aa&#39;</span>..<span class="q">&#39;zz&#39;</span> <span class="c"># minstr</span></li><li>    <span class="i">$foo</span> = <span class="i">reduce</span> <span class="s">{</span> <span class="i">$a</span> + <span class="i">$b</span> <span class="s">}</span> <span class="n">1</span> .. <span class="n">10</span>               <span class="c"># sum</span></li><li>    <span class="i">$foo</span> = <span class="i">reduce</span> <span class="s">{</span> <span class="i">$a</span> . <span class="i">$b</span> <span class="s">}</span> <span class="i">@bar</span>                  <span class="c"># concat</span></li><li></li><li>    <span class="i">$foo</span> = <span class="i">reduce</span> <span class="s">{</span> <span class="i">$a</span> || <span class="i">$code</span>-&gt;<span class="s">(</span><a class="l_k" href="../functions/local.html">local</a> <span class="i">$_</span> = <span class="i">$b</span><span class="s">)</span> <span class="s">}</span> <span class="n">0</span><span class="cm">,</span> <span class="i">@bar</span>   <span class="c"># any</span></li><li>    <span class="i">$foo</span> = <span class="i">reduce</span> <span class="s">{</span> <span class="i">$a</span> &amp;&amp; <span class="i">$code</span>-&gt;<span class="s">(</span><a class="l_k" href="../functions/local.html">local</a> <span class="i">$_</span> = <span class="i">$b</span><span class="s">)</span> <span class="s">}</span> <span class="n">1</span><span class="cm">,</span> <span class="i">@bar</span>   <span class="c"># all</span></li><li>    <span class="i">$foo</span> = <span class="i">reduce</span> <span class="s">{</span> <span class="i">$a</span> &amp;&amp; !<span class="i">$code</span>-&gt;<span class="s">(</span><a class="l_k" href="../functions/local.html">local</a> <span class="i">$_</span> = <span class="i">$b</span><span class="s">)</span> <span class="s">}</span> <span class="n">1</span><span class="cm">,</span> <span class="i">@bar</span>  <span class="c"># none</span></li><li>    <span class="i">$foo</span> = <span class="i">reduce</span> <span class="s">{</span> <span class="i">$a</span> || !<span class="i">$code</span>-&gt;<span class="s">(</span><a class="l_k" href="../functions/local.html">local</a> <span class="i">$_</span> = <span class="i">$b</span><span class="s">)</span> <span class="s">}</span> <span class="n">0</span><span class="cm">,</span> <span class="i">@bar</span>  <span class="c"># notall</span></li><li>       <span class="c"># Note that these implementations do not fully short-circuit</span></li></ol></pre><p>If your algorithm requires that <code class="inline"><span class="w">reduce</span></code>
+ produce an identity value, then make
+sure that you always pass that identity value as the first argument to prevent
+<code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> being returned</p>
+<pre class="verbatim"><ol><li>  <span class="i">$foo</span> = <span class="i">reduce</span> <span class="s">{</span> <span class="i">$a</span> + <span class="i">$b</span> <span class="s">}</span> <span class="n">0</span><span class="cm">,</span> <span class="i">@values</span><span class="sc">;</span>             <span class="c"># sum with 0 identity value</span></li></ol></pre><p>The remaining list-reduction functions are all specialisations of this generic
+idea.</p>
+<a name="%24b-%3d-any-%7b-BLOCK-%7d-%40list"></a><h2>$b = any { BLOCK } @list</h2>
+<p>Similar to <code class="inline"><a class="l_k" href="../functions/grep.html">grep</a></code> in that it evaluates <code class="inline"><span class="w">BLOCK</span></code>
+ setting <code class="inline"><span class="i">$_</span></code>
+ to each element
+of <code class="inline"><span class="i">@list</span></code>
+ in turn. <code class="inline"><span class="w">any</span></code>
+ returns true if any element makes the <code class="inline"><span class="w">BLOCK</span></code>
+
+return a true value. If <code class="inline"><span class="w">BLOCK</span></code>
+ never returns true or <code class="inline"><span class="i">@list</span></code>
+ was empty then
+it returns false.</p>
+<p>Many cases of using <code class="inline"><a class="l_k" href="../functions/grep.html">grep</a></code> in a conditional can be written using <code class="inline"><span class="w">any</span></code>
+
+instead, as it can short-circuit after the first true result.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/if.html">if</a><span class="s">(</span> <span class="i">any</span> <span class="s">{</span> <a class="l_k" href="../functions/length.html">length</a> &gt; <span class="n">10</span> <span class="s">}</span> <span class="i">@strings</span> <span class="s">)</span> <span class="s">{</span></li><li>        <span class="c"># at least one string has more than 10 characters</span></li><li>    <span class="s">}</span></li></ol></pre><a name="%24b-%3d-all-%7b-BLOCK-%7d-%40list"></a><h2>$b = all { BLOCK } @list</h2>
+<p>Similar to <code class="inline"><span class="w">any</span></code>
+, except that it requires all elements of the <code class="inline"><span class="i">@list</span></code>
+ to make
+the <code class="inline"><span class="w">BLOCK</span></code>
+ return true. If any element returns false, then it returns false.
+If the <code class="inline"><span class="w">BLOCK</span></code>
+ never returns false or the <code class="inline"><span class="i">@list</span></code>
+ was empty then it returns
+true.</p>
+<a name="%24b-%3d-none-%7b-BLOCK-%7d-%40list"></a><h2>$b = none { BLOCK } @list</h2>
+<a name="%24b-%3d-notall-%7b-BLOCK-%7d-%40list"></a><h2>$b = notall { BLOCK } @list</h2>
+<p>Similar to <code class="inline"><span class="w">any</span></code>
+ and <code class="inline"><span class="w">all</span></code>
+, but with the return sense inverted. <code class="inline"><span class="w">none</span></code>
+
+returns true only if no value in the LIST causes the BLOCK to return true, and
+<code class="inline"><span class="w">notall</span></code>
+ returns true only if not all of the values do.</p>
+<a name="%24val-%3d-first-%7b-BLOCK-%7d-%40list"></a><h2>$val = first { BLOCK } @list</h2>
+<p>Similar to <code class="inline"><a class="l_k" href="../functions/grep.html">grep</a></code> in that it evaluates <code class="inline"><span class="w">BLOCK</span></code>
+ setting <code class="inline"><span class="i">$_</span></code>
+ to each element
+of <code class="inline"><span class="i">@list</span></code>
+ in turn. <code class="inline"><span class="w">first</span></code>
+ returns the first element where the result from
+<code class="inline"><span class="w">BLOCK</span></code>
+ is a true value. If <code class="inline"><span class="w">BLOCK</span></code>
+ never returns true or <code class="inline"><span class="i">@list</span></code>
+ was empty
+then <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> is returned.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$foo</span> = <span class="i">first</span> <span class="s">{</span> <a class="l_k" href="../functions/defined.html">defined</a><span class="s">(</span><span class="i">$_</span><span class="s">)</span> <span class="s">}</span> <span class="i">@list</span>    <span class="c"># first defined value in @list</span></li><li>    <span class="i">$foo</span> = <span class="i">first</span> <span class="s">{</span> <span class="i">$_</span> &gt; <span class="i">$value</span> <span class="s">}</span> <span class="i">@list</span>    <span class="c"># first value in @list which</span></li><li>                                          <span class="c"># is greater than $value</span></li></ol></pre><a name="%24num-%3d-max-%40list"></a><h2>$num = max @list</h2>
+<p>Returns the entry in the list with the highest numerical value. If the list is
+empty then <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> is returned.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$foo</span> = <span class="w">max</span> <span class="n">1</span>..<span class="n">10</span>                <span class="c"># 10</span></li><li>    <span class="i">$foo</span> = <span class="w">max</span> <span class="n">3</span><span class="cm">,</span><span class="n">9</span><span class="cm">,</span><span class="n">12</span>               <span class="c"># 12</span></li><li>    <span class="i">$foo</span> = <span class="w">max</span> <span class="i">@bar</span><span class="cm">,</span> <span class="i">@baz</span>           <span class="c"># whatever</span></li></ol></pre><a name="%24str-%3d-maxstr-%40list"></a><h2>$str = maxstr @list</h2>
+<p>Similar to <code class="inline"><span class="w">max</span></code>
+, but treats all the entries in the list as strings and
+returns the highest string as defined by the <code class="inline"><a class="l_k" href="../functions/gt.html">gt</a></code> operator. If the list is
+empty then <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> is returned.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$foo</span> = <span class="w">maxstr</span> <span class="q">&#39;A&#39;</span>..<span class="q">&#39;Z&#39;</span>          <span class="c"># &#39;Z&#39;</span></li><li>    <span class="i">$foo</span> = <span class="w">maxstr</span> <span class="q">&quot;hello&quot;</span><span class="cm">,</span><span class="q">&quot;world&quot;</span>   <span class="c"># &quot;world&quot;</span></li><li>    <span class="i">$foo</span> = <span class="w">maxstr</span> <span class="i">@bar</span><span class="cm">,</span> <span class="i">@baz</span>        <span class="c"># whatever</span></li></ol></pre><a name="%24num-%3d-min-%40list"></a><h2>$num = min @list</h2>
+<p>Similar to <code class="inline"><span class="w">max</span></code>
+ but returns the entry in the list with the lowest numerical
+value. If the list is empty then <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> is returned.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$foo</span> = <span class="w">min</span> <span class="n">1</span>..<span class="n">10</span>                <span class="c"># 1</span></li><li>    <span class="i">$foo</span> = <span class="w">min</span> <span class="n">3</span><span class="cm">,</span><span class="n">9</span><span class="cm">,</span><span class="n">12</span>               <span class="c"># 3</span></li><li>    <span class="i">$foo</span> = <span class="w">min</span> <span class="i">@bar</span><span class="cm">,</span> <span class="i">@baz</span>           <span class="c"># whatever</span></li></ol></pre><a name="%24str-%3d-minstr-%40list"></a><h2>$str = minstr @list</h2>
+<p>Similar to <code class="inline"><span class="w">min</span></code>
+, but treats all the entries in the list as strings and
+returns the lowest string as defined by the <code class="inline"><a class="l_k" href="../functions/lt.html">lt</a></code> operator. If the list is
+empty then <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> is returned.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$foo</span> = <span class="w">minstr</span> <span class="q">&#39;A&#39;</span>..<span class="q">&#39;Z&#39;</span>          <span class="c"># &#39;A&#39;</span></li><li>    <span class="i">$foo</span> = <span class="w">minstr</span> <span class="q">&quot;hello&quot;</span><span class="cm">,</span><span class="q">&quot;world&quot;</span>   <span class="c"># &quot;hello&quot;</span></li><li>    <span class="i">$foo</span> = <span class="w">minstr</span> <span class="i">@bar</span><span class="cm">,</span> <span class="i">@baz</span>        <span class="c"># whatever</span></li></ol></pre><a name="%24num-%3d-product-%40list"></a><h2>$num = product @list</h2>
+<p>Returns the numerical product of all the elements in <code class="inline"><span class="i">@list</span></code>
+. If <code class="inline"><span class="i">@list</span></code>
+ is
+empty then <code class="inline"><span class="n">1</span></code>
+ is returned.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$foo</span> = <span class="w">product</span> <span class="n">1</span>..<span class="n">10</span>            <span class="c"># 3628800</span></li><li>    <span class="i">$foo</span> = <span class="w">product</span> <span class="n">3</span><span class="cm">,</span><span class="n">9</span><span class="cm">,</span><span class="n">12</span>           <span class="c"># 324</span></li></ol></pre><a name="%24num_or_undef-%3d-sum-%40list"></a><h2>$num_or_undef = sum @list</h2>
+<p>Returns the numerical sum of all the elements in <code class="inline"><span class="i">@list</span></code>
+. For backwards
+compatibility, if <code class="inline"><span class="i">@list</span></code>
+ is empty then <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> is returned.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$foo</span> = <span class="w">sum</span> <span class="n">1</span>..<span class="n">10</span>                <span class="c"># 55</span></li><li>    <span class="i">$foo</span> = <span class="w">sum</span> <span class="n">3</span><span class="cm">,</span><span class="n">9</span><span class="cm">,</span><span class="n">12</span>               <span class="c"># 24</span></li><li>    <span class="i">$foo</span> = <span class="w">sum</span> <span class="i">@bar</span><span class="cm">,</span> <span class="i">@baz</span>           <span class="c"># whatever</span></li></ol></pre><a name="%24num-%3d-sum0-%40list"></a><h2>$num = sum0 @list</h2>
+<p>Similar to <code class="inline"><span class="w">sum</span></code>
+, except this returns 0 when given an empty list, rather than
+<code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>.</p>
+<a name="KEY%2fVALUE-PAIR-LIST-FUNCTIONS"></a><h1>KEY/VALUE PAIR LIST FUNCTIONS</h1>
+<p>The following set of functions, all inspired by <a href="http://search.cpan.org/perldoc/List::Pairwise">List::Pairwise</a>, consume an
+even-sized list of pairs. The pairs may be key/value associations from a hash,
+or just a list of values. The functions will all preserve the original ordering
+of the pairs, and will not be confused by multiple pairs having the same "key"
+value - nor even do they require that the first of each pair be a plain string.</p>
+<a name="%40kvlist-%3d-pairgrep-%7b-BLOCK-%7d-%40kvlist"></a><h2>@kvlist = pairgrep { BLOCK } @kvlist</h2>
+<a name="%24count-%3d-pairgrep-%7b-BLOCK-%7d-%40kvlist"></a><h2>$count = pairgrep { BLOCK } @kvlist</h2>
+<p>Similar to perl's <code class="inline"><a class="l_k" href="../functions/grep.html">grep</a></code> keyword, but interprets the given list as an
+even-sized list of pairs. It invokes the <code class="inline"><span class="w">BLOCK</span></code>
+ multiple times, in scalar
+context, with <code class="inline"><span class="i">$a</span></code>
+ and <code class="inline"><span class="i">$b</span></code>
+ set to successive pairs of values from the
+<code class="inline"><span class="i">@kvlist</span></code>
+.</p>
+<p>Returns an even-sized list of those pairs for which the <code class="inline"><span class="w">BLOCK</span></code>
+ returned true
+in list context, or the count of the <b>number of pairs</b> in scalar context.
+(Note, therefore, in scalar context that it returns a number half the size of
+the count of items it would have returned in list context).</p>
+<pre class="verbatim"><ol><li>    <span class="i">@subset</span> = <span class="i">pairgrep</span> <span class="s">{</span> <span class="i">$a</span> =~ <span class="q">m/^[[:upper:]]+$/</span> <span class="s">}</span> <span class="i">@kvlist</span></li></ol></pre><p>As with <code class="inline"><a class="l_k" href="../functions/grep.html">grep</a></code> aliasing <code class="inline"><span class="i">$_</span></code>
+ to list elements, <code class="inline"><span class="w">pairgrep</span></code>
+ aliases <code class="inline"><span class="i">$a</span></code>
+ and
+<code class="inline"><span class="i">$b</span></code>
+ to elements of the given list. Any modifications of it by the code block
+will be visible to the caller.</p>
+<a name="(-%24key%2c-%24val-)-%3d-pairfirst-%7b-BLOCK-%7d-%40kvlist"></a><h2>( $key, $val ) = pairfirst { BLOCK } @kvlist</h2>
+<a name="%24found-%3d-pairfirst-%7b-BLOCK-%7d-%40kvlist"></a><h2>$found = pairfirst { BLOCK } @kvlist</h2>
+<p>Similar to the <code class="inline"><span class="w">first</span></code>
+ function, but interprets the given list as an
+even-sized list of pairs. It invokes the <code class="inline"><span class="w">BLOCK</span></code>
+ multiple times, in scalar
+context, with <code class="inline"><span class="i">$a</span></code>
+ and <code class="inline"><span class="i">$b</span></code>
+ set to successive pairs of values from the
+<code class="inline"><span class="i">@kvlist</span></code>
+.</p>
+<p>Returns the first pair of values from the list for which the <code class="inline"><span class="w">BLOCK</span></code>
+ returned
+true in list context, or an empty list of no such pair was found. In scalar
+context it returns a simple boolean value, rather than either the key or the
+value found.</p>
+<pre class="verbatim"><ol><li>    <span class="s">(</span> <span class="i">$key</span><span class="cm">,</span> <span class="i">$value</span> <span class="s">)</span> = <span class="i">pairfirst</span> <span class="s">{</span> <span class="i">$a</span> =~ <span class="q">m/^[[:upper:]]+$/</span> <span class="s">}</span> <span class="i">@kvlist</span></li></ol></pre><p>As with <code class="inline"><a class="l_k" href="../functions/grep.html">grep</a></code> aliasing <code class="inline"><span class="i">$_</span></code>
+ to list elements, <code class="inline"><span class="w">pairfirst</span></code>
+ aliases <code class="inline"><span class="i">$a</span></code>
+ and
+<code class="inline"><span class="i">$b</span></code>
+ to elements of the given list. Any modifications of it by the code block
+will be visible to the caller.</p>
+<a name="%40list-%3d-pairmap-%7b-BLOCK-%7d-%40kvlist"></a><h2>@list = pairmap { BLOCK } @kvlist</h2>
+<a name="%24count-%3d-pairmap-%7b-BLOCK-%7d-%40kvlist"></a><h2>$count = pairmap { BLOCK } @kvlist</h2>
+<p>Similar to perl's <code class="inline"><a class="l_k" href="../functions/map.html">map</a></code> keyword, but interprets the given list as an
+even-sized list of pairs. It invokes the <code class="inline"><span class="w">BLOCK</span></code>
+ multiple times, in list
+context, with <code class="inline"><span class="i">$a</span></code>
+ and <code class="inline"><span class="i">$b</span></code>
+ set to successive pairs of values from the
+<code class="inline"><span class="i">@kvlist</span></code>
+.</p>
+<p>Returns the concatenation of all the values returned by the <code class="inline"><span class="w">BLOCK</span></code>
+ in list
+context, or the count of the number of items that would have been returned in
+scalar context.</p>
+<pre class="verbatim"><ol><li>    <span class="i">@result</span> = <span class="i">pairmap</span> <span class="s">{</span> <span class="q">&quot;The key $a has value $b&quot;</span> <span class="s">}</span> <span class="i">@kvlist</span></li></ol></pre><p>As with <code class="inline"><a class="l_k" href="../functions/map.html">map</a></code> aliasing <code class="inline"><span class="i">$_</span></code>
+ to list elements, <code class="inline"><span class="w">pairmap</span></code>
+ aliases <code class="inline"><span class="i">$a</span></code>
+ and
+<code class="inline"><span class="i">$b</span></code>
+ to elements of the given list. Any modifications of it by the code block
+will be visible to the caller.</p>
+<a name="%40pairs-%3d-pairs-%40kvlist"></a><h2>@pairs = pairs @kvlist</h2>
+<p>A convenient shortcut to operating on even-sized lists of pairs, this function
+returns a list of ARRAY references, each containing two items from the given
+list. It is a more efficient version of</p>
+<pre class="verbatim"><ol><li>    <span class="i">@pairs</span> = <span class="i">pairmap</span> <span class="s">{</span> <span class="s">[</span> <span class="i">$a</span><span class="cm">,</span> <span class="i">$b</span> <span class="s">]</span> <span class="s">}</span> <span class="i">@kvlist</span></li></ol></pre><p>It is most convenient to use in a <code class="inline"><a class="l_k" href="../functions/foreach.html">foreach</a></code> loop, for example:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/foreach.html">foreach</a> <span class="s">(</span> <span class="w">pairs</span> <span class="i">@KVLIST</span> <span class="s">)</span> <span class="s">{</span></li><li>       <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span> <span class="i">$key</span><span class="cm">,</span> <span class="i">$value</span> <span class="s">)</span> = <span class="i">@$_</span><span class="sc">;</span></li><li>       ...</li><li>    <span class="s">}</span></li></ol></pre><a name="%40keys-%3d-pairkeys-%40kvlist"></a><h2>@keys = pairkeys @kvlist</h2>
+<p>A convenient shortcut to operating on even-sized lists of pairs, this function
+returns a list of the the first values of each of the pairs in the given list.
+It is a more efficient version of</p>
+<pre class="verbatim"><ol><li>    <span class="i">@keys</span> = <span class="i">pairmap</span> <span class="s">{</span> <span class="i">$a</span> <span class="s">}</span> <span class="i">@kvlist</span></li></ol></pre><a name="%40values-%3d-pairvalues-%40kvlist"></a><h2>@values = pairvalues @kvlist</h2>
+<p>A convenient shortcut to operating on even-sized lists of pairs, this function
+returns a list of the the second values of each of the pairs in the given list.
+It is a more efficient version of</p>
+<pre class="verbatim"><ol><li>    <span class="i">@values</span> = <span class="i">pairmap</span> <span class="s">{</span> <span class="i">$b</span> <span class="s">}</span> <span class="i">@kvlist</span></li></ol></pre><a name="OTHER-FUNCTIONS"></a><h1>OTHER FUNCTIONS</h1>
+<a name="%40values-%3d-shuffle-%40values"></a><h2>@values = shuffle @values</h2>
+<p>Returns the values of the input in a random order</p>
+<pre class="verbatim"><ol><li>    <span class="i">@cards</span> = <span class="w">shuffle</span> <span class="n">0</span>..<span class="n">51</span>      <span class="c"># 0..51 in a random order</span></li></ol></pre><a name="KNOWN-BUGS"></a><h1>KNOWN BUGS</h1>
+<p>With perl versions prior to 5.005 there are some cases where reduce will return
+an incorrect result. This will show up as test 7 of reduce.t failing.</p>
+<a name="SUGGESTED-ADDITIONS"></a><h1>SUGGESTED ADDITIONS</h1>
+<p>The following are additions that have been requested, but I have been reluctant
+to add due to them being very simple to implement in perl</p>
+<pre class="verbatim"><ol><li>  <span class="c"># How many elements are true</span></li><li></li><li><a name="true"></a>  sub <span class="m">true</span> <span class="s">{</span> <a class="l_k" href="../functions/scalar.html">scalar</a> <a class="l_k" href="../functions/grep.html">grep</a> <span class="s">{</span> <span class="i">$_</span> <span class="s">}</span> <span class="i">@_</span> <span class="s">}</span></li><li></li><li>  <span class="c"># How many elements are false</span></li><li></li><li><a name="false"></a>  sub <span class="m">false</span> <span class="s">{</span> <a class="l_k" href="../functions/scalar.html">scalar</a> <a class="l_k" href="../functions/grep.html">grep</a> <span class="s">{</span> !<span class="i">$_</span> <span class="s">}</span> <span class="i">@_</span> <span class="s">}</span></li></ol></pre><a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<p><a href="../Scalar/Util.html">Scalar::Util</a>, <a href="http://search.cpan.org/perldoc/List::MoreUtils">List::MoreUtils</a></p>
+<a name="COPYRIGHT"></a><h1>COPYRIGHT</h1>
+<p>Copyright (c) 1997-2007 Graham Barr &lt;gbarr@pobox.com&gt;. All rights reserved.
+This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.</p>
+<p>Recent additions and current maintenance by
+Paul Evans, &lt;leonerd@leonerd.org.uk&gt;.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#LIST-REDUCTION-FUNCTIONS">LIST-REDUCTION FUNCTIONS</a><ul><li><a href="#%24result-%3d-reduce-%7b-BLOCK-%7d-%40list">$result = reduce { BLOCK } @list</a><li><a href="#%24b-%3d-any-%7b-BLOCK-%7d-%40list">$b = any { BLOCK } @list</a><li><a href="#%24b-%3d-all-%7b-BLOCK-%7d-%40list">$b = all { BLOCK } @list</a><li><a href="#%24b-%3d-none-%7b-BLOCK-%7d-%40list">$b = none { BLOCK } @list</a><li><a href="#%24b-%3d-notall-%7b-BLOCK-%7d-%40list">$b = notall { BLOCK } @list</a><li><a href="#%24val-%3d-first-%7b-BLOCK-%7d-%40list">$val = first { BLOCK } @list</a><li><a href="#%24num-%3d-max-%40list">$num = max @list</a><li><a href="#%24str-%3d-maxstr-%40list">$str = maxstr @list</a><li><a href="#%24num-%3d-min-%40list">$num = min @list</a><li><a href="#%24str-%3d-minstr-%40list">$str = minstr @list</a><li><a href="#%24num-%3d-product-%40list">$num = product @list</a><li><a href="#%24num_or_undef-%3d-sum-%40list">$num_or_undef = sum @list</a><li><a href="#%24num-%3d-sum0-%40list">$num = sum0 @list</a></ul><li><a href="#KEY%2fVALUE-PAIR-LIST-FUNCTIONS">KEY/VALUE PAIR LIST FUNCTIONS</a><ul><li><a href="#%40kvlist-%3d-pairgrep-%7b-BLOCK-%7d-%40kvlist">@kvlist = pairgrep { BLOCK } @kvlist</a><li><a href="#%24count-%3d-pairgrep-%7b-BLOCK-%7d-%40kvlist">$count = pairgrep { BLOCK } @kvlist</a><li><a href="#(-%24key%2c-%24val-)-%3d-pairfirst-%7b-BLOCK-%7d-%40kvlist">( $key, $val ) = pairfirst { BLOCK } @kvlist</a><li><a href="#%24found-%3d-pairfirst-%7b-BLOCK-%7d-%40kvlist">$found = pairfirst { BLOCK } @kvlist</a><li><a href="#%40list-%3d-pairmap-%7b-BLOCK-%7d-%40kvlist">@list = pairmap { BLOCK } @kvlist</a><li><a href="#%24count-%3d-pairmap-%7b-BLOCK-%7d-%40kvlist">$count = pairmap { BLOCK } @kvlist</a><li><a href="#%40pairs-%3d-pairs-%40kvlist">@pairs = pairs @kvlist</a><li><a href="#%40keys-%3d-pairkeys-%40kvlist">@keys = pairkeys @kvlist</a><li><a href="#%40values-%3d-pairvalues-%40kvlist">@values = pairvalues @kvlist</a></ul><li><a href="#OTHER-FUNCTIONS">OTHER FUNCTIONS</a><ul><li><a href="#%40values-%3d-shuffle-%40values">@values = shuffle @values</a></ul><li><a href="#KNOWN-BUGS">KNOWN BUGS</a><li><a href="#SUGGESTED-ADDITIONS">SUGGESTED ADDITIONS</a><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#COPYRIGHT">COPYRIGHT</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/20/3/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

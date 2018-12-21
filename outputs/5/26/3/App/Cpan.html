@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>App::Cpan - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/26/3/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/26/3/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/26/3/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/26/3/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/26/3/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/26/3/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/26/3/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/26/3/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/26/3/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/26/3/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/26/3/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/26/3/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/26/3/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/26/3/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/26/3/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/26/3/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../index.html">Home</a> &gt;
+    
+      
+        <a href="../index-modules-A.html">Core modules (A)</a> &gt;
+      
+    
+    App::Cpan
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 26.3 documentation</p>
+                  </div>
+                  <h1>App::Cpan</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><ul><li><a href="#Options">Options</a><li><a href="#Examples">Examples</a><li><a href="#Environment-variables">Environment variables</a><li><a href="#Methods">Methods</a></ul><li><a href="#EXIT-VALUES">EXIT VALUES</a><li><a href="#TO-DO">TO DO</a><li><a href="#BUGS">BUGS</a><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#SOURCE-AVAILABILITY">SOURCE AVAILABILITY</a><li><a href="#CREDITS">CREDITS</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#COPYRIGHT">COPYRIGHT</a></ul><a name="NAME"></a><h1>NAME</h1>
+<p>App::Cpan - easily interact with CPAN from the command line</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>	<span class="c"># with arguments and no switches, installs specified modules</span></li><li>	<span class="w">cpan</span> <span class="w">module_name</span> <span class="s">[</span> <span class="w">module_name</span> ... <span class="s">]</span></li><li></li><li>	<span class="c"># with switches, installs modules with extra behavior</span></li><li>	<span class="w">cpan</span> <span class="s">[</span>-<span class="w">cfFimtTw</span><span class="s">]</span> <span class="w">module_name</span> <span class="s">[</span> <span class="w">module_name</span> ... <span class="s">]</span></li><li></li><li>	<span class="c"># use local::lib</span></li><li>	<span class="w">cpan</span> -<span class="w">I</span> <span class="w">module_name</span> <span class="s">[</span> <span class="w">module_name</span> ... <span class="s">]</span></li><li></li><li>	<span class="c"># one time mirror override for faster mirrors</span></li><li>	<span class="w">cpan</span> -p ...</li><li></li><li>	<span class="c"># with just the dot, install from the distribution in the</span></li><li>	<span class="c"># current directory</span></li><li>	<span class="w">cpan</span> .</li><li></li><li>	<span class="c"># without arguments, starts CPAN.pm shell</span></li><li>	<span class="w">cpan</span></li><li></li><li>	<span class="c"># without arguments, but some switches</span></li><li>	<span class="w">cpan</span> <span class="s">[</span>-<span class="w">ahpruvACDLOPX</span><span class="s">]</span></li></ol></pre><a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>This script provides a command interface (not a shell) to CPAN. At the
+moment it uses CPAN.pm to do the work, but it is not a one-shot command
+runner for CPAN.pm.</p>
+<a name="Options"></a><h2>Options</h2>
+<ul>
+<li><a name="-a"></a><b>-a</b>
+<p>Creates a CPAN.pm autobundle with CPAN::Shell-&gt;autobundle.</p>
+</li>
+<li><a name="-A-module-%5b-module-...-%5d"></a><b>-A module [ module ... ]</b>
+<p>Shows the primary maintainers for the specified modules.</p>
+</li>
+<li><a name="-c-module"></a><b>-c module</b>
+<p>Runs a `make clean` in the specified module's directories.</p>
+</li>
+<li><a name="-C-module-%5b-module-...-%5d"></a><b>-C module [ module ... ]</b>
+<p>Show the <i>Changes</i> files for the specified modules</p>
+</li>
+<li><a name="-D-module-%5b-module-...-%5d"></a><b>-D module [ module ... ]</b>
+<p>Show the module details. This prints one line for each out-of-date module
+(meaning, modules locally installed but have newer versions on CPAN).
+Each line has three columns: module name, local version, and CPAN
+version.</p>
+</li>
+<li><a name="-f"></a><b>-f</b>
+<p>Force the specified action, when it normally would have failed. Use this
+to install a module even if its tests fail. When you use this option,
+-i is not optional for installing a module when you need to force it:</p>
+<pre class="verbatim"><ol><li>	<span class="i">% cpan</span> -<span class="w">f</span> -<span class="w">i</span> <span class="w">Module::Foo</span></li></ol></pre></li>
+<li><a name="-F"></a><b>-F</b>
+<p>Turn off CPAN.pm's attempts to lock anything. You should be careful with
+this since you might end up with multiple scripts trying to muck in the
+same directory. This isn't so much of a concern if you're loading a special
+config with <code class="inline">-<span class="w">j</span></code>
+, and that config sets up its own work directories.</p>
+</li>
+<li><a name="-g-module-%5b-module-...-%5d"></a><b>-g module [ module ... ]</b>
+<p>Downloads to the current directory the latest distribution of the module.</p>
+</li>
+<li><a name="-G-module-%5b-module-...-%5d"></a><b>-G module [ module ... ]</b>
+<p>UNIMPLEMENTED</p>
+<p>Download to the current directory the latest distribution of the
+modules, unpack each distribution, and create a git repository for each
+distribution.</p>
+<p>If you want this feature, check out Yanick Champoux's <code class="inline"><span class="w">Git::CPAN::Patch</span></code>
+
+distribution.</p>
+</li>
+<li><a name="-h"></a><b>-h</b>
+<p>Print a help message and exit. When you specify <code class="inline">-<span class="w">h</span></code>
+, it ignores all
+of the other options and arguments.</p>
+</li>
+<li><a name="-i-module-%5b-module-...-%5d"></a><b>-i module [ module ... ]</b>
+<p>Install the specified modules. With no other switches, this switch
+is implied.</p>
+</li>
+<li><a name="-I"></a><b>-I</b>
+<p>Load <code class="inline"><a class="l_k" href="../functions/local.html">local::lib</a></code> (think like <code class="inline">-<span class="w">I</span></code>
+ for loading lib paths). Too bad
+<code class="inline">-l</code>
+ was already taken.</p>
+</li>
+<li><a name="-j-Config.pm"></a><b>-j Config.pm</b>
+<p>Load the file that has the CPAN configuration data. This should have the
+same format as the standard <i>CPAN/Config.pm</i> file, which defines
+<code class="inline"><span class="i">$CPAN::Config</span></code>
+ as an anonymous hash.</p>
+</li>
+<li><a name="-J"></a><b>-J</b>
+<p>Dump the configuration in the same format that CPAN.pm uses. This is useful
+for checking the configuration as well as using the dump as a starting point
+for a new, custom configuration.</p>
+</li>
+<li><a name="-l"></a><b>-l</b>
+<p>List all installed modules with their versions</p>
+</li>
+<li><a name="-L-author-%5b-author-...-%5d"></a><b>-L author [ author ... ]</b>
+<p>List the modules by the specified authors.</p>
+</li>
+<li><a name="-m"></a><b>-m</b>
+<p>Make the specified modules.</p>
+</li>
+<li><a name="-M-mirror1%2cmirror2%2c..."></a><b>-M mirror1,mirror2,...</b>
+<p>A comma-separated list of mirrors to use for just this run. The <code class="inline">-<span class="w">P</span></code>
+
+option can find them for you automatically.</p>
+</li>
+<li><a name="-n"></a><b>-n</b>
+<p>Do a dry run, but don't actually install anything. (unimplemented)</p>
+</li>
+<li><a name="-O"></a><b>-O</b>
+<p>Show the out-of-date modules.</p>
+</li>
+<li><a name="-p"></a><b>-p</b>
+<p>Ping the configured mirrors and print a report</p>
+</li>
+<li><a name="-P"></a><b>-P</b>
+<p>Find the best mirrors you could be using and use them for the current
+session.</p>
+</li>
+<li><a name="-r"></a><b>-r</b>
+<p>Recompiles dynamically loaded modules with CPAN::Shell-&gt;recompile.</p>
+</li>
+<li><a name="-s"></a><b>-s</b>
+<p>Drop in the CPAN.pm shell. This command does this automatically if you don't
+specify any arguments.</p>
+</li>
+<li><a name="-t-module-%5b-module-...-%5d"></a><b>-t module [ module ... ]</b>
+<p>Run a `make test` on the specified modules.</p>
+</li>
+<li><a name="-T"></a><b>-T</b>
+<p>Do not test modules. Simply install them.</p>
+</li>
+<li><a name="-u"></a><b>-u</b>
+<p>Upgrade all installed modules. Blindly doing this can really break things,
+so keep a backup.</p>
+</li>
+<li><a name="-v"></a><b>-v</b>
+<p>Print the script version and CPAN.pm version then exit.</p>
+</li>
+<li><a name="-V"></a><b>-V</b>
+<p>Print detailed information about the cpan client.</p>
+</li>
+<li><a name="-w"></a><b>-w</b>
+<p>UNIMPLEMENTED</p>
+<p>Turn on cpan warnings. This checks various things, like directory permissions,
+and tells you about problems you might have.</p>
+</li>
+<li><a name="-x-module-%5b-module-...-%5d"></a><b>-x module [ module ... ]</b>
+<p>Find close matches to the named modules that you think you might have
+mistyped. This requires the optional installation of Text::Levenshtein or
+Text::Levenshtein::Damerau.</p>
+</li>
+<li><a name="-X"></a><b>-X</b>
+<p>Dump all the namespaces to standard output.</p>
+</li>
+</ul>
+<a name="Examples"></a><h2>Examples</h2>
+<pre class="verbatim"><ol><li>	<span class="c"># print a help message</span></li><li>	<span class="w">cpan</span> -<span class="w">h</span></li><li></li><li>	<span class="c"># print the version numbers</span></li><li>	<span class="w">cpan</span> -<span class="w">v</span></li><li></li><li>	<span class="c"># create an autobundle</span></li><li>	<span class="w">cpan</span> -<span class="w">a</span></li><li></li><li>	<span class="c"># recompile modules</span></li><li>	<span class="w">cpan</span> -r</li><li></li><li>	<span class="c"># upgrade all installed modules</span></li><li>	<span class="w">cpan</span> -u</li><li></li><li>	<span class="c"># install modules ( sole -i is optional )</span></li><li>	<span class="w">cpan</span> -<span class="w">i</span> <span class="w">Netscape::Booksmarks</span> <span class="w">Business::ISBN</span></li><li></li><li>	<span class="c"># force install modules ( must use -i )</span></li><li>	<span class="w">cpan</span> -<span class="w">fi</span> <span class="w">CGI::Minimal</span> <span class="w">URI</span></li><li></li><li>	<span class="c"># install modules but without testing them</span></li><li>	<span class="w">cpan</span> -<span class="w">Ti</span> <span class="w">CGI::Minimal</span> <span class="w">URI</span></li></ol></pre><a name="Environment-variables"></a><h2>Environment variables</h2>
+<p>There are several components in CPAN.pm that use environment variables.
+The build tools, <a href="../ExtUtils/MakeMaker.html">ExtUtils::MakeMaker</a> and <a href="http://search.cpan.org/perldoc/Module::Build">Module::Build</a> use some,
+while others matter to the levels above them. Some of these are specified
+by the Perl Toolchain Gang:</p>
+<p>Lancaster Concensus: <a href="https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/lancaster-consensus.md">https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/lancaster-consensus.md</a></p>
+<p>Oslo Concensus: <a href="https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/oslo-consensus.md">https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/oslo-consensus.md</a></p>
+<ul>
+<li><a name="NONINTERACTIVE_TESTING"></a><b>NONINTERACTIVE_TESTING</b>
+<p>Assume no one is paying attention and skips prompts for distributions
+that do that correctly. <code class="inline"><span class="i">cpan</span><span class="s">(</span><span class="n">1</span><span class="s">)</span></code>
+ sets this to <code class="inline"><span class="n">1</span></code>
+ unless it already
+has a value (even if that value is false).</p>
+</li>
+<li><a name="PERL_MM_USE_DEFAULT"></a><b>PERL_MM_USE_DEFAULT</b>
+<p>Use the default answer for a prompted questions. <code class="inline"><span class="i">cpan</span><span class="s">(</span><span class="n">1</span><span class="s">)</span></code>
+ sets this
+to <code class="inline"><span class="n">1</span></code>
+ unless it already has a value (even if that value is false).</p>
+</li>
+<li><a name="CPAN_OPTS"></a><b>CPAN_OPTS</b>
+<p>As with <code class="inline"><span class="w">PERL5OPTS</span></code>
+, a string of additional <code class="inline"><span class="i">cpan</span><span class="s">(</span><span class="n">1</span><span class="s">)</span></code>
+ options to
+add to those you specify on the command line.</p>
+</li>
+<li><a name="CPANSCRIPT_LOGLEVEL"></a><b>CPANSCRIPT_LOGLEVEL</b>
+<p>The log level to use, with either the embedded, minimal logger or
+<a href="http://search.cpan.org/perldoc/Log::Log4perl">Log::Log4perl</a> if it is installed. Possible values are the same as
+the <code class="inline"><span class="w">Log::Log4perl</span></code>
+ levels: <code class="inline"><span class="w">TRACE</span></code>
+, <code class="inline"><span class="w">DEBUG</span></code>
+, <code class="inline"><span class="w">INFO</span></code>
+, <code class="inline"><span class="w">WARN</span></code>
+,
+<code class="inline"><span class="w">ERROR</span></code>
+, and <code class="inline"><span class="w">FATAL</span></code>
+. The default is <code class="inline"><span class="w">INFO</span></code>
+.</p>
+</li>
+<li><a name="GIT_COMMAND"></a><b>GIT_COMMAND</b>
+<p>The path to the <code class="inline"><span class="w">git</span></code>
+ binary to use for the Git features. The default
+is <code class="inline"><span class="q">/usr/</span><a class="l_k" href="../functions/local.html">local</a><span class="q">/bin/git</span></code>
+.</p>
+</li>
+</ul>
+<a name="Methods"></a><h2>Methods</h2>
+<ul>
+<li><a name="run()"></a><b>run()</b>
+<p>Just do it.</p>
+<p>The <code class="inline"><span class="w">run</span></code>
+ method returns 0 on success and a positive number on
+failure. See the section on EXIT CODES for details on the values.</p>
+<p>CPAN.pm sends all the good stuff either to STDOUT, or to a temp
+file if $CPAN::Be_Silent is set. I have to intercept that output
+so I can find out what happened.</p>
+<p>Stolen from File::Path::Expand</p>
+</li>
+</ul>
+<a name="EXIT-VALUES"></a><h1>EXIT VALUES</h1>
+<p>The script exits with zero if it thinks that everything worked, or a
+positive number if it thinks that something failed. Note, however, that
+in some cases it has to divine a failure by the output of things it does
+not control. For now, the exit codes are vague:</p>
+<pre class="verbatim"><ol><li>	<span class="n">1</span>	<span class="w">An</span> <span class="w">unknown</span> <span class="w">error</span></li><li></li><li>	<span class="n">2</span>	<span class="w">The</span> <span class="w">was</span> <span class="w">an</span> <span class="w">external</span> <span class="w">problem</span></li><li></li><li>	<span class="n">4</span>	<span class="w">There</span> <span class="w">was</span> <span class="w">an</span> <span class="w">internal</span> <span class="w">problem</span> <span class="w">with</span> <span class="w">the</span> <span class="w">script</span></li><li></li><li>	<span class="n">8</span>	<span class="w">A</span> <span class="w">module</span> <span class="w">failed</span> <span class="w">to</span> <span class="w">install</span></li></ol></pre><a name="TO-DO"></a><h1>TO DO</h1>
+<p>* There is initial support for Log4perl if it is available, but I
+haven't gone through everything to make the NullLogger work out
+correctly if Log4perl is not installed.</p>
+<p>* When I capture CPAN.pm output, I need to check for errors and
+report them to the user.</p>
+<p>* Warnings switch</p>
+<p>* Check then exit</p>
+<a name="BUGS"></a><h1>BUGS</h1>
+<p>* none noted</p>
+<a name="SEE-ALSO"></a><h1>SEE ALSO</h1>
+<p><a href="../CPAN.html">CPAN</a>, <a href="http://search.cpan.org/perldoc/App::cpanminus">App::cpanminus</a></p>
+<a name="SOURCE-AVAILABILITY"></a><h1>SOURCE AVAILABILITY</h1>
+<p>This code is in Github in the CPAN.pm repository:</p>
+<pre class="verbatim"><ol><li>	<span class="j">https:</span><span class="q">//github</span>.<span class="w">com</span><span class="q">/andk/cpanpm</span></li></ol></pre><p>The source used to be tracked separately in another GitHub repo,
+but the canonical source is now in the above repo.</p>
+<a name="CREDITS"></a><h1>CREDITS</h1>
+<p>Japheth Cleaver added the bits to allow a forced install (<code class="inline">-f</code>
+).</p>
+<p>Jim Brandt suggest and provided the initial implementation for the
+up-to-date and Changes features.</p>
+<p>Adam Kennedy pointed out that <code class="inline"><a class="l_k" href="../functions/exit.html">exit()</a></code> causes problems on Windows
+where this script ends up with a .bat extension</p>
+<p>David Golden helps integrate this into the <code class="inline"><span class="w">CPAN</span>.<span class="w">pm</span></code>
+ repos.</p>
+<a name="AUTHOR"></a><h1>AUTHOR</h1>
+<p>brian d foy, <code class="inline"><span class="q">&lt;bdfoy@cpan.org&gt;</span></code>
+</p>
+<a name="COPYRIGHT"></a><h1>COPYRIGHT</h1>
+<p>Copyright (c) 2001-2015, brian d foy, All Rights Reserved.</p>
+<p>You may redistribute this under the same terms as Perl itself.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><ul><li><a href="#Options">Options</a><li><a href="#Examples">Examples</a><li><a href="#Environment-variables">Environment variables</a><li><a href="#Methods">Methods</a></ul><li><a href="#EXIT-VALUES">EXIT VALUES</a><li><a href="#TO-DO">TO DO</a><li><a href="#BUGS">BUGS</a><li><a href="#SEE-ALSO">SEE ALSO</a><li><a href="#SOURCE-AVAILABILITY">SOURCE AVAILABILITY</a><li><a href="#CREDITS">CREDITS</a><li><a href="#AUTHOR">AUTHOR</a><li><a href="#COPYRIGHT">COPYRIGHT</a></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/26/3/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

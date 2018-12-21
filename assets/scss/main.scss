@@ -1,5 +1,154 @@
 @import "bootstrap/scss/bootstrap.scss";
-@import "./highlight/rainbow.scss";
+
+$ccc: #ccc;
+$green: #228b22;
+$black: #000;
+$lightred: #cd5555;
+
+.c {
+  color: $green;
+}
+
+.cm,
+.co {
+  color: $black;
+}
+
+.h {
+  color: $lightred;
+  font-weight: bold;
+}
+
+.hh {
+  color: $lightred;
+  font-style: italic;
+}
+
+
+.i {
+  color: #00688B;
+}
+
+
+.j {
+  color: $lightred;
+  font-weight: bold;
+}
+
+
+.k {
+  color: #8B008B;
+  font-weight: bold;
+}
+
+
+.m {
+  color: #FF0000;
+  font-weight: bold;
+}
+
+.n {
+  color: #B452CD;
+}
+
+.p {
+  color: $black;
+}
+
+.pd {
+  color: $green;
+  font-style: italic;
+}
+
+.pu {
+  color: $black;
+}
+
+.q {
+  color: $lightred;
+}
+
+.s,
+.sc {
+  color: $black;
+}
+
+.v {
+  color: #B452CD;
+}
+
+.w {
+  color: $black;
+}
+
+a {
+  &.l_k {
+
+    &:link,
+    &:visited,
+    &:active {
+      color: #8B008B;
+      font-weight: bold;
+    }
+
+    &:hover {
+      color: #225533;
+      font-weight: bold;
+    }
+  }
+
+  &.l_w {
+
+    &:link,
+    &:visited,
+    &:active {
+      color: $black;
+    }
+
+    &:hover {
+      color: #225533;
+    }
+  }
+}
+
+code.inline {
+  background: #b8c7ce;
+  border: 1px solid $ccc;
+  padding: 5px 10px;
+}
+
+pre {
+  &.verbatim {
+
+    background: #b8c7ce;
+    border: 1px solid $ccc;
+    padding: 3px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    ol {
+      background-color: #d8d8d8;
+      color: #3f3f3f;
+      margin-bottom: 0;
+      margin-top: 0;
+
+      li {
+        background: #b8c7ce;
+        color: #262626;
+        padding-bottom: 2px;
+      }
+    }
+  }
+
+  &.indent {
+    background: #eeeedd;
+    border: 1px solid $ccc;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
+  }
+}
+
 
 html,
 body {
@@ -164,6 +313,11 @@ object {
 }
 
 .opus-logo {
-  height: 35px;
+  height: 25px;
   padding-left: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }

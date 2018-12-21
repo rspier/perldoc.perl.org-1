@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>CPANPLUS::Internals::Fetch - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/18/2/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/18/2/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/18/2/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/18/2/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/18/2/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/18/2/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/18/2/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/18/2/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/18/2/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/18/2/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/18/2/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/18/2/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/18/2/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/18/2/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/18/2/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/18/2/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../../index.html">Home</a> &gt;
+    
+      
+        <a href="../../index-modules-C.html">Core modules (C)</a> &gt;
+      
+    
+    CPANPLUS::Internals::Fetch
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 18.2 documentation</p>
+                  </div>
+                  <h1>CPANPLUS::Internals::Fetch</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#METHODS">METHODS</a><li><a href="#%24path-%3d-_fetch(-module-%3d%3e-%24modobj%2c-%5bfetchdir-%3d%3e-'%2fpath%2fto%2fsave%2fto'%2c-fetch_from-%3d%3e-'scheme%3a%2f%2fpath%2fto%2ffetch%2ffrom'%2c-verbose-%3d%3e-BOOL%2c-force-%3d%3e-BOOL%2c-prefer_bin-%3d%3e-BOOL%2c-ttl-%3d%3e-%24seconds%5d-)">$path = _fetch( module => $modobj, [fetchdir => '/path/to/save/to', fetch_from => 'scheme://path/to/fetch/from', verbose => BOOL, force => BOOL, prefer_bin => BOOL, ttl => $seconds] )</a><ul><li><a href="#_add_fail_host(-host-%3d%3e-%24host_hashref-)">_add_fail_host( host => $host_hashref )</a><li><a href="#_host_ok(-host-%3d%3e-%24host_hashref-)">_host_ok( host => $host_hashref )</a></ul></ul><a name="NAME"></a><h1>NAME</h1>
+<p>CPANPLUS::Internals::Fetch - internals for fetching files</p>
+<a name="SYNOPSIS"></a><h1>SYNOPSIS</h1>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$output</span> = <span class="i">$cb</span><span class="i">-&gt;_fetch</span><span class="s">(</span></li><li>                        <span class="w">module</span>      <span class="cm">=&gt;</span> <span class="i">$modobj</span><span class="cm">,</span></li><li>                        <span class="w">fetchdir</span>    <span class="cm">=&gt;</span> <span class="q">&#39;/path/to/save/to&#39;</span><span class="cm">,</span></li><li>                        <span class="w">verbose</span>     <span class="cm">=&gt;</span> <span class="w">BOOL</span><span class="cm">,</span></li><li>                        <span class="w">force</span>       <span class="cm">=&gt;</span> <span class="w">BOOL</span><span class="cm">,</span></li><li>                    <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$cb</span><span class="i">-&gt;_add_fail_host</span><span class="s">(</span> <span class="w">host</span> <span class="cm">=&gt;</span> <span class="q">&#39;foo.com&#39;</span> <span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$cb</span><span class="i">-&gt;_host_ok</span><span class="s">(</span>       <span class="w">host</span> <span class="cm">=&gt;</span> <span class="q">&#39;foo.com&#39;</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><a name="DESCRIPTION"></a><h1>DESCRIPTION</h1>
+<p>CPANPLUS::Internals::Fetch fetches files from either ftp, http, file
+or rsync mirrors.</p>
+<p>This is the rough flow:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$cb</span><span class="i">-&gt;_fetch</span></li><li>        <span class="w">Delegate</span> <span class="w">to</span> <span class="w">File::Fetch</span><span class="sc">;</span></li></ol></pre><a name="METHODS"></a><h1>METHODS</h1>
+<a name="%24path-%3d-_fetch(-module-%3d%3e-%24modobj%2c-%5bfetchdir-%3d%3e-'%2fpath%2fto%2fsave%2fto'%2c-fetch_from-%3d%3e-'scheme%3a%2f%2fpath%2fto%2ffetch%2ffrom'%2c-verbose-%3d%3e-BOOL%2c-force-%3d%3e-BOOL%2c-prefer_bin-%3d%3e-BOOL%2c-ttl-%3d%3e-%24seconds%5d-)"></a><h1>$path = _fetch( module =&gt; $modobj, [fetchdir =&gt; '/path/to/save/to', fetch_from =&gt; 'scheme://path/to/fetch/from', verbose =&gt; BOOL, force =&gt; BOOL, prefer_bin =&gt; BOOL, ttl =&gt; $seconds] )</h1>
+<p><code class="inline"><span class="w">_fetch</span></code>
+ will fetch files based on the information in a module
+object. You always need a module object. If you want a fake module
+object for a one-off fetch, look at <code class="inline"><span class="w">CPANPLUS::Module::Fake</span></code>
+.</p>
+<p><code class="inline"><span class="w">fetchdir</span></code>
+ is the place to save the file to. Usually this
+information comes from your configuration, but you can override it
+expressly if needed.</p>
+<p><code class="inline"><span class="w">fetch_from</span></code>
+ lets you specify an URI to get this file from. If you
+do not specify one, your list of configured hosts will be probed to
+download the file from.</p>
+<p><code class="inline"><span class="w">force</span></code>
+ forces a new download, even if the file already exists.</p>
+<p><code class="inline"><span class="w">verbose</span></code>
+ simply indicates whether or not to print extra messages.</p>
+<p><code class="inline"><span class="w">prefer_bin</span></code>
+ indicates whether you prefer the use of commandline
+programs over perl modules. Defaults to your corresponding config
+setting.</p>
+<p><code class="inline"><span class="w">ttl</span></code>
+ (in seconds) indicates how long a cached copy is valid for. If
+the fetch time of the local copy is within the ttl, the cached copy is
+returned. Otherwise, the file is refetched.</p>
+<p><code class="inline"><span class="w">_fetch</span></code>
+ figures out, based on the host list, what scheme to use and
+from there, delegates to <code class="inline"><span class="w">File::Fetch</span></code>
+ do the actual fetching.</p>
+<p>Returns the path of the output file on success, false on failure.</p>
+<p>Note that you can set a <code class="inline"><span class="w">blacklist</span></code>
+ on certain methods in the config.
+Simply add the identifying name of the method (ie, <code class="inline"><span class="w">lwp</span></code>
+) to:
+    $conf-&gt;_set_fetch( blacklist =&gt; ['lwp'] );</p>
+<p>And the <code class="inline"><span class="w">LWP</span></code>
+ function will be skipped by <code class="inline"><span class="w">File::Fetch</span></code>
+.</p>
+<a name="_add_fail_host(-host-%3d%3e-%24host_hashref-)"></a><h2>_add_fail_host( host =&gt; $host_hashref )</h2>
+<p>Mark a particular host as bad. This makes <code class="inline"><span class="w">CPANPLUS::Internals::Fetch</span></code>
+
+skip it in fetches until this cache is flushed.</p>
+<a name="_host_ok(-host-%3d%3e-%24host_hashref-)"></a><h2>_host_ok( host =&gt; $host_hashref )</h2>
+<p>Query the cache to see if this host is ok, or if it has been flagged
+as bad.</p>
+<p>Returns true if the host is ok, false otherwise.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><li><a href="#SYNOPSIS">SYNOPSIS</a><li><a href="#DESCRIPTION">DESCRIPTION</a><li><a href="#METHODS">METHODS</a><li><a href="#%24path-%3d-_fetch(-module-%3d%3e-%24modobj%2c-%5bfetchdir-%3d%3e-'%2fpath%2fto%2fsave%2fto'%2c-fetch_from-%3d%3e-'scheme%3a%2f%2fpath%2fto%2ffetch%2ffrom'%2c-verbose-%3d%3e-BOOL%2c-force-%3d%3e-BOOL%2c-prefer_bin-%3d%3e-BOOL%2c-ttl-%3d%3e-%24seconds%5d-)">$path = _fetch( module => $modobj, [fetchdir => '/path/to/save/to', fetch_from => 'scheme://path/to/fetch/from', verbose => BOOL, force => BOOL, prefer_bin => BOOL, ttl => $seconds] )</a><ul><li><a href="#_add_fail_host(-host-%3d%3e-%24host_hashref-)">_add_fail_host( host => $host_hashref )</a><li><a href="#_host_ok(-host-%3d%3e-%24host_hashref-)">_host_ok( host => $host_hashref )</a></ul></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/18/2/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>

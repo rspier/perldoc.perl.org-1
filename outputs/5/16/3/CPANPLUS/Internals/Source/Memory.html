@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/public/img/favicon.ico">
+    <title>CPANPLUS::Internals::Source::Memory - perldoc.perl.org</title>
+    <link href="/public/css/main.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body container-fluid ">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-perl fixed-top justify-content-between">
+          <a class="navbar-brand" href="/">
+            <object class="logo" data="/public/img/logo_perl_doc.svg" type="image/svg+xml">Perl Documentation Logo</object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar" class="collapse navbar-collapse justify-content-end">
+            <div class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" id="dropdown-menu-links" aria-labelledby="navbarDropdown">
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="/5/16/3/index-overview.html">Overview</a>
+                  <a class="dropdown-item" href="/5/16/3/index-tutorials.html">Tutorials</a>
+                  <a class="dropdown-item" href="/5/16/3/index-faq.html">FAQs</a>
+                  <a class="dropdown-item" href="/5/16/3/index-history.html">History / Changes</a>
+                  <a class="dropdown-item" href="/5/16/3/index-licence.html">License</a>
+                  <a class="dropdown-item" href="/5/16/3/index-language.html">Language</a>
+                  <a class="dropdown-item" href="/5/16/3/index-functions.html">Functions</a>
+                  <a class="dropdown-item" href="/5/16/3/perlop.html">Operators</a>
+                  <a class="dropdown-item" href="/5/16/3/perlvar.html">Special Variables</a>
+                  <a class="dropdown-item" href="/5/16/3/index-pragmas.html">Pragmas</a>
+                  <a class="dropdown-item" href="/5/16/3/index-utilities.html">Utilities</a>
+                  <a class="dropdown-item" href="/5/16/3/index-internals.html">Internals</a>
+                  <a class="dropdown-item" href="/5/16/3/index-platforms.html">Platform Specific</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3" class="dropdown-menu letters-wrap">
+                  <a class="dropdown-item" href="/5/16/3/index-functions.html">A-Z</a>
+                  <a class="dropdown-item" href="/5/16/3/index-functions-by-cat.html">By Category</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="letter-container">
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-A.html">A</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-B.html">B</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-C.html">C</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-D.html">D</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-E.html">E</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-F.html">F</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-G.html">G</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-H.html">H</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-I.html">I</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-J.html">J</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-L.html">L</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-M.html">M</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-N.html">N</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-O.html">O</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-P.html">P</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-S.html">S</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-T.html">T</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-U.html">U</a>
+                    <a class="dropdown-item letters" href="/5/16/3/index-modules-X.html">X</a>
+                    </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!--/.nav-collapse -->
+        </nav>
+     
+      <main class="row main-content pb-5 pt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="breadcrumbs">
+                    
+    <a href="../../../index.html">Home</a> &gt;
+    
+      
+        <a href="../../../index-modules-C.html">Core modules (C)</a> &gt;
+      
+    
+    CPANPLUS::Internals::Source::Memory
+  
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <article class="col-sm-12 content">
+                <div class="documentation-wrapper">
+                  <div id="perl_version">
+                    <p class='page-title'> Perl 5 version 16.3 documentation</p>
+                  </div>
+                  <h1>CPANPLUS::Internals::Source::Memory</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a><ul><li><a href="#%24cb-%3e__memory_retrieve_source(name-%3d%3e-%24name%2c-%5bpath-%3d%3e-%24path%2c-uptodate-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d)">$cb->__memory_retrieve_source(name => $name, [path => $path, uptodate => BOOL, verbose => BOOL])</a><li><a href="#%24cb-%3e__memory_save_source(%5bverbose-%3d%3e-BOOL%2c-path-%3d%3e-%24path%5d)">$cb->__memory_save_source([verbose => BOOL, path => $path])</a></ul></ul><a name="NAME"></a><h1>NAME</h1>
+<p>CPANPLUS::Internals::Source::Memory - In memory implementation</p>
+<a name="%24cb-%3e__memory_retrieve_source(name-%3d%3e-%24name%2c-%5bpath-%3d%3e-%24path%2c-uptodate-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d)"></a><h2>$cb-&gt;__memory_retrieve_source(name =&gt; $name, [path =&gt; $path, uptodate =&gt; BOOL, verbose =&gt; BOOL])</h2>
+<p>This method retrieves a <i>storable</i>d tree identified by <code class="inline"><span class="i">$name</span></code>
+.</p>
+<p>It takes the following arguments:</p>
+<ul>
+<li><a name="name"></a><b>name</b>
+<p>The internal name for the source file to retrieve.</p>
+</li>
+<li><a name="uptodate"></a><b>uptodate</b>
+<p>A flag indicating whether the file-cache is up-to-date or not.</p>
+</li>
+<li><a name="path"></a><b>path</b>
+<p>The absolute path to the directory holding the source files.</p>
+</li>
+<li><a name="verbose"></a><b>verbose</b>
+<p>A boolean flag indicating whether or not to be verbose.</p>
+</li>
+</ul>
+<p>Will get information from the config file by default.</p>
+<p>Returns a tree on success, false on failure.</p>
+<a name="%24cb-%3e__memory_save_source(%5bverbose-%3d%3e-BOOL%2c-path-%3d%3e-%24path%5d)"></a><h2>$cb-&gt;__memory_save_source([verbose =&gt; BOOL, path =&gt; $path])</h2>
+<p>This method saves all the parsed trees in <i>storable</i>d format if
+<code class="inline"><span class="w">Storable</span></code>
+ is available.</p>
+<p>It takes the following arguments:</p>
+<ul>
+<li><a name="path"></a><b>path</b>
+<p>The absolute path to the directory holding the source files.</p>
+</li>
+<li><a name="verbose"></a><b>verbose</b>
+<p>A boolean flag indicating whether or not to be verbose.</p>
+</li>
+</ul>
+<p>Will get information from the config file by default.</p>
+<p>Returns true on success, false on failure.</p>
+
+
+
+
+  <div id="page_index" class="hud_container">
+    <div id="page_index_header" class="hud_header">
+      <div id="page_index_close" class="hud_close"><a href="#" onClick="pageIndex.hide();return false;"></a></div>
+      <div id="page_index_title" class="hud_title"><span class="hud_span_top">Page index</span></div>
+      <div id="page_index_topright" class="hud_topright"></div>
+    </div>
+    <div id="page_index_content" class="hud_content">
+      <ul><li><a href="#NAME">NAME</a><ul><li><a href="#%24cb-%3e__memory_retrieve_source(name-%3d%3e-%24name%2c-%5bpath-%3d%3e-%24path%2c-uptodate-%3d%3e-BOOL%2c-verbose-%3d%3e-BOOL%5d)">$cb->__memory_retrieve_source(name => $name, [path => $path, uptodate => BOOL, verbose => BOOL])</a><li><a href="#%24cb-%3e__memory_save_source(%5bverbose-%3d%3e-BOOL%2c-path-%3d%3e-%24path%5d)">$cb->__memory_save_source([verbose => BOOL, path => $path])</a></ul></ul>
+    </div>
+    <div id="page_index_footer" class="hud_footer">
+      <div id="page_index_bottomleft" class="hud_bottomleft"></div>
+      <div id="page_index_bottom" class="hud_bottom"><span class="hud_span_bottom"></span></div>
+      <div id="page_index_resize" class="hud_resize"></div>
+    </div>
+  </div>
+
+
+                </div>
+              </article>
+        </div>        
+      </main>
+    </div>
+    <footer class="footer row bg-light pt-5 pb-5">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <h4>Site info</h4>
+              </li>
+              <li>Site mantained by
+                <a href="mailto:community@opusvl.com"><img class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo"></a>
+              </li>
+              <li>Docs mantained by
+                <a href="//lists.cpan.org/showlist.cgi?name=perl5-porters" rel="noopener">Perl 5 Porters</a>
+              </li>
+              <li>Development supported by
+                <a href="//opusvl.com" rel="noopener">OpusVL</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Manual</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-overview.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-faq.html">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-history.html">Changes</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Reference</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-language.html">Language</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-functions.html">Functions</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/perlop.html">Operators</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/perlvar.html">Variables</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Modules</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-modules-A.html">Modules</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-pragmas.html">Pragmas</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-utilities.html">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <ul class=" list-unstyled">
+                  <li>
+                    <h4>Misc</h4>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-licence.html">License</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-internals.html">Internals</a>
+                  </li>
+                  <li>
+                    <a href="/5/16/3/index-platforms.html">Platforms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 footer-inf text-center">
+            <small>perldoc.perl.org - Official documentation for the Perl programming language</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>
